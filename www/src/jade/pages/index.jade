@@ -1,0 +1,110 @@
+block variables
+  - var bodyClass = 'page_index';
+  - var htmlClass = 'stick_footer stick_header';
+  - var pageTitle = 'Главная';
+  - var pageDescription = 'Описание страницы';
+  - var activePage = 0;
+  - var hasUnitNav = true;
+
+include ../components/dashboard
+
+extends ../components/layout
+block head
+block content
+  .wrapper
+    include ../components/header
+
+    .main_content._has_footer_controls
+      .section_inner
+        .dash_box._footer._alone
+          .dash_box_inner
+            ul.dash_list
+              li
+                .dash_unit.meetings_unit.scrollTo(data-scroll='#meetings_block')
+                  .dash_counter
+                    .dash_counter_val 10
+                    .dash_counter_name Заседания
+                  ul.dash_counter_list
+                    li
+                      span.dash_list_val 0
+                      span Очное заседание
+                    li
+                      span.dash_list_val 3
+                      span Заочных заседаний
+                    li
+                      span.dash_list_val 7
+                      span Запланировано
+
+              li
+                .dash_unit.instructions_unit.scrollTo(data-scroll='#instructions_block')
+                  .dash_counter
+                    .dash_counter_val 4
+                    .dash_counter_name Поручения
+                  ul.dash_counter_list
+                    li
+                      span.dash_list_val 3
+                      span Новых поручения
+                    li
+                      span.dash_list_val 3
+                      span В работе
+                    li
+                      span.dash_list_val 0
+                      span Просрочены
+
+              li
+                .dash_unit.actions_unit.scrollTo(data-scroll='#actions_block')
+                  .dash_counter
+                    .dash_counter_val 2
+                    .dash_counter_name Действия
+                  ul.dash_counter_list
+                    li
+                      span.dash_list_val 1
+                      span На голосовании
+                    li
+                      span.dash_list_val 1
+                      span На голосовании
+                    li
+                      span.dash_list_val 0
+                      span На утверждении
+
+          .dash_box_footer
+            a.btn_v1.btn_white.dash_btn(href='index.html') СМОТРЕТЬ ОТЧЕТНОСТЬ
+
+        #meetings_block.dash_box_title.clr_green ЗАСЕДАНИЯ
+
+        ul.dashboard_list
+          li
+            +meeting_box(23, '_in_process', 'Управляющий комитет')
+          li
+            +meeting_box(22, '', 'Комитет по проектам и процессам')
+          li
+            +meeting_box(1, '_in_preparation', 'Комитет по проектам и процессам')
+          li
+            +meeting_box(22, '_in_process', 'Управляющий комитет')
+
+        .text_center.more_block
+          a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 10 ЗАСЕДАНИЙ
+
+        #instructions_block.dash_box_title.clr_orange 4 ПОРУЧЕНИЯ
+
+        ul.dashboard_list
+          li
+            +instruction_box('', '_new')
+          li
+            +instruction_box('', '_new')
+          li
+            +instruction_box('', '_in_process')
+          li
+            +instruction_box('', '_new')
+
+        #actions_block.dash_box_title.clr_blue 2 ДЕЙСТВИЯ
+
+        ul.dashboard_list
+          li
+            +question_box(0, '_approved')
+          li
+            +question_box(29, '_rejected', true)
+
+      include ../components/preloader
+
+    include ../components/footer_controls

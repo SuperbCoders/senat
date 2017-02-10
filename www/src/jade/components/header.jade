@@ -1,0 +1,25 @@
+.header()
+  .section_inner.clearfix
+    .logo_block
+      a.logo.clr_white.mb(href='#')
+        span.logo_icon
+    include navbar
+    include user_block
+  -if (hasUnitNav)
+    .unit_nav
+      .section_inner
+        ul.nav_list
+          li
+            .nav_unit.scrollTo.clr_green(data-scroll='#meetings_block')
+              span.nav_unit_counter 1
+              span Заседания сегодня
+          li
+            .nav_unit.scrollTo.clr_orange(data-scroll='#meetings_block')
+              span.nav_unit_counter 4
+              span Поручения
+          li
+            .nav_unit.scrollTo.clr_blue(data-scroll='#meetings_block')
+              span.nav_unit_counter 2
+              span Действия
+
+

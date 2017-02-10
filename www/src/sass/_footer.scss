@@ -1,0 +1,170 @@
+.footer {
+  padding-top: 10px;
+  line-height: 100px;
+  background: #686151;
+  border-bottom: 2px solid #fff;
+
+  .section_inner {
+    padding: 0 25px;
+  }
+}
+
+.popup {
+  background: #f4f4f4;
+  padding: 0 20px 20px;
+  text-align: center;
+
+  p {
+    margin-bottom: 20px;
+  }
+}
+
+.footer_controls {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 5;
+  pointer-events: none;
+
+  .section_inner {
+    padding: 10px 35px 30px;
+    max-width: none;
+  }
+}
+
+.f_controls_holder {
+  position: relative;
+  pointer-events: all;
+}
+
+$palette_outer_radius: 230px;
+$palette_inner_radius: 160px;
+$palette_list: 'clr_green', 'item_4', 'item_5', 'item_6', 'item_7', 'item_8', 'clr_orange', 'clr_blue';
+
+.f_controls_panel {
+  @include transition_all(transform .3s, background .3s);
+  transform: rotate(-360deg) scale(0);
+  position: absolute;
+  width: $palette_outer_radius * 2;
+  height: $palette_outer_radius * 2;
+  margin: (-$palette_outer_radius) 0 0 (-$palette_outer_radius);
+  top: 30px;
+  left: 30px;
+  background: transparent;
+  border-radius: 100%;
+
+  .open_aside_add & {
+    background: #fcfcfc;
+    transform: rotate(0deg) scale(1);
+
+    .f_control_item {
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+}
+
+.f_control_item {
+  @include transition_all(transform .3s);
+  @extend %translate3d;
+  @extend %hor_vert_centr;
+  transform: translate(-50%, -50%) scale(0);
+  padding: 0;
+  position: absolute;
+  text-align: center;
+
+  $R: $palette_inner_radius;
+  $ticks: length($palette_list);
+  $section: (pi()/36); // 91 !important
+  $magic: pi() + $section * ($ticks + 1); // some magic to put first item at 12 o'clock
+
+  @for $i from 1 through $ticks {
+    $clr: nth($palette_list, $i);
+
+    &:nth-child(#{$i}) {
+      //@include transition_all(transform .3s (.3s * ($i)));
+    }
+
+    &.#{$clr} {
+      $rad: -((($ticks + 1) * $i * $section) - $magic);
+      top: $R * cos($rad) + $palette_outer_radius;
+      left: $R * sin($rad) + $palette_outer_radius;
+    }
+  }
+}
+
+.f_control_link {
+  display: block;
+}
+
+.f_control_text {
+  font: 10px $HelveticaNeueBold;
+  margin-top: 10px;
+  letter-spacing: .07em;
+}
+
+$preloader_size: 100px;
+$preloader_border: 5px;
+
+.preloader {
+  position: relative;
+  margin: 20px auto;
+  width: $preloader_size;
+  height: $preloader_size;
+  background: #e6ebed;
+  overflow: hidden;
+  border-radius: 100%;
+}
+
+.timer_holder {
+  @extend %hor_vert_centr;
+  width: $preloader_size;
+  height: $preloader_size;
+}
+
+.timer_wrapper {
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: $preloader_size / 2;
+  overflow: hidden;
+  position: absolute;
+}
+
+.timer_wrapper.mod_right {
+  left: 50%;
+}
+
+.timer_l, .timer_r {
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: $preloader_size;
+  border: $preloader_border solid #a0b3be;
+}
+
+.no_animation .timer_l, .no_animation .timer_r {
+  transition: none !important
+}
+
+.timer_holder, .timer_l, .timer_r {
+  position: absolute;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.timer_r {
+  left: -$preloader_size / 2;
+  clip: rect(auto, auto, auto, $preloader_size / 2);
+  transform: rotate(-180deg);
+}
+
+.timer_l, .timer_r {
+  -webkit-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+}
+
+.timer_l {
+  clip: rect(auto, $preloader_size / 2, auto, auto);
+  transform: rotate(-180deg);
+}

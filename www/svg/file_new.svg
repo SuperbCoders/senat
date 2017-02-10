@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="22px" height="30px" viewBox="0 0 22 30" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>pdf icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="create-meeting-add-file" transform="translate(-306.000000, -160.000000)" fill="#50C171">
+            <g id="notification" transform="translate(286.000000, 140.000000)">
+                <g id="pdf-icon" transform="translate(20.000000, 20.000000)">
+                    <path d="M20.4370524,11.8650635 L21.9611894,11.8650635 L21.9611894,5.63493654 C21.9611894,5.35704743 21.8440999,5.11890448 21.6487315,4.92050768 L16.490544,0.238142953 C16.2951756,0.079492318 16.0606677,1.77635684e-15 15.8261598,1.77635684e-15 L0.976842231,1.77635684e-15 C0.429876362,1.77635684e-15 0,0.436539746 0,0.991983968 L0,29.008016 C0,29.5634603 0.429876362,30 0.976842231,30 L21.0231578,30 C21.5701236,30 22,29.5634603 22,29.008016 L22,11.8650635 L20.4370524,11.8650635 L20.4370524,28.4124916 L1.56294757,28.4124916 L1.56294757,1.58717435 L15.5133729,1.58717435 L15.5133729,6.23012692 L20.4370524,6.23012692 L20.4370524,11.8650635 Z" id="Shape"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

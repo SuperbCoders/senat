@@ -1,0 +1,151 @@
+mixin dash_b_menu()
+  .dash_b_menu
+    .dash_b_menu_btn.dashMenuBtn: .dash_b_menu_icon
+    .dash_b_menu_w
+      ul.dash_b_menu_list
+        li.dash_menu_group
+          span.mb Действия
+        li: a.dash_menu_link(href='#')
+          span.mb Редактировать
+        li: a.dash_menu_link(href='#')
+          span.mb Перейти к оформлению
+        li: a.dash_menu_link(href='#')
+          span.mb Удалить
+      ul.dash_b_menu_list
+        li.dash_menu_group
+          span.mb Cтатус
+        li: a.dash_menu_link(href='#')
+          span.mb В ПРОЦЕССЕ
+        li: a.dash_menu_link(href='#')
+          span.mb НОВАЯ
+        li: a.dash_menu_link(href='#')
+          span.mb ЗАВЕРШЕНО
+
+
+mixin meeting_box(date, status, author)
+  .dash_box
+    .dash_box_inner
+      .fl
+        .mb
+          .dash_b_date
+            .day= date
+            .month сентября
+        .mb
+          .dash_b_info.fl
+            .dash_b_caption №241, с 17:00 до 19:00
+            p= author
+      .fr
+        .mb
+          - if (status == '_in_process')
+            a.btn_v1.dash_btn.btn_blue(href='#'): span ПЕРЕЙТИ К ГОЛОСОВАНИЮ
+          - else if (status == '_in_preparation')
+            | &nbsp;
+          - else
+            a.btn_v1.dash_btn.btn_green(href='#') ПРОТОКОЛ ЗАСЕДАНИЯ
+        .mb
+          .dash_b_status(class= status ? status : '_completed')
+            - if (status == '_in_process')
+              | В ПРОЦЕССЕ
+            - else if (status == '_new')
+              | НОВАЯ
+            - else if (status == '_in_preparation')
+              | ПОДГОТОВКА
+            - else
+              span.dash_b_status_counter
+                span.mb.i-check.dash_b_icon
+                span.mb 10
+              span.dash_b_status_counter
+                span.mb.i-cross.dash_b_icon
+                span.mb 5
+              span.dash_b_status_counter
+                span.mb.i-circle-minus.dash_b_icon
+                span.mb 2
+        .mb
+          dash_b_menu()
+
+mixin instruction_box(date, status)
+  .dash_box
+    .dash_box_inner
+      .fl
+        .mb
+          .dash_b_date
+            - if (date)
+              .day= date
+              .month сентября
+            - else
+              a.dash_b_control.clr_orange(href='#')
+                span.i-list
+
+        .mb
+          .dash_b_info.fl._meetings_mod
+            p Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные обязательства
+      .fr
+        .mb
+          .dash_b_status(class= status ? status : '_completed')
+            - if (status == '_in_process')
+              | ИСПОЛНЯЕТСЯ
+            - else if (status == '_new')
+              | НОВАЯ
+            - else if (status == '_in_preparation')
+              | ПОДГОТОВКА
+            - else
+              span.dash_b_status_counter
+                span.mb.i-check.dash_b_icon
+                span.mb 10
+              span.dash_b_status_counter
+                span.mb.i-cross.dash_b_icon
+                span.mb 5
+              span.dash_b_status_counter
+                span.mb.i-circle-minus.dash_b_icon
+                span.mb 2
+        .mb
+          +dash_b_menu()
+
+mixin question_box(date, status, mod_1)
+  .dash_box
+    .dash_box_inner
+      .fl
+        .mb
+          .dash_b_date
+            - if (date)
+              .day= date
+              .month сентября
+            - else
+              a.dash_b_control.clr_blue(href='#')
+                span.i-help
+
+        .mb
+          .dash_b_info.fl(class= (mod_1 ? '' : '_meetings_mod'))
+            - if (mod_1)
+              .dash_b_caption №244, с 17:00 до 19:00
+              p Управляющий комитет
+            - else
+              .dash_b_caption №21
+                span  Комитет по проектам и процессам
+              p Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные
+      .fr
+        .mb
+          - if (status == '_approved')
+            .dash_b_status._name(class= status ? status : '_completed') УТВЕРЖДЕН
+          - else if (status == '_rejected')
+            .dash_b_status._name(class= status ? status : '_completed') ОТКЛОНЕН
+          .dash_b_status(class= status ? status : '_completed')
+            - if (status == '_in_process')
+              | ИСПОЛНЯЕТСЯ
+            - else if (status == '_new')
+              | НОВАЯ
+            - else if (status == '_in_preparation')
+              | ПОДГОТОВКА
+            - else
+              span.dash_b_status_counter
+                span.mb.i-check.dash_b_icon
+                span.mb 10
+              span.dash_b_status_counter
+                span.mb.i-cross.dash_b_icon
+                span.mb 5
+              span.dash_b_status_counter
+                span.mb.i-circle-minus.dash_b_icon
+                span.mb 2
+
+        .mb
+          +dash_b_menu()

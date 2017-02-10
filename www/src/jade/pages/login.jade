@@ -1,0 +1,31 @@
+block variables
+  - var bodyClass = 'page_login';
+  - var htmlClass = 'full_h';
+  - var pageTitle = 'Логин';
+  - var pageDescription = 'Описание страницы';
+  - var loginPage = true;
+
+extends ../components/layout
+block head
+block content
+  .wrapper
+    .auth_ground.ground_green
+      .ground_main
+    .gl_table
+      .gl_table_cell.text_center
+        .form_holder.auth_form
+          .auth_title
+            a.logo.clr_white(href='#')
+              span.logo_icon
+              span.mb СЕНАТ
+          form(action='#')
+            .input_w.has_icon
+              input.f_input.input_v1(placeholder='Логин')
+              span.input_icon.i-user
+            .input_w.has_icon
+              input.f_input.input_v1(placeholder='Пароль' type='password')
+              span.input_icon.i-lock
+            .input_w
+              a.btn_v1.btn_light_white.auth_btn(href='index.html') ВОЙТИ
+
+          .auth_tip Техподдержка +7 (495) 123-45-67

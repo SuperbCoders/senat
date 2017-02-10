@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'senat_icons';
+  src:  url('fonts/senat_icons.eot?odeiym');
+  src:  url('fonts/senat_icons.eot?odeiym#iefix') format('embedded-opentype'),
+    url('fonts/senat_icons.ttf?odeiym') format('truetype'),
+    url('fonts/senat_icons.woff?odeiym') format('woff'),
+    url('fonts/senat_icons.svg?odeiym#senat_icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="i-"], [class*=" i-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'senat_icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.i-check:before {
+  content: "\e903";
+}
+.i-help:before {
+  content: "\e915";
+}
+.i-plus2:before {
+  content: "\e917";
+}
+.i-minus:before {
+  content: "\e918";
+}
+.i-check2:before {
+  content: "\e902";
+}
+.i-plus:before {
+  content: "\e91f";
+}
+.i-circle-minus:before {
+  content: "\e91b";
+}
+.i-circle-plus:before {
+  content: "\e91a";
+}
+.i-cross:before {
+  content: "\e904";
+}
+.i-chevron-right:before {
+  content: "\e905";
+}
+.i-chevron-left:before {
+  content: "\e90b";
+}
+.i-chevron-down:before {
+  content: "\e910";
+}
+.i-chevron-up:before {
+  content: "\e911";
+}
+.i-folder:before {
+  content: "\e900";
+}
+.i-file_doc:before {
+  content: "\e901";
+}
+.i-file_new:before {
+  content: "\e906";
+}
+.i-file_pdf:before {
+  content: "\e907";
+}
+.i-pin_small:before {
+  content: "\e908";
+}
+.i-timer:before {
+  content: "\e909";
+}
+.i-calendar:before {
+  content: "\e90a";
+}
+.i-chat:before {
+  content: "\e90c";
+}
+.i-envelope:before {
+  content: "\e90d";
+}
+.i-phone:before {
+  content: "\e90e";
+}
+.i-checkmark_bold:before {
+  content: "\e90f";
+}
+.i-search:before {
+  content: "\e912";
+}
+.i-bell:before {
+  content: "\e913";
+}
+.i-stat:before {
+  content: "\e914";
+}
+.i-list:before {
+  content: "\e916";
+}
+.i-answer:before {
+  content: "\e919";
+}
+.i-lock:before {
+  content: "\e91c";
+}
+.i-user:before {
+  content: "\e91d";
+}
+.i-logo:before {
+  content: "\e91e";
+}
+.i-location2:before {
+  content: "\e948";
+}
+

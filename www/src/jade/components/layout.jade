@@ -1,0 +1,19 @@
+block variables
+
+include page
+include ../utils/scripts
+
+doctype html
+html(lang='ru' class=htmlClass || '')
+  include head
+  +page(bodyClass || '')
+    block content
+
+    - if (!loginPage)
+      include popup
+      +scripts([
+        'vendors/jquery1.10.js',
+        'vendors/snabbt.min.js',
+        'vendors/flexibility.js',
+        'main.js'
+      ])

@@ -1,0 +1,55 @@
+[
+  {
+    "title": "Заседания",
+    "href": "meetings.html",
+    "submenu": [
+      {
+        "title": "Инфраструктура",
+        "href": "meetings.html"
+      },
+      {
+        "title": "Коммуникации",
+        "href": "apartments.html"
+      },
+      {
+        "title": "Документация",
+        "href": "apartments.html"
+      }
+    ]
+  },
+  {
+    "title": "Вопросы",
+    "href": "questions.html"
+  },
+  {
+    "title": "Поручения",
+    "href": "instructions.html",
+    "counter" : 4,
+    "submenu": [
+      {
+        "title": "Ипотека",
+        "href": "apartments.html"
+      },
+      {
+        "title": "Военная ипотека",
+        "href": "apartments.html"
+      },
+      {
+        "title": "Рассрочка",
+        "href": "apartments.html"
+      }
+    ]
+  },
+  {
+    "title": "Сообщения",
+    "href": "messages.html"
+  },
+  {
+    "title": "Мои файлы",
+    "href": "files.html"
+  },
+  {
+    "title": "Отчеты",
+    "href": "reports.html"
+  }
+]

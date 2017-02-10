@@ -1,0 +1,201 @@
+.full_h {
+  height: 100%;
+  overflow-y: auto;
+
+  body {
+    height: 100%;
+
+    .wrapper {
+      height: 100%;
+      min-height: 535px;
+    }
+  }
+}
+
+.page_login {
+
+  .wrapper .gl_table {
+    position: relative;
+    z-index: 4;
+  }
+}
+
+.auth_ground {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: hidden;
+
+  &:after,
+  &:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+  }
+
+  &:before {
+    top: -200px;
+    right: -200px;
+    bottom: -140%;
+    left: -110%;
+  }
+
+  &:after {
+    top: -170%;
+    right: -450px;
+    bottom: -300px;
+    left: -105%;
+  }
+
+  &.ground_green {
+    &:before {
+      /* Rectangle 319: */
+      //background-image: radial-gradient(-2% 49%, #83f1b6 0%, rgba(116, 237, 185, 0.69) 12%, rgba(31, 223, 208, 0.00) 87%);
+
+      background: -moz-radial-gradient(center, ellipse cover, rgba(131, 241, 182, 1) 0%, rgba(116, 237, 185, 0.69) 12%, rgba(31, 223, 208, 0) 100%);
+      background: -webkit-radial-gradient(center, ellipse cover, rgba(131, 241, 182, 1) 0%, rgba(116, 237, 185, 0.69) 12%, rgba(31, 223, 208, 0) 100%);
+      background: radial-gradient(ellipse at center, rgba(131, 241, 182, 1) 0%, rgba(116, 237, 185, 0.69) 12%, rgba(31, 223, 208, 0) 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#83f1b6', endColorstr='#001fdfd0', GradientType=1);
+      opacity: .8;
+    }
+
+    &:after {
+      /* Rectangle 319: */
+      //background-image: radial-gradient(-2% 26%, #4bec3a 0%, rgba(255, 255, 255, 0.00) 99%);
+
+      background: -moz-radial-gradient(center, ellipse cover, rgba(75, 236, 58, 0.7) 0%, rgba(255, 255, 255, 0) 99%);
+      background: -webkit-radial-gradient(center, ellipse cover, rgba(75, 236, 58, 0.7) 0%, rgba(255, 255, 255, 0) 99%);
+      background: radial-gradient(ellipse at center, rgba(75, 236, 58, 0.7) 0%, rgba(255, 255, 255, 0) 99%);
+      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#b34bec3a', endColorstr='#00ffffff', GradientType=1);
+      opacity: .8;
+    }
+
+  }
+
+}
+
+.ground_main {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  top: -110%;
+  right: -110%;
+
+  .ground_green & {
+    background: rgb(17, 183, 91);
+    background: -moz-radial-gradient(center, ellipse cover, rgba(17, 183, 91, 1) 0%, rgba(70, 178, 102, 1) 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(17, 183, 91, 1) 0%, rgba(70, 178, 102, 1) 100%);
+    background: radial-gradient(ellipse at center, rgba(17, 183, 91, 1) 0%, rgba(70, 178, 102, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#11b75b', endColorstr='#46b266', GradientType=1);
+
+  }
+}
+
+.auth_form {
+  margin: 0 auto 75px;
+  max-width: 100%;
+  width: 360px;
+  padding: 20px;
+  color: $gl_white;
+
+  .input_w {
+    margin-bottom: 20px;
+  }
+
+  .input_icon {
+    opacity: .8;
+  }
+
+  .auth_btn {
+    margin-top: 20px;
+  }
+
+}
+
+.auth_title {
+  font: 33px/40px $HelveticaNeueLight;
+  margin-bottom: 118px;
+  letter-spacing: .17em;
+
+  .logo_icon {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 44px;
+    margin-right: 15px;
+  }
+}
+
+.auth_tip {
+  text-align: center;
+  font: 10px $HelveticaNeueLight;
+  letter-spacing: .09em;
+  margin: 32px 0;
+}
+
+.input_w {
+  position: relative;
+}
+
+.input_icon {
+  @include transition_all(opacity .3s, transform .3s);
+  position: absolute;
+  top: 50%;
+  margin-top: -10px;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  left: 10px;
+  font-size: 14px;
+  line-height: 20px;
+
+  .f_input:focus + & {
+    opacity: 1;
+    @include transform_scale(1.3);
+  }
+
+}
+
+.f_input {
+  display: block;
+  width: 100%;
+
+  &.input_v1 {
+    @include transition_all(border .3s);
+    height: 40px;
+    padding: 10px;
+    font: 14px/18px $HelveticaNeueReg;
+    color: $gl_white;
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, .4);
+
+    &::-moz-placeholder {
+      color: rgba(255, 255, 255, .6);
+    }
+
+    &::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, .6);
+    }
+
+    &:focus {
+      border-color: #fff;
+
+      &:empty {
+        &::-moz-placeholder {
+          color: rgba(255, 255, 255, 1) !important;
+        }
+
+        &::-webkit-input-placeholder {
+          color: rgba(255, 255, 255, 1) !important;
+        }
+      }
+    }
+  }
+
+  .has_icon & {
+    padding-left: 40px;
+  }
+
+}
+

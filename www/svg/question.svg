@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 12</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="16" cy="16" r="10"></circle>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="20" height="20" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="meeting-item" transform="translate(-107.000000, -267.000000)">
+            <g id="votes-questions-comments">
+                <g transform="translate(35.000000, 261.000000)">
+                    <g id="Group-2" transform="translate(66.000000, 0.000000)">
+                        <g id="Group-12">
+                            <g id="Group-9">
+                                <rect id="Rectangle-38" x="0" y="0" width="32" height="32"></rect>
+                            </g>
+                            <path d="M13.3701545,13.3875854 L14.5289602,13.3875854 C14.6035033,12.4185257 15.2540608,11.8154046 16.2773337,11.8154046 C17.2870532,11.8154046 17.9376108,12.432079 17.9376108,13.2723825 C17.9376108,13.9974831 17.6326619,14.4244115 16.8465715,14.905553 C15.9181717,15.4612376 15.4844666,16.0711353 15.4912433,16.965652 L15.4912433,17.589103 L16.6771555,17.589103 L16.6771555,17.1486213 C16.6771555,16.437074 16.9211146,16.0575821 17.781748,15.549334 C18.6491581,15.0275326 19.1980661,14.2753254 19.1980661,13.2113927 C19.1980661,11.8154046 18.0324838,10.7582485 16.3247702,10.7582485 C14.4205339,10.7582485 13.4446976,11.9238309 13.3701545,13.3875854 L13.3701545,13.3875854 Z M16.0875877,20.6792515 C16.5280694,20.6792515 16.8601248,20.3404194 16.8601248,19.9067143 C16.8601248,19.4662327 16.5280694,19.1341772 16.0875877,19.1341772 C15.6538827,19.1341772 15.3150506,19.4662327 15.3150506,19.9067143 C15.3150506,20.3404194 15.6538827,20.6792515 16.0875877,20.6792515 L16.0875877,20.6792515 Z" id="?" fill="#B7B7B7"></path>
+                            <use id="Oval-29" stroke="#B1B1B1" mask="url(#mask-2)" stroke-width="2" xlink:href="#path-1"></use>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
