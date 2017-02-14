@@ -1,0 +1,35 @@
+block variables
+  - var bodyClass = 'page_search';
+  - var htmlClass = 'stick_footer stick_header';
+  - var pageTitle = 'Поиск';
+  - var pageDescription = 'Описание страницы';
+  - var activePage = 0;
+  - var hasUnitNav = false;
+
+include ../components/dashboard
+
+extends ../components/layout
+block head
+block content
+  .wrapper
+    include ../components/header
+    include ../components/navbar
+
+    .main_content._has_footer_controls
+      .section_inner
+        .search_field
+          form(action='#')
+            .input_w.has_icon
+              input.f_input.input_v1._inp_black(placeholder='Поиск')
+              button.search_submit.i-search._small
+        
+        ul.filter_controls
+          li.filter_item: a.filter_link.filterLink(href='#') ВСЕ
+          li.filter_item: a.filter_link.filterLink(href='#') ЗАСЕДАНИЯ
+          li.filter_item: a.filter_link.filterLink(href='#') ВОПРОСЫ
+          li.filter_item: a.filter_link.filterLink(href='#') ПОРУЧЕНИЯ
+          
+        .search_results
+          .caption_v1 Ничего не найдено
+          
+    include ../components/footer_controls

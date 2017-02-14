@@ -4,7 +4,7 @@ block variables
   - var pageTitle = 'Поиск';
   - var pageDescription = 'Описание страницы';
   - var activePage = 0;
-  - var hasUnitNav = true;
+  - var hasUnitNav = false;
 
 include ../components/dashboard
 
@@ -17,97 +17,55 @@ block content
 
     .main_content._has_footer_controls
       .section_inner
-        .dash_box._footer._alone
-          .dash_box_inner
-            ul.dash_list
-              li
-                .dash_unit.meetings_unit.scrollTo(data-scroll='#meetings_block')
-                  .dash_counter
-                    .dash_counter_val 10
-                    .dash_counter_name Заседания
-                  ul.dash_counter_list
-                    li
-                      span.dash_list_val 0
-                      span Очное заседание
-                    li
-                      span.dash_list_val 3
-                      span Заочных заседаний
-                    li
-                      span.dash_list_val 7
-                      span Запланировано
-
-              li
-                .dash_unit.instructions_unit.scrollTo(data-scroll='#instructions_block')
-                  .dash_counter
-                    .dash_counter_val 4
-                    .dash_counter_name Поручения
-                  ul.dash_counter_list
-                    li
-                      span.dash_list_val 3
-                      span Новых поручения
-                    li
-                      span.dash_list_val 3
-                      span В работе
-                    li
-                      span.dash_list_val 0
-                      span Просрочены
-
-              li
-                .dash_unit.actions_unit.scrollTo(data-scroll='#actions_block')
-                  .dash_counter
-                    .dash_counter_val 2
-                    .dash_counter_name Действия
-                  ul.dash_counter_list
-                    li
-                      span.dash_list_val 1
-                      span На голосовании
-                    li
-                      span.dash_list_val 1
-                      span На голосовании
-                    li
-                      span.dash_list_val 0
-                      span На утверждении
-                      
-          .dash_box_footer
-            a.btn_v1.btn_white.dash_btn(href='index.html') СМОТРЕТЬ ОТЧЕТНОСТЬ
+        .search_field
+          form(action='#')
+            .input_w.has_icon
+              input.f_input.input_v1._inp_black(placeholder='Поиск')
+              button.search_submit.i-search._small
+        
+        ul.filter_controls
+          li.filter_item: a.filter_link.filterLink(href='#') ВСЕ
+          li.filter_item: a.filter_link.filterLink.clr_green(href='#meetings_block') ЗАСЕДАНИЯ
+          li.filter_item: a.filter_link.filterLink.clr_orange(href='#instructions_block') ВОПРОСЫ
+          li.filter_item: a.filter_link.filterLink.clr_blue(href='#actions_block') ПОРУЧЕНИЯ
           
-          .navBarMark
-
-        #meetings_block.dash_box_title.clr_green ЗАСЕДАНИЯ
-
-        ul.dashboard_list
-          li
-            +meeting_box(23, '_in_process', 'Управляющий комитет')
-          li
-            +meeting_box(22, '', 'Комитет по проектам и процессам')
-          li
-            +meeting_box(1, '_in_preparation', 'Комитет по проектам и процессам')
-          li
-            +meeting_box(22, '_in_process', 'Управляющий комитет')
-
-        .text_center.more_block
-          a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 10 ЗАСЕДАНИЙ
-
-        #instructions_block.dash_box_title.clr_orange 4 ПОРУЧЕНИЯ
-
-        ul.dashboard_list
-          li
-            +instruction_box('', '_new')
-          li
-            +instruction_box('', '_new')
-          li
-            +instruction_box('', '_in_process')
-          li
-            +instruction_box('', '_new')
-
-        #actions_block.dash_box_title.clr_blue 2 ДЕЙСТВИЯ
-
-        ul.dashboard_list
-          li
-            +question_box(0, '_approved')
-          li
-            +question_box(29, '_rejected', true)
-
-      include ../components/preloader
+        .filter_container.filterContainer
+          #meetings_block.filter_unit.filterUnit
+            .dash_box_title.clr_green ЗАСЕДАНИЯ
+    
+            ul.dashboard_list
+              li
+                +meeting_box(23, '_in_process', 'Управляющий комитет')
+              li
+                +meeting_box(22, '', 'Комитет по проектам и процессам')
+              li
+                +meeting_box(1, '_in_preparation', 'Комитет по проектам и процессам')
+              li
+                +meeting_box(22, '_in_process', 'Управляющий комитет')
+    
+            //-.text_center.more_block
+              a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 10 ЗАСЕДАНИЙ
+  
+          #instructions_block.filter_unit.filterUnit
+            .dash_box_title.clr_orange 4 ПОРУЧЕНИЯ
+    
+            ul.dashboard_list
+              li
+                +instruction_box('', '_new')
+              li
+                +instruction_box('', '_new')
+              li
+                +instruction_box('', '_in_process')
+              li
+                +instruction_box('', '_new')
+  
+          #actions_block.filter_unit.filterUnit
+            .dash_box_title.clr_blue 2 ДЕЙСТВИЯ
+    
+            ul.dashboard_list
+              li
+                +question_box(0, '_approved')
+              li
+                +question_box(29, '_rejected', true)
 
     include ../components/footer_controls

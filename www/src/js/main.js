@@ -24,9 +24,9 @@ $(function ($) {
   body_var
     .delegate('.scrollTo', 'click', function () {
       var el = $(this);
-      docScrollTo($(el.attr('data-scroll')).offset().top - header.outerHeight() - 20, 800, function () {
-        el.parent().addClass('scroll_done').siblings().removeClass('scroll_done');
-      });
+      el.parent().addClass('scroll_done').siblings().removeClass('scroll_done');
+
+      docScrollTo($(el.attr('data-scroll')).offset().top - header.outerHeight() - 20, 800);
       return false;
     })
     .delegate('.openForm', 'click', function () {
@@ -49,6 +49,20 @@ $(function ($) {
         overlay.fadeOut(600, function () {
           html.removeClass(el.attr('data-class'));
         });
+      }
+
+      return false;
+    })
+    .delegate('.filterLink', 'click', function () {
+      var item = $(this), target = $(item.attr('href'));
+
+      item.parent().addClass('_active').siblings().removeClass('_active');
+
+      if (target.length) {
+        $('.filterUnit').hide().addClass('_active');
+        target.show();
+      } else {
+        $('.filterUnit').removeClass('_active').show();
       }
 
       return false;
@@ -87,17 +101,13 @@ $(function ($) {
 });
 
 function catchNavBar() {
+  var navBarMark = $('.navBarMark'), navBar = $('.navBar');
 
-  wnd.on('scroll', function () {
-    var navBarMark = $('.navBarMark'), navBar = $('.navBar');
-
-    console.log(navBarMark.offset().top, doc.scrollTop(), navBar.outerHeight());
-
-    navBar.css('top', ((navBarMark.offset().top - header.outerHeight()) <= doc.scrollTop()) ? header.outerHeight() : 0);
-
-
-  });
-
+  if (navBarMark.length && navBar.length) {
+    wnd.on('scroll', function () {
+      navBar.css('top', ((navBarMark.offset().top - header.outerHeight() - 30) <= doc.scrollTop()) ? header.outerHeight() : 0);
+    });
+  }
 }
 
 function hideDropDowns(excl) {

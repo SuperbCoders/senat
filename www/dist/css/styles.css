@@ -1,4 +1,4 @@
-.dash_box_inner:after, .dash_list:after {
+.dash_box_inner:after, .dash_list:after, .filter_controls:after {
   position: static;
   display: block;
   height: 0;
@@ -356,6 +356,34 @@
     line-height: 28px;
     border-radius: 100%;
     background: #fff; }
+
+.caption_v1 {
+  font-size: 30px;
+  color: #a0b3be;
+  letter-spacing: 0.04em; }
+
+.filter_controls {
+  margin-left: -52px;
+  padding: 10px 10px 22px; }
+
+.filter_item {
+  float: left;
+  padding-left: 52px;
+  margin-bottom: 20px; }
+
+.filter_link {
+  font-size: 12px;
+  letter-spacing: .07em; }
+  .filter_item:not(._active) .filter_link {
+    color: #6e737a; }
+  ._active .filter_link {
+    cursor: default; }
+
+.filter_unit._active .dash_box_title {
+  display: none; }
+
+.search_results .caption_v1 {
+  margin-top: 58px; }
 
 .footer {
   padding-top: 10px;
