@@ -24,7 +24,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 5;
+  z-index: 3;
   pointer-events: none;
 
   .section_inner {
@@ -120,6 +120,17 @@ $preloader_border: 5px;
   @extend %hor_vert_centr;
   width: $preloader_size;
   height: $preloader_size;
+
+  &:before {
+    @extend %hor_vert_centr;
+    content: '';
+    position: absolute;
+    width: $preloader_size - $preloader_border * 2;
+    height: $preloader_size - $preloader_border * 2;
+    background: #f0f2f3;
+    z-index: 1;
+    border-radius: 100%;
+  }
 }
 
 .timer_wrapper {

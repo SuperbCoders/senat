@@ -19,6 +19,12 @@ html {
       padding-top: 120px;
     }
   }
+
+  &.nav_header {
+    .wrapper {
+      padding-top: 170px;
+    }
+  }
 }
 
 body {
@@ -113,9 +119,6 @@ body {
     letter-spacing: .1em;
   }
 }
-
-
-
 
 .btn_light_white {
   @include transition_all(background .3s);

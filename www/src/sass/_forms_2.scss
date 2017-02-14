@@ -1,0 +1,64 @@
+
+.f_input {
+  display: block;
+  width: 100%;
+
+  &.input_v2 {
+    @include transition_all(border .3s);
+    height: 80px;
+    padding: 10px;
+    font: 30px/40px $HelveticaNeueLight;
+    color: $gl_white;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, .4);
+    letter-spacing: .02em;
+
+    &::-moz-placeholder {
+      color: rgba(255, 255, 255, .6);
+    }
+
+    &::-webkit-input-placeholder {
+      color: rgba(255, 255, 255, .6);
+    }
+
+    &:focus {
+      border-color: #fff;
+
+      &:empty {
+        &::-moz-placeholder {
+          color: rgba(255, 255, 255, 1) !important;
+        }
+
+        &::-webkit-input-placeholder {
+          color: rgba(255, 255, 255, 1) !important;
+        }
+      }
+    }
+  }
+
+  .has_icon & {
+    padding-left: 80px;
+  }
+
+}
+
+.search_submit {
+  @include transition_all(opacity .3s, transform .3s);
+  @extend %icon_pseudo;
+  position: absolute;
+  left: 1px;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  margin-top: -25px;
+  background: none;
+  font-size: 30px;
+  line-height: 50px;
+  text-align: center;
+  color: $gl_white;
+
+  .f_input:focus + & {
+    opacity: 1;
+    @include transform_scale(1.3);
+  }
+}

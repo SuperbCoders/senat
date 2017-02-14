@@ -12,7 +12,7 @@
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden; }
 
-.f_control_item, .timer_holder {
+.f_control_item, .timer_holder, .timer_holder:before {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
@@ -260,27 +260,26 @@
   height: 30px;
   border-radius: 100%;
   cursor: pointer; }
-  .open_dash_menu .dash_b_menu_btn, .dash_b_menu_btn:hover {
+  .open_menu .dash_b_menu_btn, .dash_b_menu_btn:hover {
     background: #e2e3e4; }
 
-.dash_b_menu_w {
+.menu_w {
   position: absolute;
   top: 100%;
-  right: 20px;
-  margin-top: 10px;
   display: none;
   z-index: 3;
   background: #fff;
-  padding: 10px 0;
   box-shadow: 0 2px 5px rgba(26, 26, 26, 0.3); }
-  .open_dash_menu .dash_b_menu_w {
+  .open_menu .menu_w {
     display: block; }
 
+.dash_b_menu_w {
+  right: 20px;
+  margin-top: 10px;
+  padding: 10px 0; }
+
 .dash_b_menu_list {
-  min-width: 240px;
-  border-bottom: 1px solid #d8d8d8;
-  padding-bottom: 10px;
-  margin-bottom: 10px; }
+  min-width: 240px; }
   .dash_b_menu_list li {
     line-height: 40px;
     letter-spacing: .03em; }
@@ -288,6 +287,10 @@
       color: #a0b3be;
       padding: 0 20px;
       font: 12px/30px "HelveticaNeueLight", sans-serif; }
+  .dash_b_menu_w .dash_b_menu_list {
+    border-bottom: 1px solid #d8d8d8;
+    margin-bottom: 10px;
+    padding-bottom: 10px; }
 
 .dash_menu_link {
   transition: transform 0.3s;
@@ -297,6 +300,18 @@
   color: #474747; }
   .dash_menu_link:hover {
     background: #ececec; }
+
+.dash_m_status {
+  width: 16px;
+  height: 16px;
+  border-radius: 100%;
+  margin-right: 10px; }
+  .dash_m_status._in_process {
+    background: #ff543a; }
+  .dash_m_status._new {
+    background: #4c81f6; }
+  .dash_m_status._completed {
+    background: #67cb5c; }
 
 .dash_b_menu_icon {
   position: absolute;
@@ -362,7 +377,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  z-index: 5;
+  z-index: 3;
   pointer-events: none; }
   .footer_controls .section_inner {
     padding: 10px 35px 30px;
@@ -440,6 +455,14 @@
 .timer_holder {
   width: 100px;
   height: 100px; }
+  .timer_holder:before {
+    content: '';
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background: #f0f2f3;
+    z-index: 1;
+    border-radius: 100%; }
 
 .timer_wrapper {
   left: 0;
@@ -479,3 +502,22 @@
 .timer_l {
   clip: rect(auto, 50px, auto, auto);
   transform: rotate(-180deg); }
+
+.gl_overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 3;
+  background: rgba(26, 26, 26, 0.9); }
+
+.popup_wrapper {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 4; }

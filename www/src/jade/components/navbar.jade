@@ -1,2 +1,16 @@
-.navbar
-  include nav
+.nav_bar.navBar
+  .section_inner
+    ul.nav_list
+      li
+        .nav_unit.scrollTo.clr_green(data-scroll='#meetings_block')
+          span.mb.nav_unit_counter 1
+          span.mb Заседания сегодня
+      li
+        .nav_unit.scrollTo.clr_orange(data-scroll='#instructions_block')
+          span.mb.nav_unit_counter 4
+          span.mb Поручения
+      li
+        .nav_unit.scrollTo.clr_blue(data-scroll='#actions_block')
+          span.mb.nav_unit_counter 2
+          span.mb Действия
+  

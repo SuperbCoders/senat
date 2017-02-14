@@ -7,8 +7,19 @@
           span.nav_counter 3
       li.user_b_item
         .user_b_control
-          a.search_btn(href='#')
+          .search_btn.openForm(data-href='#search_popup')
       li.user_b_item
         .user_b_control
-          .user_avatar
+          .user_avatar.userMenuBtn
             img(src='img/avatar.png')
+          .user_menu_w.menu_w
+            ul.dash_b_menu_list
+              li.dash_menu_group
+                span.mb Созонов Владислав Андреевич
+              li: a.dash_menu_link(href='#')
+                span.mb Настройки профиля
+              li: a.dash_menu_link(href='#')
+                span.mb Администрирование
+              li: a.dash_menu_link(href='#')
+                span.mb Выйти
+          

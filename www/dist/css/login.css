@@ -307,6 +307,8 @@ html {
     min-height: 100%; }
   html.stick_header .wrapper {
     padding-top: 120px; }
+  html.nav_header .wrapper {
+    padding-top: 170px; }
 
 body {
   background: #f0f2f3;

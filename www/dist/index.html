@@ -31,7 +31,7 @@
       <div class="header">
         <div class="section_inner clearfix">
           <div class="logo_block"><a href="#" class="logo clr_white mb"><span class="logo_icon"></span></a></div>
-          <div class="navbar">
+          <div class="main_nav">
             <ul class="nav mb">
               <li class="nav_item"><a href="meetings.html" class="nav_link">Заседания</a>
               </li>
@@ -54,31 +54,41 @@
                   <div class="user_b_control"><a href="#" class="notification_btn"></a><span class="nav_counter">3</span></div>
                 </li>
                 <li class="user_b_item">
-                  <div class="user_b_control"><a href="#" class="search_btn"></a></div>
+                  <div class="user_b_control">
+                    <div data-href="#search_popup" class="search_btn openForm"></div>
+                  </div>
                 </li>
                 <li class="user_b_item">
                   <div class="user_b_control">
-                    <div class="user_avatar"><img src="img/avatar.png"></div>
+                    <div class="user_avatar userMenuBtn"><img src="img/avatar.png"></div>
+                    <div class="user_menu_w menu_w">
+                      <ul class="dash_b_menu_list">
+                        <li class="dash_menu_group"><span class="mb">Созонов Владислав Андреевич</span></li>
+                        <li><a href="#" class="dash_menu_link"><span class="mb">Настройки профиля</span></a></li>
+                        <li><a href="#" class="dash_menu_link"><span class="mb">Администрирование</span></a></li>
+                        <li><a href="#" class="dash_menu_link"><span class="mb">Выйти</span></a></li>
+                      </ul>
+                    </div>
                   </div>
                 </li>
               </ul>
             </div>
           </div>
         </div>
-        <div class="unit_nav">
-          <div class="section_inner">
-            <ul class="nav_list">
-              <li>
-                <div data-scroll="#meetings_block" class="nav_unit scrollTo clr_green"><span class="nav_unit_counter">1</span><span>Заседания сегодня</span></div>
-              </li>
-              <li>
-                <div data-scroll="#meetings_block" class="nav_unit scrollTo clr_orange"><span class="nav_unit_counter">4</span><span>Поручения</span></div>
-              </li>
-              <li>
-                <div data-scroll="#meetings_block" class="nav_unit scrollTo clr_blue"><span class="nav_unit_counter">2</span><span>Действия</span></div>
-              </li>
-            </ul>
-          </div>
+      </div>
+      <div class="nav_bar navBar">
+        <div class="section_inner">
+          <ul class="nav_list">
+            <li>
+              <div data-scroll="#meetings_block" class="nav_unit scrollTo clr_green"><span class="mb nav_unit_counter">1</span><span class="mb">Заседания сегодня</span></div>
+            </li>
+            <li>
+              <div data-scroll="#instructions_block" class="nav_unit scrollTo clr_orange"><span class="mb nav_unit_counter">4</span><span class="mb">Поручения</span></div>
+            </li>
+            <li>
+              <div data-scroll="#actions_block" class="nav_unit scrollTo clr_blue"><span class="mb nav_unit_counter">2</span><span class="mb">Действия</span></div>
+            </li>
+          </ul>
         </div>
       </div>
       <div class="main_content _has_footer_controls">
@@ -128,6 +138,7 @@
               </ul>
             </div>
             <div class="dash_box_footer"><a href="index.html" class="btn_v1 btn_white dash_btn">СМОТРЕТЬ ОТЧЕТНОСТЬ</a></div>
+            <div class="navBarMark"></div>
           </div>
           <div id="meetings_block" class="dash_box_title clr_green">ЗАСЕДАНИЯ</div>
           <ul class="dashboard_list">
@@ -283,7 +294,7 @@
                         <div class="dash_b_menu_btn dashMenuBtn">
                           <div class="dash_b_menu_icon"></div>
                         </div>
-                        <div class="dash_b_menu_w">
+                        <div class="dash_b_menu_w menu_w">
                           <ul class="dash_b_menu_list">
                             <li class="dash_menu_group"><span class="mb">Действия</span></li>
                             <li><a href="#" class="dash_menu_link"><span class="mb">Редактировать</span></a></li>
@@ -292,9 +303,9 @@
                           </ul>
                           <ul class="dash_b_menu_list">
                             <li class="dash_menu_group"><span class="mb">Cтатус</span></li>
-                            <li><a href="#" class="dash_menu_link"><span class="mb">В ПРОЦЕССЕ</span></a></li>
-                            <li><a href="#" class="dash_menu_link"><span class="mb">НОВАЯ</span></a></li>
-                            <li><a href="#" class="dash_menu_link"><span class="mb">ЗАВЕРШЕНО</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _in_process"></span><span class="mb">В ПРОЦЕССЕ</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _new"></span><span class="mb">НОВАЯ</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _completed"></span><span class="mb">ЗАВЕРШЕНО</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -327,7 +338,7 @@
                         <div class="dash_b_menu_btn dashMenuBtn">
                           <div class="dash_b_menu_icon"></div>
                         </div>
-                        <div class="dash_b_menu_w">
+                        <div class="dash_b_menu_w menu_w">
                           <ul class="dash_b_menu_list">
                             <li class="dash_menu_group"><span class="mb">Действия</span></li>
                             <li><a href="#" class="dash_menu_link"><span class="mb">Редактировать</span></a></li>
@@ -336,9 +347,9 @@
                           </ul>
                           <ul class="dash_b_menu_list">
                             <li class="dash_menu_group"><span class="mb">Cтатус</span></li>
-                            <li><a href="#" class="dash_menu_link"><span class="mb">В ПРОЦЕССЕ</span></a></li>
-                            <li><a href="#" class="dash_menu_link"><span class="mb">НОВАЯ</span></a></li>
-                            <li><a href="#" class="dash_menu_link"><span class="mb">ЗАВЕРШЕНО</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _in_process"></span><span class="mb">В ПРОЦЕССЕ</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _new"></span><span class="mb">НОВАЯ</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _completed"></span><span class="mb">ЗАВЕРШЕНО</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -371,7 +382,7 @@
                         <div class="dash_b_menu_btn dashMenuBtn">
                           <div class="dash_b_menu_icon"></div>
                         </div>
-                        <div class="dash_b_menu_w">
+                        <div class="dash_b_menu_w menu_w">
                           <ul class="dash_b_menu_list">
                             <li class="dash_menu_group"><span class="mb">Действия</span></li>
                             <li><a href="#" class="dash_menu_link"><span class="mb">Редактировать</span></a></li>
@@ -380,9 +391,9 @@
                           </ul>
                           <ul class="dash_b_menu_list">
                             <li class="dash_menu_group"><span class="mb">Cтатус</span></li>
-                            <li><a href="#" class="dash_menu_link"><span class="mb">В ПРОЦЕССЕ</span></a></li>
-                            <li><a href="#" class="dash_menu_link"><span class="mb">НОВАЯ</span></a></li>
-                            <li><a href="#" class="dash_menu_link"><span class="mb">ЗАВЕРШЕНО</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _in_process"></span><span class="mb">В ПРОЦЕССЕ</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _new"></span><span class="mb">НОВАЯ</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _completed"></span><span class="mb">ЗАВЕРШЕНО</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -415,7 +426,7 @@
                         <div class="dash_b_menu_btn dashMenuBtn">
                           <div class="dash_b_menu_icon"></div>
                         </div>
-                        <div class="dash_b_menu_w">
+                        <div class="dash_b_menu_w menu_w">
                           <ul class="dash_b_menu_list">
                             <li class="dash_menu_group"><span class="mb">Действия</span></li>
                             <li><a href="#" class="dash_menu_link"><span class="mb">Редактировать</span></a></li>
@@ -424,9 +435,9 @@
                           </ul>
                           <ul class="dash_b_menu_list">
                             <li class="dash_menu_group"><span class="mb">Cтатус</span></li>
-                            <li><a href="#" class="dash_menu_link"><span class="mb">В ПРОЦЕССЕ</span></a></li>
-                            <li><a href="#" class="dash_menu_link"><span class="mb">НОВАЯ</span></a></li>
-                            <li><a href="#" class="dash_menu_link"><span class="mb">ЗАВЕРШЕНО</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _in_process"></span><span class="mb">В ПРОЦЕССЕ</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _new"></span><span class="mb">НОВАЯ</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _completed"></span><span class="mb">ЗАВЕРШЕНО</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -464,7 +475,7 @@
                         <div class="dash_b_menu_btn dashMenuBtn">
                           <div class="dash_b_menu_icon"></div>
                         </div>
-                        <div class="dash_b_menu_w">
+                        <div class="dash_b_menu_w menu_w">
                           <ul class="dash_b_menu_list">
                             <li class="dash_menu_group"><span class="mb">Действия</span></li>
                             <li><a href="#" class="dash_menu_link"><span class="mb">Редактировать</span></a></li>
@@ -473,9 +484,9 @@
                           </ul>
                           <ul class="dash_b_menu_list">
                             <li class="dash_menu_group"><span class="mb">Cтатус</span></li>
-                            <li><a href="#" class="dash_menu_link"><span class="mb">В ПРОЦЕССЕ</span></a></li>
-                            <li><a href="#" class="dash_menu_link"><span class="mb">НОВАЯ</span></a></li>
-                            <li><a href="#" class="dash_menu_link"><span class="mb">ЗАВЕРШЕНО</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _in_process"></span><span class="mb">В ПРОЦЕССЕ</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _new"></span><span class="mb">НОВАЯ</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _completed"></span><span class="mb">ЗАВЕРШЕНО</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -512,7 +523,7 @@
                         <div class="dash_b_menu_btn dashMenuBtn">
                           <div class="dash_b_menu_icon"></div>
                         </div>
-                        <div class="dash_b_menu_w">
+                        <div class="dash_b_menu_w menu_w">
                           <ul class="dash_b_menu_list">
                             <li class="dash_menu_group"><span class="mb">Действия</span></li>
                             <li><a href="#" class="dash_menu_link"><span class="mb">Редактировать</span></a></li>
@@ -521,9 +532,9 @@
                           </ul>
                           <ul class="dash_b_menu_list">
                             <li class="dash_menu_group"><span class="mb">Cтатус</span></li>
-                            <li><a href="#" class="dash_menu_link"><span class="mb">В ПРОЦЕССЕ</span></a></li>
-                            <li><a href="#" class="dash_menu_link"><span class="mb">НОВАЯ</span></a></li>
-                            <li><a href="#" class="dash_menu_link"><span class="mb">ЗАВЕРШЕНО</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _in_process"></span><span class="mb">В ПРОЦЕССЕ</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _new"></span><span class="mb">НОВАЯ</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _completed"></span><span class="mb">ЗАВЕРШЕНО</span></a></li>
                           </ul>
                         </div>
                       </div>
@@ -552,8 +563,27 @@
         </div>
       </div>
     </div>
-    <div class="popup__overlay"></div>
-    <div id="order_popup" class="popup popup__callback"></div>
+    <div class="gl_overlay glOverlay"></div>
+    <div id="search_popup" data-class="search_opened" class="popup_wrapper popupWrapper">
+      <div class="gl_table">
+        <div class="gl_table_cell">
+          <div class="main_content">
+            <div class="section_inner noClose">
+              <div class="search_form">
+                <form action="#">
+                  <div class="form_cell">
+                    <div class="input_w has_icon">
+                      <input placeholder="Поиск" class="f_input input_v2">
+                      <button class="search_submit i-search"></button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <script src="js/vendors/jquery1.10.js"></script>
     <script src="js/vendors/snabbt.min.js"></script>
     <script src="js/vendors/flexibility.js"></script>

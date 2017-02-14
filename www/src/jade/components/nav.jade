@@ -1,15 +1,15 @@
 - var menuList = locals['nav'];
-
-ul.nav.mb
-  each item, ind in menuList
-    li.nav_item
-      a.nav_link(href=item.href class=((ind + 1) == activePage ? 'active' : ''))
-        | #{item.title}
-      - if (item.counter)
-        span.nav_counter= item.counter
-      //- if (item.submenu)
-        ul.nav__submenu.mob-only
-          each subitem, subind in item.submenu
-            li.item
-              a.link(href=subitem.href)
-                | #{subitem.title}
+.main_nav
+  ul.nav.mb
+    each item, ind in menuList
+      li.nav_item
+        a.nav_link(href=item.href class=((ind + 1) == activePage ? 'active' : ''))
+          | #{item.title}
+        - if (item.counter)
+          span.nav_counter= item.counter
+        //- if (item.submenu)
+          ul.nav__submenu.mob-only
+            each subitem, subind in item.submenu
+              li.item
+                a.link(href=subitem.href)
+                  | #{subitem.title}
