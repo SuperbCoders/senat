@@ -1,10 +1,10 @@
 
 .profile_bg_w {
   position: fixed;
-  top: 0;
-  bottom: 0;
+  top: 80px;
   left: 0;
   right: 0;
+  bottom: 0;
 }
 
 .profile_bg {
@@ -27,6 +27,42 @@
       content: '';
       background: transparentize($default_t_color, .7);
     }
+  }
+}
+
+.person_bg_w {
+  position: relative;
+  margin-top: -40px;
+  padding-top: 40px;
+  padding-bottom: 1px;
+
+  .section_inner {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.person_bg {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-repeat: repeat-x;
+  -webkit-filter: blur(30px);
+  -moz-filter: blur(30px);
+  -o-filter: blur(30px);
+  -ms-filter: blur(30px);
+  filter: blur(30px);
+
+  &:before {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: '';
+    background: transparentize($default_t_color, .7);
   }
 }
 

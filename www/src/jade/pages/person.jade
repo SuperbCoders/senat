@@ -1,0 +1,36 @@
+block variables
+  - var bodyClass = 'page_person';
+  - var htmlClass = 'stick_footer stick_header';
+  - var pageTitle = 'Пользователь';
+  - var pageDescription = 'Описание страницы';
+  - var activePage = 0;
+  - var hasUnitNav = false;
+  - var customScripts = ['person.js'];
+
+include ../components/dashboard
+
+extends ../components/layout
+block head
+block content
+  .wrapper
+    include ../components/header
+    include ../components/navbar
+      
+    .main_content
+      .person_bg_w
+        .person_bg.personBG
+          img.hide.personIMG(src='/img/profile_bg.png')
+          
+        .section_inner
+          .profile_block
+            .profile_logout
+              //-a.btn_v1.btn_white_3.logout_btn(href='#') ВЫЙТИ ИЗ АККАУНТА
+            .profile_photo
+              img(src='/img/profile.png')
+            
+            .profile_info.clr_white
+              .profile_name Кислицин Олег Михайлович
+              .profile_post Старший руководитель
+                
+              p Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности
+              
