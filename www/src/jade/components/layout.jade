@@ -1,8 +1,14 @@
 mixin radio_toggle(on, off, flags)
-  label
-    input(type='radio')
-    span.radio_text._on= on
-    span.radio_text._off= off
+  label.radio_toggle(class= flags != undefined ? '_flag' : '')
+    input.hide(type='checkbox')
+    span.radio_text._on
+      - if (flags != undefined && flags.length > 0)
+        img.flag_img(src=flags[0])
+      span= on
+    span.radio_text._off
+      - if (flags != undefined && flags.length > 1)
+        img.flag_img(src=flags[1])
+      span= off
 
 block variables
   

@@ -382,6 +382,9 @@
 .filter_unit._active .dash_box_title {
   display: none; }
 
+.search_field {
+  margin-bottom: 30px; }
+
 .search_results .caption_v1 {
   margin-top: 58px; }
 
@@ -453,7 +456,7 @@
 
 .profile_s_row {
   position: relative;
-  line-height: 40px;
+  line-height: 38px;
   padding: 20px 0; }
   .profile_s_row:before {
     content: '';
