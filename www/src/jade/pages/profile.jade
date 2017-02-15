@@ -1,0 +1,65 @@
+block variables
+  - var bodyClass = 'page_profile';
+  - var htmlClass = 'stick_footer stick_header';
+  - var pageTitle = 'Профиль';
+  - var pageDescription = 'Описание страницы';
+  - var activePage = 0;
+  - var hasUnitNav = false;
+  - var customScripts = ['vendors/backstretch.js', 'profile.js'];
+
+include ../components/dashboard
+
+extends ../components/layout
+block head
+block content
+  .wrapper
+    include ../components/header
+    include ../components/navbar
+
+    .profile_bg_w
+      .profile_bg.profileBG
+        img.hide.profileIMG(src='/img/person_bg.png')
+        
+    .main_content
+      .section_inner
+        .profile_block
+          .profile_logout
+            a.btn_v1.btn_white_3.logout_btn(href='#') ВЫЙТИ ИЗ АККАУНТА
+          .profile_photo
+            img(src='/img/person.png')
+          
+          .profile_info.clr_white
+            .profile_name Созонов Владислав Андреевич
+            .profile_post Руководитель комитета
+              
+            p Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности
+              
+        .profile_settings.clr_white
+          .profile_s_row
+            .fr: .mb 
+              .profile_s_val
+                +radio_toggle('Ru', 'Eng')
+            .profile_s_name
+              .mb Язык интерфейса
+          
+          .profile_s_row
+            .fr: .mb 
+              .profile_s_val
+                +radio_toggle('Да', 'Нет')
+            .profile_s_name
+              .mb Уведомлять о новых заседаниях
+          
+          .profile_s_row
+            .fr: .mb 
+              .profile_s_val
+                +radio_toggle('Да', 'Нет')
+            .profile_s_name
+              .mb Уведомлять о сообщениях
+          
+          .profile_s_row
+            .fr: .mb 
+              .profile_s_val
+                +radio_toggle('Да', 'Нет')
+            .profile_s_name
+              .mb Уведомлять о задачах
+                

@@ -1,5 +1,18 @@
 //************  buttons
 
+%main_btn {
+  padding: 10px;
+  display: inline-block;
+  vertical-align: top;
+  cursor: pointer;
+  border-radius: 20px;
+  font: 10px/20px $HelveticaNeueBold;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: .1em;
+  text-align: center;
+}
+
 .btn_v1 {
 
   &.f_control_btn {
@@ -34,21 +47,17 @@
   }
 
   &.dash_btn {
-    padding: 10px;
-    display: inline-block;
-    vertical-align: top;
-    cursor: pointer;
-    border-radius: 20px;
-    font: 10px/20px $HelveticaNeueBold;
-    text-transform: uppercase;
-    text-decoration: none;
-    letter-spacing: .1em;
+    @extend %main_btn;
     min-width: 200px;
-    text-align: center;
 
     .more_block & {
       min-width: 230px;
     }
+  }
+
+  &.logout_btn {
+    @extend %main_btn;
+    min-width: 180px;
   }
 }
 
@@ -92,6 +101,18 @@
   &:hover {
     background: $default_t_color;
     color: $gl_white;
+  }
+}
+
+.btn_white_3 {
+  @include transition_all(background .3s, color .3s);
+  background: none;
+  border: 1px solid $gl_white;
+  color: $gl_white;
+
+  &:hover {
+    background: $gl_white;
+    color: $default_t_color;
   }
 }
 

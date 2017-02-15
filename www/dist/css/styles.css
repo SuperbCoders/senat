@@ -1,4 +1,4 @@
-.dash_box_inner:after, .dash_list:after, .filter_controls:after {
+.dash_box_inner:after, .dash_list:after, .filter_controls:after, .profile_block:after, .profile_s_row:after {
   position: static;
   display: block;
   height: 0;
@@ -384,6 +384,95 @@
 
 .search_results .caption_v1 {
   margin-top: 58px; }
+
+.profile_bg_w {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0; }
+
+.profile_bg {
+  width: 100%;
+  height: 100%; }
+  .profile_bg .backstretch {
+    -moz-filter: blur(30px);
+    -o-filter: blur(30px);
+    -ms-filter: blur(30px);
+    filter: blur(30px); }
+    .profile_bg .backstretch:before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: '';
+      background: rgba(71, 71, 71, 0.3); }
+
+.profile_block {
+  min-height: 220px;
+  margin: 22px 0 18px; }
+
+.profile_info {
+  padding: 0 200px; }
+  .profile_info p {
+    margin-top: 20px;
+    font: 14px/18px "HelveticaNeueLight", sans-serif;
+    letter-spacing: .065em; }
+
+.profile_logout {
+  float: right;
+  padding-top: 8px;
+  margin-bottom: 20px; }
+
+.profile_photo {
+  float: left;
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+  overflow: hidden;
+  margin-bottom: 20px; }
+  .profile_photo img {
+    display: block;
+    max-width: 100%;
+    border-radius: 100%; }
+
+.profile_name {
+  font: 24px "HelveticaNeueLight", sans-serif;
+  letter-spacing: .045em;
+  padding: 8px 0 4px; }
+
+.profile_post {
+  font: 18px "HelveticaNeueLight", sans-serif;
+  letter-spacing: .06em;
+  opacity: .5;
+  margin-bottom: 20px; }
+
+.profile_settings {
+  margin-bottom: 20px; }
+
+.profile_s_row {
+  position: relative;
+  line-height: 40px;
+  padding: 20px 0; }
+  .profile_s_row:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -80px;
+    left: -80px;
+    border-top: 1px solid #d8d8d8; }
+
+.profile_s_name {
+  padding-right: 110px;
+  font-size: 18px;
+  letter-spacing: .04em; }
+
+.profile_s_val {
+  width: 90px;
+  font-size: 18px;
+  color: #fff;
+  letter-spacing: .05em; }
 
 .footer {
   padding-top: 10px;

@@ -1,5 +1,19 @@
-block variables
+mixin radio_toggle(on, off, flags)
+  label
+    input(type='radio')
+    span.radio_text._on= on
+    span.radio_text._off= off
 
+block variables
+  
+- var scriptsArr= ['vendors/jquery1.10.js','vendors/snabbt.min.js','vendors/flexibility.js'];
+
+- if (customScripts != undefined)
+  - for scr in customScripts
+    - scriptsArr.push(scr);
+
+- scriptsArr.push('main.js');
+  
 include page
 include ../utils/scripts
 
@@ -11,9 +25,4 @@ html(lang='ru' class=htmlClass || '')
 
     - if (!loginPage)
       include popups
-      +scripts([
-        'vendors/jquery1.10.js',
-        'vendors/snabbt.min.js',
-        'vendors/flexibility.js',
-        'main.js'
-      ])
+      +scripts(scriptsArr)
