@@ -1,4 +1,5 @@
-.dash_box_inner:after, .dash_list:after, .filter_controls:after, .contact_block:after, .profile_block:after, .profile_s_row:after {
+@charset "UTF-8";
+.dash_box_inner:after, .dash_list:after, .filter_controls:after, .contact_block:after, .profile_block:after, .profile_s_row:after, .filter_list:after {
   position: static;
   display: block;
   height: 0;
@@ -16,6 +17,138 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%); }
+
+@font-face {
+  font-family: 'senat_icons';
+  src: url("../fonts/senat_icons.eot?odeiym");
+  src: url("../fonts/senat_icons.eot?odeiym#iefix") format("embedded-opentype"), url("../fonts/senat_icons.ttf?odeiym") format("truetype"), url("../fonts/senat_icons.woff?odeiym") format("woff"), url("../fonts/senat_icons.svg?odeiym#senat_icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="i-"], [class*=" i-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'senat_icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.i-check:before {
+  content: ""; }
+
+.i-help:before {
+  content: ""; }
+
+.i-plus2:before {
+  content: ""; }
+
+.i-minus:before {
+  content: ""; }
+
+.i-check2:before {
+  content: ""; }
+
+.i-plus:before {
+  content: ""; }
+
+.i-circle-minus:before {
+  content: ""; }
+
+.i-circle-plus:before {
+  content: ""; }
+
+.i-cross:before {
+  content: ""; }
+
+.i-chevron-right:before {
+  content: ""; }
+
+.i-chevron-left:before {
+  content: ""; }
+
+.i-chevron-down:before {
+  content: ""; }
+
+.i-chevron-up:before {
+  content: ""; }
+
+.i-folder:before {
+  content: ""; }
+
+.i-file_doc:before {
+  content: ""; }
+
+.i-file_new:before {
+  content: ""; }
+
+.i-file_pdf:before {
+  content: ""; }
+
+.i-pin_small:before {
+  content: ""; }
+
+.i-timer:before {
+  content: ""; }
+
+.i-calendar:before {
+  content: ""; }
+
+.i-chat:before {
+  content: ""; }
+
+.i-envelope:before {
+  content: ""; }
+
+.i-phone:before {
+  content: ""; }
+
+.i-checkmark_bold:before {
+  content: ""; }
+
+.i-search:before {
+  content: ""; }
+
+.i-bell:before {
+  content: ""; }
+
+.i-stat:before {
+  content: ""; }
+
+.i-list:before {
+  content: ""; }
+
+.i-answer:before {
+  content: ""; }
+
+.i-lock:before {
+  content: ""; }
+
+.i-user:before {
+  content: ""; }
+
+.i-logo:before {
+  content: ""; }
+
+.i-location2:before {
+  content: ""; }
+
+.filter_btn:after, .filter_btn:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "senat_icons" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
 
 .gl_table {
   display: table;
@@ -550,6 +683,41 @@
   font-size: 18px;
   color: #fff;
   letter-spacing: .05em; }
+
+.filter_bar {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background: #fff; }
+  .filter_bar .section_inner {
+    padding: 0 32px; }
+
+.filter_btn {
+  padding-right: 20px;
+  line-height: 30px;
+  font-size: 12px;
+  letter-spacing: .075em;
+  position: relative; }
+  .filter_btn:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    font-size: 14px;
+    margin-top: -10px;
+    top: 50%;
+    line-height: 20px; }
+  .filter_btn:hover {
+    opacity: .5; }
+    .filter_btn:hover:before {
+      content: ""; }
+
+.filter_list {
+  margin-left: -45px;
+  padding: 10px 0; }
+  .filter_list > li {
+    float: left;
+    padding-left: 55px; }
 
 .footer {
   padding-top: 10px;

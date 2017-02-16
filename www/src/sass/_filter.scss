@@ -1,0 +1,49 @@
+.filter_bar {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background: $gl_white;
+
+  .section_inner {
+    padding: 0 32px;
+  }
+}
+
+.filter_btn {
+  @extend %icon_pseudo;
+  padding-right: 20px;
+  line-height: 30px;
+  font-size: 12px;
+  letter-spacing: .075em;
+  position: relative;
+
+  &:before {
+    content: $i-chevron-down;
+    position: absolute;
+    right: 0;
+    font-size: 14px;
+    margin-top: -10px;
+    top: 50%;
+    line-height: 20px;
+  }
+  
+  &:hover{
+    opacity: .5;
+    
+    &:before{
+      content: $i-chevron-up;
+    }
+  }
+}
+
+.filter_list {
+  @extend %clearfix;
+  margin-left: -45px;
+  padding: 10px 0;
+  
+  > li {
+    float: left;
+    padding-left: 55px;
+  }
+}
