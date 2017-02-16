@@ -1,4 +1,4 @@
-.dash_box_inner:after, .dash_list:after, .filter_controls:after, .profile_block:after, .profile_s_row:after {
+.dash_box_inner:after, .dash_list:after, .filter_controls:after, .contact_block:after, .profile_block:after, .profile_s_row:after {
   position: static;
   display: block;
   height: 0;
@@ -174,7 +174,7 @@
   font: 12px "HelveticaNeueLight", sans-serif;
   margin-bottom: 10px;
   padding-left: 8px;
-  letter-spacing: .08em; }
+  letter-spacing: .1em; }
   .dashboard_list + .dash_box_title {
     margin-top: 15px; }
 
@@ -262,6 +262,11 @@
   cursor: pointer; }
   .open_menu .dash_b_menu_btn, .dash_b_menu_btn:hover {
     background: #e2e3e4; }
+
+.dash_b_term {
+  font-size: 12px;
+  opacity: .5;
+  letter-spacing: .05em; }
 
 .menu_w {
   position: absolute;
@@ -427,6 +432,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  overflow: hidden;
   background-repeat: repeat-x;
   -moz-filter: blur(30px);
   -o-filter: blur(30px);
@@ -441,12 +447,51 @@
     content: '';
     background: rgba(71, 71, 71, 0.3); }
 
+.person_info {
+  padding: 35px 40px 25px;
+  border-radius: 10px;
+  letter-spacing: .045em;
+  background: #fff; }
+  .person_info p {
+    font-size: 16px;
+    margin-bottom: 10px; }
+
+.profile_contacts {
+  background: #fff;
+  padding: 20px 0;
+  line-height: 40px;
+  margin-bottom: 35px; }
+
+.contact_block {
+  margin: 0 -88px; }
+
+.contact_item.fl {
+  padding-left: 88px; }
+
+.contact_item.fr {
+  padding-right: 88px; }
+
+.contact_link {
+  font-size: 15px;
+  line-height: 20px;
+  color: #6e737a;
+  letter-spacing: .04em; }
+
+.contact_icon {
+  color: #474747;
+  margin-right: 10px; }
+  .contact_icon.i-phone {
+    font-size: 20px; }
+  .contact_icon.i-envelope {
+    font-size: 15px; }
+
 .profile_block {
-  min-height: 220px;
-  margin: 22px 0 18px; }
+  min-height: 217px;
+  margin: 22px 0 0; }
 
 .profile_info {
-  padding: 0 200px; }
+  padding: 0 200px;
+  min-height: 160px; }
   .profile_info p {
     margin-top: 20px;
     font: 14px/18px "HelveticaNeueLight", sans-serif;
@@ -481,7 +526,7 @@
   margin-bottom: 20px; }
 
 .profile_settings {
-  margin-bottom: 20px; }
+  margin: 20px 0; }
 
 .profile_s_row {
   position: relative;

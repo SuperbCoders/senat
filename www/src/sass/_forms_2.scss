@@ -49,7 +49,7 @@
     }
 
     &:focus {
-      border-color: #6e737a;
+      border-color: $gl_gray_2;
 
       &:empty {
         &::-moz-placeholder {

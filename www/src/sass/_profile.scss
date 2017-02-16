@@ -48,6 +48,7 @@
   bottom: 0;
   left: 0;
   right: 0;
+  overflow: hidden;
   background-repeat: repeat-x;
   -webkit-filter: blur(30px);
   -moz-filter: blur(30px);
@@ -66,14 +67,70 @@
   }
 }
 
+.person_info {
+  padding: 35px 40px 25px;
+  border-radius: 10px;
+  letter-spacing: .045em;
+  background: $gl_white;
+  
+  p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+}
+
+.profile_contacts {
+  background: $gl_white;
+  padding: 20px 0;
+  line-height: 40px;
+  margin-bottom: 35px;
+}
+
+.contact_block {
+  @extend %clearfix;
+  margin: 0 -88px;
+}
+
+.contact_item {
+
+  &.fl {
+    padding-left: 88px;
+  }
+
+  &.fr {
+    padding-right: 88px;
+  }
+}
+
+.contact_link {
+  font-size: 15px;
+  line-height: 20px;
+  color: $gl_gray_2;
+  letter-spacing: .04em;
+}
+
+.contact_icon {
+  color: $default_t_color;
+  margin-right: 10px;
+
+  &.i-phone {
+    font-size: 20px;
+  }
+
+  &.i-envelope {
+    font-size: 15px;
+  }
+}
+
 .profile_block {
   @extend %clearfix;
-  min-height: 220px;
-  margin: 22px 0 18px;
+  min-height: 217px;
+  margin: 22px 0 0;
 }
 
 .profile_info {
   padding: 0 200px;
+  min-height: 160px;
 
   p {
     margin-top: 20px;
@@ -117,7 +174,7 @@
 }
 
 .profile_settings {
-  margin-bottom: 20px;
+  margin: 20px 0;
 }
 
 .profile_s_row {

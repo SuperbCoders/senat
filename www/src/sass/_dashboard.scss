@@ -220,7 +220,7 @@
   font: 12px $HelveticaNeueLight;
   margin-bottom: 10px;
   padding-left: 8px;
-  letter-spacing: .08em;
+  letter-spacing: .1em;
 
   .dashboard_list + & {
     margin-top: 15px;
@@ -346,6 +346,12 @@
   &:hover {
     background: #e2e3e4;
   }
+}
+
+.dash_b_term {
+  font-size: 12px;
+  opacity: .5;
+  letter-spacing: .05em;
 }
 
 .menu_w {

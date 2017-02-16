@@ -250,7 +250,7 @@
   border-bottom: 2px solid transparent;
 
   li:not(.scroll_done) & {
-    color: #6e737a;
+    color: $gl_gray_2;
   }
 
   .scroll_done & {

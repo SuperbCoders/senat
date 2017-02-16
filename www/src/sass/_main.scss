@@ -21,7 +21,7 @@
   letter-spacing: .07em;
 
   .filter_item:not(._active) & {
-    color: #6e737a;
+    color: $gl_gray_2;
   }
 
   ._active & {
