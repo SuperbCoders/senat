@@ -118,7 +118,7 @@
 .i-location2:before {
   content: ""; }
 
-.dash_box_inner:after, .dash_list:after, .filter_controls:after, .participants_block:after, .member_list:after, .contact_block:after, .profile_block:after, .profile_s_row:after {
+.dash_box_inner:after, .dash_list:after, .filter_controls:after, .participants_block:after, .member_list:after, .contact_block:after, .profile_block:after, .profile_s_row:after, .filter_list:after {
   position: static;
   display: block;
   height: 0;
@@ -137,7 +137,7 @@
   left: 50%;
   transform: translate(-50%, -50%); }
 
-.dash_b_point:after, .dash_b_location:after, .dash_b_point:before, .dash_b_location:before {
+.dash_b_point:after, .dash_b_location:after, .filter_btn:after, .dash_b_point:before, .dash_b_location:before, .filter_btn:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "senat_icons" !important;
   speak: none;
@@ -659,6 +659,11 @@
     padding-left: 12px;
     margin-bottom: 15px; }
 
+.participant_vote {
+  float: right; }
+  .participant_vote .btn_v1.dash_btn {
+    min-width: 230px; }
+
 .action_progress_block p {
   font-size: 12px;
   opacity: .5; }
@@ -910,6 +915,41 @@
   font-size: 18px;
   color: #fff;
   letter-spacing: .05em; }
+
+.filter_bar {
+  position: fixed;
+  top: 80px;
+  left: 0;
+  right: 0;
+  background: #fff; }
+  .filter_bar .section_inner {
+    padding: 0 32px; }
+
+.filter_btn {
+  padding-right: 23px;
+  line-height: 30px;
+  font-size: 12px;
+  letter-spacing: .075em;
+  position: relative; }
+  .filter_btn:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    font-size: 14px;
+    margin-top: -10px;
+    top: 50%;
+    line-height: 20px; }
+  .filter_btn:hover {
+    opacity: .5; }
+    .filter_btn:hover:before {
+      content: ""; }
+
+.filter_list {
+  padding: 10px 0; }
+  .filter_list > li {
+    float: left;
+    padding-right: 30px;
+    padding-left: 20px; }
 
 .footer {
   padding-top: 10px;

@@ -154,6 +154,14 @@
   }
 }
 
+.participant_vote {
+  float: right;
+
+  .btn_v1.dash_btn {
+    min-width: 230px;
+  }
+}
+
 .action_progress_block {
 
   p {
@@ -276,7 +284,7 @@
   display: inline-block;
   vertical-align: bottom;
   border-radius: 100%;
-  
+
   img {
     display: block;
     max-width: 100%;

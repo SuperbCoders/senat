@@ -12,7 +12,7 @@
 
 .filter_btn {
   @extend %icon_pseudo;
-  padding-right: 20px;
+  padding-right: 23px;
   line-height: 30px;
   font-size: 12px;
   letter-spacing: .075em;
@@ -39,11 +39,11 @@
 
 .filter_list {
   @extend %clearfix;
-  margin-left: -45px;
   padding: 10px 0;
   
   > li {
     float: left;
-    padding-left: 55px;
+    padding-right: 30px;
+    padding-left: 20px;
   }
 }
