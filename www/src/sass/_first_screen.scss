@@ -6,7 +6,7 @@ html, body {
 
 html {
   overflow-y: scroll;
-  overflow-x: hidden;
+  //overflow-x: hidden;
 
   &.stick_footer {
     .wrapper {
@@ -23,6 +23,12 @@ html {
   &.nav_header {
     .wrapper {
       padding-top: 170px;
+    }
+  }
+
+  &.action_header {
+    .wrapper {
+      padding-top: 130px;
     }
   }
 }
@@ -158,6 +164,10 @@ body {
 
 .clr_green {
   color: $gl_green;
+}
+
+.clr_red {
+  color: $gl_red_3;
 }
 
 .clr_blue {

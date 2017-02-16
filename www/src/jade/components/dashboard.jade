@@ -1,3 +1,10 @@
+mixin participant(post)
+  .dash_b_participant
+    .participant_avatar
+      img(src='./img/participant.png')
+    .participant_name Долгов Ч.М.
+    .participant_post= post 
+      
 mixin dash_b_menu()
   .dash_b_menu
     .dash_b_menu_btn.dashMenuBtn: .dash_b_menu_icon
@@ -63,7 +70,7 @@ mixin meeting_box(date, status, author)
                 span.mb.i-circle-minus.dash_b_icon
                 span.mb 2
         .mb
-          dash_b_menu()
+          +dash_b_menu()
 
 mixin instruction_box(date, status)
   .dash_box
@@ -151,3 +158,90 @@ mixin question_box(date, status, mod_1)
 
         .mb
           +dash_b_menu()
+
+mixin action_brief(date, status, brief_menu, users, counter, progress, points)
+  .dash_box
+    .dash_box_inner
+      .fl
+        .mb
+          .dash_b_date
+            - if (counter)
+              .dash_b_control.clr_blue
+                span= counter
+            - if (date)
+              .day= date
+              .month сентября
+            - else
+              a.dash_b_control.clr_blue(href='#')
+                span.i-help
+      .fl
+        .mb
+          .dash_b_info
+            - if (points != undefined)
+              - for pnt in points
+                .dash_b_point= pnt
+            - else
+              .dash_b_location
+                span  Офис 302, 3 этаж, главное здание корпус А, Москва, шоссе Энтузиастов, 12, 2
+
+      .fr
+        .mb
+          - if (status == '_approved')
+            .dash_b_status._name(class= status ? status : '_completed') УТВЕРЖДЕН
+          - else if (status == '_rejected')
+            .dash_b_status._name(class= status ? status : '_completed') ОТКЛОНЕН
+         
+          .dash_b_status(class= status ? status : '_completed')
+            - if (status == '_in_process')
+              | ПРОВОДИТСЯ
+            - else if (status == '_new')
+              | НОВАЯ
+            - else if (status == '_in_preparation')
+              | ПОДГОТОВКА
+            - else if (status == '_in_vote')
+              | НА ГОЛОСОВАНИИ
+            - else if (status == '_in_review')
+              | РАССМАТРИВАЕТСЯ
+            - else
+              span.dash_b_status_counter
+                span.mb.i-check.dash_b_icon
+                span.mb 10
+              span.dash_b_status_counter
+                span.mb.i-cross.dash_b_icon
+                span.mb 5
+              span.dash_b_status_counter
+                span.mb.i-circle-minus.dash_b_icon
+                span.mb 2
+
+        - if (brief_menu)
+          .mb
+            +dash_b_menu()
+
+
+      - if (users > 0)
+        .participants_block
+          
+          - if (users > 1)
+            ul.participants_list
+              li
+                +participant('Председатель')
+              li
+                +participant('Секретарь')
+    
+          - else if (users == 1)
+            ul.participants_list
+              li
+                +participant('Председатель')
+    
+              - if (progress)
+                li
+                  .action_progress_block
+                    .action_progress_time
+                      span.mb 15:59
+                      .mb
+                        .action_progress_box
+                          .action_progress_val(style='width: 90%;')
+                    p Минут на вопрос
+          
+          .participant_vote
+            a.btn_v1.dash_btn.btn_blue(href='#'): span ПЕРЕЙТИ К ГОЛОСОВАНИЮ

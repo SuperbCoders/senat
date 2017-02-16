@@ -1,4 +1,124 @@
-.dash_box_inner:after, .dash_list:after, .filter_controls:after, .contact_block:after, .profile_block:after, .profile_s_row:after {
+@charset "UTF-8";
+@font-face {
+  font-family: 'senat_icons';
+  src: url("fonts/senat_icons.eot?msvh2w");
+  src: url("fonts/senat_icons.eot?msvh2w#iefix") format("embedded-opentype"), url("fonts/senat_icons.ttf?msvh2w") format("truetype"), url("fonts/senat_icons.woff?msvh2w") format("woff"), url("fonts/senat_icons.svg?msvh2w#senat_icons") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+[class^="i-"], [class*=" i-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'senat_icons' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.i-check:before {
+  content: ""; }
+
+.i-help:before {
+  content: ""; }
+
+.i-plus2:before {
+  content: ""; }
+
+.i-minus:before {
+  content: ""; }
+
+.i-check2:before {
+  content: ""; }
+
+.i-plus:before {
+  content: ""; }
+
+.i-circle-minus:before {
+  content: ""; }
+
+.i-circle-plus:before {
+  content: ""; }
+
+.i-cross:before {
+  content: ""; }
+
+.i-chevron-right:before {
+  content: ""; }
+
+.i-chevron-left:before {
+  content: ""; }
+
+.i-chevron-down:before {
+  content: ""; }
+
+.i-chevron-up:before {
+  content: ""; }
+
+.i-folder:before {
+  content: ""; }
+
+.i-file_doc:before {
+  content: ""; }
+
+.i-file_new:before {
+  content: ""; }
+
+.i-file_pdf:before {
+  content: ""; }
+
+.i-pin_small:before {
+  content: ""; }
+
+.i-timer:before {
+  content: ""; }
+
+.i-calendar:before {
+  content: ""; }
+
+.i-chat:before {
+  content: ""; }
+
+.i-envelope:before {
+  content: ""; }
+
+.i-phone:before {
+  content: ""; }
+
+.i-checkmark_bold:before {
+  content: ""; }
+
+.i-search:before {
+  content: ""; }
+
+.i-bell:before {
+  content: ""; }
+
+.i-stat:before {
+  content: ""; }
+
+.i-list:before {
+  content: ""; }
+
+.i-answer:before {
+  content: ""; }
+
+.i-lock:before {
+  content: ""; }
+
+.i-user:before {
+  content: ""; }
+
+.i-logo:before {
+  content: ""; }
+
+.i-location2:before {
+  content: ""; }
+
+.dash_box_inner:after, .dash_list:after, .filter_controls:after, .participants_block:after, .member_list:after, .contact_block:after, .profile_block:after, .profile_s_row:after {
   position: static;
   display: block;
   height: 0;
@@ -17,6 +137,19 @@
   left: 50%;
   transform: translate(-50%, -50%); }
 
+.dash_b_point:after, .dash_b_location:after, .dash_b_point:before, .dash_b_location:before {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "senat_icons" !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
 .gl_table {
   display: table;
   width: 100%;
@@ -31,6 +164,17 @@
   .dash_box._alone {
     margin-bottom: 35px; }
 
+.box_caption {
+  font-size: 18px;
+  color: #3c3c3c;
+  margin-bottom: 30px;
+  letter-spacing: .03em; }
+
+.box_splitter {
+  margin: 10px -15px 30px;
+  height: 1px;
+  background: #d8d8d8; }
+
 .dash_box_inner {
   border-radius: 10px;
   background: #fff; }
@@ -39,10 +183,6 @@
     padding: 16px 25px 10px 20px;
     min-height: 100px;
     line-height: 60px; }
-    .dashboard_list .dash_box_inner > .fl {
-      max-width: 60%; }
-      .dashboard_list .dash_box_inner > .fl > .mb {
-        max-width: 340px; }
     .dashboard_list .dash_box_inner > .fr {
       padding-top: 5px; }
       .dashboard_list .dash_box_inner > .fr > .mb {
@@ -51,6 +191,8 @@
           margin-left: 0; }
   ._alone .dash_box_inner {
     padding: 25px 35px 12px; }
+  ._members .dash_box_inner {
+    padding: 30px 40px 50px; }
   ._footer .dash_box_inner {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0; }
@@ -83,9 +225,13 @@
 
 .dashboard_list {
   padding-bottom: 10px; }
+  .dashboard_list._mb_20 {
+    margin-bottom: 20px; }
 
 .more_block {
   margin-bottom: 30px; }
+  .more_block.mod_2 {
+    margin: 20px 0 55px; }
 
 .dash_unit {
   cursor: pointer;
@@ -182,18 +328,26 @@
   color: #3c3c3c;
   font-family: "HelveticaNeueLight", sans-serif;
   width: 100px;
-  height: 60px;
+  min-height: 60px;
   float: left;
   text-align: center;
-  padding: 4px 25px 0 0;
-  border-right: 1px solid #d8d8d8; }
+  padding: 4px 25px 0 0; }
   .dash_b_date .day {
     font-size: 30px; }
   .dash_b_date .month {
     font-size: 12px;
     letter-spacing: 0.06em; }
+  .dash_b_date:before {
+    content: '';
+    position: absolute;
+    left: 119px;
+    top: 20px;
+    bottom: 20px;
+    width: 1px;
+    background: #d8d8d8; }
 
 .dash_b_info {
+  width: 400px;
   padding-left: 24px;
   letter-spacing: .05em; }
   .dash_b_info p {
@@ -204,6 +358,24 @@
     line-height: 1.25;
     letter-spacing: .045em; }
 
+.dash_b_point {
+  position: relative;
+  padding-left: 15px;
+  margin: 20px 0 15px; }
+  .dash_b_point:before {
+    position: absolute;
+    top: 0;
+    left: -9px;
+    content: "";
+    border-radius: 100%;
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    background: #5081c1;
+    color: #fff; }
+
 .dash_b_caption {
   color: #50c171;
   font: 14px "HelveticaNeueBold", sans-serif;
@@ -212,6 +384,22 @@
     font: 12px "HelveticaNeue", sans-serif;
     color: #474747;
     opacity: .5; }
+
+.dash_b_location {
+  font: 12px "HelveticaNeue", sans-serif;
+  color: #474747;
+  position: relative;
+  padding-left: 33px;
+  margin-left: 12px;
+  min-height: 50px; }
+  .dash_b_location:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    line-height: 30px;
+    font-size: 30px;
+    color: #696969; }
 
 .dash_b_status {
   float: left;
@@ -228,6 +416,9 @@
   .dash_b_status._new {
     color: #4c81f6;
     border-color: #4c81f6; }
+  .dash_b_status._in_vote, .dash_b_status._in_review {
+    color: #8d87da;
+    border-color: #8d87da; }
   .dash_b_status._in_preparation {
     color: #8d87da;
     border-color: #8d87da; }
@@ -357,10 +548,14 @@
     display: block;
     width: 28px;
     height: 28px;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 28px;
     border-radius: 100%;
     background: #fff; }
+    .dash_b_control span:before {
+      font-size: 12px; }
+  .dash_b_control + .day {
+    margin-top: 30px; }
 
 .caption_v1 {
   font-size: 30px;
@@ -392,6 +587,171 @@
 
 .search_results .caption_v1 {
   margin-top: 58px; }
+
+.action_brief {
+  background: #fff;
+  position: relative;
+  margin-bottom: 25px; }
+  .action_brief .dash_box_inner {
+    position: relative;
+    padding: 20px 0 3px 20px;
+    min-height: 100px;
+    line-height: 60px; }
+    .action_brief .dash_box_inner .dash_b_info {
+      padding-top: 12px; }
+    .action_brief .dash_box_inner > .fl > .mb {
+      vertical-align: top; }
+
+.action_brief_progress {
+  position: relative;
+  background: #c0cfd0;
+  line-height: 25px; }
+  .action_brief_progress .section_inner {
+    position: relative;
+    z-index: 1; }
+
+.action_brief_val {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #fff793; }
+
+.action_brief_left,
+.action_brief_time {
+  width: 50%;
+  font-size: 10px;
+  letter-spacing: 0.085em; }
+
+.action_brief_time {
+  text-align: left;
+  float: left; }
+
+.action_brief_left {
+  text-align: right;
+  color: #fff;
+  float: right; }
+
+.participants_block {
+  padding-left: 100px;
+  line-height: normal;
+  position: relative;
+  clear: right; }
+  .dashboard_list .participants_block {
+    padding-top: 30px;
+    padding-bottom: 15px; }
+    .dashboard_list .participants_block:before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 140px;
+      right: 0;
+      border-top: 1px solid #d8d8d8; }
+
+.participants_list {
+  padding-left: 24px;
+  width: 420px;
+  float: left;
+  margin-right: -20px; }
+  .participants_list > li {
+    float: left;
+    width: 50%;
+    padding-left: 12px;
+    margin-bottom: 15px; }
+
+.action_progress_block p {
+  font-size: 12px;
+  opacity: .5; }
+
+.action_progress_time {
+  font: 14px/1.5 "HelveticaNeueBold", sans-serif; }
+
+.action_progress_val {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: #50c171;
+  border-radius: 3px; }
+
+.action_progress_box {
+  position: relative;
+  border-radius: 3px;
+  width: 67px;
+  height: 6px;
+  margin-left: 3px;
+  background: #d8d8d8; }
+
+.dash_b_participant {
+  letter-spacing: .05em; }
+
+.participant_avatar {
+  float: left;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 100%; }
+  .participant_avatar img {
+    display: block;
+    max-width: 100%; }
+
+.dash_b_participant .participant_name {
+  padding-left: 50px;
+  line-height: 1.5; }
+
+.participant_post {
+  transition: opacity 0.3s;
+  font-size: 12px;
+  opacity: .5; }
+  .dash_b_participant .participant_post {
+    padding-left: 50px; }
+
+.member_list {
+  margin-left: -62px; }
+  .member_list li {
+    float: left;
+    width: 20%;
+    padding-left: 48px;
+    margin-bottom: 25px; }
+
+.member_box {
+  text-align: center;
+  letter-spacing: .03em; }
+  .member_box:hover .participant_post {
+    opacity: 1; }
+  .member_box .participant_name {
+    margin-bottom: 8px; }
+
+.member_avatars {
+  margin-bottom: 12px; }
+
+.member_main_avatar {
+  transition: border-color 0.3s;
+  width: 80px;
+  height: 80px;
+  border: 2px solid transparent;
+  position: relative; }
+  .member_main_avatar:hover {
+    border-color: #50c171; }
+
+.member_small_avatar {
+  position: absolute;
+  bottom: 0;
+  width: 40px;
+  height: 40px;
+  right: -20px;
+  z-index: 1; }
+
+.member_small_avatar,
+.member_main_avatar {
+  display: inline-block;
+  vertical-align: bottom;
+  border-radius: 100%; }
+  .member_small_avatar img,
+  .member_main_avatar img {
+    display: block;
+    max-width: 100%;
+    border-radius: 100%; }
 
 .profile_bg_w {
   position: fixed;
@@ -580,6 +940,10 @@
 .f_controls_holder {
   position: relative;
   pointer-events: all; }
+  .f_controls_holder + .f_controls_holder {
+    margin-top: 30px; }
+  .f_controls_holder.open_aside_add {
+    z-index: 2; }
 
 .f_controls_panel {
   transition: transform 0.3s, background 0.3s;

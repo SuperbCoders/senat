@@ -1,0 +1,25 @@
+mixin meeting_menu()
+  .dash_b_menu
+    .dash_b_menu_btn.dashMenuBtn: .dash_b_menu_icon
+    .dash_b_menu_w.menu_w
+      ul.dash_b_menu_list
+        li.dash_menu_group
+          span.mb Действия
+        li: a.dash_menu_link(href='#')
+          span.mb Редактировать
+        li: a.dash_menu_link(href='#')
+          span.mb Перейти к оформлению
+        li: a.dash_menu_link(href='#')
+          span.mb Удалить
+      ul.dash_b_menu_list
+        li.dash_menu_group
+          span.mb Cтатус
+        li: a.dash_menu_link(href='#')
+          span.mb.dash_m_status._in_process
+          span.mb В ПРОЦЕССЕ
+        li: a.dash_menu_link(href='#')
+          span.mb.dash_m_status._new
+          span.mb НОВАЯ
+        li: a.dash_menu_link(href='#')
+          span.mb.dash_m_status._completed
+          span.mb ЗАВЕРШЕНО

@@ -36,6 +36,14 @@
 .f_controls_holder {
   position: relative;
   pointer-events: all;
+
+  + .f_controls_holder {
+    margin-top: 30px;
+  }
+  
+  &.open_aside_add {
+    z-index: 2;
+  }  
 }
 
 $palette_outer_radius: 230px;

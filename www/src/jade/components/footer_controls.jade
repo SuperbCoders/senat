@@ -1,14 +1,24 @@
+block variables
+  
 - var items =['clr_orange', 'clr_blue', 'clr_green'];
 - var texts =['ПОРУЧЕНИЕ', 'ВОПРОС', 'ЗАСЕДАНИЕ'];
 
 .footer_controls
   .section_inner.clearfix
-    .fr.f_controls_holder
-      .btn_v2.aside_add_btn.btn_white_2.asideAddOpen
-        span.mb.i-plus
-      .f_controls_panel
-        - each item,i in items
-          .f_control_item(class= item)
-            a.f_control_link(href='#' class= item)
-              span.btn_v1.f_control_btn.i-plus
-              .f_control_text= texts[i]
+    .fr
+      .f_controls_holder
+        .btn_v2.aside_add_btn.btn_white_2.asideAddOpen
+          span.mb.i-plus
+        .f_controls_panel
+          - each item,i in items
+            .f_control_item(class= item)
+              a.f_control_link(href='#' class= item)
+                span.btn_v1.f_control_btn.i-plus
+                .f_control_text= texts[i]
+            
+      - if (hasChatNav)
+        .f_controls_holder
+          .btn_v2.aside_add_btn.btn_white_2
+            span.nav_counter 23
+            span.mb.i-chat.clr_red
+        

@@ -10,6 +10,12 @@ mixin radio_toggle(on, off, flags)
         img.flag_img(src=flags[1])
       span= off
 
+mixin loop_while(counter)
+  -i=0;
+  while i < counter
+    -i++;
+    block
+      
 block variables
   
 - var scriptsArr= ['vendors/jquery1.10.js','vendors/snabbt.min.js','vendors/flexibility.js'];

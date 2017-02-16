@@ -12,7 +12,7 @@
   -webkit-box-pack: center;
   -webkit-box-align: start; }
 
-.nav_list:after {
+.nav_list:after, .action_nav_list:after {
   position: static;
   display: block;
   height: 0;
@@ -199,7 +199,7 @@ a {
   font-weight: 800;
   font-style: normal; }
 
-.logo_icon:after, .dialog_close_butt_mod_1 .ui-dialog-titlebar-close:after, .search_submit:after, .search_btn:after, .notification_btn:after, .logo_icon:before, .dialog_close_butt_mod_1 .ui-dialog-titlebar-close:before, .search_submit:before, .search_btn:before, .notification_btn:before {
+.logo_icon:after, .dialog_close_butt_mod_1 .ui-dialog-titlebar-close:after, .search_submit:after, .search_btn:after, .notification_btn:after, .nav_back_link:after, .logo_icon:before, .dialog_close_butt_mod_1 .ui-dialog-titlebar-close:before, .search_submit:before, .search_btn:before, .notification_btn:before, .nav_back_link:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "senat_icons" !important;
   speak: none;
@@ -214,8 +214,8 @@ a {
 
 @font-face {
   font-family: 'senat_icons';
-  src: url("../fonts/senat_icons.eot?odeiym");
-  src: url("../fonts/senat_icons.eot?odeiym#iefix") format("embedded-opentype"), url("../fonts/senat_icons.ttf?odeiym") format("truetype"), url("../fonts/senat_icons.woff?odeiym") format("woff"), url("../fonts/senat_icons.svg?odeiym#senat_icons") format("svg");
+  src: url("../fonts/senat_icons.eot?msvh2w");
+  src: url("../fonts/senat_icons.eot?msvh2w#iefix") format("embedded-opentype"), url("../fonts/senat_icons.ttf?msvh2w") format("truetype"), url("../fonts/senat_icons.woff?msvh2w") format("woff"), url("../fonts/senat_icons.svg?msvh2w#senat_icons") format("svg");
   font-weight: normal;
   font-style: normal; }
 
@@ -335,14 +335,15 @@ html, body {
   height: 100%; }
 
 html {
-  overflow-y: scroll;
-  overflow-x: hidden; }
+  overflow-y: scroll; }
   html.stick_footer .wrapper {
     min-height: 100%; }
   html.stick_header .wrapper {
     padding-top: 120px; }
   html.nav_header .wrapper {
     padding-top: 170px; }
+  html.action_header .wrapper {
+    padding-top: 130px; }
 
 body {
   background: #f0f2f3;
@@ -438,6 +439,9 @@ body {
 
 .clr_green {
   color: #50c171; }
+
+.clr_red {
+  color: #ff543a; }
 
 .clr_blue {
   color: #5081c1; }
@@ -1089,6 +1093,12 @@ body.rtl .formError .formErrorArrow {
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.3); }
     .open_aside_add .btn_v2.aside_add_btn {
       background: #e9e9e9; }
+    .btn_v2.aside_add_btn .nav_counter {
+      top: -2px;
+      right: 0;
+      height: 18px;
+      width: 18px;
+      line-height: 18px; }
 
 .btn_white {
   transition: background 0.3s, color 0.3s;
@@ -1162,6 +1172,7 @@ body.rtl .formError .formErrorArrow {
   left: 0;
   min-height: 80px;
   line-height: 80px;
+  min-width: 1024px;
   z-index: 5;
   background: #50c171;
   background: linear-gradient(to right, #50c171 0%, #18ce98 100%);
@@ -1348,3 +1359,53 @@ body.rtl .formError .formErrorArrow {
     border-bottom-color: #ff841f; }
   .scroll_done .nav_unit.clr_blue {
     border-bottom-color: #5081c1; }
+
+.action_navbar {
+  transition: top 0.3s;
+  position: fixed;
+  top: 80px;
+  right: 0;
+  left: 0;
+  z-index: 3;
+  background: #fff;
+  height: 50px;
+  padding: 10px 0;
+  line-height: 30px;
+  box-shadow: 0 2px 2px 0 rgba(26, 26, 26, 0.1); }
+  .action_navbar .section_inner {
+    padding: 0 32px; }
+
+.action_nav_back {
+  float: left;
+  width: 200px;
+  font: 12px/30px "HelveticaNeueBold", sans-serif;
+  border-right: 1px solid #d8d8d8; }
+
+.action_nav_list {
+  margin-left: -42px; }
+  .action_nav_list > li {
+    float: left;
+    padding-left: 42px;
+    letter-spacing: 0.04em; }
+
+.action_nav_controls {
+  padding-left: 200px; }
+
+.action_nav_menu {
+  float: right;
+  padding-right: 25px; }
+  .action_nav_menu + .action_nav_controls {
+    padding-right: 65px; }
+
+.nav_back_link {
+  position: relative;
+  padding-left: 15px;
+  letter-spacing: .055em; }
+  .nav_back_link:before {
+    position: absolute;
+    top: 50%;
+    left: -5px;
+    margin-top: -10px;
+    font-size: 14px;
+    line-height: 20px;
+    content: ""; }
