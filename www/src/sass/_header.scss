@@ -17,6 +17,7 @@
 
   .section_inner {
     padding: 0 32px;
+    max-width: none;
   }
 }
 
@@ -227,6 +228,7 @@
 
 .nav_bar {
   @include transition_all(top .3s);
+  @extend %clearfix;
   position: fixed;
   top: 0;
   right: 0;

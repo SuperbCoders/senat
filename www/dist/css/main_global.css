@@ -12,7 +12,7 @@
   -webkit-box-pack: center;
   -webkit-box-align: start; }
 
-.nav_list:after, .action_nav_list:after {
+.main_content:after, .nav_bar:after, .nav_list:after, .action_nav_list:after {
   position: static;
   display: block;
   height: 0;
@@ -379,15 +379,34 @@ body {
   width: 100%;
   max-width: 1024px;
   margin: 0 auto; }
+  .filter_bar .section_inner,
   .main_content .section_inner {
     padding: 0 72px;
     max-width: 944px; }
+    @media only screen and (min-width: 1440px) {
+      .filter_bar .section_inner,
+      .main_content .section_inner {
+        max-width: 1024px;
+        padding: 0 32px; } }
 
 .main_content {
   position: relative;
   z-index: 1; }
   .main_content._has_footer_controls {
     padding-bottom: 100px; }
+
+@media only screen and (min-width: 1800px) {
+  .wide_aside_left {
+    float: left;
+    width: 43.75%;
+    padding-left: 4.7%; } }
+
+@media only screen and (min-width: 1800px) {
+  .wide_aside_right {
+    float: left;
+    width: 56.25%; }
+    .wide_aside_right .section_inner {
+      max-width: 904px; } }
 
 .gl_table {
   display: table;
@@ -802,7 +821,7 @@ body.rtl .formError .formErrorArrow {
   outline: 0; }
   .no_animation .ui-dialog {
     display: none !important; }
-  @media only screen and (max-width: 959px) {
+  @media only screen and (max-width: 1439px) {
     .ui-dialog.dialog_g_size_1 {
       max-width: 95%; } }
 
@@ -1199,13 +1218,14 @@ body.rtl .formError .formErrorArrow {
   background: linear-gradient(to right, #50c171 0%, #18ce98 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#50c171', endColorstr='#18ce98', GradientType=1); }
   .header .section_inner {
-    padding: 0 32px; }
+    padding: 0 32px;
+    max-width: none; }
 
 .logo_block {
   float: left; }
   .logo_block .logo {
     font-size: 32px; }
-  @media only screen and (min-width: 960px) {
+  @media only screen and (min-width: 1440px) {
     .logo_block {
       padding-right: 20px; } }
 
@@ -1327,7 +1347,7 @@ body.rtl .formError .formErrorArrow {
 .main_menu {
   text-align: center;
   font-family: "Source Sans Pro", sans-serif; }
-  @media only screen and (min-width: 960px) {
+  @media only screen and (min-width: 1440px) {
     .main_menu {
       float: right;
       padding-right: 30px;

@@ -1,0 +1,115 @@
+block variables
+  - var bodyClass = 'page_meetings';
+  - var htmlClass = 'stick_footer action_header';
+  - var pageTitle = 'Заседания';
+  - var pageDescription = 'Описание страницы';
+  - var activePage = 1;
+  - var hasUnitNav = true;
+  - var hasChatNav = true;
+
+include ../components/dashboard
+
+extends ../components/layout
+block head
+block content
+  .wrapper
+    include ../components/header
+    include ../components/action_navbar
+
+    .main_content._has_footer_controls
+      .action_brief
+        .section_inner
+          +action_brief(23, '_in_process', false, 2)
+        .action_brief_progress
+          .action_brief_val(style='width: 58%;')
+          .section_inner.clearfix
+            .action_brief_time 1 час 10 минут длительность заседания
+            .action_brief_left 40 минут до конца
+
+      .section_inner
+        .dash_box_title.clr_blue ПОВЕСТКА
+
+        ul.dashboard_list
+          li
+            +action_brief(17, '_in_vote', true, 1, 1, false, ['Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные'])
+          li
+            +action_brief(17, '_in_vote', true, 1, 1, true, ['Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные'])
+          li
+            +question_box(0, '_approved')
+          li
+            +question_box(29, '_rejected', true)
+            
+        .text_center.more_block.mod_2
+          a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 34 ВОПРОСА
+
+        .dash_box_title.clr_orange 4 ПОРУЧЕНИЯ
+
+        ul.dashboard_list
+          li
+            +instruction_box('', '_new')
+          li
+            +instruction_box('', '_new')
+          li
+            +instruction_box('', '_in_process')
+          li
+            +instruction_box('', '_new')
+
+        .text_center.more_block.mod_2
+          a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 4 ПОРУЧЕНИЯ
+          
+        .dash_box_title УЧАСТНИКИ
+          
+        .dash_box._members
+          .dash_box_inner
+            .box_caption Члены коллегиального органа
+            ul.member_list
+              +loop_while(2)
+                li
+                  .member_box
+                    .member_avatars
+                      .member_main_avatar
+                        img(src='./img/member.png')
+                        .member_small_avatar
+                          img(src='./img/member.png')
+                    .participant_name Кислицин Д.М.
+                    .participant_post Председатель
+                li
+                  .member_box
+                    .member_avatars
+                      .member_main_avatar
+                        img(src='./img/user_empty.png')
+                        .member_small_avatar
+                          img(src='./img/member.png')
+                    .participant_name Морозов В.К.
+                    .participant_post Секретарь <br> Кислицина. М.П.
+                      
+            .box_splitter
+              
+            .box_caption Приглашенные участники
+            ul.member_list
+              +loop_while(2)
+                li
+                  .member_box
+                    .member_avatars
+                      .member_main_avatar
+                        img(src='./img/member.png')
+                        .member_small_avatar
+                          img(src='./img/member.png')
+                    .participant_name Кислицин Д.М.
+                    .participant_post Председатель
+                li
+                  .member_box
+                    .member_avatars
+                      .member_main_avatar
+                        img(src='./img/user_empty.png')
+                        .member_small_avatar
+                          img(src='./img/member.png')
+                    .participant_name Морозов В.К.
+                    .participant_post Секретарь <br> Кислицина. М.П.
+                      
+        .text_center.more_block.mod_2
+          a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 21 УЧАСТНИКА
+            
+      include ../components/preloader
+
+    include ../components/footer_controls

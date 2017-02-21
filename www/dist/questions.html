@@ -11,7 +11,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="mobile-web-app-capable" content="yes">
-    <title>Главная</title>
+    <title>Вопросы</title>
     <meta name="description" content="Описание страницы">
     <meta property="og:title" content="feedly: organize, read and share what matters to you.">
     <meta property="og:url" content="http://feedly.com/index.html">
@@ -35,7 +35,7 @@
             <ul class="nav mb">
               <li class="nav_item"><a href="meetings.html" class="nav_link">Заседания</a>
               </li>
-              <li class="nav_item"><a href="questions.html" class="nav_link">Вопросы</a>
+              <li class="nav_item active"><a href="questions.html" class="nav_link">Вопросы</a>
               </li>
               <li class="nav_item"><a href="instructions.html" class="nav_link">Поручения</a><span class="nav_counter">4</span>
               </li>
@@ -85,78 +85,84 @@
       <div class="filter_bar">
         <div class="section_inner">
           <ul class="filter_list">
-            <li><a href="#collegial_filter" class="filter_link filterToggle clr_green"><span class="mb">КОЛЛЕГИАЛЬНЫЙ ОРГАН</span></a></li>
-            <li><a href="#status_filter" class="filter_link filterToggle clr_green"><span class="mb">СТАТУС</span></a></li>
-            <li><a href="#date_filter" class="filter_link filterToggle clr_green"><span class="mb">ДАТА</span></a></li>
+            <li class="menu_holder"><a href="#collegial_filter" class="filter_link dashMenuBtn clr_blue"><span class="mb">КОЛЛЕГИАЛЬНЫЙ ОРГАН</span></a>
+              <div class="filter_menu_w menu_w _wide">
+                <div class="collegial_switch_w">
+                  <ul class="collegial_switch_list">
+                    <li>
+                      <label class="collegial_switch_item check_v1">
+                        <input type="checkbox" class="hide"><span class="check_text">Комитет по корпоративному бизнесу обеспечивает реализацию Стратегии развития банка в части обслуживания корпоративных клиентов (крупнейших, крупных, средних корпоративных клиентов и предприятий малого и микробизнеса).</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="collegial_switch_item check_v1">
+                        <input type="checkbox" class="hide"><span class="check_text">Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности.</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="collegial_switch_item check_v1">
+                        <input type="checkbox" class="hide"><span class="check_text">Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности.</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="collegial_switch_item check_v1">
+                        <input type="checkbox" class="hide"><span class="check_text">Конкурсная комиссия занимается аккредитацией поставщиков, рассмотрением конкурсных предложений при закупке товаров, работ, услуг.</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="collegial_switch_item check_v1">
+                        <input type="checkbox" class="hide"><span class="check_text">Комитет по управлению дочерними и зависимыми обществами обеспечивает решение задач, поставленных банком перед дочерними и зависимыми обществами ОАО «Сбербанк России».</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="collegial_switch_item check_v1">
+                        <input type="checkbox" class="hide"><span class="check_text">Комитет по корпоративному бизнесу обеспечивает реализацию Стратегии развития банка в части обслуживания корпоративных клиентов (крупнейших, крупных, средних корпоративных клиентов и предприятий малого и микробизнеса).</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="collegial_switch_item check_v1">
+                        <input type="checkbox" class="hide"><span class="check_text">Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности.</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="collegial_switch_item check_v1">
+                        <input type="checkbox" class="hide"><span class="check_text">Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности.</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="collegial_switch_item check_v1">
+                        <input type="checkbox" class="hide"><span class="check_text">Конкурсная комиссия занимается аккредитацией поставщиков, рассмотрением конкурсных предложений при закупке товаров, работ, услуг.</span>
+                      </label>
+                    </li>
+                    <li>
+                      <label class="collegial_switch_item check_v1">
+                        <input type="checkbox" class="hide"><span class="check_text">Комитет по управлению дочерними и зависимыми обществами обеспечивает решение задач, поставленных банком перед дочерними и зависимыми обществами ОАО «Сбербанк России».</span>
+                      </label>
+                    </li>
+                  </ul>
+                  <ul class="filter_bar_controls text_center">
+                    <li><a href="#" class="btn_v1 btn_green_2 filter_btn">ПРИМЕНИТЬ ФИЛЬТР</a></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="menu_holder"><a href="#collegial_filter" class="filter_link dashMenuBtn clr_blue"><span class="mb">СТАТУС</span></a>
+              <div class="filter_menu_w menu_w">
+                <ul class="dash_b_menu_list">
+                  <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _in_process"></span><span class="mb">В ПРОЦЕССЕ</span></a></li>
+                  <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _new"></span><span class="mb">НОВАЯ</span></a></li>
+                  <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _completed"></span><span class="mb">ЗАВЕРШЕНО</span></a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="#date_filter" class="filter_link filterToggle clr_blue"><span class="mb">ДАТА</span></a></li>
           </ul>
         </div>
         <div class="filter_dropdown">
-          <div id="status_filter" class="section_inner filterUnit"></div>
           <div id="date_filter" class="section_inner filterUnit">
             <div class="input_w daterangepicker_holder">
               <input id="range_calendar" name="daterange">
             </div>
-          </div>
-          <div id="collegial_filter" class="section_inner filterUnit">
-            <div class="collegial_list_w">
-              <ul class="collegial_list">
-                <li>
-                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
-                    <p>Комитет по розничному кредитованию обеспечивает реализацию политики банка в области кредитования физических лиц</p>
-                  </div>
-                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
-                    <p>Комитет по управлению дочерними банками рассматривает вопросы бизнес-планирования дочерних банков, предложения по созданию и ликвидации дочерних и зависимых обществ, интеграции приобретенных активов.</p>
-                  </div>
-                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
-                    <p>Комитет по розничному кредитованию обеспечивает реализацию политики банка в области кредитования физических лиц</p>
-                  </div>
-                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
-                    <p>Комитет по управлению дочерними банками рассматривает вопросы бизнес-планирования дочерних банков, предложения по созданию и ликвидации дочерних и зависимых обществ, интеграции приобретенных активов.</p>
-                  </div>
-                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
-                    <p>Комитет по управлению дочерними и зависимыми обществами обеспечивает решение задач, поставленных банком перед дочерними и зависимыми обществами ОАО «Сбербанк России».</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
-                    <p>Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности.</p>
-                  </div>
-                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
-                    <p>Комитет по корпоративному бизнесу обеспечивает реализацию Стратегии развития банка в части обслуживания корпоративных клиентов (крупнейших, крупных, средних корпоративных клиентов и предприятий малого и микробизнеса).</p>
-                  </div>
-                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
-                    <p>Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности.</p>
-                  </div>
-                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
-                    <p>Комитет по корпоративному бизнесу обеспечивает реализацию Стратегии развития банка в части обслуживания корпоративных клиентов (крупнейших, крупных, средних корпоративных клиентов и предприятий малого и микробизнеса).</p>
-                  </div>
-                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
-                    <p>Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности.</p>
-                  </div>
-                </li>
-                <li>
-                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
-                    <p>Комитет по корпоративному бизнесу обеспечивает реализацию Стратегии развития банка в части обслуживания корпоративных клиентов (крупнейших, крупных, средних корпоративных клиентов и предприятий малого и микробизнеса).</p>
-                  </div>
-                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
-                    <p>Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности.</p>
-                  </div>
-                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
-                    <p>Комитет по корпоративному бизнесу обеспечивает реализацию Стратегии развития банка в части обслуживания корпоративных клиентов (крупнейших, крупных, средних корпоративных клиентов и предприятий малого и микробизнеса).</p>
-                  </div>
-                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
-                    <p>Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности.</p>
-                  </div>
-                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
-                    <p>Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности.</p>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <ul class="filter_bar_controls">
-              <li><a href="#" class="btn_v1 btn_green_2 filter_btn">РЕДАКТИРОВАТЬ ФИЛЬТР</a></li>
-              <li><a href="#" class="btn_v1 btn_red filter_btn">СБРОСИТЬ ФИЛЬТР</a></li>
-            </ul>
           </div>
         </div>
       </div>

@@ -76,18 +76,46 @@ body {
   max-width: $content-max-w;
   margin: 0 auto;
 
+  .filter_bar &,
   .main_content & {
     padding: 0 72px;
     max-width: $content-max-w - 80;
+
+    @include respond-to-min($resp_step_2) {
+      max-width: $content-max-w;
+      padding: 0 32px;
+    }
   }
 }
 
 .main_content {
+  @extend %clearfix;
   position: relative;
   z-index: 1;
 
   &._has_footer_controls {
     padding-bottom: 100px;
+  }
+}
+
+.wide_aside_left {
+
+  @include respond-to-min($resp_step_3) {
+    float: left;
+    width: 43.75%;
+    padding-left: 4.7%;
+  }
+}
+
+.wide_aside_right {
+
+  @include respond-to-min($resp_step_3) {
+    float: left;
+    width: 56.25%;
+
+    .section_inner {
+      max-width: $content-max-w - 120;
+    }
   }
 }
 

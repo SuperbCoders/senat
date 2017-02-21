@@ -1,0 +1,59 @@
+block variables
+    
+.filter_bar
+  .section_inner
+    ul.filter_list
+      li.menu_holder
+        a.filter_link.dashMenuBtn(href="#collegial_filter" class=filterClass)
+          span.mb КОЛЛЕГИАЛЬНЫЙ ОРГАН
+        .filter_menu_w.menu_w._wide
+          .collegial_switch_w
+            ul.collegial_switch_list
+              +loop_while(2)
+                li
+                  label.collegial_switch_item.check_v1
+                    input.hide(type='checkbox')
+                    span.check_text Комитет по корпоративному бизнесу обеспечивает реализацию Стратегии развития банка в части обслуживания корпоративных клиентов (крупнейших, крупных, средних корпоративных клиентов и предприятий малого и микробизнеса).
+                li
+                  label.collegial_switch_item.check_v1
+                    input.hide(type='checkbox')
+                    span.check_text Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности.
+                li
+                  label.collegial_switch_item.check_v1
+                    input.hide(type='checkbox')
+                    span.check_text Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности.
+                li
+                  label.collegial_switch_item.check_v1
+                    input.hide(type='checkbox')
+                    span.check_text Конкурсная комиссия занимается аккредитацией поставщиков, рассмотрением конкурсных предложений при закупке товаров, работ, услуг.
+                li
+                  label.collegial_switch_item.check_v1
+                    input.hide(type='checkbox')
+                    span.check_text Комитет по управлению дочерними и зависимыми обществами обеспечивает решение задач, поставленных банком перед дочерними и зависимыми обществами ОАО «Сбербанк России».
+            ul.filter_bar_controls.text_center
+              li
+                a.btn_v1.btn_green_2.filter_btn(href='#') ПРИМЕНИТЬ ФИЛЬТР
+
+      li.menu_holder
+        a.filter_link.dashMenuBtn(href="#collegial_filter" class=filterClass)
+          span.mb СТАТУС
+        .filter_menu_w.menu_w
+          ul.dash_b_menu_list
+            li: a.dash_menu_link(href='#')
+              span.mb.dash_m_status._in_process
+              span.mb В ПРОЦЕССЕ
+            li: a.dash_menu_link(href='#')
+              span.mb.dash_m_status._new
+              span.mb НОВАЯ
+            li: a.dash_menu_link(href='#')
+              span.mb.dash_m_status._completed
+              span.mb ЗАВЕРШЕНО
+        
+      li
+        a.filter_link.filterToggle(href="#date_filter" class=filterClass)
+          span.mb ДАТА
+          
+  .filter_dropdown
+    #date_filter.section_inner.filterUnit
+      .input_w.daterangepicker_holder
+        input#range_calendar('name'='daterange')
