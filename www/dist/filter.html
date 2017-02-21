@@ -33,17 +33,17 @@
           <div class="logo_block"><a href="index.html" class="logo clr_white mb"><span class="logo_icon"></span></a></div>
           <div class="main_nav">
             <ul class="nav mb">
-              <li class="nav_item"><a href="meetings.html" class="nav_link 0">Заседания</a>
+              <li class="nav_item"><a href="meetings.html" class="nav_link">Заседания</a>
               </li>
-              <li class="nav_item"><a href="questions.html" class="nav_link 0">Вопросы</a>
+              <li class="nav_item"><a href="questions.html" class="nav_link">Вопросы</a>
               </li>
-              <li class="nav_item"><a href="instructions.html" class="nav_link 0">Поручения</a><span class="nav_counter">4</span>
+              <li class="nav_item"><a href="instructions.html" class="nav_link">Поручения</a><span class="nav_counter">4</span>
               </li>
-              <li class="nav_item"><a href="messages.html" class="nav_link 0">Сообщения</a>
+              <li class="nav_item"><a href="messages.html" class="nav_link">Сообщения</a>
               </li>
-              <li class="nav_item"><a href="files.html" class="nav_link 0">Мои файлы</a>
+              <li class="nav_item"><a href="files.html" class="nav_link">Мои файлы</a>
               </li>
-              <li class="nav_item"><a href="reports.html" class="nav_link 0">Отчеты</a>
+              <li class="nav_item"><a href="reports.html" class="nav_link">Отчеты</a>
               </li>
             </ul>
           </div>
@@ -51,7 +51,13 @@
             <div class="mb">
               <ul class="user_block">
                 <li class="user_b_item">
-                  <div class="user_b_control"><a href="#" class="notification_btn"></a><span class="nav_counter">3</span></div>
+                  <div class="user_b_control"><a href="#" class="notification_btn userMenuBtn"></a><span class="nav_counter">3</span>
+                    <div class="notification_menu_w menu_w">
+                      <ul class="dash_b_menu">
+                        <li class="dash_menu_group"><span class="mb">5 минут назад </span></li>
+                      </ul>
+                    </div>
+                  </div>
                 </li>
                 <li class="user_b_item">
                   <div class="user_b_control">
@@ -78,17 +84,80 @@
       </div>
       <div class="filter_bar">
         <div class="section_inner">
-          <ul class="filter_list clr_green">
-            <li>
-              <div class="filter_btn"><span class="mb">КОЛЛЕГИАЛЬНЫЙ ОРГАН</span></div>
-            </li>
-            <li>
-              <div class="filter_btn"><span class="mb">СТАТУС</span></div>
-            </li>
-            <li>
-              <div class="filter_btn"><span class="mb">ДАТА</span></div>
-            </li>
+          <ul class="filter_list">
+            <li><a href="#collegial_filter" class="filter_link filterToggle clr_green"><span class="mb">КОЛЛЕГИАЛЬНЫЙ ОРГАН</span></a></li>
+            <li><a href="#status_filter" class="filter_link filterToggle clr_green"><span class="mb">СТАТУС</span></a></li>
+            <li><a href="#date_filter" class="filter_link filterToggle clr_green"><span class="mb">ДАТА</span></a></li>
           </ul>
+        </div>
+        <div class="filter_dropdown">
+          <div id="status_filter" class="section_inner filterUnit"></div>
+          <div id="date_filter" class="section_inner filterUnit">
+            <div class="input_w daterangepicker_holder">
+              <input id="range_calendar" name="daterange">
+            </div>
+          </div>
+          <div id="collegial_filter" class="section_inner filterUnit">
+            <div class="collegial_list_w">
+              <ul class="collegial_list">
+                <li>
+                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
+                    <p>Комитет по розничному кредитованию обеспечивает реализацию политики банка в области кредитования физических лиц</p>
+                  </div>
+                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
+                    <p>Комитет по управлению дочерними банками рассматривает вопросы бизнес-планирования дочерних банков, предложения по созданию и ликвидации дочерних и зависимых обществ, интеграции приобретенных активов.</p>
+                  </div>
+                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
+                    <p>Комитет по розничному кредитованию обеспечивает реализацию политики банка в области кредитования физических лиц</p>
+                  </div>
+                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
+                    <p>Комитет по управлению дочерними банками рассматривает вопросы бизнес-планирования дочерних банков, предложения по созданию и ликвидации дочерних и зависимых обществ, интеграции приобретенных активов.</p>
+                  </div>
+                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
+                    <p>Комитет по управлению дочерними и зависимыми обществами обеспечивает решение задач, поставленных банком перед дочерними и зависимыми обществами ОАО «Сбербанк России».</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
+                    <p>Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности.</p>
+                  </div>
+                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
+                    <p>Комитет по корпоративному бизнесу обеспечивает реализацию Стратегии развития банка в части обслуживания корпоративных клиентов (крупнейших, крупных, средних корпоративных клиентов и предприятий малого и микробизнеса).</p>
+                  </div>
+                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
+                    <p>Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности.</p>
+                  </div>
+                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
+                    <p>Комитет по корпоративному бизнесу обеспечивает реализацию Стратегии развития банка в части обслуживания корпоративных клиентов (крупнейших, крупных, средних корпоративных клиентов и предприятий малого и микробизнеса).</p>
+                  </div>
+                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
+                    <p>Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности.</p>
+                  </div>
+                </li>
+                <li>
+                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
+                    <p>Комитет по корпоративному бизнесу обеспечивает реализацию Стратегии развития банка в части обслуживания корпоративных клиентов (крупнейших, крупных, средних корпоративных клиентов и предприятий малого и микробизнеса).</p>
+                  </div>
+                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
+                    <p>Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности.</p>
+                  </div>
+                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
+                    <p>Комитет по корпоративному бизнесу обеспечивает реализацию Стратегии развития банка в части обслуживания корпоративных клиентов (крупнейших, крупных, средних корпоративных клиентов и предприятий малого и микробизнеса).</p>
+                  </div>
+                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
+                    <p>Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности.</p>
+                  </div>
+                  <div class="collegial_unit"><span class="unit_rm_btn"></span>
+                    <p>Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <ul class="filter_bar_controls">
+              <li><a href="#" class="btn_v1 btn_green_2 filter_btn">РЕДАКТИРОВАТЬ ФИЛЬТР</a></li>
+              <li><a href="#" class="btn_v1 btn_red filter_btn">СБРОСИТЬ ФИЛЬТР</a></li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="main_content _has_footer_controls">
@@ -614,6 +683,8 @@
     <script src="js/vendors/jquery1.10.js"></script>
     <script src="js/vendors/snabbt.min.js"></script>
     <script src="js/vendors/flexibility.js"></script>
+    <script src="js/vendors/moment.min.js"></script>
+    <script src="js/vendors/daterangepicker.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

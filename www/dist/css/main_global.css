@@ -1038,7 +1038,7 @@ body.rtl .formError .formErrorArrow {
   width: 100%;
   height: 100%; }
 
-.btn_v1.dash_btn, .btn_v1.logout_btn {
+.btn_v1.dash_btn, .btn_v1.logout_btn, .btn_v1.filter_btn {
   padding: 10px;
   display: inline-block;
   vertical-align: top;
@@ -1077,6 +1077,9 @@ body.rtl .formError .formErrorArrow {
 
 .btn_v1.logout_btn {
   min-width: 180px; }
+
+.btn_v1.filter_btn {
+  padding: 10px 41px; }
 
 .btn_v2 {
   height: 60px; }
@@ -1136,6 +1139,24 @@ body.rtl .formError .formErrorArrow {
     background: #50c171;
     color: #fff; }
 
+.btn_green_2 {
+  transition: background 0.3s, color 0.3s;
+  background: #00d473;
+  border: 1px solid #00d473;
+  color: #fff; }
+  .btn_green_2:hover {
+    background: #fff;
+    color: #00d473; }
+
+.btn_red {
+  transition: background 0.3s, color 0.3s;
+  border: 1px solid #ff0029;
+  background: #ff0029;
+  color: #fff; }
+  .btn_red:hover {
+    background: #fff;
+    color: #ff0029; }
+
 .btn_black {
   transition: background 0.3s, color 0.3s;
   border: 1px solid #474747;
@@ -1173,7 +1194,7 @@ body.rtl .formError .formErrorArrow {
   min-height: 80px;
   line-height: 80px;
   min-width: 1024px;
-  z-index: 5;
+  z-index: 6;
   background: #50c171;
   background: linear-gradient(to right, #50c171 0%, #18ce98 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#50c171', endColorstr='#18ce98', GradientType=1); }
@@ -1220,6 +1241,7 @@ body.rtl .formError .formErrorArrow {
   font: 14px "HelveticaNeueLight", sans-serif;
   letter-spacing: .1em; }
   .active .nav_link {
+    cursor: default;
     font-family: "HelveticaNeueBold", sans-serif; }
   .active .nav_link, .nav_link:hover {
     background: #fff;
@@ -1280,6 +1302,20 @@ body.rtl .formError .formErrorArrow {
   padding: 10px 0;
   border-radius: 10px; }
   .user_menu_w:before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    right: 22px;
+    border-left: 18px solid transparent;
+    border-right: 18px solid transparent;
+    border-bottom: 14px solid #fff; }
+
+.notification_menu_w {
+  right: -22px;
+  margin-top: 25px;
+  padding: 10px 0;
+  border-radius: 10px; }
+  .notification_menu_w:before {
     content: '';
     position: absolute;
     bottom: 100%;

@@ -71,6 +71,14 @@ $(function ($) {
       $(this).parent().toggleClass('open_aside_add');
       return false;
     })
+    .delegate('.filterToggle', 'click', function () {
+      var lnk = $(this);
+      var dd = $(lnk.attr('href'));
+      hideDropDowns(dd);
+      lnk.parent().toggleClass('_active').siblings().removeClass('_active');
+      dd.toggleClass('open_menu');
+      return false;
+    })
     .delegate('.preloader', 'click', function () {
       runCircle($(this), 4000);
       return false;
@@ -90,15 +98,34 @@ $(function ($) {
 
   $(document).click(function (e) {
     if ($(e.target).parents().filter('.open_menu').length != 1) {
+      $('._active').removeClass('_active');
       hideDropDowns();
     }
   });
 
   catchNavBar();
 
+  initCalendar();
+
   all_dialog_close();
 
 });
+
+function initCalendar() {
+  var clndr = $('#range_calendar');
+
+  if (clndr.length) {
+    clndr.daterangepicker({
+      "alwaysShowCalendars": true,
+      "showDropdowns": true,
+      "parentEl": clndr.parent(),
+      "startDate": "02/14/2017",
+      "endDate": "02/20/2017"
+    });
+  }
+
+
+}
 
 function catchNavBar() {
   var navBarMark = $('.navBarMark'), navBar = $('.navBar');

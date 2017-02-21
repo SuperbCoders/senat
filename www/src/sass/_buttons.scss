@@ -59,6 +59,11 @@
     @extend %main_btn;
     min-width: 180px;
   }
+
+  &.filter_btn {
+    @extend %main_btn;
+    padding: 10px 41px;
+  }
 }
 
 .btn_v2 {
@@ -136,6 +141,30 @@
   &:hover {
     background: $gl_green;
     color: $gl_white;
+  }
+}
+
+.btn_green_2 {
+  @include transition_all(background .3s, color .3s);
+  background: $gl_green_2;
+  border: 1px solid $gl_green_2;
+  color: $gl_white;
+
+  &:hover {
+    background: $gl_white;
+    color: $gl_green_2;
+  }
+}
+
+.btn_red {
+  @include transition_all(background .3s, color .3s);
+  border: 1px solid $gl_red_4;
+  background: $gl_red_4;
+  color: $gl_white;
+
+  &:hover {
+    background: $gl_white;
+    color: $gl_red_4;
   }
 }
 

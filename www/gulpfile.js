@@ -24,7 +24,7 @@ var src = {
   jade: 'src/jade/pages/**/*.jade',
   sass: 'src/sass/*.scss',
   js: 'src/js/**/*.js',
-  img: 'src/img/*',
+  img: 'src/img/**/*',
   data: 'src/data/*.json',
   fonts: 'src/fonts/*',
   icons: 'src/senat_icons/fonts/*'
@@ -97,7 +97,17 @@ gulp.task('copy', function () {
 
 gulp.task('image', function () {
   gulp.src(src.img)
-    .pipe(image())
+    .pipe(image({
+      pngquant: true,
+      optipng: false,
+      zopflipng: false,
+      jpegRecompress: false,
+      jpegoptim: true,
+      mozjpeg: true,
+      gifsicle: true,
+      svgo: true,
+      concurrent: 10
+    }))
     .pipe(gulp.dest(dest.img));
 });
 

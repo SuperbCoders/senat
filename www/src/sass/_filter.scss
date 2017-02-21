@@ -4,19 +4,110 @@
   left: 0;
   right: 0;
   background: $gl_white;
+  z-index: 5;
 
   .section_inner {
     padding: 0 32px;
   }
 }
 
-.filter_btn {
+.filter_dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  background: $gl_white;
+
+  .section_inner {
+    display: none;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    
+    &.open_menu {
+      display: block;
+    }
+  }
+}
+
+.collegial_list_w {
+  max-height: 180px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  margin-right: -30px;
+  padding-right: 15px;
+}
+
+.collegial_list {
+  @extend %clearfix;
+  margin: -15px -1% 0 -15px;
+
+  > li {
+    float: left;
+    width: 33%;
+    padding-left: 15px;
+  }
+}
+
+.collegial_unit {
+  @include transition_all(background .3s);
+  position: relative;
+  padding: 16px 40px 14px 20px;
+  background: #f0f1f1;
+  border-radius: 10px;
+  margin-top: 15px;
+
+  .unit_rm_btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  p {
+    font: 11px $HelveticaNeueLight;
+  }
+
+  &:hover {
+    background: #e2e3e4;
+  }
+}
+
+.filter_bar_controls {
+  @extend %clearfix;
+  margin-left: -15px;
+  padding-top: 20px;
+
+  li {
+    float: left;
+    padding-left: 15px;
+  }
+}
+
+.unit_rm_btn {
+  @extend %icon_pseudo;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  text-align: center;
+  background: $gl_white;
+  cursor: pointer;
+
+  &:before {
+    content: $i-cross;
+    font-size: 12px;
+    line-height: 20px;
+    color: $gl_red_2;
+  }
+}
+
+.filter_link {
+  @include transition_all(opacity .3s);
   @extend %icon_pseudo;
   padding-right: 23px;
   line-height: 30px;
   font-size: 12px;
   letter-spacing: .075em;
   position: relative;
+  cursor: pointer;
 
   &:before {
     content: $i-chevron-down;
@@ -27,23 +118,49 @@
     top: 50%;
     line-height: 20px;
   }
-  
-  &:hover{
+
+  ._active & {
     opacity: .5;
     
-    &:before{
+    &:before {
       content: $i-chevron-up;
     }
+  }
+
+  &:hover {
+    opacity: .5;
   }
 }
 
 .filter_list {
   @extend %clearfix;
   padding: 10px 0;
-  
+
   > li {
     float: left;
     padding-right: 30px;
     padding-left: 20px;
+  }
+}
+
+.daterangepicker_holder {
+  
+  .daterangepicker {
+    @extend %clearfix;
+    position: relative;
+    top: auto !important;
+    bottom: auto !important;
+    left: auto !important;
+    right: auto !important;
+    padding: 0;
+    border-radius: 0;
+    
+    .calendar {
+      margin: 0;
+    }
+    
+    .ranges {
+      display: none;
+    }
   }
 }

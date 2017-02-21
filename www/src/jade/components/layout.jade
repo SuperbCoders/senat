@@ -10,6 +10,11 @@ mixin radio_toggle(on, off, flags)
         img.flag_img(src=flags[1])
       span= off
 
+mixin collegial_unit(txt)
+  .collegial_unit
+    span.unit_rm_btn
+    p= txt
+      
 mixin loop_while(counter)
   -i=0;
   while i < counter

@@ -1,11 +1,12 @@
 block variables
 
 - var menuList = locals['nav'];
+  
 .main_nav
   ul.nav.mb
     each item, ind in menuList
-      li.nav_item
-        a.nav_link(href=item.href class= activePage + ((ind + 1) == activePage ? 'active' : ''))
+      li.nav_item(class= ((ind + 1) == activePage ? 'active' : ''))
+        a.nav_link(href=item.href)
           | #{item.title}
         - if (item.counter)
           span.nav_counter= item.counter

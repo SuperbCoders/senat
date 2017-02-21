@@ -24,7 +24,7 @@ header look 3.jpg
 header look.jpg
 login.jpg +
 meeting.jpg
-meetings.jpg
+meetings.jpg +
 messages.jpg
 notification important.jpg
 notifications.jpg
