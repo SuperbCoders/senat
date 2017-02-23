@@ -18,6 +18,15 @@ html {
     .wrapper {
       padding-top: 120px;
     }
+
+    .page_index {
+      .wrapper {
+
+        @include respond-to-min($resp_step_3) {
+          padding-top: 140px;
+        }
+      }
+    }
   }
 
   &.nav_header {
@@ -99,23 +108,40 @@ body {
 }
 
 .wide_aside_left {
-
   @include respond-to-min($resp_step_3) {
     float: left;
     width: 43.75%;
     padding-left: 4.7%;
+    position: relative;
   }
 }
 
 .wide_aside_right {
+  display: none;
 
   @include respond-to-min($resp_step_3) {
+    display: block;
     float: left;
     width: 56.25%;
 
     .section_inner {
       max-width: $content-max-w - 120;
     }
+
+    .main_content & {
+      position: fixed;
+      top: 130px;
+      bottom: 0;
+      right: 0;
+      overflow-y: auto;
+    }
+  }
+}
+
+.wide-hidden {
+
+  @include respond-to-min($resp_step_3) {
+    display: none;
   }
 }
 

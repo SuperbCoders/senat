@@ -171,20 +171,83 @@
 }
 
 .notification_menu_w {
-  right: -22px;
+  right: -30px;
   margin-top: 25px;
   padding: 10px 0;
   border-radius: 10px;
+  width: 320px;
 
   &:before {
     content: '';
     position: absolute;
     bottom: 100%;
-    right: 22px;
+    right: 30px;
     border-left: 18px solid transparent;
     border-right: 18px solid transparent;
     border-bottom: 14px solid $gl_white;
   }
+
+  .dash_b_menu_list {
+    border-bottom: 1px solid #d8d8d8;
+    margin-bottom: 10px;
+
+    &:last-child {
+      padding-bottom: 10px;
+    }
+  }
+
+  .dash_menu_group {
+    letter-spacing: .09em;
+  }
+}
+
+.notification_item {
+  position: relative;
+  padding: 7px 20px 20px;
+  min-height: 40px;
+  letter-spacing: .045em;
+
+  b {
+    font-family: $HelveticaNeueBold;
+  }
+
+  p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  &._has_img {
+    padding-left: 50px;
+  }
+}
+
+.notification_author {
+  position: absolute;
+  left: 20px;
+  top: 7px;
+  width: 20px;
+  height: 20px;
+  overflow: hidden;
+  border-radius: 100%;
+
+  img {
+    display: block;
+    max-width: 100%;
+    border-radius: 100%;
+  }
+}
+
+.notification_control {
+  padding-top: 10px;
+
+  .dash_btn {
+    display: block;
+  }
+}
+
+.notification_caption {
+  color: $gl_gray_2;
+  font: 12px/1.5 $HelveticaNeueLight;
 }
 
 // *********  menu
@@ -239,6 +302,23 @@
   padding-top: 10px;
   line-height: 40px;
   box-shadow: 0 2px 2px 0 rgba(26, 26, 26, 0.10);
+
+  .page_index & {
+    @include respond-to-min($resp_step_3) {
+      top: 80px !important;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 43.75%;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: #d8d8d8;
+        margin-left: -1px;
+      }
+    }
+  }
 }
 
 .nav_list {
@@ -315,16 +395,24 @@
 .action_nav_list {
   @extend %clearfix;
   margin-left: -42px;
+  white-space: nowrap;
 
   > li {
-    float: left;
-    padding-left: 42px;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 40px;
     letter-spacing: 0.04em;
+    max-width: 700px;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 }
 
 .action_nav_controls {
-  padding-left: 200px;
+
+  .action_nav_back ~ & {
+    padding-left: 200px;
+  }
 }
 
 .action_nav_menu {

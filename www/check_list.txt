@@ -7,31 +7,31 @@ create meeting add file.jpg
 create meeting.jpg
 create task.jpg
 dashboard - long.jpg +
-dashboard 1440.jpg
-dashboard 1920.jpg
+dashboard 1440.jpg +
+dashboard 1920.jpg +
 dashboard scroll 1.jpg +
 dashboard scroll 2.jpg +
-dashboard.jpg -
-Files empty.jpg
-Files file.jpg
-Files.jpg
+dashboard.jpg +
+Files empty.jpg 
+Files file.jpg 
+Files.jpg 
 filter calendar.jpg
-filter organs view.jpg
-filter organs.jpg
-filter status.jpg
+filter organs view.jpg +
+filter organs.jpg +
+filter status.jpg +
 header look 2.jpg
 header look 3.jpg
 header look.jpg
 login.jpg +
-meeting.jpg
+meeting.jpg +
 meetings.jpg +
 messages.jpg
-notification important.jpg
-notifications.jpg
+notification important.jpg +
+notifications.jpg 
 Person.jpg +
 Profile.jpg +
 question.jpg
-questions.jpg
+questions.jpg +
 search empty.jpg +
 search field.jpg +
 search.jpg +

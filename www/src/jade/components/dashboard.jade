@@ -31,8 +31,8 @@ mixin dash_b_menu()
           span.mb.dash_m_status._completed
           span.mb ЗАВЕРШЕНО
           
-mixin meeting_box(date, status, author)
-  .dash_box
+mixin meeting_box(date, status, author, active)
+  .dash_box(class= active ? '_current' : '')
     .dash_box_inner
       .fl
         .mb

@@ -327,6 +327,9 @@ html {
     min-height: 100%; }
   html.stick_header .wrapper {
     padding-top: 120px; }
+  @media only screen and (min-width: 1800px) {
+    html.stick_header .page_index .wrapper {
+      padding-top: 140px; } }
   html.nav_header .wrapper {
     padding-top: 170px; }
   html.action_header .wrapper {
@@ -386,14 +389,28 @@ body {
   .wide_aside_left {
     float: left;
     width: 43.75%;
-    padding-left: 4.7%; } }
+    padding-left: 4.7%;
+    position: relative; } }
+
+.wide_aside_right {
+  display: none; }
+  @media only screen and (min-width: 1800px) {
+    .wide_aside_right {
+      display: block;
+      float: left;
+      width: 56.25%; }
+      .wide_aside_right .section_inner {
+        max-width: 904px; }
+      .main_content .wide_aside_right {
+        position: fixed;
+        top: 130px;
+        bottom: 0;
+        right: 0;
+        overflow-y: auto; } }
 
 @media only screen and (min-width: 1800px) {
-  .wide_aside_right {
-    float: left;
-    width: 56.25%; }
-    .wide_aside_right .section_inner {
-      max-width: 904px; } }
+  .wide-hidden {
+    display: none; } }
 
 .gl_table {
   display: table;

@@ -6,9 +6,38 @@
           a.notification_btn.userMenuBtn(href='#')
           span.nav_counter 3
           .notification_menu_w.menu_w
-            ul.menu_holder
+            ul.dash_b_menu_list
               li.dash_menu_group
-                span.mb 5 минут назад 
+                span.mb 5 минут назад
+              li
+                .notification_item._has_img
+                  .notification_author
+                    img(src='./img/msg_author.png')
+                  .notification_caption Олег П.П. добавил вас к заседанию: 
+                  p Подготовка к постройке нового комплекса
+              li
+                .notification_item._has_img
+                  .notification_author
+                    img(src='./img/msg_author.png')
+                  .notification_caption Владислав А.С. добавил вас к заседанию: 
+                  p Подготовка к постройке нового комплекса
+
+            ul.dash_b_menu_list
+              li.dash_menu_group
+                span.mb Сейчас
+              li
+                .notification_item
+                  .notification_caption 
+                    | Началось голосование на заседании  
+                    b.clr_green  №241
+                    |  Форма реестра №6 и отчета «Инвестиционные проек…:
+                  p Текст документа подготовлен. Необходимо согласовать дополнительные гарантийный обязательства
+                  .notification_control
+                    a.btn_v1.dash_btn.btn_blue(href='#'): span ПЕРЕЙТИ К ГОЛОСОВАНИЮ
+                
+            ul.dash_b_menu_list
+              li: a.dash_menu_link(href='#')
+                span.mb Смотреть все оповещения
             
       li.user_b_item
         .user_b_control
@@ -27,4 +56,4 @@
                 span.mb Администрирование
               li: a.dash_menu_link(href='#')
                 span.mb Выйти
-          
+                
