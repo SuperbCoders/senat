@@ -389,7 +389,6 @@
   float: left;
   width: 200px;
   font: 12px/30px $HelveticaNeueBold;
-  border-right: 1px solid $gl_gray;
 }
 
 .action_nav_list {
@@ -411,7 +410,8 @@
 .action_nav_controls {
 
   .action_nav_back ~ & {
-    padding-left: 200px;
+    margin-left: 199px;
+    border-left: 1px solid $gl_gray;
   }
 }
 
@@ -439,9 +439,4 @@
     line-height: 20px;
     content: $i-chevron-left;
   }
-
 }
-
-
-
-

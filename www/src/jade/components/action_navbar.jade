@@ -1,18 +1,18 @@
+block variables
+
 .action_navbar
   .section_inner.clearfix
     .action_nav_back
-      a.clr_green.nav_back_link(href='#') 
+      a.clr_green.nav_back_link(href='meetings.html') 
         span ВСЕ ЗАСЕДАНИЯ
         
-    .action_nav_menu
-      +dash_b_menu()
-      
-    .action_nav_controls
-      ul.action_nav_list.clr_green
-        li №241
-        li Очное
-        li КПП
-        li 17:00 – 19:00
-    
-      
-   
+    - if (!shortUnitNav)
+      .action_nav_menu
+        +dash_b_menu()
+        
+      .action_nav_controls
+        ul.action_nav_list.clr_green
+          li №241
+          li Очное
+          li КПП
+          li 17:00 – 19:00
