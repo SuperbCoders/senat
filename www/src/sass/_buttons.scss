@@ -69,7 +69,7 @@
 .btn_v2 {
   height: 60px;
 
-  &.aside_add_btn {
+  &.add_unit_btn {
     cursor: pointer;
     position: relative;
     z-index: 1;
@@ -111,9 +111,10 @@
   background: $gl_white;
   color: $default_t_color;
 
+  .open_menu &,
   &:hover {
-    background: $default_t_color;
-    color: $gl_white;
+    background: #ececec;
+    //color: $gl_white;
   }
 }
 
@@ -168,10 +169,32 @@
   }
 }
 
+.btn_red_2 {
+  @include transition_all(background .3s, color .3s);
+  background: $gl_white;
+  color: $gl_red_2;
+
+  &:hover {
+    background: $gl_red_2;
+    color: $gl_white;
+  }
+}
+
 .btn_black {
   @include transition_all(background .3s, color .3s);
   border: 1px solid $default_t_color;
   color: #4f4f4f;
+
+  &:hover {
+    background: $default_t_color;
+    color: $gl_white;
+  }
+}
+
+.btn_gray {
+  @include transition_all(background .3s, color .3s);
+  background: #cecece;
+  color: $default_t_color;
 
   &:hover {
     background: $default_t_color;

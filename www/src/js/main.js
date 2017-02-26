@@ -83,6 +83,10 @@ $(function ($) {
       runCircle($(this), 4000);
       return false;
     })
+    .delegate('.rmBtn', 'click', function () {
+      $(this).closest('.rmUnit').remove();
+      return false;
+    })
     .delegate('.userMenuBtn', 'click', function () {
       var dd = $(this).parent();
       hideDropDowns(dd);
@@ -103,25 +107,227 @@ $(function ($) {
     }
   });
 
+  $('.select2').each(function (ind) {
+    var slct = $(this);
+
+    slct.select2({
+      minimumResultsForSearch: Infinity,
+      dropdownParent: slct.parent(),
+      width: '100%'
+    })
+  });
+
   catchNavBar();
 
   initCalendar();
+
+  initTimePicker();
 
   all_dialog_close();
 
 });
 
+
+function customizeSelect(pckr) {
+
+  $(pckr.container).find('select').each(function (ind) {
+    var slct = $(this);
+
+    slct.wrap($('<div class="calendar_select"/>'));
+
+    slct.select2({
+      minimumResultsForSearch: Infinity,
+      dropdownParent: slct.parent(),
+      width: '100%'
+    })
+  });
+}
+
+function initTimePicker() {
+  $('.timePicker').each(function (ind) {
+    var tmp = $(this),
+      val = tmp.find('.timePickerVal');
+
+    val.on('focus', function () {
+      $(this).parent().addClass('open_menu');
+    });
+
+  });
+
+  $('.timeMinus').on('click', function () {
+    var valCell = $(this).closest('.valCell'),
+      inp = valCell.find('input'),
+      tmPckr = valCell.closest('.timePicker'),
+      val = parseInt(inp.val()),
+      new_val = val - (1 * inp.attr('data-step'));
+
+    inp.val(('0' + (new_val >= (1 * inp.attr('data-min')) ? new_val : inp.attr('data-max'))).substr(-2));
+
+    updateTime(tmPckr);
+
+    return false;
+  });
+
+  $('.timePlus').on('click', function () {
+    var valCell = $(this).closest('.valCell'),
+      inp = valCell.find('input'),
+      tmPckr = valCell.closest('.timePicker'),
+      val = parseInt(inp.val()),
+      new_val = val + (1 * inp.attr('data-step'));
+
+    inp.val(('0' + (new_val <= (1 * inp.attr('data-max')) ? new_val : inp.attr('data-min'))).substr(-2));
+
+    updateTime(tmPckr);
+
+    return false;
+  });
+}
+
+function updateTime(el) {
+  var inp = el.find('.timePickerVal');
+
+  inp.val(inp.attr('data-format').replace('hh', el.find('.valH').val()).replace('mm', el.find('.valM').val()));
+
+}
+
 function initCalendar() {
-  var clndr = $('#range_calendar');
+  var clndr = $('#range_calendar'), sngl = $('.singleDate');
+
+  if (sngl.length) {
+    sngl
+      .on('show.daterangepicker', function (ev, picker) {
+
+      })
+      .on('showCalendar.daterangepicker', function (ev, picker) {
+        customizeSelect(picker);
+      })
+      .each(function (ind) {
+        $(this).daterangepicker({
+          "alwaysShowCalendars": false,
+          "singleDatePicker": true,
+          "showDropdowns": true,
+          "parentEl": $(this).parent(),
+          "startDate": "14/02/2017",
+          "endDate": "20/02/2017",
+          "locale": {
+            "format": "DD/MM/YYYY",
+            "separator": " - ",
+            "applyLabel": "Apply",
+            "cancelLabel": "Cancel",
+            "fromLabel": "From",
+            "toLabel": "To",
+            "customRangeLabel": "Custom",
+            "weekLabel": "W",
+            "daysOfWeek": [
+              "Вс",
+              "Пн",
+              "Вт",
+              "Ср",
+              "Чт",
+              "Пт",
+              "Сб"
+            ],
+            "monthNames": [
+              "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+            ],
+            "firstDay": 1
+          }
+        });
+      });
+  }
 
   if (clndr.length) {
     clndr.daterangepicker({
       "alwaysShowCalendars": true,
       "showDropdowns": true,
       "parentEl": clndr.parent(),
-      "startDate": "02/14/2017",
-      "endDate": "02/20/2017"
+      "startDate": "14/02/2017",
+      "endDate": "20/02/2017",
+      "dateLimit": 20,
+      "locale": {
+        "format": "DD/MM/YYYY",
+        "separator": " - ",
+        "applyLabel": "Apply",
+        "cancelLabel": "Cancel",
+        "fromLabel": "From",
+        "toLabel": "To",
+        "customRangeLabel": "Custom",
+        "weekLabel": "W",
+        "daysOfWeek": [
+          "Вс",
+          "Пн",
+          "Вт",
+          "Ср",
+          "Чт",
+          "Пт",
+          "Сб"
+        ],
+        "monthNames": [
+          "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+        ],
+        "firstDay": 1
+      }
     });
+
+    /*
+        clndr.dateRangePicker({
+          autoClose: false,
+          format: 'YYYY-MM-DD',
+          separator: ' to ',
+          language: 'auto',
+          startOfWeek: 'monday',// or monday
+          getValue: function () {
+            return $(this).val();
+          },
+          setValue: function (s) {
+            if (!$(this).attr('readonly') && !$(this).is(':disabled') && s != $(this).val()) {
+              $(this).val(s);
+            }
+          },
+          startDate: false,
+          endDate: false,
+          time: {
+            enabled: false
+          },
+          minDays: 0,
+          maxDays: 0,
+          showShortcuts: false,
+          shortcuts: {
+            //'prev-days': [1,3,5,7],
+            //'next-days': [3,5,7],
+            //'prev' : ['week','month','year'],
+            //'next' : ['week','month','year']
+          },
+          customShortcuts: [],
+          inline: true,
+          container: clndr.parent(),
+          alwaysOpen: true,
+          singleDate: false,
+          lookBehind: true,
+          batchMode: false,
+          duration: 200,
+          stickyMonths: true,
+          dayDivAttrs: [],
+          dayTdAttrs: [],
+          applyBtnClass: '',
+          singleMonth: 'auto',
+          showTopbar: false,
+          swapTime: false,
+          selectForward: false,
+          selectBackward: false,
+          showWeekNumbers: false,
+          // showDateFilter: function (time, date) {
+          //   return '<div style="padding:0 5px;">\
+          //     <span style="font-weight:bold">' + date + '</span>\
+          //     <div style="opacity:0.3;">$' + Math.round(Math.random() * 999) + '</div>\
+          //   </div>';
+          // },
+          getWeekNumber: function (date) //date will be the first day of a week
+          {
+            return moment(date).format('w');
+          }
+        });*/
+
   }
 
 

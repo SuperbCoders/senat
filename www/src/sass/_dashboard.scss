@@ -1,10 +1,14 @@
 .dash_box {
-  margin-bottom: 10px;
+  padding-bottom: 10px;
+  position: relative;
 
   &._alone {
-    margin-bottom: 35px;
+    padding-bottom: 35px;
   }
 
+  &._mb_50 {
+    margin-bottom: 50px;
+  }
 }
 
 .box_caption {
@@ -31,6 +35,13 @@
     min-height: 100px;
     line-height: 60px;
 
+    .unit_rm_btn {
+      position: absolute;
+      top: -10px;
+      right: -10px;
+      box-shadow: 0 2px 5px 0 rgba(26, 26, 26, 0.30);
+    }
+
     > .fl {
       //max-width: 70%;
 
@@ -52,12 +63,31 @@
     }
   }
 
+  .sortable & {
+    @include transition_all(box-shadow .3s);
+    cursor: move;
+  }
+
+  .ui-sortable-helper & {
+    box-shadow: 10px 10px 10px 0 rgba(26, 26, 26, 0.20);
+  }
+
   ._alone & {
     padding: 25px 35px 12px;
   }
 
   ._members & {
     padding: 30px 40px 50px;
+  }
+
+  ._create & {
+    padding: 23px 40px 50px;
+  }
+
+  ._add > & {
+    padding: 20px 25px 0;
+    border-radius: 0;
+    box-shadow: 0 2px 5px 0 rgba(26, 26, 26, 0.30);
   }
 
   ._footer & {
@@ -128,10 +158,25 @@
 }
 
 .more_block {
+  @extend %clearfix;
   margin-bottom: 30px;
 
   &.mod_2 {
     margin: 20px 0 55px;
+  }
+
+  &.mod_3 {
+    margin: 20px 0;
+
+    .btn_v1.dash_btn {
+      min-width: 200px;
+    }
+  }
+
+  > li {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 10px;
   }
 }
 
@@ -262,9 +307,17 @@
   padding-left: 8px;
   letter-spacing: .1em;
 
+  &.mod_1,
   .dashboard_list + & {
     margin-top: 15px;
   }
+}
+
+.dash_b_label {
+  margin-bottom: 15px;
+  font: 12px/18px $HelveticaNeueLight;
+  color: #a0b3be;
+  letter-spacing: .09em;
 }
 
 .dash_b_date {
@@ -321,19 +374,21 @@
   padding-left: 15px;
   margin: 20px 0 15px;
 
-  &:before {
-    position: absolute;
-    top: 0;
-    left: -9px;
-    content: $i-check;
-    border-radius: 100%;
-    width: 16px;
-    height: 16px;
-    font-size: 12px;
-    line-height: 16px;
-    text-align: center;
-    background: $gl_blue_2;
-    color: $gl_white;
+  &._checked {
+    &:before {
+      position: absolute;
+      top: 0;
+      left: -9px;
+      content: $i-check;
+      border-radius: 100%;
+      width: 16px;
+      height: 16px;
+      font-size: 12px;
+      line-height: 16px;
+      text-align: center;
+      background: $gl_blue_2;
+      color: $gl_white;
+    }
   }
 }
 
@@ -417,6 +472,7 @@
 .dash_b_status_counter {
   float: left;
   font-size: 11px;
+  line-height: 16px;
   padding: 0 2px;
 }
 

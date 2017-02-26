@@ -1,11 +1,12 @@
 block variables
-  - var bodyClass = 'page_index';
-  - var htmlClass = 'stick_footer nav_header';
+  - var bodyClass = 'page_question';
+  - var htmlClass = 'stick_footer action_header';
   - var filterClass = 'clr_blue';
   - var pageTitle = 'Вопросы';
   - var pageDescription = 'Описание страницы';
   - var activePage = 2;
   - var hasUnitNav = true;
+  - var actionNavbarColor = 'clr_blue';
   - var customScripts = ['vendors/moment.min.js', 'vendors/daterangepicker.js'];
 
 include ../components/dashboard
@@ -15,27 +16,35 @@ block head
 block content
   .wrapper
     include ../components/header
-    include ../components/filter_2
+    include ../components/action_navbar
 
     .main_content._has_footer_controls
-      .section_inner
+      .action_brief
+        .section_inner
+          +action_brief(23, '_in_process', false, 2)
+        .action_brief_progress
+          .action_brief_val(style='width: 58%;')
+          .section_inner.clearfix
+            .action_brief_time 1 час 10 минут длительность заседания
+            .action_brief_left 40 минут до конца
 
-        #meetings_block.dash_box_title.clr_green ЗАСЕДАНИЯ
+      .section_inner
+        .dash_box_title.clr_blue ПОВЕСТКА
 
         ul.dashboard_list
           li
-            +meeting_box(23, '_in_process', 'Управляющий комитет')
+            +action_brief(17, '_in_vote', true, 1, 1, false, ['Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные'])
           li
-            +meeting_box(22, '', 'Комитет по проектам и процессам')
+            +action_brief(17, '_in_vote', true, 1, 1, true, ['Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные'])
           li
-            +meeting_box(1, '_in_preparation', 'Комитет по проектам и процессам')
+            +question_box(0, '_approved')
           li
-            +meeting_box(22, '_in_process', 'Управляющий комитет')
+            +question_box(29, '_rejected', true)
 
-        .text_center.more_block
-          a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 10 ЗАСЕДАНИЙ
+        .text_center.more_block.mod_2
+          a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 34 ВОПРОСА
 
-        #instructions_block.dash_box_title.clr_orange 4 ПОРУЧЕНИЯ
+        .dash_box_title.clr_orange 4 ПОРУЧЕНИЯ
 
         ul.dashboard_list
           li
@@ -47,13 +56,61 @@ block content
           li
             +instruction_box('', '_new')
 
-        #actions_block.dash_box_title.clr_blue 2 ДЕЙСТВИЯ
+        .text_center.more_block.mod_2
+          a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 4 ПОРУЧЕНИЯ
 
-        ul.dashboard_list
-          li
-            +question_box(0, '_approved')
-          li
-            +question_box(29, '_rejected', true)
+        .dash_box_title УЧАСТНИКИ
+
+        .dash_box._members
+          .dash_box_inner
+            .box_caption Члены коллегиального органа
+            ul.member_list
+              +loop_while(2)
+                li
+                  .member_box
+                    .member_avatars
+                      .member_main_avatar
+                        img(src='./img/member.png')
+                        .member_small_avatar
+                          img(src='./img/member.png')
+                    .participant_name Кислицин Д.М.
+                    .participant_post Председатель
+                li
+                  .member_box
+                    .member_avatars
+                      .member_main_avatar
+                        img(src='./img/user_empty.png')
+                        .member_small_avatar
+                          img(src='./img/member.png')
+                    .participant_name Морозов В.К.
+                    .participant_post Секретарь <br> Кислицина. М.П.
+
+            .box_splitter
+
+            .box_caption Приглашенные участники
+            ul.member_list
+              +loop_while(2)
+                li
+                  .member_box
+                    .member_avatars
+                      .member_main_avatar
+                        img(src='./img/member.png')
+                        .member_small_avatar
+                          img(src='./img/member.png')
+                    .participant_name Кислицин Д.М.
+                    .participant_post Председатель
+                li
+                  .member_box
+                    .member_avatars
+                      .member_main_avatar
+                        img(src='./img/user_empty.png')
+                        .member_small_avatar
+                          img(src='./img/member.png')
+                    .participant_name Морозов В.К.
+                    .participant_post Секретарь <br> Кислицина. М.П.
+
+        .text_center.more_block.mod_2
+          a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 21 УЧАСТНИКА
 
       include ../components/preloader
 

@@ -3,7 +3,7 @@ block variables
 .action_navbar
   .section_inner.clearfix
     .action_nav_back
-      a.clr_green.nav_back_link(href='meetings.html') 
+      a.nav_back_link(href='meetings.html' class=actionNavbarColor) 
         span ВСЕ ЗАСЕДАНИЯ
         
     - if (!shortUnitNav)
@@ -11,7 +11,7 @@ block variables
         +dash_b_menu()
         
       .action_nav_controls
-        ul.action_nav_list.clr_green
+        ul.action_nav_list(class=actionNavbarColor)
           li №241
           li Очное
           li КПП

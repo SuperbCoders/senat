@@ -299,8 +299,7 @@
   z-index: 3;
   background: $gl_white;
   height: 50px;
-  padding-top: 10px;
-  line-height: 40px;
+  line-height: 50px;
   box-shadow: 0 2px 2px 0 rgba(26, 26, 26, 0.10);
 
   .page_index & {
@@ -325,6 +324,7 @@
   @extend %clearfix;
   margin: 0 auto;
   max-width: 800px;
+  padding-top: 10px;
 
   li {
     float: left;
@@ -418,9 +418,16 @@
 .action_nav_menu {
   float: right;
   padding-right: 25px;
+  line-height: 50px;
 
   + .action_nav_controls {
     padding-right: 65px;
+  }
+
+  .menu_holder {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
   }
 }
 

@@ -373,11 +373,10 @@ body {
   .main_content .section_inner {
     padding: 0 72px;
     max-width: 944px; }
-    @media only screen and (min-width: 1440px) {
-      .filter_bar .section_inner,
-      .main_content .section_inner {
-        max-width: 1024px;
-        padding: 0 32px; } }
+  @media only screen and (min-width: 1440px) {
+    .page_index .filter_bar .section_inner,
+    .page_index .main_content .section_inner {
+      padding: 0 32px; } }
 
 .main_content {
   position: relative;

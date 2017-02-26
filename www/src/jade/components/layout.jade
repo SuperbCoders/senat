@@ -11,9 +11,33 @@ mixin radio_toggle(on, off, flags)
       span= off
 
 mixin collegial_unit(txt)
-  .collegial_unit
-    span.unit_rm_btn
+  .collegial_unit.rmUnit
+    span.btn_red_2.unit_rm_btn.rmBtn
     p= txt
+      
+mixin member_search(id)
+  .member_search_w.menu_w
+    .member_search_header
+      label.dash_b_label(for='member_search_' + (id ? id : 0)) Поиск участников по имени или комитету
+      form(action='#')
+        .input_w.has_icon
+          input.f_input.input_v1._inp_black(placeholder='Поиск' id= 'member_search_' + (id ? id : 0))
+          button.search_submit.i-search._small
+      
+    ul.add_list
+      li
+        .dash_b_label Приглашенные участники
+      +loop_while(7)
+        li
+          .add_item
+            label.check_v1
+              input.hide(type='checkbox')
+              span.check_text
+            +participant('Руководитель', 'Комитет по проектам и процессам')
+              
+        
+    .member_search_footer
+      a.btn_v1.dash_btn.btn_green_2(href='#') ВЫБРАТЬ УЧАСТНИКОВ
       
 mixin loop_while(counter)
   -i=0;

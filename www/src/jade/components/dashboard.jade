@@ -1,10 +1,15 @@
-mixin participant(post)
+mixin participant(post, committee)
   .dash_b_participant
     .participant_avatar
-      img(src='./img/participant.png')
+      - if (committee)
+        img(src='./img/member.png')
+      - else
+        img(src='./img/participant.png')
     .participant_name Долгов Ч.М.
     .participant_post= post 
-      
+    - if (committee)
+      .participant_committee= committee
+
 mixin dash_b_menu()
   .menu_holder
     .dash_b_menu_btn.dashMenuBtn: .dash_b_menu_icon
@@ -159,9 +164,11 @@ mixin question_box(date, status, mod_1)
         .mb
           +dash_b_menu()
 
-mixin action_brief(date, status, brief_menu, users, counter, progress, points)
+mixin action_brief(date, status, brief_menu, users, counter, progress, points, rm, check_class)
   .dash_box
     .dash_box_inner
+      - if (rm)
+        span.btn_red_2.unit_rm_btn.rmBtn
       .fl
         .mb
           .dash_b_date
@@ -179,7 +186,7 @@ mixin action_brief(date, status, brief_menu, users, counter, progress, points)
           .dash_b_info
             - if (points != undefined)
               - for pnt in points
-                .dash_b_point= pnt
+                .dash_b_point(class= !check_class ? '' : '_checked')= pnt
             - else
               .dash_b_location
                 span  Офис 302, 3 этаж, главное здание корпус А, Москва, шоссе Энтузиастов, 12, 2
@@ -218,9 +225,20 @@ mixin action_brief(date, status, brief_menu, users, counter, progress, points)
             +dash_b_menu()
 
 
+      - if (users == 0)
+        .participants_block
+  
+          ul.participants_list
+            li
+              +participant('Ответственный')
+            li
+              .participant_post Комитет по проектам и процессам
+        
       - if (users > 0)
         .participants_block
-          
+          .participant_vote
+            a.btn_v1.dash_btn.btn_blue(href='#'): span ПЕРЕЙТИ К ГОЛОСОВАНИЮ
+            
           - if (users > 1)
             ul.participants_list
               li
@@ -242,6 +260,20 @@ mixin action_brief(date, status, brief_menu, users, counter, progress, points)
                         .action_progress_box
                           .action_progress_val(style='width: 90%;')
                     p Минут на вопрос
-          
-          .participant_vote
-            a.btn_v1.dash_btn.btn_blue(href='#'): span ПЕРЕЙТИ К ГОЛОСОВАНИЮ
+        
+
+mixin time_picker()
+  .time_picker_w.menu_w.timePickerDD
+    .form_row
+      .form_cell._s_50
+        .f_label ЧАСЫ
+        .input_w.valCell
+          input.valH.input_v1.f_input._inp_black.text_center(readonly value='12' data-min='8' data-max='17' data-step='1')
+          .val_btn.minus.timeMinus &ndash;
+          .val_btn.plus.timePlus +
+      .form_cell._s_50
+        .f_label МИНУТЫ
+        .input_w.valCell
+          input.valM.input_v1.f_input._inp_black.text_center(readonly value='00' data-min='0' data-max='50' data-step='10')
+          .val_btn.minus.timeMinus &ndash;
+          .val_btn.plus.timePlus +

@@ -1125,7 +1125,7 @@
         },
 
         hide: function(e) {
-            if (!this.isShowing) return;
+            if (!(this.isShowing || this.alwaysShowCalendars)) return;
 
             //incomplete date selection, revert to last values
             if (!this.endDate) {

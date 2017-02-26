@@ -31,6 +31,15 @@
     padding: 10px 35px 30px;
     max-width: none;
   }
+
+  &.mod_2 {
+    background: $gl_white;
+    padding-top: 30px;
+  }
+  
+  .dash_btn {
+    min-width: 230px;
+  }
 }
 
 .f_controls_holder {
@@ -40,10 +49,10 @@
   + .f_controls_holder {
     margin-top: 30px;
   }
-  
+
   &.open_aside_add {
     z-index: 2;
-  }  
+  }
 }
 
 $palette_outer_radius: 230px;

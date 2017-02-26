@@ -89,9 +89,13 @@ body {
   .main_content & {
     padding: 0 72px;
     max-width: $content-max-w - 80;
+  }
+  
+  .page_index .filter_bar &,
+  .page_index .main_content & {
 
     @include respond-to-min($resp_step_2) {
-      max-width: $content-max-w;
+      //max-width: $content-max-w;
       padding: 0 32px;
     }
   }
