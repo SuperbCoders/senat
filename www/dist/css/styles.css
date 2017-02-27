@@ -145,8 +145,8 @@
   transform: translate(-50%, -50%); }
 
 .dash_b_point:after, .dash_b_location:after, .unit_rm_btn:after, .filter_link:after, .daterangepicker_v1 .glyphicon-chevron-right:after,
-.daterangepicker_v1 .glyphicon-chevron-left:after, .dash_b_point:before, .dash_b_location:before, .add_item .check_v1 .check_text:before, .unit_rm_btn:before, .filter_link:before, .collegial_switch_item.check_v1 .check_text:before, .daterangepicker_v1 .glyphicon-chevron-right:before,
-.daterangepicker_v1 .glyphicon-chevron-left:before {
+.daterangepicker_v1 .glyphicon-chevron-left:after, .popup_close:after, .dash_b_point:before, .dash_b_location:before, .add_item .check_v1 .check_text:before, .check_v2 .check_state:before, .unit_rm_btn:before, .filter_link:before, .collegial_switch_item.check_v1 .check_text:before, .daterangepicker_v1 .glyphicon-chevron-right:before,
+.daterangepicker_v1 .glyphicon-chevron-left:before, .popup_close:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "senat_icons" !important;
   speak: none;
@@ -1410,6 +1410,11 @@
   .dash_b_control + .day {
     margin-top: 30px; }
 
+._link {
+  text-decoration: underline; }
+  ._link:hover {
+    text-decoration: none; }
+
 .caption_v1 {
   font-size: 30px;
   color: #a0b3be;
@@ -1712,6 +1717,82 @@
       bottom: 10px; }
     .question_inner .dash_b_date .day {
       margin-bottom: 5px; }
+
+.check_v2 {
+  letter-spacing: .06em;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 30px;
+  cursor: pointer; }
+  .check_v2 .check_state {
+    transition: transform 0.3s;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 18px;
+    border-radius: 100%; }
+    .check_v2 .check_state:after {
+      transition: border 0.3s, opacity 0.3s;
+      position: absolute;
+      content: '';
+      left: 50%;
+      margin-left: -60px;
+      top: 0;
+      border-radius: 100%;
+      width: 120px;
+      height: 120px;
+      border: 1px solid; }
+    .check_v2 .check_state:before {
+      transition: background 0.3s, color 0.3s;
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      margin: -35px 0 0 -35px;
+      width: 70px;
+      height: 70px;
+      border-radius: 100%;
+      font-size: 50px;
+      line-height: 70px;
+      text-align: center;
+      background: #fff; }
+    .check_v2 .check_state.i-check:after {
+      border-color: #50c171; }
+    .check_v2 .check_state.i-cross:after {
+      border-color: #ff5137; }
+    .check_v2 .check_state.i-circle-minus:after {
+      border-color: #a0b3be; }
+  .check_v2 .check_text {
+    transition: color 0.3s;
+    font: 18px "HelveticaNeueBold", sans-serif;
+    display: block; }
+  .check_v2:hover .check_state {
+    transform: scale(1.143); }
+    .check_v2:hover .check_state:after {
+      border-width: 30px;
+      opacity: .2; }
+    .check_v2:hover .check_state.i-check ~ .check_text {
+      color: #50c171; }
+    .check_v2:hover .check_state.i-cross ~ .check_text {
+      color: #ff5137; }
+    .check_v2:hover .check_state.i-circle-minus ~ .check_text {
+      color: #a0b3be; }
+  .check_v2 input.hide:checked + .check_state:before {
+    color: #fff;
+    background-color: transparent; }
+  .check_v2 input.hide:checked + .check_state:after {
+    opacity: 1;
+    border-width: 60px; }
+  .check_v2 input.hide:checked + .check_state.i-check ~ .check_text {
+    color: #50c171; }
+  .check_v2 input.hide:checked + .check_state.i-cross ~ .check_text {
+    color: #ff5137; }
+  .check_v2 input.hide:checked + .check_state.i-circle-minus ~ .check_text {
+    color: #a0b3be; }
 
 .question_info {
   padding-left: 15px;
@@ -2360,3 +2441,73 @@
   left: 0;
   right: 0;
   z-index: 4; }
+  .vote_opened .popup_wrapper .gl_table {
+    padding-top: 40vh; }
+
+.popup_close {
+  transition: border 0.3s;
+  position: absolute;
+  top: 0;
+  right: 30px;
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  border: 1px solid rgba(71, 71, 71, 0.4);
+  z-index: 1;
+  cursor: pointer; }
+  .popup_close:before {
+    line-height: 38px;
+    font-size: 20px;
+    content: "";
+    color: #474747; }
+  .popup_close:hover {
+    border-color: #474747; }
+
+.vote_info_holder {
+  background: #fff;
+  position: relative;
+  height: 30%;
+  margin-top: 80px;
+  padding-top: 27px; }
+  .vote_info_holder .section_inner {
+    position: relative;
+    height: 100%; }
+
+.vote_form_holder {
+  padding: 25px 0; }
+
+.vote_info_caption {
+  font: 16px/22px "HelveticaNeueBold", sans-serif;
+  margin-bottom: 24px; }
+
+.vote_info {
+  position: relative;
+  max-height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 80px 30px;
+  overflow-y: auto; }
+  .vote_info p {
+    font: 16px/22px "HelveticaNeueLight", sans-serif;
+    margin-top: 24px; }
+
+.search_opened .wrapper .nav_bar,
+.search_opened .wrapper .footer_controls,
+.search_opened .wrapper .main_content,
+.vote_opened .wrapper .nav_bar,
+.vote_opened .wrapper .footer_controls,
+.vote_opened .wrapper .main_content {
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px); }
+
+.vote_form {
+  max-width: 700px;
+  margin: 0 auto; }
+  .vote_form p {
+    margin-bottom: 40px;
+    letter-spacing: .07em; }
+  .vote_form .form_cell {
+    line-height: 40px; }

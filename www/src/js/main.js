@@ -50,8 +50,6 @@ $(function ($) {
           html.removeClass(el.attr('data-class'));
         });
       }
-
-      return false;
     })
     .delegate('.filterLink', 'click', function () {
       var item = $(this), target = $(item.attr('href'));
@@ -67,9 +65,28 @@ $(function ($) {
 
       return false;
     })
+    .delegate('.popupClose', 'click', function () {
+      var form = $(this).parents('.popupWrapper');
+
+      form.fadeOut(600);
+      
+      overlay.toggle();
+      
+      html.toggleClass(form.attr('data-class'));
+
+      return false;
+    })
     .delegate('.asideAddOpen', 'click', function () {
       $(this).parent().toggleClass('open_aside_add');
       return false;
+    })
+    .delegate('.voteCheck', 'change', function () {
+      var radio = $(this),
+        btn = $('.voteBtn'),
+        new_class = btn.attr('class').replace(/btn_green|btn_red_3|btn_gray_2/, '');
+
+      btn.text(radio.attr('data-check-text')).attr('class', new_class).addClass(radio.attr('data-btn-class'));
+
     })
     .delegate('.filterToggle', 'click', function () {
       var lnk = $(this);

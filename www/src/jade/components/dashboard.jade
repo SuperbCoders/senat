@@ -51,7 +51,7 @@ mixin meeting_box(date, status, author, active)
       .fr
         .mb
           - if (status == '_in_process')
-            a.btn_v1.dash_btn.btn_blue(href='#'): span ПЕРЕЙТИ К ГОЛОСОВАНИЮ
+            a.btn_v1.dash_btn.btn_blue.openForm(data-href='#vote_popup' href='#'): span ПЕРЕЙТИ К ГОЛОСОВАНИЮ
           - else if (status == '_in_preparation')
             | &nbsp;
           - else
@@ -237,7 +237,7 @@ mixin action_brief(date, status, brief_menu, users, counter, progress, points, r
       - if (users > 0)
         .participants_block
           .participant_vote
-            a.btn_v1.dash_btn.btn_blue(href='#'): span ПЕРЕЙТИ К ГОЛОСОВАНИЮ
+            a.btn_v1.dash_btn.btn_blue.openForm(data-href='#vote_popup' href='#'): span ПЕРЕЙТИ К ГОЛОСОВАНИЮ
             
           - if (users > 1)
             ul.participants_list

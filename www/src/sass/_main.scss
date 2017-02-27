@@ -1,3 +1,11 @@
+._link {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .caption_v1 {
   font-size: 30px;
   color: #a0b3be;
@@ -266,7 +274,7 @@
   .member_list {
     padding-top: 10px;
 
-   > li {
+    > li {
       margin-bottom: 10px;
     }
   }
@@ -452,6 +460,153 @@
 
     .day {
       margin-bottom: 5px;
+    }
+  }
+}
+
+.check_v2 {
+  letter-spacing: .06em;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 30px;
+  cursor: pointer;
+
+  .check_state {
+    @include transition_all(transform .3s);
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    width: 120px;
+    height: 120px;
+    margin-bottom: 18px;
+    border-radius: 100%;
+
+    &:after {
+      @include transition_all(border .3s, opacity .3s);
+      position: absolute;
+      content: '';
+      left: 50%;
+      margin-left: -60px;
+      top: 0;
+      border-radius: 100%;
+      width: 120px;
+      height: 120px;
+      border: 1px solid;
+    }
+
+    &:before {
+      @extend %icon_pseudo;
+      @include transition_all(background .3s, color .3s);
+      position: absolute;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      margin: -35px 0 0 -35px;
+      width: 70px;
+      height: 70px;
+      border-radius: 100%;
+      font-size: 50px;
+      line-height: 70px;
+      text-align: center;
+      background: $gl_white;
+    }
+
+    &.i-check {
+      &:after {
+        border-color: $gl_green;
+      }
+    }
+
+    &.i-cross {
+      &:after {
+        border-color: $gl_red_2;
+      }
+    }
+
+    &.i-circle-minus {
+      &:after {
+        border-color: $gl_gray_3;
+      }
+    }
+  }
+
+  .check_text {
+    @include transition_all(color .3s);
+    font: 18px $HelveticaNeueBold;
+    display: block;
+  }
+
+  &:hover {
+    .check_state {
+      @include transform_scale(1.143);
+
+      &:after {
+        border-width: 30px;
+        opacity: .2;
+      }
+
+      &.i-check {
+        ~ .check_text {
+          color: $gl_green;
+        }
+      }
+
+      &.i-cross {
+        ~ .check_text {
+          color: $gl_red_2;
+        }
+      }
+
+      &.i-circle-minus {
+        ~ .check_text {
+          color: $gl_gray_3;
+        }
+      }
+    }
+  }
+
+  input.hide:checked + .check_state {
+
+    &:before {
+      color: $gl_white;
+      background-color: transparent;
+    }
+
+    &:after {
+      opacity: 1;
+      border-width: 60px;
+    }
+
+    &.i-check {
+      &:before {
+        //background: $gl_green;
+      }
+
+      ~ .check_text {
+        color: $gl_green;
+      }
+    }
+
+    &.i-cross {
+      &:before {
+        //background: $gl_red_2;
+      }
+
+      ~ .check_text {
+        color: $gl_red_2;
+      }
+    }
+
+    &.i-circle-minus {
+      &:before {
+        //background: $gl_gray_3;
+      }
+
+      ~ .check_text {
+        color: $gl_gray_3;
+      }
     }
   }
 }

@@ -11,5 +11,56 @@
                   input.f_input.input_v2(placeholder='Поиск')
                   button.search_submit.i-search._large.clr_white
                   
-                  
-                  
+#vote_popup.popup_wrapper.popupWrapper(data-class='vote_opened')
+  .vote_info_holder
+    .section_inner.noClose
+      .popup_close.popupClose
+
+      .vote_info
+        .vote_info_caption Финального голосования за символы России, которые будут изображены на новых банкнотах Банка России в 200 и 2000 рублей!
+
+        p Финального голосования за символы России, которые будут изображены на новых банкнотах Банка России в 200 и 2000 рублей!
+
+        p Ниже в алфавитном порядке представлены города/территории, которые уже прошли два отборочных этапа (подробнее о них здесь). Именно их символы жители России чаще всего предлагали для изображения на новых купюрах.
+
+        p Выбери двух самых достойных претендентов, проголосуй за них, и, возможно, твой голос станет решающим при подведении итогов.
+
+        p Также ты можешь проголосовать 1 октября 2016 года в рамках Дня открытых дверей Банка России (список всех региональных отделений доступен по ссылке) или заполнив специальные анкеты в федеральных изданиях газет «Аргументы и факты» и «Комсомольская правда». Анкеты будут опубликованы 14 и 15 сентября 2016 года, соответственно.
+
+        p Участвуй в финальном этапе отбора, голосуй за любимые символы!
+    
+  .vote_form_holder
+    .section_inner.noClose
+      .vote_form
+        p.text_center
+          a.clr_white._link(href='#') Посмотреть ход голосования
+          
+        form(action='#')
+          .form_row.cell_v1.text_center
+            .form_cell._s_33
+              label.check_v2
+                input.hide.voteCheck(data-check-text='ПРОГОЛОСОВАТЬ «ЗА»' type='radio' name='vote_process' data-btn-class='btn_green')
+                span.check_state.i-check
+                span.check_text «За»
+              
+            .form_cell._s_33
+              label.check_v2
+                input.hide.voteCheck(data-check-text='ПРОГОЛОСОВАТЬ «ПРОТИВ»' type='radio' name='vote_process' data-btn-class='btn_red_3')
+                span.check_state.i-cross
+                span.check_text «Против»
+              
+            .form_cell._s_33
+              label.check_v2
+                input.hide.voteCheck(data-check-text='ВОЗДЕРЖАТЬСЯ' type='radio' name='vote_process' data-btn-class='btn_gray_2')
+                span.check_state.i-circle-minus
+                span.check_text Воздержаться
+              
+          .form_row.cell_v1
+            .form_cell._s_33 &nbsp;
+              
+            .form_cell._s_33.text_center
+              button.btn_v1.dash_btn.voteBtn.btn_gray_2 ПРОГОЛОСОВАТЬ «ЗА»
+              
+            .form_cell._s_33.text_left
+              .mb: a.clr_white._link(href='#') Добавить мнение
+              

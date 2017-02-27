@@ -343,6 +343,9 @@ body {
 .hide {
   display: none !important; }
 
+input.hide {
+  position: absolute; }
+
 .clearfix:before, .clearfix:after {
   content: " ";
   display: table; }

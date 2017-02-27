@@ -79,7 +79,7 @@
                               Началось голосование на заседании  <b class="clr_green"> №241</b> Форма реестра №6 и отчета «Инвестиционные проек…:
                             </div>
                             <p>Текст документа подготовлен. Необходимо согласовать дополнительные гарантийный обязательства</p>
-                            <div class="notification_control"><a href="#" class="btn_v1 dash_btn btn_blue"><span>ПЕРЕЙТИ К ГОЛОСОВАНИЮ</span></a></div>
+                            <div class="notification_control"><a data-href="#vote_popup" href="#" class="btn_v1 dash_btn btn_blue openForm"><span>ПЕРЕЙТИ К ГОЛОСОВАНИЮ</span></a></div>
                           </div>
                         </li>
                       </ul>
@@ -212,7 +212,7 @@
                     </div>
                   </div>
                   <div class="fr">
-                    <div class="mb"><a href="#" class="btn_v1 dash_btn btn_blue"><span>ПЕРЕЙТИ К ГОЛОСОВАНИЮ</span></a>
+                    <div class="mb"><a data-href="#vote_popup" href="#" class="btn_v1 dash_btn btn_blue openForm"><span>ПЕРЕЙТИ К ГОЛОСОВАНИЮ</span></a>
                     </div>
                     <div class="mb">
                       <div class="dash_b_status _in_process">В ПРОЦЕССЕ
@@ -359,7 +359,7 @@
                     </div>
                   </div>
                   <div class="fr">
-                    <div class="mb"><a href="#" class="btn_v1 dash_btn btn_blue"><span>ПЕРЕЙТИ К ГОЛОСОВАНИЮ</span></a>
+                    <div class="mb"><a data-href="#vote_popup" href="#" class="btn_v1 dash_btn btn_blue openForm"><span>ПЕРЕЙТИ К ГОЛОСОВАНИЮ</span></a>
                     </div>
                     <div class="mb">
                       <div class="dash_b_status _in_process">В ПРОЦЕССЕ
@@ -706,6 +706,56 @@
                 </form>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="vote_popup" data-class="vote_opened" class="popup_wrapper popupWrapper">
+      <div class="vote_info_holder">
+        <div class="section_inner noClose">
+          <div class="popup_close popupClose"></div>
+          <div class="vote_info">
+            <div class="vote_info_caption">Финального голосования за символы России, которые будут изображены на новых банкнотах Банка России в 200 и 2000 рублей!</div>
+            <p>Финального голосования за символы России, которые будут изображены на новых банкнотах Банка России в 200 и 2000 рублей!</p>
+            <p>Ниже в алфавитном порядке представлены города/территории, которые уже прошли два отборочных этапа (подробнее о них здесь). Именно их символы жители России чаще всего предлагали для изображения на новых купюрах.</p>
+            <p>Выбери двух самых достойных претендентов, проголосуй за них, и, возможно, твой голос станет решающим при подведении итогов.</p>
+            <p>Также ты можешь проголосовать 1 октября 2016 года в рамках Дня открытых дверей Банка России (список всех региональных отделений доступен по ссылке) или заполнив специальные анкеты в федеральных изданиях газет «Аргументы и факты» и «Комсомольская правда». Анкеты будут опубликованы 14 и 15 сентября 2016 года, соответственно.</p>
+            <p>Участвуй в финальном этапе отбора, голосуй за любимые символы!</p>
+          </div>
+        </div>
+      </div>
+      <div class="vote_form_holder">
+        <div class="section_inner noClose">
+          <div class="vote_form">
+            <p class="text_center"><a href="#" class="clr_white _link">Посмотреть ход голосования</a></p>
+            <form action="#">
+              <div class="form_row cell_v1 text_center">
+                <div class="form_cell _s_33">
+                  <label class="check_v2">
+                    <input data-check-text="ПРОГОЛОСОВАТЬ «ЗА»" type="radio" name="vote_process" data-btn-class="btn_green" class="hide voteCheck"><span class="check_state i-check"></span><span class="check_text">«За»</span>
+                  </label>
+                </div>
+                <div class="form_cell _s_33">
+                  <label class="check_v2">
+                    <input data-check-text="ПРОГОЛОСОВАТЬ «ПРОТИВ»" type="radio" name="vote_process" data-btn-class="btn_red_3" class="hide voteCheck"><span class="check_state i-cross"></span><span class="check_text">«Против»</span>
+                  </label>
+                </div>
+                <div class="form_cell _s_33">
+                  <label class="check_v2">
+                    <input data-check-text="ВОЗДЕРЖАТЬСЯ" type="radio" name="vote_process" data-btn-class="btn_gray_2" class="hide voteCheck"><span class="check_state i-circle-minus"></span><span class="check_text">Воздержаться</span>
+                  </label>
+                </div>
+              </div>
+              <div class="form_row cell_v1">
+                <div class="form_cell _s_33">&nbsp;</div>
+                <div class="form_cell _s_33 text_center">
+                  <button class="btn_v1 dash_btn voteBtn btn_gray_2">ПРОГОЛОСОВАТЬ «ЗА»</button>
+                </div>
+                <div class="form_cell _s_33 text_left">
+                  <div class="mb"><a href="#" class="clr_white _link">Добавить мнение</a></div>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>

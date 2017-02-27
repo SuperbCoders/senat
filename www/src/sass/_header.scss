@@ -19,6 +19,10 @@
     padding: 0 32px;
     max-width: none;
   }
+
+  .vote_opened & {
+    background: $default_t_color;
+  }
 }
 
 .logo_block {

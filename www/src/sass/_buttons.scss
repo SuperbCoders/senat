@@ -135,12 +135,13 @@
 }
 
 .btn_green {
-  @include transition_all(background .3s, color .3s);
+  @include transition_all(background .3s, color .3s, border .3s);
   border: 1px solid $gl_green;
   color: $gl_green;
+  background-color: transparent;
 
   &:hover {
-    background: $gl_green;
+    background-color: $gl_green;
     color: $gl_white;
   }
 }
@@ -180,6 +181,18 @@
   }
 }
 
+.btn_red_3 {
+  @include transition_all(background .3s, border .3s, color .3s);
+  background: transparent;
+  border: 1px solid $gl_red_2;
+  color: $gl_red_2;
+
+  &:hover {
+    background: $gl_red_2;
+    color: $gl_white;
+  }
+}
+
 .btn_black {
   @include transition_all(background .3s, color .3s);
   border: 1px solid $default_t_color;
@@ -198,6 +211,19 @@
 
   &:hover {
     background: $default_t_color;
+    color: $gl_white;
+  }
+}
+
+.btn_gray_2 {
+  @include transition_all(background .3s, color .3s, border .3s);
+  background: transparent;
+  border: 1px solid $gl_gray_2;
+  color: $gl_gray_2;
+
+  &:hover {
+    background: $default_t_color;
+    border-color: $default_t_color;
     color: $gl_white;
   }
 }

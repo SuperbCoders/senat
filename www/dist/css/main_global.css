@@ -356,6 +356,9 @@ body {
 .hide {
   display: none !important; }
 
+input.hide {
+  position: absolute; }
+
 .clearfix:before, .clearfix:after {
   content: " ";
   display: table; }
@@ -1263,11 +1266,12 @@ body.rtl .formError .formErrorArrow {
   background: green; }
 
 .btn_green {
-  transition: background 0.3s, color 0.3s;
+  transition: background 0.3s, color 0.3s, border 0.3s;
   border: 1px solid #50c171;
-  color: #50c171; }
+  color: #50c171;
+  background-color: transparent; }
   .btn_green:hover {
-    background: #50c171;
+    background-color: #50c171;
     color: #fff; }
 
 .btn_green_2 {
@@ -1296,6 +1300,15 @@ body.rtl .formError .formErrorArrow {
     background: #ff5137;
     color: #fff; }
 
+.btn_red_3 {
+  transition: background 0.3s, border 0.3s, color 0.3s;
+  background: transparent;
+  border: 1px solid #ff5137;
+  color: #ff5137; }
+  .btn_red_3:hover {
+    background: #ff5137;
+    color: #fff; }
+
 .btn_black {
   transition: background 0.3s, color 0.3s;
   border: 1px solid #474747;
@@ -1310,6 +1323,16 @@ body.rtl .formError .formErrorArrow {
   color: #474747; }
   .btn_gray:hover {
     background: #474747;
+    color: #fff; }
+
+.btn_gray_2 {
+  transition: background 0.3s, color 0.3s, border 0.3s;
+  background: transparent;
+  border: 1px solid #6e737a;
+  color: #6e737a; }
+  .btn_gray_2:hover {
+    background: #474747;
+    border-color: #474747;
     color: #fff; }
 
 .btn_blue {
@@ -1348,6 +1371,8 @@ body.rtl .formError .formErrorArrow {
   .header .section_inner {
     padding: 0 32px;
     max-width: none; }
+  .vote_opened .header {
+    background: #474747; }
 
 .logo_block {
   float: left; }
