@@ -80,6 +80,15 @@ $(function ($) {
       $(this).parent().toggleClass('open_aside_add');
       return false;
     })
+    .delegate('.voteStepBtn', 'click', function () {
+      var step = $(this).attr('data-step');
+
+      $('.voteStep').hide().filter(function () {
+        return $(this).attr('data-step') == step;
+      }).show();
+
+      return false;
+    })
     .delegate('.voteCheck', 'change', function () {
       var radio = $(this),
         btn = $('.voteBtn'),
@@ -155,7 +164,7 @@ $(function ($) {
 function selectTemplate(data, container) {
   if (data.element) {
     var el = $(container);
-    
+
     if (el.attr('class')) {
 
       el.attr('class', el.attr('class').replace(/ _\w+/, ''));
@@ -163,7 +172,7 @@ function selectTemplate(data, container) {
       el.addClass($(data.element).attr("class"));
     }
   }
-  
+
   return data.text;
 }
 

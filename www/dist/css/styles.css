@@ -118,7 +118,7 @@
 .i-location2:before {
   content: ""; }
 
-.dash_box_inner:after, .dash_list:after, .more_block:after, .filter_controls:after, .participants_block:after, .member_list:after, .members_wrapper:after, .question_inner:after, .tag_list:after, .contact_block:after, .profile_block:after, .profile_s_row:after, .collegial_list:after, .filter_bar_controls:after, .filter_list:after, .daterangepicker_holder .daterangepicker:after {
+.dash_box_inner:after, .dash_list:after, .more_block:after, .filter_controls:after, .participants_block:after, .member_list:after, .members_wrapper:after, .question_inner:after, .tag_list:after, .contact_block:after, .profile_block:after, .profile_s_row:after, .collegial_list:after, .filter_bar_controls:after, .filter_list:after, .daterangepicker_holder .daterangepicker:after, .vote_result_caption:after, .vote_results_scale:after, .votings_list > li:after, .opinion_item:after {
   position: static;
   display: block;
   height: 0;
@@ -145,8 +145,8 @@
   transform: translate(-50%, -50%); }
 
 .dash_b_point:after, .dash_b_location:after, .unit_rm_btn:after, .filter_link:after, .daterangepicker_v1 .glyphicon-chevron-right:after,
-.daterangepicker_v1 .glyphicon-chevron-left:after, .popup_close:after, .dash_b_point:before, .dash_b_location:before, .add_item .check_v1 .check_text:before, .check_v2 .check_state:before, .unit_rm_btn:before, .filter_link:before, .collegial_switch_item.check_v1 .check_text:before, .daterangepicker_v1 .glyphicon-chevron-right:before,
-.daterangepicker_v1 .glyphicon-chevron-left:before, .popup_close:before {
+.daterangepicker_v1 .glyphicon-chevron-left:after, .popup_close:after, .vote_thanks_caption:after, .dash_b_point:before, .dash_b_location:before, .add_item .check_v1 .check_text:before, .check_v2 .check_state:before, .unit_rm_btn:before, .filter_link:before, .collegial_switch_item.check_v1 .check_text:before, .daterangepicker_v1 .glyphicon-chevron-right:before,
+.daterangepicker_v1 .glyphicon-chevron-left:before, .popup_close:before, .vote_thanks_caption:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "senat_icons" !important;
   speak: none;
@@ -2538,8 +2538,6 @@
   left: 0;
   right: 0;
   z-index: 4; }
-  .vote_opened .popup_wrapper .gl_table {
-    padding-top: 40vh; }
 
 .popup_close {
   transition: border 0.3s;
@@ -2560,15 +2558,95 @@
     color: #474747; }
   .popup_close:hover {
     border-color: #474747; }
+  .popup_close._close_2:before {
+    color: #fff; }
+
+.vote_step {
+  display: none;
+  height: 100%;
+  padding-top: 107px; }
+  .vote_step .section_inner {
+    padding: 0 32px;
+    position: relative; }
+  .vote_step.step_2 {
+    background-image: linear-gradient(-90deg, #50c171 0%, #18ce98 100%); }
+  .vote_step.step_3 {
+    background: #2e2e2e; }
+
+.vote_results {
+  margin: 0 auto;
+  max-width: 800px;
+  font-size: 18px; }
+  .vote_results p {
+    line-height: 1.75;
+    letter-spacing: .04em; }
+
+.vote_result_caption {
+  font-size: 18px;
+  margin-bottom: 20px;
+  letter-spacing: .05em; }
+
+.vote_icon {
+  margin: 0 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  color: #fff;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center; }
+  .vote_icon.i-check {
+    background: #50c171; }
+
+.vote_results_scale {
+  margin: 0 -40px 35px; }
+  .vote_results_scale .vote_val {
+    background: #6e737a;
+    color: #fff;
+    font: 48px/53px "HelveticaNeueLight", sans-serif;
+    float: left;
+    height: 80px; }
+    .vote_results_scale .vote_val span {
+      padding: 10px 30px; }
+    .vote_results_scale .vote_val.vote_pro {
+      background-image: linear-gradient(-90deg, #50c171 0%, #18ce98 100%); }
+    .vote_results_scale .vote_val.vote_cons {
+      background-image: linear-gradient(-90deg, #ff1f3c 0%, #ff6a31 100%); }
+
+.votings_block {
+  position: relative;
+  padding-top: 30px;
+  margin-top: 38px; }
+  .votings_block:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px;
+    left: -10px;
+    height: 1px;
+    background: #d8d8d8; }
+
+.votings_list > li {
+  margin: 20px 0 30px; }
+
+.votings_list .participant_avatar {
+  width: 80px;
+  height: 80px;
+  margin-right: 20px;
+  margin-left: -10px; }
+
+.votings_list .participant_name {
+  padding-top: 15px; }
+
+.votings_list .participant_post {
+  padding-top: 5px;
+  font: 14px "HelveticaNeueLight", sans-serif; }
 
 .vote_info_holder {
   background: #fff;
   position: relative;
-  height: 30%;
-  margin-top: 80px;
-  padding-top: 27px; }
+  height: 34%; }
   .vote_info_holder .section_inner {
-    position: relative;
     height: 100%; }
 
 .vote_form_holder {
@@ -2577,6 +2655,45 @@
 .vote_info_caption {
   font: 16px/22px "HelveticaNeueBold", sans-serif;
   margin-bottom: 24px; }
+
+.vote_thanks_caption {
+  font: 24px/30px "HelveticaNeueLight", sans-serif;
+  margin: 30px 0;
+  letter-spacing: .05em;
+  text-align: center; }
+  .vote_thanks_caption:before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    line-height: 30px;
+    border-radius: 100%;
+    margin-right: 20px;
+    color: #50c171;
+    background: #fff; }
+  .vote_thanks_caption.clr_green:before {
+    color: #fff;
+    background: #50c171; }
+  .votings_block .vote_thanks_caption {
+    margin: 0;
+    font-size: 18px; }
+
+.vote_counter_val {
+  font: 144px/1 "HelveticaNeueLight", sans-serif;
+  margin-bottom: 22px;
+  letter-spacing: .1em; }
+
+.vote_counter {
+  margin: 60px 0;
+  padding: 75px 0 78px;
+  border: solid rgba(255, 255, 255, 0.4);
+  border-width: 1px 0; }
+  .vote_counter p {
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: .03em; }
 
 .vote_info {
   position: relative;
@@ -2608,3 +2725,25 @@
     letter-spacing: .07em; }
   .vote_form .form_cell {
     line-height: 40px; }
+
+.section_scroller {
+  margin: 0 -10px;
+  padding: 0 10px;
+  max-height: 60vh;
+  overflow-x: hidden;
+  overflow-y: auto; }
+
+.special_opinion {
+  padding-top: 25px;
+  font-size: 14px; }
+  .special_opinion > li {
+    margin-bottom: 40px; }
+
+.opinion_author {
+  float: left;
+  max-width: 25%;
+  margin-left: -10px; }
+
+.opinion_text {
+  padding-left: 29%;
+  font-size: 14px; }

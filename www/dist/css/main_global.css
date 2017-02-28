@@ -480,6 +480,9 @@ input.hide {
 .clr_green {
   color: #50c171; }
 
+.clr_gray {
+  color: #a0b3be; }
+
 .clr_red {
   color: #ff543a; }
 
@@ -1234,6 +1237,8 @@ body.rtl .formError .formErrorArrow {
 
 .btn_v1.dash_btn {
   min-width: 200px; }
+  .btn_v1.dash_btn._mod_2 {
+    min-width: 220px; }
   .more_block .btn_v1.dash_btn {
     min-width: 230px; }
 
@@ -1360,6 +1365,15 @@ body.rtl .formError .formErrorArrow {
   .btn_gray_2:hover {
     background: #474747;
     border-color: #474747;
+    color: #fff; }
+
+.btn_gray_3 {
+  transition: background 0.3s, color 0.3s, border 0.3s;
+  background: transparent;
+  border: 1px solid #474747;
+  color: #474747; }
+  .btn_gray_3:hover {
+    background: #474747;
     color: #fff; }
 
 .btn_blue {

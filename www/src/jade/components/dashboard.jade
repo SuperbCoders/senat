@@ -1,7 +1,7 @@
-mixin participant(post, committee)
+mixin participant(post, committee, member)
   .dash_b_participant
     .participant_avatar
-      - if (committee)
+      - if (committee || member)
         img(src='./img/member.png')
       - else
         img(src='./img/participant.png')

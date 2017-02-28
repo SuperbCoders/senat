@@ -50,6 +50,10 @@
     @extend %main_btn;
     min-width: 200px;
 
+    &._mod_2 {
+      min-width: 220px;
+    }
+
     .more_block & {
       min-width: 230px;
     }
@@ -224,6 +228,18 @@
   &:hover {
     background: $default_t_color;
     border-color: $default_t_color;
+    color: $gl_white;
+  }
+}
+
+.btn_gray_3 {
+  @include transition_all(background .3s, color .3s, border .3s);
+  background: transparent;
+  border: 1px solid $default_t_color;
+  color: $default_t_color;
+
+  &:hover {
+    background: $default_t_color;
     color: $gl_white;
   }
 }

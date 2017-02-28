@@ -11,7 +11,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="mobile-web-app-capable" content="yes">
-    <title>Новое заседания</title>
+    <title>Новое заседание</title>
     <meta name="description" content="Описание страницы">
     <meta property="og:title" content="feedly: organize, read and share what matters to you.">
     <meta property="og:url" content="http://feedly.com/index.html">
@@ -1006,51 +1006,173 @@
       </div>
     </div>
     <div id="vote_popup" data-class="vote_opened" class="popup_wrapper popupWrapper">
-      <div class="vote_info_holder">
-        <div class="section_inner noClose">
-          <div class="popup_close popupClose"></div>
-          <div class="vote_info">
-            <div class="vote_info_caption">Финального голосования за символы России, которые будут изображены на новых банкнотах Банка России в 200 и 2000 рублей!</div>
-            <p>Финального голосования за символы России, которые будут изображены на новых банкнотах Банка России в 200 и 2000 рублей!</p>
-            <p>Ниже в алфавитном порядке представлены города/территории, которые уже прошли два отборочных этапа (подробнее о них здесь). Именно их символы жители России чаще всего предлагали для изображения на новых купюрах.</p>
-            <p>Выбери двух самых достойных претендентов, проголосуй за них, и, возможно, твой голос станет решающим при подведении итогов.</p>
-            <p>Также ты можешь проголосовать 1 октября 2016 года в рамках Дня открытых дверей Банка России (список всех региональных отделений доступен по ссылке) или заполнив специальные анкеты в федеральных изданиях газет «Аргументы и факты» и «Комсомольская правда». Анкеты будут опубликованы 14 и 15 сентября 2016 года, соответственно.</p>
-            <p>Участвуй в финальном этапе отбора, голосуй за любимые символы!</p>
+      <div data-step="1" class="vote_step voteStep">
+        <div class="vote_info_holder">
+          <div class="section_inner noClose">
+            <div class="popup_close popupClose"></div>
+            <div class="vote_info">
+              <div class="vote_info_caption">Финального голосования за символы России, которые будут изображены на новых банкнотах Банка России в 200 и 2000 рублей!</div>
+              <p>Финального голосования за символы России, которые будут изображены на новых банкнотах Банка России в 200 и 2000 рублей!</p>
+              <p>Ниже в алфавитном порядке представлены города/территории, которые уже прошли два отборочных этапа (подробнее о них здесь). Именно их символы жители России чаще всего предлагали для изображения на новых купюрах.</p>
+              <p>Выбери двух самых достойных претендентов, проголосуй за них, и, возможно, твой голос станет решающим при подведении итогов.</p>
+              <p>Также ты можешь проголосовать 1 октября 2016 года в рамках Дня открытых дверей Банка России (список всех региональных отделений доступен по ссылке) или заполнив специальные анкеты в федеральных изданиях газет «Аргументы и факты» и «Комсомольская правда». Анкеты будут опубликованы 14 и 15 сентября 2016 года, соответственно.</p>
+              <p>Участвуй в финальном этапе отбора, голосуй за любимые символы!</p>
+            </div>
+          </div>
+        </div>
+        <div class="vote_form_holder">
+          <div class="section_inner noClose">
+            <div class="vote_form">
+              <p class="text_center"><a href="#" class="clr_white _link">Посмотреть ход голосования</a></p>
+              <form action="#">
+                <div class="form_row cell_v1 text_center">
+                  <div class="form_cell _s_33">
+                    <label class="check_v2">
+                      <input data-check-text="ПРОГОЛОСОВАТЬ «ЗА»" type="radio" name="vote_process" data-btn-class="btn_green" class="hide voteCheck"><span class="check_state i-check"></span><span class="check_text">«За»</span>
+                    </label>
+                  </div>
+                  <div class="form_cell _s_33">
+                    <label class="check_v2">
+                      <input data-check-text="ПРОГОЛОСОВАТЬ «ПРОТИВ»" type="radio" name="vote_process" data-btn-class="btn_red_3" class="hide voteCheck"><span class="check_state i-cross"></span><span class="check_text">«Против»</span>
+                    </label>
+                  </div>
+                  <div class="form_cell _s_33">
+                    <label class="check_v2">
+                      <input data-check-text="ВОЗДЕРЖАТЬСЯ" type="radio" name="vote_process" data-btn-class="btn_gray_2" class="hide voteCheck"><span class="check_state i-circle-minus"></span><span class="check_text">Воздержаться</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="form_row cell_v1">
+                  <div class="form_cell _s_33">&nbsp;</div>
+                  <div class="form_cell _s_33 text_center">
+                    <button data-step="2" class="btn_v1 dash_btn voteBtn voteStepBtn btn_gray_2">ПРОГОЛОСОВАТЬ «ЗА»</button>
+                  </div>
+                  <div class="form_cell _s_33 text_left">
+                    <div class="mb"><a href="#" class="clr_white _link">Добавить мнение</a></div>
+                  </div>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
-      <div class="vote_form_holder">
-        <div class="section_inner noClose">
-          <div class="vote_form">
-            <p class="text_center"><a href="#" class="clr_white _link">Посмотреть ход голосования</a></p>
-            <form action="#">
-              <div class="form_row cell_v1 text_center">
-                <div class="form_cell _s_33">
-                  <label class="check_v2">
-                    <input data-check-text="ПРОГОЛОСОВАТЬ «ЗА»" type="radio" name="vote_process" data-btn-class="btn_green" class="hide voteCheck"><span class="check_state i-check"></span><span class="check_text">«За»</span>
-                  </label>
+      <div data-step="2" class="vote_step voteStep step_2 clr_white noClose">
+        <div class="gl_table">
+          <div class="gl_table_cell">
+            <div class="section_inner text_center">
+              <div class="vote_thanks_caption"><span class="mb">Спасибо за голос!</span></div>
+              <div class="vote_counter">
+                <div class="vote_counter_val">12</div>
+                <p>Человека проголосовали <br>  так-же как и вы</p>
+              </div>
+              <div class="text_center more_block">
+                <div data-step="3" class="btn_v1 dash_btn voteStepBtn btn_white_2"><span class="clr_green">ПЕРЕЙТИ К РЕЗУЛЬТАТАМ</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div data-step="3" style="display: block;" class="vote_step voteStep step_3 noClose">
+        <div class="section_inner">
+          <div class="popup_close popupClose _close_2"></div>
+          <div class="vote_results">
+            <div class="dash_box _members">
+              <div class="dash_box_inner">
+                <div class="vote_result_caption">
+                  <div class="fl"> <span class="mb">Результаты</span></div>
+                  <div class="fr"> <span class="mb">Вы проголосовали:</span><span class="mb clr_green"><span class="i-check vote_icon mb"></span><span>«За»</span></span></div>
                 </div>
-                <div class="form_cell _s_33">
-                  <label class="check_v2">
-                    <input data-check-text="ПРОГОЛОСОВАТЬ «ПРОТИВ»" type="radio" name="vote_process" data-btn-class="btn_red_3" class="hide voteCheck"><span class="check_state i-cross"></span><span class="check_text">«Против»</span>
-                  </label>
+                <div class="vote_results_scale">
+                  <div style="width:55%;" class="vote_val vote_pro"> <span class="mb">12</span></div>
+                  <div style="width:35%;" class="vote_val vote_cons"> <span class="mb">7</span></div>
+                  <div style="width:10%;" class="vote_val"> <span class="mb">1</span></div>
                 </div>
-                <div class="form_cell _s_33">
-                  <label class="check_v2">
-                    <input data-check-text="ВОЗДЕРЖАТЬСЯ" type="radio" name="vote_process" data-btn-class="btn_gray_2" class="hide voteCheck"><span class="check_state i-circle-minus"></span><span class="check_text">Воздержаться</span>
-                  </label>
+                <div class="section_scroller">
+                  <p>Паспорта услуг и заключение SLA между обеспечивающими подразделениями и краткий обзор паспорта услуг и заключение SLA между обеспечивающими подразделениями и краткий обзор и заключение SLA между обеспечивающими подразделениями.</p>
+                  <div class="votings_block">
+                    <p>Проголосовали <span class="clr_green">«За»</span></p>
+                    <ul class="votings_list">
+                      <li> 
+                        <div class="dash_b_participant">
+                          <div class="participant_avatar"><img src="./img/member.png"/>
+                          </div>
+                          <div class="participant_name">Долгов Ч.М.</div>
+                          <div class="participant_post">Председатель</div>
+                        </div>
+                      </li>
+                      <li> 
+                        <div class="dash_b_participant">
+                          <div class="participant_avatar"><img src="./img/member.png"/>
+                          </div>
+                          <div class="participant_name">Долгов Ч.М.</div>
+                          <div class="participant_post">Председатель</div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="votings_block">
+                    <p>Проголосовали <span class="clr_red">«Против»</span></p>
+                    <ul class="votings_list">
+                      <li> 
+                        <div class="dash_b_participant">
+                          <div class="participant_avatar"><img src="./img/member.png"/>
+                          </div>
+                          <div class="participant_name">Долгов Ч.М.</div>
+                          <div class="participant_post">Председатель</div>
+                        </div>
+                      </li>
+                      <li> 
+                        <div class="dash_b_participant">
+                          <div class="participant_avatar"><img src="./img/member.png"/>
+                          </div>
+                          <div class="participant_name">Долгов Ч.М.</div>
+                          <div class="participant_post">Председатель</div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="votings_block">
+                    <p><span class="clr_gray">Особое мнение</span></p>
+                    <ul class="special_opinion">
+                      <li> 
+                        <div class="opinion_item">
+                          <div class="opinion_author">
+                            <div class="dash_b_participant">
+                              <div class="participant_avatar"><img src="./img/participant.png"/>
+                              </div>
+                              <div class="participant_name">Долгов Ч.М.</div>
+                              <div class="participant_post">Ответственный</div>
+                            </div>
+                          </div>
+                          <div class="opinion_text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</div>
+                        </div>
+                      </li>
+                      <li> 
+                        <div class="opinion_item">
+                          <div class="opinion_author">
+                            <div class="dash_b_participant">
+                              <div class="participant_avatar"><img src="./img/participant.png"/>
+                              </div>
+                              <div class="participant_name">Долгов Ч.М.</div>
+                              <div class="participant_post">Ответственный</div>
+                            </div>
+                          </div>
+                          <div class="opinion_text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="votings_block">
+                    <div class="vote_thanks_caption clr_green"><span class="mb">Вопрос утвержден</span></div>
+                  </div>
+                  <div class="votings_block">
+                    <div class="text_center">
+                      <div data-step="1" class="btn_v1 dash_btn voteStepBtn btn_gray_3">ВЕРНУТЬСЯ К ВОПРОСУ</div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="form_row cell_v1">
-                <div class="form_cell _s_33">&nbsp;</div>
-                <div class="form_cell _s_33 text_center">
-                  <button class="btn_v1 dash_btn voteBtn btn_gray_2">ПРОГОЛОСОВАТЬ «ЗА»</button>
-                </div>
-                <div class="form_cell _s_33 text_left">
-                  <div class="mb"><a href="#" class="clr_white _link">Добавить мнение</a></div>
-                </div>
-              </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>

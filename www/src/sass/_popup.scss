@@ -20,7 +20,7 @@
 
   .vote_opened & {
     .gl_table {
-      padding-top: 40vh;
+      //padding-top: 40vh;
     }
   }
 
@@ -39,7 +39,7 @@
   border: 1px solid transparentize($default_t_color, .6);
   z-index: 1;
   cursor: pointer;
-  
+
   &:before {
     line-height: 38px;
     font-size: 20px;
@@ -50,6 +50,130 @@
   &:hover {
     border-color: $default_t_color;
   }
+
+  &._close_2 {
+
+    &:before {
+      color: $gl_white;
+    }
+  }
+}
+
+.vote_step {
+  display: none;
+  height: 100%;
+  padding-top: 107px;
+
+  .section_inner {
+    padding: 0 32px;
+    position: relative;
+  }
+
+  &.step_2 {
+    background-image: linear-gradient(-90deg, #50c171 0%, #18ce98 100%);
+  }
+
+  &.step_3 {
+    background: #2e2e2e;
+  }
+}
+
+.vote_results {
+  margin: 0 auto;
+  max-width: 800px;
+  font-size: 18px;
+
+  p {
+    line-height: 1.75;
+    letter-spacing: .04em;
+  }
+}
+
+.vote_result_caption {
+  @extend %clearfix;
+  font-size: 18px;
+  margin-bottom: 20px;
+  letter-spacing: .05em;
+}
+
+.vote_icon {
+  margin: 0 10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  color: $gl_white;
+  font-size: 15px;
+  line-height: 20px;
+  text-align: center;
+
+  &.i-check {
+    background: $gl_green;
+  }
+}
+
+.vote_results_scale {
+  @extend %clearfix;
+  margin: 0 -40px 35px;
+
+  .vote_val {
+    background: $gl_gray_2;
+    color: $gl_white;
+    font: 48px/53px $HelveticaNeueLight;
+    float: left;
+    height: 80px;
+
+    span {
+      padding: 10px 30px;
+    }
+
+    &.vote_pro {
+      background-image: linear-gradient(-90deg, #50c171 0%, #18ce98 100%);
+    }
+
+    &.vote_cons {
+      background-image: linear-gradient(-90deg, #ff1f3c 0%, #ff6a31 100%);
+    }
+  }
+}
+
+.votings_block {
+  position: relative;
+  padding-top: 30px;
+  margin-top: 38px;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -10px;
+    left: -10px;
+    height: 1px;
+    background: #d8d8d8;
+  }
+}
+
+.votings_list {
+
+  > li {
+    @extend %clearfix;
+    margin: 20px 0 30px;
+  }
+
+  .participant_avatar {
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+    margin-left: -10px;
+  }
+
+  .participant_name {
+    padding-top: 15px;
+  }
+
+  .participant_post {
+    padding-top: 5px;
+    font: 14px $HelveticaNeueLight;
+  }
 }
 
 .vote_info_holder {
@@ -57,15 +181,13 @@
   position: relative;
   //position: fixed;
   //top: 80px;
-  height: 30%;
-  margin-top: 80px;
-  padding-top: 27px;
+  height: 34%;
+  //padding-top: 27px;
   //right: 0;
   //left: 0;
   //z-index: 4;
 
   .section_inner {
-    position: relative;
     height: 100%;
   }
 }
@@ -77,6 +199,59 @@
 .vote_info_caption {
   font: 16px/22px $HelveticaNeueBold;
   margin-bottom: 24px;
+}
+
+.vote_thanks_caption {
+  @extend %icon_pseudo;
+  font: 24px/30px $HelveticaNeueLight;
+  margin: 30px 0;
+  letter-spacing: .05em;
+  text-align: center;
+
+  &:before {
+    content: $i-check;
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+    line-height: 30px;
+    border-radius: 100%;
+    margin-right: 20px;
+    color: $gl_green;
+    background: $gl_white;
+  }
+
+  &.clr_green {
+    &:before {
+      color: $gl_white;
+      background: $gl_green;
+    }
+  }
+
+  .votings_block & {
+    margin: 0;
+    font-size: 18px;
+  }
+}
+
+.vote_counter_val {
+  font: 144px/1 $HelveticaNeueLight;
+  margin-bottom: 22px;
+  letter-spacing: .1em;
+}
+
+.vote_counter {
+  margin: 60px 0;
+  padding: 75px 0 78px;
+  border: solid rgba(255, 255, 255, .4);
+  border-width: 1px 0;
+
+  p {
+    font-size: 18px;
+    line-height: 1.5;
+    letter-spacing: .03em;
+  }
 }
 
 .vote_info {
@@ -120,5 +295,40 @@
   .form_cell {
     line-height: 40px;
   }
+}
 
+.special_opinion {
+
+}
+
+.section_scroller {
+  margin: 0 -10px;
+  padding: 0 10px;
+  max-height: 60vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.special_opinion {
+  padding-top: 25px;
+  font-size: 14px;
+
+  > li {
+    margin-bottom: 40px;
+  }
+}
+
+.opinion_item {
+  @extend %clearfix;
+}
+
+.opinion_author {
+  float: left;
+  max-width: 25%;
+  margin-left: -10px;
+}
+
+.opinion_text {
+  padding-left: 29%;
+  font-size: 14px;
 }
