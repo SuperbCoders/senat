@@ -364,12 +364,12 @@
   border: 1px dashed #b7b9bd;
   cursor: pointer;
 
-  &:hover {
-    .drag_text {
-      color: $gl_red_2;
-      text-decoration: underline;
-    }
-  }
+  //&:hover {
+  //  .drag_text {
+  //    color: $gl_red_2;
+  //    text-decoration: underline;
+  //  }
+  //}
 }
 
 .drag_text {
@@ -379,6 +379,7 @@
 }
 
 .drag_link {
+  cursor: pointer;
   color: $gl_red_2;
   font: 10px $HelveticaNeueBold;
   text-decoration: underline;

@@ -1848,7 +1848,10 @@
   left: 0;
   right: 0;
   border-radius: inherit;
-  overflow: hidden; }
+  overflow: hidden;
+  display: none; }
+  ._loading .loading_progress {
+    display: block; }
 
 .loading_progress_val {
   position: absolute;
@@ -1895,6 +1898,24 @@
     color: #fff; }
     .tag_list .tagit-close:hover {
       color: #ff6363; }
+
+.drop_catcher {
+  transition: opacity 0.3s;
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 80px;
+  z-index: 10;
+  pointer-events: none;
+  background: rgba(255, 255, 255, 0.8);
+  border: 10px solid #50c171; }
+  .drag_in .drop_catcher {
+    opacity: 1; }
+  .nav_footer .drop_catcher {
+    bottom: 110px; }
+  .nav_header .drop_catcher {
+    top: 130px; }
 
 .profile_bg_w {
   position: fixed;
@@ -2403,6 +2424,8 @@
     margin-top: 30px; }
   .f_controls_holder.open_aside_add {
     z-index: 2; }
+  .drag_in .f_controls_holder {
+    opacity: .6; }
 
 .f_controls_panel {
   transition: transform 0.3s, background 0.3s;

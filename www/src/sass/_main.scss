@@ -685,6 +685,11 @@
   right: 0;
   border-radius: inherit;
   overflow: hidden;
+  display: none;
+
+  ._loading & {
+    display: block;
+  }
 }
 
 .loading_progress_val {
@@ -754,7 +759,30 @@
   }
 }
 
+.drop_catcher {
+  @include transition_all(opacity .3s);
+  opacity: 0;
+  position: fixed;
+  right: 0;
+  left: 0;
+  top: 80px;
+  z-index: 10;
+  pointer-events: none;
+  background: rgba(255, 255, 255, .8);
+  border: 10px solid $gl_green;
 
+  .drag_in & {
+    opacity: 1;
+  }
+
+  .nav_footer & {
+    bottom: 110px;
+  }
+
+  .nav_header & {
+    top: 130px;
+  }
+}
 
 
 

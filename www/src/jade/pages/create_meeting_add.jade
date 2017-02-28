@@ -1,12 +1,13 @@
 block variables
-  - var bodyClass = 'page_create_meeting';
-  - var htmlClass = 'stick_footer nav_header';
+  - var bodyClass = 'page_create_meeting dropzone';
+  - var htmlClass = 'stick_footer nav_header nav_footer';
   - var pageTitle = 'Новое заседание драг-н-дроп';
   - var pageDescription = 'Описание страницы';
   - var activePage = 1;
   - var hasUnitNav = true;
   - var shortUnitNav = true;
   - var actionNavbarColor = 'clr_green';
+  - var actionText = 'ОПУБЛИКОВАТЬ ЗАСЕДАНИЕ';
   - var customScripts = ['vendors/moment.min.js','vendors/daterangepicker.js','vendors/select2.js','vendors/jquery-ui-1.10.2.custom.min.js','vendors/tag-it.min.js','create.js'];
 
 include ../components/dashboard
@@ -15,11 +16,13 @@ extends ../components/layout
 block head
 block content
   .wrapper
+    .drop_catcher
     include ../components/header
     .action_navbar
       include ../components/action_navbar
 
     .main_content._has_footer_nav
+      //-form.dropzone(action="/file-upload")
       .section_inner
         .dash_box._create
           .dash_box_inner
@@ -315,16 +318,22 @@ block content
               
             .f_label МАТЕРИАЛЫ
               
-            ul.upload_list
+            ul.upload_list.uploadList
               li
                 .input_w.drag_catcher
-                  span.drag_text ДОБАВИТЬ
+                  input#file_upload.hide(type='file')
+                  label.drag_link(for='file_upload') ДОБАВИТЬ
               li
                 +file_upload()
               li
                 +file_upload()
               li
                 +file_upload(true)
+              li.uploadTip
+                .input_w.drag_catcher.text_upper
+                  input#file_upload_2.hide(type='file')
+                  span.drag_text.clr_def Переместите файлы с компьютера в окно браузера 
+                  label.drag_link(for='file_upload_2') Воспользуйтесь обычной загрузкой
 
             .f_label ТЕГИ
               

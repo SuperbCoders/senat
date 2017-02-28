@@ -483,6 +483,9 @@ input.hide {
 .clr_gray {
   color: #a0b3be; }
 
+.clr_def {
+  color: #474747; }
+
 .clr_red {
   color: #ff543a; }
 
@@ -1189,9 +1192,6 @@ body.rtl .formError .formErrorArrow {
   background: #fafbfb;
   border: 1px dashed #b7b9bd;
   cursor: pointer; }
-  .drag_catcher:hover .drag_text {
-    color: #ff5137;
-    text-decoration: underline; }
 
 .drag_text {
   transition: color 0.3s;
@@ -1199,6 +1199,7 @@ body.rtl .formError .formErrorArrow {
   font: 10px "HelveticaNeueBold", sans-serif; }
 
 .drag_link {
+  cursor: pointer;
   color: #ff5137;
   font: 10px "HelveticaNeueBold", sans-serif;
   text-decoration: underline; }
