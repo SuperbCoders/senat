@@ -15,6 +15,20 @@ mixin collegial_unit(txt)
     span.btn_red_2.unit_rm_btn.rmBtn
     p= txt
       
+mixin file_upload(loading)
+  .upload_file.rmUnit(class= loading ? '_loading' : '')
+    span.btn_red_2.unit_rm_btn.rmBtn
+    .mb
+      span.upload_icon
+        img(src='./img/file_doc.svg')
+        //-span.i-cross
+    .upload_name.mb Dogovor_23_05_2016-idjjjh2.pdf
+    - if (loading)
+      .loading_progress
+        .loading_progress_val(style='width: 76%;')
+        .loading_progress_text 76%
+        
+      
 mixin member_search(id)
   .member_search_w.menu_w
     .member_search_header

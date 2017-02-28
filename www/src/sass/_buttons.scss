@@ -38,7 +38,7 @@
 
     .f_control_link:not(:hover) & {
       color: $gl_white !important;
-      box-shadow: 0 2px 5px 0 rgba(26, 26, 26, 0.30);
+      box-shadow: 0 2px 5px 0 rgba(26, 26, 26, .3);
     }
 
     .f_control_link:hover & {
@@ -79,7 +79,7 @@
     text-align: center;
     font-size: 38px;
     line-height: 52px;
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.30);
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
 
     .open_aside_add & {
       background: #e9e9e9;

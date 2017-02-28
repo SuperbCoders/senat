@@ -7,7 +7,7 @@ block variables
   - var hasUnitNav = true;
   - var shortUnitNav = true;
   - var actionNavbarColor = 'clr_green';
-  - var customScripts = ['vendors/moment.min.js','vendors/daterangepicker.js','vendors/select2.js','vendors/jquery-ui-1.10.2.custom.min.js','create.js'];
+  - var customScripts = ['vendors/moment.min.js','vendors/daterangepicker.js','vendors/select2.js','vendors/jquery-ui-1.10.2.custom.min.js','vendors/tag-it.min.js','create.js'];
 
 include ../components/dashboard
 
@@ -19,7 +19,7 @@ block content
     .action_navbar
       include ../components/action_navbar
 
-    .main_content._has_footer_controls
+    .main_content._has_footer_nav
       .section_inner
         .dash_box._create
           .dash_box_inner
@@ -261,20 +261,27 @@ block content
                       +member_search()
 
             .form_row.cell_v1.cell_group
-              .form_cell._s_25
+              .form_cell._s_12
                 .f_label СВЕТОФОР
-                .input_w
-                  input.f_input._inp_black.input_v1(placeholder='Название')
-              .form_cell._s_75
+                .input_w.select_v1
+                  select.select2.switchLights
+                    option.light_pin._pin_orange(value='1' selected) 1
+                    option.light_pin._pin_green(value='2') 2
+                    option.light_pin._pin_red(value='3') 3
+                  
+              .form_cell._s_88
                 .f_label &nbsp;
                 .input_w
                   input.f_input._inp_black.input_v1(placeholder='Название')
             
-              .form_cell._s_25
-                .input_w
-                  input.f_input._inp_black.input_v1(placeholder='Название')
+              .form_cell._s_12
+                .input_w.select_v1
+                  select.select2.switchLights
+                    option.light_pin._pin_orange(value='1') 1
+                    option.light_pin._pin_green(value='2') 2
+                    option.light_pin._pin_red(value='3' selected) 3
                   
-              .form_cell._s_75
+              .form_cell._s_88
                 .input_w
                   input.f_input._inp_black.input_v1(placeholder='Название')
             
@@ -307,68 +314,27 @@ block content
                   span.drag_text ФАЙЛ ПРИЛОЖЕНИЯ
               
             .f_label МАТЕРИАЛЫ
-            .form_row.cell_v1
-              .form_cell._s_100
+              
+            ul.upload_list
+              li
                 .input_w.drag_catcher
                   span.drag_text ДОБАВИТЬ
-                  
+              li
+                +file_upload()
+              li
+                +file_upload()
+              li
+                +file_upload(true)
 
-        .text_center.more_block.mod_2
-          a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 4 ПОРУЧЕНИЯ
-          
-        .dash_box_title УЧАСТНИКИ
-          
-        .dash_box._members
-          .dash_box_inner
-            .box_caption Члены коллегиального органа
-            ul.member_list
-              +loop_while(2)
-                li
-                  .member_box
-                    .member_avatars
-                      .member_main_avatar
-                        img(src='./img/member.png')
-                        .member_small_avatar
-                          img(src='./img/member.png')
-                    .participant_name Кислицин Д.М.
-                    .participant_post Председатель
-                li
-                  .member_box
-                    .member_avatars
-                      .member_main_avatar
-                        img(src='./img/user_empty.png')
-                        .member_small_avatar
-                          img(src='./img/member.png')
-                    .participant_name Морозов В.К.
-                    .participant_post Секретарь <br> Кислицина. М.П.
-                      
-            .box_splitter
+            .f_label ТЕГИ
               
-            .box_caption Приглашенные участники
-            ul.member_list
-              +loop_while(2)
-                li
-                  .member_box
-                    .member_avatars
-                      .member_main_avatar
-                        img(src='./img/member.png')
-                        .member_small_avatar
-                          img(src='./img/member.png')
-                    .participant_name Кислицин Д.М.
-                    .participant_post Председатель
-                li
-                  .member_box
-                    .member_avatars
-                      .member_main_avatar
-                        img(src='./img/user_empty.png')
-                        .member_small_avatar
-                          img(src='./img/member.png')
-                    .participant_name Морозов В.К.
-                    .participant_post Секретарь <br> Кислицина. М.П.
-                      
-        .text_center.more_block.mod_2
-          a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 21 УЧАСТНИКА
+            .tag_holder: ul.tag_list.tagIt
+              li
+                span Заседание
+              li
+                span Комитет №1
+                
+            .text_center
+              a.btn_v1.btn_gray_2.dash_btn(href='#') СОХРАНИТЬ ВОПРОС
             
-      include ../components/preloader
-
     include ../components/footer_controls_2

@@ -69,9 +69,9 @@ $(function ($) {
       var form = $(this).parents('.popupWrapper');
 
       form.fadeOut(600);
-      
+
       overlay.toggle();
-      
+
       html.toggleClass(form.attr('data-class'));
 
       return false;
@@ -86,6 +86,12 @@ $(function ($) {
         new_class = btn.attr('class').replace(/btn_green|btn_red_3|btn_gray_2/, '');
 
       btn.text(radio.attr('data-check-text')).attr('class', new_class).addClass(radio.attr('data-btn-class'));
+
+    })
+    .delegate('.switchLights', 'change', function () {
+      var slct = $(this);
+
+      console.log(slct.find('option:selected').attr('data-class'));
 
     })
     .delegate('.filterToggle', 'click', function () {
@@ -130,7 +136,9 @@ $(function ($) {
     slct.select2({
       minimumResultsForSearch: Infinity,
       dropdownParent: slct.parent(),
-      width: '100%'
+      width: '100%',
+      templateResult: selectTemplate,
+      templateSelection: selectTemplate
     })
   });
 
@@ -144,6 +152,20 @@ $(function ($) {
 
 });
 
+function selectTemplate(data, container) {
+  if (data.element) {
+    var el = $(container);
+    
+    if (el.attr('class')) {
+
+      el.attr('class', el.attr('class').replace(/ _\w+/, ''));
+
+      el.addClass($(data.element).attr("class"));
+    }
+  }
+  
+  return data.text;
+}
 
 function customizeSelect(pckr) {
 

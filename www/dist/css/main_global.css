@@ -399,6 +399,8 @@ input.hide {
   z-index: 1; }
   .main_content._has_footer_controls {
     padding-bottom: 100px; }
+  .main_content._has_footer_nav {
+    padding-bottom: 150px; }
 
 @media only screen and (min-width: 1800px) {
   .wide_aside_left {
@@ -1104,12 +1106,16 @@ body.rtl .formError .formErrorArrow {
   position: relative; }
   .cell_v1 .form_cell._s_25 {
     width: 25%; }
+  .cell_v1 .form_cell._s_12 {
+    width: 12%; }
   .cell_v1 .form_cell._s_33 {
     width: 33.33%; }
   .cell_v1 .form_cell._s_50 {
     width: 50%; }
   .cell_v1 .form_cell._s_75 {
     width: 75%; }
+  .cell_v1 .form_cell._s_88 {
+    width: 88%; }
   .cell_v1 .form_cell._s_100 {
     width: 100%; }
   .cell_v1 .form_cell .input_icon {
@@ -1120,6 +1126,9 @@ body.rtl .formError .formErrorArrow {
 
 .select_v1 .select2-dropdown {
   border-color: #6e737a; }
+
+.select_v1 .select2-container--default .select2-results__option {
+  padding: 12px 14px; }
 
 .select_v1 .select2-container--default .select2-selection--single {
   transition: border 0.3s;
@@ -1150,6 +1159,24 @@ body.rtl .formError .formErrorArrow {
 
 .select_v1 .select2-container--default.select2-container--open .select2-selection__arrow:before {
   content: ""; }
+
+.light_pin {
+  position: relative;
+  font-size: 0 !important; }
+  .light_pin:before {
+    content: '';
+    border-radius: 100%;
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1; }
+  .light_pin._pin_orange:before {
+    background: #ffc107; }
+  .light_pin._pin_green:before {
+    background: #50c171; }
+  .light_pin._pin_red:before {
+    background: #ff5137; }
 
 .drag_catcher {
   text-align: center;

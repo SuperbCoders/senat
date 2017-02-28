@@ -1,5 +1,7 @@
 $(function ($) {
 
-  $(".sortable").sortable();
+  $('.sortable').sortable();
 
+  $('.tagIt').tagit();
+  
 });

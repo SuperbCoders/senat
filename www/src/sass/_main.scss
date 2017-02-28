@@ -324,7 +324,7 @@
     position: absolute;
     right: 0;
     top: 0;
-    box-shadow: 0 2px 5px 0 rgba(26, 26, 26, 0.30);
+    box-shadow: 0 2px 5px 0 rgba(26, 26, 26, .3);
   }
 }
 
@@ -616,4 +616,146 @@
   max-width: 575px;
   letter-spacing: .05em;
 }
+
+.upload_list {
+  margin-bottom: 30px;
+
+  > li {
+    margin-bottom: 5px;
+  }
+}
+
+.upload_file {
+  @include transition_all(background .3s);
+  position: relative;
+  background: #fafbfc;
+  height: 70px;
+  border-radius: 4px;
+  line-height: 30px;
+  padding: 20px 50px 20px 20px;
+  white-space: nowrap;
+
+  .unit_rm_btn {
+    z-index: 1;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -10px;
+    box-shadow: 0 2px 5px 0 rgba(26, 26, 26, .3);
+  }
+
+  &._loading {
+    .unit_rm_btn {
+      display: none;
+    }
+
+    > .mb {
+      opacity: .1;
+    }
+  }
+
+  &:hover {
+    background: #f5f7f8;
+  }
+}
+
+.upload_name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 92%;
+  font: 18px $HelveticaNeueLight;
+}
+
+.upload_icon {
+  display: block;
+  font-size: 30px;
+  margin-right: 15px;
+
+  img {
+    display: block;
+    max-height: 30px;
+  }
+}
+
+.loading_progress {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: inherit;
+  overflow: hidden;
+}
+
+.loading_progress_val {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(160, 179, 190, .5);
+}
+
+.loading_progress_text {
+  text-align: center;
+  padding: 20px;
+  font: 24px/30px $HelveticaNeueLight;
+}
+
+.tag_holder {
+  padding: 9px 10px 1px;
+  margin-bottom: 40px;
+  border-radius: 10px;
+  border: 1px solid $gl_gray_2;
+}
+
+.tag_list {
+  @extend %clearfix;
+  margin-left: -10px;
+
+  > li {
+    @include transition_all(background .3s);
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 8px;
+    line-height: 22px;
+
+    &.tagit-choice {
+      cursor: pointer;
+      padding: 0 8px;
+      border-radius: 4px;
+      background: $gl_gray_2;
+
+      &:hover {
+        background: #a8abb0;
+      }
+    }
+  }
+
+  .tagit-new {
+    .ui-autocomplete-input {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  .tagit-label {
+    padding-right: 5px;
+    color: $gl_white;
+    font: 12px/22px $HelveticaNeueLight;
+  }
+
+  .tagit-close {
+    @include transition_all(color .3s);
+    color: $gl_white;
+
+    &:hover {
+      color: $gl_red;
+    }
+  }
+}
+
+
+
+
+
 

@@ -39,7 +39,7 @@
       position: absolute;
       top: -10px;
       right: -10px;
-      box-shadow: 0 2px 5px 0 rgba(26, 26, 26, 0.30);
+      box-shadow: 0 2px 5px 0 rgba(26, 26, 26, .3);
     }
 
     > .fl {
@@ -87,7 +87,7 @@
   ._add > & {
     padding: 20px 25px 0;
     border-radius: 0;
-    box-shadow: 0 2px 5px 0 rgba(26, 26, 26, 0.30);
+    box-shadow: 0 2px 5px 0 rgba(26, 26, 26, .3);
   }
 
   ._footer & {

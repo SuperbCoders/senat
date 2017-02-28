@@ -119,7 +119,7 @@
           </div>
         </div>
       </div>
-      <div class="main_content _has_footer_controls">
+      <div class="main_content _has_footer_nav">
         <div class="section_inner">
           <div class="dash_box _create">
             <div class="dash_box_inner">
@@ -876,24 +876,32 @@
                 </div>
               </div>
               <div class="form_row cell_v1 cell_group">
-                <div class="form_cell _s_25">
+                <div class="form_cell _s_12">
                   <div class="f_label">СВЕТОФОР</div>
-                  <div class="input_w">
-                    <input placeholder="Название" class="f_input _inp_black input_v1">
+                  <div class="input_w select_v1">
+                    <select class="select2 switchLights">
+                      <option value="1" selected class="light_pin _pin_orange">1</option>
+                      <option value="2" class="light_pin _pin_green">2</option>
+                      <option value="3" class="light_pin _pin_red">3</option>
+                    </select>
                   </div>
                 </div>
-                <div class="form_cell _s_75">
+                <div class="form_cell _s_88">
                   <div class="f_label">&nbsp;</div>
                   <div class="input_w">
                     <input placeholder="Название" class="f_input _inp_black input_v1">
                   </div>
                 </div>
-                <div class="form_cell _s_25">
-                  <div class="input_w">
-                    <input placeholder="Название" class="f_input _inp_black input_v1">
+                <div class="form_cell _s_12">
+                  <div class="input_w select_v1">
+                    <select class="select2 switchLights">
+                      <option value="1" class="light_pin _pin_orange">1</option>
+                      <option value="2" class="light_pin _pin_green">2</option>
+                      <option value="3" selected class="light_pin _pin_red">3</option>
+                    </select>
                   </div>
                 </div>
-                <div class="form_cell _s_75">
+                <div class="form_cell _s_88">
                   <div class="input_w">
                     <input placeholder="Название" class="f_input _inp_black input_v1">
                   </div>
@@ -931,117 +939,44 @@
                 </div>
               </div>
               <div class="f_label">МАТЕРИАЛЫ</div>
-              <div class="form_row cell_v1">
-                <div class="form_cell _s_100">
+              <ul class="upload_list">
+                <li>
                   <div class="input_w drag_catcher"><span class="drag_text">ДОБАВИТЬ</span></div>
-                </div>
+                </li>
+                <li>
+                  <div class="upload_file rmUnit"><span class="btn_red_2 unit_rm_btn rmBtn"></span>
+                    <div class="mb"><span class="upload_icon"><img src="./img/file_doc.svg"/></span></div>
+                    <div class="upload_name mb">Dogovor_23_05_2016-idjjjh2.pdf</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="upload_file rmUnit"><span class="btn_red_2 unit_rm_btn rmBtn"></span>
+                    <div class="mb"><span class="upload_icon"><img src="./img/file_doc.svg"/></span></div>
+                    <div class="upload_name mb">Dogovor_23_05_2016-idjjjh2.pdf</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="upload_file rmUnit _loading"><span class="btn_red_2 unit_rm_btn rmBtn"></span>
+                    <div class="mb"><span class="upload_icon"><img src="./img/file_doc.svg"/></span></div>
+                    <div class="upload_name mb">Dogovor_23_05_2016-idjjjh2.pdf</div>
+                    <div class="loading_progress">
+                      <div style="width: 76%;" class="loading_progress_val"></div>
+                      <div class="loading_progress_text">76%</div>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+              <div class="f_label">ТЕГИ</div>
+              <div class="tag_holder">
+                <ul class="tag_list tagIt">
+                  <li><span>Заседание</span></li>
+                  <li><span>Комитет №1</span></li>
+                </ul>
               </div>
+              <div class="text_center"><a href="#" class="btn_v1 btn_gray_2 dash_btn">СОХРАНИТЬ ВОПРОС</a></div>
             </div>
           </div>
-          <div class="text_center more_block mod_2"><a href="#" class="btn_v1 btn_white_2 dash_btn">ПОКАЗАТЬ ВСЕ 4 ПОРУЧЕНИЯ</a></div>
-          <div class="dash_box_title">УЧАСТНИКИ</div>
-          <div class="dash_box _members">
-            <div class="dash_box_inner">
-              <div class="box_caption">Члены коллегиального органа</div>
-              <ul class="member_list">
-                <li>
-                  <div class="member_box">
-                    <div class="member_avatars">
-                      <div class="member_main_avatar"><img src="./img/member.png">
-                        <div class="member_small_avatar"><img src="./img/member.png"></div>
-                      </div>
-                    </div>
-                    <div class="participant_name">Кислицин Д.М.</div>
-                    <div class="participant_post">Председатель</div>
-                  </div>
-                </li>
-                <li>
-                  <div class="member_box">
-                    <div class="member_avatars">
-                      <div class="member_main_avatar"><img src="./img/user_empty.png">
-                        <div class="member_small_avatar"><img src="./img/member.png"></div>
-                      </div>
-                    </div>
-                    <div class="participant_name">Морозов В.К.</div>
-                    <div class="participant_post">Секретарь <br> Кислицина. М.П.</div>
-                  </div>
-                </li>
-                <li>
-                  <div class="member_box">
-                    <div class="member_avatars">
-                      <div class="member_main_avatar"><img src="./img/member.png">
-                        <div class="member_small_avatar"><img src="./img/member.png"></div>
-                      </div>
-                    </div>
-                    <div class="participant_name">Кислицин Д.М.</div>
-                    <div class="participant_post">Председатель</div>
-                  </div>
-                </li>
-                <li>
-                  <div class="member_box">
-                    <div class="member_avatars">
-                      <div class="member_main_avatar"><img src="./img/user_empty.png">
-                        <div class="member_small_avatar"><img src="./img/member.png"></div>
-                      </div>
-                    </div>
-                    <div class="participant_name">Морозов В.К.</div>
-                    <div class="participant_post">Секретарь <br> Кислицина. М.П.</div>
-                  </div>
-                </li>
-              </ul>
-              <div class="box_splitter"></div>
-              <div class="box_caption">Приглашенные участники</div>
-              <ul class="member_list">
-                <li>
-                  <div class="member_box">
-                    <div class="member_avatars">
-                      <div class="member_main_avatar"><img src="./img/member.png">
-                        <div class="member_small_avatar"><img src="./img/member.png"></div>
-                      </div>
-                    </div>
-                    <div class="participant_name">Кислицин Д.М.</div>
-                    <div class="participant_post">Председатель</div>
-                  </div>
-                </li>
-                <li>
-                  <div class="member_box">
-                    <div class="member_avatars">
-                      <div class="member_main_avatar"><img src="./img/user_empty.png">
-                        <div class="member_small_avatar"><img src="./img/member.png"></div>
-                      </div>
-                    </div>
-                    <div class="participant_name">Морозов В.К.</div>
-                    <div class="participant_post">Секретарь <br> Кислицина. М.П.</div>
-                  </div>
-                </li>
-                <li>
-                  <div class="member_box">
-                    <div class="member_avatars">
-                      <div class="member_main_avatar"><img src="./img/member.png">
-                        <div class="member_small_avatar"><img src="./img/member.png"></div>
-                      </div>
-                    </div>
-                    <div class="participant_name">Кислицин Д.М.</div>
-                    <div class="participant_post">Председатель</div>
-                  </div>
-                </li>
-                <li>
-                  <div class="member_box">
-                    <div class="member_avatars">
-                      <div class="member_main_avatar"><img src="./img/user_empty.png">
-                        <div class="member_small_avatar"><img src="./img/member.png"></div>
-                      </div>
-                    </div>
-                    <div class="participant_name">Морозов В.К.</div>
-                    <div class="participant_post">Секретарь <br> Кислицина. М.П.</div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div class="text_center more_block mod_2"><a href="#" class="btn_v1 btn_white_2 dash_btn">ПОКАЗАТЬ ВСЕ 21 УЧАСТНИКА</a></div>
         </div>
-        <div class="preloader"><span class="timer_holder"><span class="timer_wrapper"><span class="timer_l"></span></span><span class="timer_wrapper mod_right"><span class="timer_r"></span></span></span></div>
       </div>
       <div class="footer_controls mod_2">
         <div class="section_inner clearfix">
@@ -1127,6 +1062,7 @@
     <script src="js/vendors/daterangepicker.js"></script>
     <script src="js/vendors/select2.js"></script>
     <script src="js/vendors/jquery-ui-1.10.2.custom.min.js"></script>
+    <script src="js/vendors/tag-it.min.js"></script>
     <script src="js/create.js"></script>
     <script src="js/main.js"></script>
   </body>

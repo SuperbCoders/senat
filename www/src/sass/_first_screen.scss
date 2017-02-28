@@ -94,7 +94,7 @@ input.hide {
     padding: 0 72px;
     max-width: $content-max-w - 80;
   }
-  
+
   .page_index .filter_bar &,
   .page_index .main_content & {
 
@@ -112,6 +112,10 @@ input.hide {
 
   &._has_footer_controls {
     padding-bottom: 100px;
+  }
+
+  &._has_footer_nav {
+    padding-bottom: 150px;
   }
 }
 
