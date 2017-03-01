@@ -56,10 +56,13 @@
       }
     }
   }
-  
+
   .has_icon & {
     padding-left: 40px;
   }
 
+  .chat_cell & {
+    padding-right: 135px;
+  }
 }
 

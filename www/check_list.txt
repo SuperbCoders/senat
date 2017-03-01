@@ -3,9 +3,9 @@
 03-actions.png
 04-prepared-question.png
 05-files-list.png
-create meeting add file.jpg
+create meeting add file.jpg +
 create meeting.jpg +
-create task.jpg
+create task.jpg +
 dashboard - long.jpg +
 dashboard 1440.jpg +
 dashboard 1920.jpg +
@@ -15,7 +15,7 @@ dashboard.jpg +
 Files empty.jpg 
 Files file.jpg 
 Files.jpg 
-filter calendar.jpg
+filter calendar.jpg 
 filter organs view.jpg +
 filter organs.jpg +
 filter status.jpg +
@@ -30,15 +30,15 @@ notification important.jpg +
 notifications.jpg 
 Person.jpg +
 Profile.jpg +
-question.jpg
+question.jpg +
 questions.jpg +
 search empty.jpg +
 search field.jpg +
 search.jpg +
 task.jpg
-tasks.jpg
+tasks.jpg +
 vote empty.jpg +
 vote process.jpg +
 vote process2.jpg +
-vote process3.jpg
-vote process4.jpg
+vote process3.jpg +
+vote process4.jpg +

@@ -15,6 +15,17 @@
 
 .btn_v1 {
 
+  &.chat_btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    min-width: 120px;
+    border-radius: 4px;
+    padding: 10px;
+    font: 10px/20px $HelveticaNeueBold;
+  }
+
   &.f_control_btn {
     @include transition_all(background .3s, color .3s);
     display: inline-block;
@@ -159,6 +170,16 @@
   &:hover {
     background: $gl_white;
     color: $gl_green_2;
+  }
+}
+
+.btn_green_3 {
+  @include transition_all(background .3s, color .3s);
+  background: #56c376;
+  color: $gl_white;
+
+  &:hover {
+    background: $gl_green_2;
   }
 }
 

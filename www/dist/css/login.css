@@ -608,3 +608,5 @@ input.hide {
         color: white !important; }
   .has_icon .f_input {
     padding-left: 40px; }
+  .chat_cell .f_input {
+    padding-right: 135px; }

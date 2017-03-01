@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="stick_footer stick_header">
+<html lang="ru" class="stick_footer action_header">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -11,7 +11,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="mobile-web-app-capable" content="yes">
-    <title>Профиль</title>
+    <title>Задание</title>
     <meta name="description" content="Описание страницы">
     <meta property="og:title" content="feedly: organize, read and share what matters to you.">
     <meta property="og:url" content="http://feedly.com/index.html">
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/main_global.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body class="page_profile">
+  <body class="page_question">
     <div class="wrapper">
       <div class="header">
         <div class="section_inner clearfix">
@@ -35,7 +35,7 @@
             <ul class="nav mb">
               <li class="nav_item"><a href="meetings.html" class="nav_link">Заседания</a>
               </li>
-              <li class="nav_item"><a href="questions.html" class="nav_link">Вопросы</a>
+              <li class="nav_item active"><a href="questions.html" class="nav_link">Вопросы</a>
               </li>
               <li class="nav_item"><a href="tasks.html" class="nav_link">Поручения</a><span class="nav_counter">4</span>
               </li>
@@ -112,129 +112,347 @@
           </div>
         </div>
       </div>
-      <div class="nav_bar navBar">
-        <div class="wide_aside_left">
-          <div class="section_inner">
-            <ul class="nav_list">
-              <li>
-                <div data-scroll="#meetings_block" class="nav_unit scrollTo clr_green"><span class="mb nav_unit_counter">1</span><span class="mb">Заседания сегодня</span></div>
-              </li>
-              <li>
-                <div data-scroll="#instructions_block" class="nav_unit scrollTo clr_orange"><span class="mb nav_unit_counter">4</span><span class="mb">Поручения</span></div>
-              </li>
-              <li>
-                <div data-scroll="#actions_block" class="nav_unit scrollTo clr_blue"><span class="mb nav_unit_counter">2</span><span class="mb">Действия</span></div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="wide_aside_right">
-          <div class="section_inner">
-            <div class="section_inner clearfix">
-              <div class="action_nav_menu">
-                <div class="menu_holder">
-                  <div class="dash_b_menu_btn dashMenuBtn">
-                    <div class="dash_b_menu_icon"></div>
-                  </div>
-                  <div class="dash_b_menu_w menu_w">
-                    <ul class="dash_b_menu_list">
-                      <li class="dash_menu_group"><span class="mb">Действия</span></li>
-                      <li><a href="#" class="dash_menu_link"><span class="mb">Редактировать</span></a></li>
-                      <li><a href="#" class="dash_menu_link"><span class="mb">Перейти к оформлению</span></a></li>
-                      <li><a href="#" class="dash_menu_link"><span class="mb">Удалить</span></a></li>
-                    </ul>
-                    <ul class="dash_b_menu_list">
-                      <li class="dash_menu_group"><span class="mb">Cтатус</span></li>
-                      <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _in_process"></span><span class="mb">В ПРОЦЕССЕ</span></a></li>
-                      <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _new"></span><span class="mb">НОВАЯ</span></a></li>
-                      <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _completed"></span><span class="mb">ЗАВЕРШЕНО</span></a></li>
-                    </ul>
-                  </div>
-                </div>
+      <div class="action_navbar">
+        <div class="section_inner clearfix">
+          <div class="action_nav_back"><a href="meetings.html" class="nav_back_link clr_orange"> <span>ВСЕ ЗАСЕДАНИЯ</span></a></div>
+          <div class="action_nav_menu">
+            <div class="menu_holder">
+              <div class="dash_b_menu_btn dashMenuBtn">
+                <div class="dash_b_menu_icon"></div>
               </div>
-              <div class="action_nav_controls">
-                <ul class="action_nav_list clr_green">
-                  <li>№241</li>
-                  <li>Очное</li>
-                  <li>Комитет по корпоративному бизнесу обеспечивает реализации стратегии разития по корпоративному бизнесу обеспечивает реализации стратегии разития</li>
+              <div class="dash_b_menu_w menu_w">
+                <ul class="dash_b_menu_list">
+                  <li class="dash_menu_group"><span class="mb">Действия</span></li>
+                  <li><a href="#" class="dash_menu_link"><span class="mb">Редактировать</span></a></li>
+                  <li><a href="#" class="dash_menu_link"><span class="mb">Перейти к оформлению</span></a></li>
+                  <li><a href="#" class="dash_menu_link"><span class="mb">Удалить</span></a></li>
+                </ul>
+                <ul class="dash_b_menu_list">
+                  <li class="dash_menu_group"><span class="mb">Cтатус</span></li>
+                  <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _in_process"></span><span class="mb">В ПРОЦЕССЕ</span></a></li>
+                  <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _new"></span><span class="mb">НОВАЯ</span></a></li>
+                  <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _completed"></span><span class="mb">ЗАВЕРШЕНО</span></a></li>
                 </ul>
               </div>
             </div>
           </div>
+          <div class="action_nav_controls">
+            <ul class="action_nav_list clr_orange">
+              <li>№241</li>
+              <li>Очное</li>
+              <li>КПП</li>
+              <li>17:00 – 19:00</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="profile_bg_w">
-        <div class="profile_bg profileBG"><img src="./img/person_bg.png" class="hide profileIMG"></div>
-      </div>
       <div class="main_content">
+        <div class="action_brief">
+          <div class="section_inner">
+            <div class="dash_box">
+              <div class="dash_box_inner">
+                <div class="fl">
+                  <div class="mb">
+                    <div class="dash_b_date">
+                      <div class="day">23</div>
+                      <div class="month">сентября</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="fl">
+                  <div class="mb">
+                    <div class="dash_b_info _mod_1">
+                      <div class="dash_b_point">Паспорта услуг и заключение SLA между обеспечивающими подразделениями и краткий обзор проблемных проектов
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="fr">
+                  <div class="mb">
+                    <div class="dash_b_status _in_process">ПРОВОДИТСЯ
+                    </div>
+                  </div>
+                </div>
+                <div class="participants_block">
+                  <div class="participant_vote"><a data-href="#vote_popup" href="#" class="btn_v1 dash_btn btn_blue openForm"><span>ПЕРЕЙТИ К ГОЛОСОВАНИЮ</span></a></div>
+                  <ul class="participants_list">
+                    <li>
+                      <div class="dash_b_participant">
+                        <div class="participant_avatar"><img src="./img/participant.png"/>
+                        </div>
+                        <div class="participant_name">Долгов Ч.М.</div>
+                        <div class="participant_post">Председатель</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="dash_b_participant">
+                        <div class="participant_avatar"><img src="./img/participant.png"/>
+                        </div>
+                        <div class="participant_name">Долгов Ч.М.</div>
+                        <div class="participant_post">Секретарь</div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="action_brief_progress">
+            <div style="width: 58%;" class="action_brief_val"></div>
+            <div class="section_inner clearfix">
+              <div class="action_brief_time">1 час 10 минут длительность заседания</div>
+              <div class="action_brief_left">40 минут до конца</div>
+            </div>
+          </div>
+        </div>
         <div class="section_inner">
-          <div class="profile_block">
-            <div class="profile_logout"><a href="#" class="btn_v1 btn_white_3 logout_btn">ВЫЙТИ ИЗ АККАУНТА</a></div>
-            <div class="profile_photo"><img src="./img/person.png"></div>
-            <div class="profile_info clr_white">
-              <div class="profile_name">Созонов Владислав Андреевич</div>
-              <div class="profile_post">Руководитель комитета</div>
-              <p>Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности</p>
+          <div class="dash_box _members _alone">
+            <div class="dash_box_inner">
+              <div class="box_caption">Описание</div>
+              <div class="dash_box_description">Паспорта услуг и заключение SLA между обеспечивающими подразделениями и краткий обзор паспорта услуг и заключение SLA между обеспечивающими подразделениями и краткий обзор и заключение SLA между обеспечивающими подразделениями и краткий обзор паспорта услуг и заключение SLA между обеспечивающими подразделениями и краткий обзор</div>
             </div>
           </div>
-          <div class="profile_settings clr_white">
-            <div class="profile_s_row">
-              <div class="fr">
-                <div class="mb"> 
-                  <div class="profile_s_val">
-                    <label class="radio_toggle _flag">
-                      <input type="checkbox" class="hide"/><span class="radio_text _on"><img src="img/flag_ru.png" class="flag_img"/><span>Ru</span></span><span class="radio_text _off"><img src="img/flag_ru.png" class="flag_img"/><span>Eng</span></span>
-                    </label>
+          <div class="dash_box_title">ХОД ИСПОЛНЕНИЯ</div>
+          <div class="dash_box _implementation">
+            <div class="dash_box_inner">
+              <ul class="chat_list">
+                <li>
+                  <div class="chat_msg">
+                    <div class="chat_avatar"><img src="./img/participant.png"></div>
+                    <div class="chat_caption"><span class="fl msg_author">Бунтман С.В.</span><span class="fl msg_date">03 сент в 21:42</span></div>
+                    <p>я не знаю как все скачать, у меня половина файлов битые</p>
                   </div>
-                </div>
-              </div>
-              <div class="profile_s_name">
-                <div class="mb">Язык интерфейса</div>
-              </div>
-            </div>
-            <div class="profile_s_row">
-              <div class="fr">
-                <div class="mb"> 
-                  <div class="profile_s_val">
-                    <label class="radio_toggle">
-                      <input type="checkbox" class="hide"/><span class="radio_text _on"><span>Да</span></span><span class="radio_text _off"><span>Нет</span></span>
-                    </label>
+                </li>
+                <li>
+                  <div class="chat_msg">
+                    <div class="chat_avatar"><img src="./img/participant.png"></div>
+                    <div class="chat_caption"><span class="fl msg_author">Дмитриевцев В.В.</span><span class="fl msg_date">10 сент в 12:15</span></div>
+                    <p>Профессионалы с профильным образованием и как минимум 5-летним опытом работы, постоянная актуализация знаний и повышение квалификации Знание английского языка всеми членами команды</p>
                   </div>
-                </div>
-              </div>
-              <div class="profile_s_name">
-                <div class="mb">Уведомлять о новых заседаниях</div>
-              </div>
-            </div>
-            <div class="profile_s_row">
-              <div class="fr">
-                <div class="mb"> 
-                  <div class="profile_s_val">
-                    <label class="radio_toggle">
-                      <input type="checkbox" class="hide"/><span class="radio_text _on"><span>Да</span></span><span class="radio_text _off"><span>Нет</span></span>
-                    </label>
+                </li>
+                <li>
+                  <div class="chat_msg">
+                    <div class="chat_avatar"><img src="./img/participant.png"></div>
+                    <div class="chat_caption"><span class="fl msg_author">Бунтман С.В.</span><span class="fl msg_date">03 сент в 21:42</span></div>
+                    <p>я не знаю как все скачать, у меня половина файлов битые</p>
                   </div>
-                </div>
-              </div>
-              <div class="profile_s_name">
-                <div class="mb">Уведомлять о сообщениях</div>
-              </div>
-            </div>
-            <div class="profile_s_row">
-              <div class="fr">
-                <div class="mb"> 
-                  <div class="profile_s_val">
-                    <label class="radio_toggle">
-                      <input type="checkbox" class="hide"/><span class="radio_text _on"><span>Да</span></span><span class="radio_text _off"><span>Нет</span></span>
-                    </label>
+                </li>
+              </ul>
+              <div class="chat_form">
+                <form action="#">
+                  <div class="input_w chat_cell">
+                    <input placeholder="Сообщение" class="f_input input_v1 _inp_black">
+                    <button class="btn_v1 btn_green_3 chat_btn">ОТПРАВИТЬ</button>
                   </div>
-                </div>
-              </div>
-              <div class="profile_s_name">
-                <div class="mb">Уведомлять о задачах</div>
+                </form>
               </div>
             </div>
           </div>
+          <div class="dash_box_title">МАТЕРИАЛЫ</div>
+          <div class="dash_box _alone">
+            <div class="dash_box_inner">
+              <ul class="material_list _full_w">
+                <li>
+                  <div class="upload_file">
+                    <div class="mb"><span class="upload_icon"><img src="./img/folder.svg"></span></div>
+                    <div class="upload_name mb">Документация</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="upload_file">
+                    <div class="mb"><span class="upload_icon"><img src="./img/file_pdf.svg"></span></div>
+                    <div class="upload_name mb">Intro.pdf</div>
+                  </div>
+                </li>
+                <li>
+                  <div class="upload_file">
+                    <div class="mb"><span class="upload_icon"><img src="./img/file_pdf.svg"></span></div>
+                    <div class="upload_name mb">Wеlcome-to-biejing.pdf</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="text_center more_block"><a href="#" class="btn_v1 btn_white_2 dash_btn">ПОКАЗАТЬ ВСЕ 15 ФАЙЛОВ</a></div>
+          <div class="dash_box_title clr_orange">4 СВЯЗАННЫХ ПОРУЧЕНИЯ</div>
+          <ul class="dashboard_list">
+            <li>
+              <div class="dash_box">
+                <div class="dash_box_inner">
+                  <div class="fl">
+                    <div class="mb">
+                      <div class="dash_b_date"><a href="#" class="dash_b_control clr_orange"><span class="i-list"></span></a>
+                      </div>
+                    </div>
+                    <div class="mb">
+                      <div class="dash_b_info fl _meetings_mod">
+                        <p>Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные обязательства</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fr">
+                    <div class="mb">
+                      <div class="dash_b_status _new">НОВАЯ
+                      </div>
+                    </div>
+                    <div class="mb">
+                      <div class="menu_holder">
+                        <div class="dash_b_menu_btn dashMenuBtn">
+                          <div class="dash_b_menu_icon"></div>
+                        </div>
+                        <div class="dash_b_menu_w menu_w">
+                          <ul class="dash_b_menu_list">
+                            <li class="dash_menu_group"><span class="mb">Действия</span></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb">Редактировать</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb">Перейти к оформлению</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb">Удалить</span></a></li>
+                          </ul>
+                          <ul class="dash_b_menu_list">
+                            <li class="dash_menu_group"><span class="mb">Cтатус</span></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _in_process"></span><span class="mb">В ПРОЦЕССЕ</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _new"></span><span class="mb">НОВАЯ</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _completed"></span><span class="mb">ЗАВЕРШЕНО</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dash_box">
+                <div class="dash_box_inner">
+                  <div class="fl">
+                    <div class="mb">
+                      <div class="dash_b_date"><a href="#" class="dash_b_control clr_orange"><span class="i-list"></span></a>
+                      </div>
+                    </div>
+                    <div class="mb">
+                      <div class="dash_b_info fl _meetings_mod">
+                        <p>Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные обязательства</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fr">
+                    <div class="mb">
+                      <div class="dash_b_status _new">НОВАЯ
+                      </div>
+                    </div>
+                    <div class="mb">
+                      <div class="menu_holder">
+                        <div class="dash_b_menu_btn dashMenuBtn">
+                          <div class="dash_b_menu_icon"></div>
+                        </div>
+                        <div class="dash_b_menu_w menu_w">
+                          <ul class="dash_b_menu_list">
+                            <li class="dash_menu_group"><span class="mb">Действия</span></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb">Редактировать</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb">Перейти к оформлению</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb">Удалить</span></a></li>
+                          </ul>
+                          <ul class="dash_b_menu_list">
+                            <li class="dash_menu_group"><span class="mb">Cтатус</span></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _in_process"></span><span class="mb">В ПРОЦЕССЕ</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _new"></span><span class="mb">НОВАЯ</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _completed"></span><span class="mb">ЗАВЕРШЕНО</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dash_box">
+                <div class="dash_box_inner">
+                  <div class="fl">
+                    <div class="mb">
+                      <div class="dash_b_date"><a href="#" class="dash_b_control clr_orange"><span class="i-list"></span></a>
+                      </div>
+                    </div>
+                    <div class="mb">
+                      <div class="dash_b_info fl _meetings_mod">
+                        <p>Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные обязательства</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fr">
+                    <div class="mb">
+                      <div class="dash_b_status _in_process">ИСПОЛНЯЕТСЯ
+                      </div>
+                    </div>
+                    <div class="mb">
+                      <div class="menu_holder">
+                        <div class="dash_b_menu_btn dashMenuBtn">
+                          <div class="dash_b_menu_icon"></div>
+                        </div>
+                        <div class="dash_b_menu_w menu_w">
+                          <ul class="dash_b_menu_list">
+                            <li class="dash_menu_group"><span class="mb">Действия</span></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb">Редактировать</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb">Перейти к оформлению</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb">Удалить</span></a></li>
+                          </ul>
+                          <ul class="dash_b_menu_list">
+                            <li class="dash_menu_group"><span class="mb">Cтатус</span></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _in_process"></span><span class="mb">В ПРОЦЕССЕ</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _new"></span><span class="mb">НОВАЯ</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _completed"></span><span class="mb">ЗАВЕРШЕНО</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="dash_box">
+                <div class="dash_box_inner">
+                  <div class="fl">
+                    <div class="mb">
+                      <div class="dash_b_date"><a href="#" class="dash_b_control clr_orange"><span class="i-list"></span></a>
+                      </div>
+                    </div>
+                    <div class="mb">
+                      <div class="dash_b_info fl _meetings_mod">
+                        <p>Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные обязательства</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="fr">
+                    <div class="mb">
+                      <div class="dash_b_status _new">НОВАЯ
+                      </div>
+                    </div>
+                    <div class="mb">
+                      <div class="menu_holder">
+                        <div class="dash_b_menu_btn dashMenuBtn">
+                          <div class="dash_b_menu_icon"></div>
+                        </div>
+                        <div class="dash_b_menu_w menu_w">
+                          <ul class="dash_b_menu_list">
+                            <li class="dash_menu_group"><span class="mb">Действия</span></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb">Редактировать</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb">Перейти к оформлению</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb">Удалить</span></a></li>
+                          </ul>
+                          <ul class="dash_b_menu_list">
+                            <li class="dash_menu_group"><span class="mb">Cтатус</span></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _in_process"></span><span class="mb">В ПРОЦЕССЕ</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _new"></span><span class="mb">НОВАЯ</span></a></li>
+                            <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _completed"></span><span class="mb">ЗАВЕРШЕНО</span></a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -434,8 +652,8 @@
     <script src="js/vendors/jquery1.10.js"></script>
     <script src="js/vendors/snabbt.min.js"></script>
     <script src="js/vendors/flexibility.js"></script>
-    <script src="js/vendors/backstretch.js"></script>
-    <script src="js/profile.js"></script>
+    <script src="js/vendors/moment.min.js"></script>
+    <script src="js/vendors/daterangepicker.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

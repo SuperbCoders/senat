@@ -1,0 +1,116 @@
+block variables
+  - var bodyClass = 'page_question';
+  - var htmlClass = 'stick_footer action_header';
+  - var filterClass = 'clr_blue';
+  - var pageTitle = 'Задание';
+  - var pageDescription = 'Описание страницы';
+  - var activePage = 2;
+  - var hasUnitNav = true;
+  - var actionNavbarColor = 'clr_orange';
+  - var customScripts = ['vendors/moment.min.js', 'vendors/daterangepicker.js'];
+
+include ../components/dashboard
+
+extends ../components/layout
+block head
+block content
+  .wrapper
+    include ../components/header
+    include ../components/action_navbar
+
+    .main_content
+      .action_brief
+        .section_inner
+          +action_brief(23, '_in_process', false, 2, 0, false, ['Паспорта услуг и заключение SLA между обеспечивающими подразделениями и краткий обзор проблемных проектов'], false, false, false, '_mod_1')
+        .action_brief_progress
+          .action_brief_val(style='width: 58%;')
+          .section_inner.clearfix
+            .action_brief_time 1 час 10 минут длительность заседания
+            .action_brief_left 40 минут до конца
+
+      .section_inner
+        .dash_box._members._alone
+          .dash_box_inner
+            .box_caption Описание
+            .dash_box_description Паспорта услуг и заключение SLA между обеспечивающими подразделениями и краткий обзор паспорта услуг и заключение SLA между обеспечивающими подразделениями и краткий обзор и заключение SLA между обеспечивающими подразделениями и краткий обзор паспорта услуг и заключение SLA между обеспечивающими подразделениями и краткий обзор
+
+        .dash_box_title ХОД ИСПОЛНЕНИЯ
+        .dash_box._implementation
+          .dash_box_inner
+            ul.chat_list
+              li
+                .chat_msg
+                  .chat_avatar
+                    img(src='./img/participant.png')
+                  .chat_caption
+                    span.fl.msg_author Бунтман С.В.
+                    span.fl.msg_date 03 сент в 21:42
+                    
+                  p я не знаю как все скачать, у меня половина файлов битые
+                    
+              li
+                .chat_msg
+                  .chat_avatar
+                    img(src='./img/participant.png')
+                  .chat_caption
+                    span.fl.msg_author Дмитриевцев В.В.
+                    span.fl.msg_date 10 сент в 12:15
+                    
+                  p Профессионалы с профильным образованием и как минимум 5-летним опытом работы, постоянная актуализация знаний и повышение квалификации Знание английского языка всеми членами команды
+                    
+              li
+                .chat_msg
+                  .chat_avatar
+                    img(src='./img/participant.png')
+                  .chat_caption
+                    span.fl.msg_author Бунтман С.В.
+                    span.fl.msg_date 03 сент в 21:42
+                    
+                  p я не знаю как все скачать, у меня половина файлов битые
+                  
+            .chat_form
+              form(action='#')
+                .input_w.chat_cell
+                  input.f_input.input_v1._inp_black(placeholder='Сообщение')
+                  button.btn_v1.btn_green_3.chat_btn ОТПРАВИТЬ
+                  
+        .dash_box_title МАТЕРИАЛЫ
+
+        .dash_box._alone
+          .dash_box_inner
+            ul.material_list._full_w
+              li
+                .upload_file
+                  .mb
+                    span.upload_icon
+                      img(src='./img/folder.svg')
+                  .upload_name.mb Документация
+
+              li
+                .upload_file
+                  .mb
+                    span.upload_icon
+                      img(src='./img/file_pdf.svg')
+                  .upload_name.mb Intro.pdf
+
+              li
+                .upload_file
+                  .mb
+                    span.upload_icon
+                      img(src='./img/file_pdf.svg')
+                  .upload_name.mb Wеlcome-to-biejing.pdf
+              
+        .text_center.more_block
+          a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 15 ФАЙЛОВ
+              
+        .dash_box_title.clr_orange 4 СВЯЗАННЫХ ПОРУЧЕНИЯ
+
+        ul.dashboard_list
+          li
+            +instruction_box('', '_new')
+          li
+            +instruction_box('', '_new')
+          li
+            +instruction_box('', '_in_process')
+          li
+            +instruction_box('', '_new')

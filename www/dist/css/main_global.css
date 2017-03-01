@@ -959,6 +959,8 @@ body.rtl .formError .formErrorArrow {
         color: white !important; }
   .has_icon .f_input {
     padding-left: 40px; }
+  .chat_cell .f_input {
+    padding-right: 135px; }
 
 .f_input {
   display: block;
@@ -1216,6 +1218,16 @@ body.rtl .formError .formErrorArrow {
   letter-spacing: .1em;
   text-align: center; }
 
+.btn_v1.chat_btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  min-width: 120px;
+  border-radius: 4px;
+  padding: 10px;
+  font: 10px/20px "HelveticaNeueBold", sans-serif; }
+
 .btn_v1.f_control_btn {
   transition: background 0.3s, color 0.3s;
   display: inline-block;
@@ -1315,6 +1327,13 @@ body.rtl .formError .formErrorArrow {
   .btn_green_2:hover {
     background: #fff;
     color: #00d473; }
+
+.btn_green_3 {
+  transition: background 0.3s, color 0.3s;
+  background: #56c376;
+  color: #fff; }
+  .btn_green_3:hover {
+    background: #00d473; }
 
 .btn_red {
   transition: background 0.3s, color 0.3s;
