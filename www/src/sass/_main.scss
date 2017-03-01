@@ -630,34 +630,37 @@
 .upload_file {
   @include transition_all(background .3s);
   position: relative;
-  background: #fafbfc;
-  height: 70px;
-  border-radius: 4px;
   line-height: 30px;
-  padding: 20px 50px 20px 20px;
   white-space: nowrap;
 
-  .unit_rm_btn {
-    z-index: 1;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    margin-top: -10px;
-    box-shadow: 0 2px 5px 0 rgba(26, 26, 26, .3);
-  }
+  .upload_list & {
+    background: #fafbfc;
+    height: 70px;
+    border-radius: 4px;
+    padding: 20px 50px 20px 20px;
 
-  &._loading {
     .unit_rm_btn {
-      display: none;
+      z-index: 1;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      margin-top: -10px;
+      box-shadow: 0 2px 5px 0 rgba(26, 26, 26, .3);
     }
 
-    > .mb {
-      opacity: .1;
-    }
-  }
+    &._loading {
+      .unit_rm_btn {
+        display: none;
+      }
 
-  &:hover {
-    background: #f5f7f8;
+      > .mb {
+        opacity: .1;
+      }
+    }
+
+    &:hover {
+      background: #f5f7f8;
+    }
   }
 }
 
@@ -759,6 +762,15 @@
       color: $gl_red;
     }
   }
+}
+
+.tag_item {
+  font: 12px/22px $HelveticaNeueLight;
+  padding: 0 10px;
+  border-radius: 4px;
+  color: #1a1a1a;
+  background: $gl_white;
+  letter-spacing: .065em;
 }
 
 .drop_catcher {

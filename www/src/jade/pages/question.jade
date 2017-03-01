@@ -21,7 +21,7 @@ block content
     .main_content._has_footer_controls
       .action_brief
         .section_inner
-          +action_brief(23, '_in_process', false, 2)
+          +action_brief(23, '_in_process', false, 1, 0, false, ['Паспорта услуг и заключение SLA между обеспечивающими подразделениями и краткий обзор проблемных проектов'], false, false, false, '_mod_1')
         .action_brief_progress
           .action_brief_val(style='width: 58%;')
           .section_inner.clearfix
@@ -29,39 +29,14 @@ block content
             .action_brief_left 40 минут до конца
 
       .section_inner
-        .dash_box_title.clr_blue ПОВЕСТКА
-
-        ul.dashboard_list
-          li
-            +action_brief(17, '_in_vote', true, 1, 1, false, ['Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные'])
-          li
-            +action_brief(17, '_in_vote', true, 1, 1, true, ['Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные'])
-          li
-            +question_box(0, '_approved')
-          li
-            +question_box(29, '_rejected', true)
-
-        .text_center.more_block.mod_2
-          a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 34 ВОПРОСА
-
-        .dash_box_title.clr_orange 4 ПОРУЧЕНИЯ
-
-        ul.dashboard_list
-          li
-            +instruction_box('', '_new')
-          li
-            +instruction_box('', '_new')
-          li
-            +instruction_box('', '_in_process')
-          li
-            +instruction_box('', '_new')
-
-        .text_center.more_block.mod_2
-          a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 4 ПОРУЧЕНИЯ
+        .dash_box._members._alone
+          .dash_box_inner
+            .box_caption Описание
+            .dash_box_description Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. 
 
         .dash_box_title УЧАСТНИКИ
 
-        .dash_box._members
+        .dash_box._members._alone
           .dash_box_inner
             .box_caption Члены коллегиального органа
             ul.member_list
@@ -109,9 +84,150 @@ block content
                     .participant_name Морозов В.К.
                     .participant_post Секретарь <br> Кислицина. М.П.
 
-        .text_center.more_block.mod_2
+        .text_center.more_block
           a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 21 УЧАСТНИКА
 
-      include ../components/preloader
+        .dash_box_title
+          .fl МОНИТОРИНГ
+          .fr
+            .menu_holder
+              .dash_b_menu_btn.dashMenuBtn: .dash_b_menu_icon
+              .dash_b_menu_w.menu_w
+                ul.dash_b_menu_list
+                  li.dash_menu_group
+                    span.mb Действия
+                  li: a.dash_menu_link(href='#')
+                    span.mb Редактировать
+                  li: a.dash_menu_link(href='#')
+                    span.mb Перейти к оформлению
+                  li: a.dash_menu_link(href='#')
+                    span.mb Удалить
+                ul.dash_b_menu_list
+                  li.dash_menu_group
+                    span.mb Cтатус
+                  li: a.dash_menu_link(href='#')
+                    span.mb.dash_m_status._in_process
+                    span.mb В ПРОЦЕССЕ
+                  li: a.dash_menu_link(href='#')
+                    span.mb.dash_m_status._new
+                    span.mb НОВАЯ
+                  li: a.dash_menu_link(href='#')
+                    span.mb.dash_m_status._completed
+                    span.mb ЗАВЕРШЕНО
+            
+        .dash_box._monitor._alone
+          .dash_box_inner
+            ul.monitor_list
+              li
+                .monitor_item
+                  .monitor_icon.monitor_orange.mb
+                    .monitor_tip Финального голосования за символы России, которые будут изображены на новых банкнотах Банка России в 200 и 2000 рублей! Ниже в алфавитном порядке представлены города/территории, которые уже прошли два отборочных этапа (подробнее о них здесь).
+                  .mb.monitor_name ДСР
+              li
+                .monitor_item
+                  .monitor_icon.monitor_red.mb
+                    .monitor_tip Текст пояснения к показателю. Одно-два предложения. <br> Слишком много текста не требуется.
+                  .mb.monitor_name УФК
+              li
+                .monitor_item
+                  .monitor_icon.monitor_green.mb
+                    .monitor_tip Текст пояснения к показателю. Одно-два предложения. <br> Слишком много текста не требуется.
+                  .mb.monitor_name ИТ
+                  
+        .dash_box_title ОСНОВНЫЕ МАТЕРИАЛЫ
+                    
+        .dash_box._alone
+          .dash_box_inner
+            ul.material_list
+              +loop_while(3)
+                li
+                  .upload_file
+                    .mb
+                      span.upload_icon
+                        img(src='./img/file_doc.svg')
+                    .upload_name.mb Презентация
+                                        
+        .dash_box_title
+          .fl МАТЕРИАЛЫ
+          .fr
+            .menu_holder
+              .dash_b_menu_btn.dashMenuBtn: .dash_b_menu_icon
+              .dash_b_menu_w.menu_w
+                ul.dash_b_menu_list
+                  li.dash_menu_group
+                    span.mb Действия
+                  li: a.dash_menu_link(href='#')
+                    span.mb Редактировать
+                  li: a.dash_menu_link(href='#')
+                    span.mb Перейти к оформлению
+                  li: a.dash_menu_link(href='#')
+                    span.mb Удалить
+                ul.dash_b_menu_list
+                  li.dash_menu_group
+                    span.mb Cтатус
+                  li: a.dash_menu_link(href='#')
+                    span.mb.dash_m_status._in_process
+                    span.mb В ПРОЦЕССЕ
+                  li: a.dash_menu_link(href='#')
+                    span.mb.dash_m_status._new
+                    span.mb НОВАЯ
+                  li: a.dash_menu_link(href='#')
+                    span.mb.dash_m_status._completed
+                    span.mb ЗАВЕРШЕНО
+                    
+        .dash_box._alone
+          .dash_box_inner
+            ul.material_list._full_w
+              li
+                .upload_file
+                  .mb
+                    span.upload_icon
+                      img(src='./img/file_pdf.svg')
+                  .upload_name.mb Dogovor_23_05_2016-idjjjh2.pdf
+                      
+              li
+                .upload_file
+                  .mb
+                    span.upload_icon
+                      img(src='./img/file_pdf.svg')
+                  .upload_name.mb Intro.pdf
+                      
+              li
+                .upload_file
+                  .mb
+                    span.upload_icon
+                      img(src='./img/file_pdf.svg')
+                  .upload_name.mb Wеlcome-to-biejing.pdf
+                      
+        .text_center.more_block
+          a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 15 ФАЙЛОВ
+          
+        .dash_box_title.clr_orange 4 ПОРУЧЕНИЯ
+
+        ul.dashboard_list
+          li
+            +instruction_box('', '_new')
+          li
+            +instruction_box('', '_new')
+          li
+            +instruction_box('', '_in_process')
+          li
+            +instruction_box('', '_new')
+                      
+        .dash_box_title ТЕГИ
+            
+        ul.tag_list
+          li
+            .tag_item Заседание
+          li
+            .tag_item Комитет №1
+          li
+            .tag_item Поручение
+          li
+            .tag_item Комитет по корпоративному бизнесу обеспечивает реализацию стратегии
+          li
+            .tag_item Встречи в сентябре
+          li
+            .tag_item Поручения созданные Долговым
 
     include ../components/footer_controls

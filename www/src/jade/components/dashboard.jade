@@ -166,7 +166,7 @@ mixin question_box(date, status, mod_1, mod_2)
         .mb
           +dash_b_menu()
 
-mixin action_brief(date, status, brief_menu, users, counter, progress, points, rm, check_class, extra_info)
+mixin action_brief(date, status, brief_menu, users, counter, progress, points, rm, check_class, extra_info, add_class)
   .dash_box
     .dash_box_inner
       - if (rm)
@@ -185,7 +185,7 @@ mixin action_brief(date, status, brief_menu, users, counter, progress, points, r
                 span.i-help
       .fl
         .mb
-          .dash_b_info
+          .dash_b_info(class= add_class)
             - if (points != undefined)
               - for pnt in points
                 .dash_b_point(class= !check_class ? '' : '_checked')
