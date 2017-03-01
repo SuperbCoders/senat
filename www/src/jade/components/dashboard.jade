@@ -115,7 +115,7 @@ mixin instruction_box(date, status)
         .mb
           +dash_b_menu()
 
-mixin question_box(date, status, mod_1)
+mixin question_box(date, status, mod_1, mod_2)
   .dash_box
     .dash_box_inner
       .fl
@@ -133,6 +133,8 @@ mixin question_box(date, status, mod_1)
             - if (mod_1)
               .dash_b_caption №244, с 17:00 до 19:00
               p Управляющий комитет
+            - else if (mod_2)
+              p Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные обязательства
             - else
               .dash_b_caption №21
                 span  Комитет по проектам и процессам
@@ -164,7 +166,7 @@ mixin question_box(date, status, mod_1)
         .mb
           +dash_b_menu()
 
-mixin action_brief(date, status, brief_menu, users, counter, progress, points, rm, check_class)
+mixin action_brief(date, status, brief_menu, users, counter, progress, points, rm, check_class, extra_info)
   .dash_box
     .dash_box_inner
       - if (rm)
@@ -186,7 +188,13 @@ mixin action_brief(date, status, brief_menu, users, counter, progress, points, r
           .dash_b_info
             - if (points != undefined)
               - for pnt in points
-                .dash_b_point(class= !check_class ? '' : '_checked')= pnt
+                .dash_b_point(class= !check_class ? '' : '_checked')
+                  - if (extra_info)
+                    .dash_b_caption №21
+                      span  Комитет по проектам и процессам
+                    div= pnt
+                  - else
+                    = pnt
             - else
               .dash_b_location
                 span  Офис 302, 3 этаж, главное здание корпус А, Москва, шоссе Энтузиастов, 12, 2

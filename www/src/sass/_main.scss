@@ -266,8 +266,10 @@
   padding-top: 7px;
 
   .members_wrapper & {
-    width: 50%;
-    float: left;
+    max-width: 49.7%;
+    min-width: 32.9%;
+    display: inline-block;
+    vertical-align: top;
     margin-bottom: 40px;
   }
 

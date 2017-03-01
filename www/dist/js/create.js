@@ -4,8 +4,16 @@ $(function ($) {
 
   $('.tagIt').tagit();
 
+  initDrop();
+
+});
+
+function initDrop() {
+
   var dropZone = $('.dropzone'),
     maxFileSize = 1024 * 1024 * 1024; // максимальный размер фалйа
+
+  if (!dropZone.length) return;
 
   // Проверка поддержки браузером
   if (typeof(window.FileReader) == 'undefined') {
@@ -88,4 +96,4 @@ $(function ($) {
       }
     }
   }
-});
+}

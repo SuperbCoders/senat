@@ -23,7 +23,7 @@
   },
   {
     "title": "Поручения",
-    "href": "instructions.html",
+    "href": "tasks.html",
     "counter" : 4,
     "submenu": [
       {

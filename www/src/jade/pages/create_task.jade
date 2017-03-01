@@ -1,0 +1,154 @@
+block variables
+  - var bodyClass = 'page_create_meeting';
+  - var htmlClass = 'stick_footer nav_header';
+  - var pageTitle = 'Новая задача';
+  - var pageDescription = 'Описание страницы';
+  - var activePage = 3;
+  - var hasUnitNav = true;
+  - var shortUnitNav = true;
+  - var actionNavbarColor = 'clr_orange';
+  - var actionText = 'В ПОВЕСТКУ';
+  - var customScripts = ['vendors/moment.min.js','vendors/daterangepicker.js','vendors/select2.js','vendors/jquery-ui-1.10.2.custom.min.js','vendors/tag-it.min.js','create.js'];
+
+include ../components/dashboard
+
+extends ../components/layout
+block head
+block content
+  .wrapper
+    include ../components/header
+    .action_navbar
+      include ../components/action_navbar
+
+    .main_content
+      .section_inner
+        .dash_box._create
+          .dash_box_inner
+            .form_row.cell_v1
+              .form_cell._s_100
+                label.f_label(for='question_description') ФОРМУЛИРОВКА ПОРУЧЕНИЯ
+                .input_w
+                  textarea#question_description.f_input._inp_black.input_v1._h_120(placeholder='Сформулируйте суть поручения')
+                    
+            .form_row.cell_v1
+              .form_cell._s_25
+                label.f_label(for='date') ДАТА ПОСТАНОВКИ
+                .input_w.has_icon.daterangepicker_v1
+                  input#date.f_input._inp_black.input_v1.singleDate
+                  span.input_icon.i-calendar
+
+              .form_cell._s_25
+                label.f_label(for='time') ДАТА ВЫПОЛНЕНИЯ
+                .input_w.has_icon.timePicker
+                  input#time.f_input._inp_black.input_v1.timePickerVal(data-format='hh часов mm минут')
+                  span.input_icon.i-timer
+                  +time_picker()
+
+              .form_cell._s_25
+                label.f_label(for='remind_date') НАПОМНИТЬ
+                .input_w.select_v1
+                  select#remind_date.select2
+                    option За 1 день
+                    option За 2 дня
+                    option За 3 дня
+                    option За 4 дня
+
+              .form_cell._s_25
+                label.f_label(for='material_deadline') НАПОМНИТЬ В ДЕНЬ
+                .input_w.has_icon.daterangepicker_v1
+                  input#material_deadline.f_input._inp_black.input_v1.singleDate
+                  span.input_icon.i-calendar
+            
+            .members_wrapper
+              .members_holder
+                .f_label ОТВЕТСТВЕННЫЙ
+                ul.member_list
+                  +loop_while(1)
+                    li.rmUnit
+                      .member_box
+                        .member_avatars
+                          .member_main_avatar
+                            img(src='./img/member.png')
+                            span.btn_red_2.unit_rm_btn.rmBtn
+  
+                        .participant_name Кислицин Д.М.
+                        .participant_post Председатель
+                   
+                    li
+                      .member_box
+                        .btn_v2.add_unit_btn.btn_white_2
+                          span.mb.i-plus
+                                      
+              .members_holder
+                .f_label ИНИЦИАТОР
+                ul.member_list
+                  +loop_while(1)
+                    li
+                      .member_box
+                        .member_avatars
+                          .member_main_avatar
+                          
+                  li
+                    .member_box
+                      .btn_v2.add_unit_btn.btn_white_2
+                        span.mb.i-plus
+                        
+              .members_holder
+                .f_label КОНТРОЛЕР
+                ul.member_list
+                  +loop_while(1)
+                    li
+                      .member_box
+                        .member_avatars
+                          .member_main_avatar
+                          
+                  li
+                    .member_box
+                      .btn_v2.add_unit_btn.btn_white_2
+                        span.mb.i-plus
+                        
+              .members_holder
+                .f_label ИСПОЛНИТЕЛИ
+                ul.member_list
+                  +loop_while(2)
+                    li
+                      .member_box
+                        .member_avatars
+                          .member_main_avatar
+                          
+                  li
+                    .member_box
+                      .btn_v2.add_unit_btn.btn_white_2.userMenuBtn
+                        span.mb.i-plus
+                      +member_search()
+            
+            .f_label ОСНОВНЫЕ МАТЕРИАЛЫ
+            .form_row.cell_v1
+              .form_cell._s_33
+                .input_w.drag_catcher
+                  span.drag_text ФАЙЛ ПРЕЗЕНТАЦИИ
+              .form_cell._s_33
+                .input_w.drag_catcher
+                  span.drag_text ФАЙЛ ПРОЕКТА РЕШЕНИЯ
+              .form_cell._s_33
+                .input_w.drag_catcher
+                  span.drag_text ФАЙЛ ПРИЛОЖЕНИЯ
+              
+            .f_label МАТЕРИАЛЫ
+              
+            ul.upload_list
+              li
+                .input_w.drag_catcher
+                  span.drag_text ДОБАВИТЬ
+              li
+                +file_upload()
+              li
+                +file_upload()
+              li
+                +file_upload(true)
+                
+            .text_center
+              a.btn_v1.btn_gray_2.dash_btn(href='#') СОХРАНИТЬ ПОРУЧЕНИЕ
+              
+            
+    //include ../components/footer_controls_2

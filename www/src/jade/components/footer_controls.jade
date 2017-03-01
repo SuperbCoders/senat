@@ -9,7 +9,7 @@ block variables
     .fr
       .f_controls_holder
         .btn_v2.add_unit_btn.btn_white_2.asideAddOpen
-          span.mb.i-plus
+          span.mb.i-plus(class=filterClass || '')
         .f_controls_panel
           - each item,i in items
             .f_control_item(class= item)

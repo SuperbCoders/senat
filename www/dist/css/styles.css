@@ -1236,6 +1236,8 @@
     font: 12px "HelveticaNeue", sans-serif;
     color: #474747;
     opacity: .5; }
+  .dash_b_point .dash_b_caption {
+    margin: 0; }
 
 .dash_b_location {
   font: 12px "HelveticaNeue", sans-serif;
@@ -1587,8 +1589,10 @@
 .members_holder {
   padding-top: 7px; }
   .members_wrapper .members_holder {
-    width: 50%;
-    float: left;
+    max-width: 49.7%;
+    min-width: 32.9%;
+    display: inline-block;
+    vertical-align: top;
     margin-bottom: 40px; }
   .members_holder .member_list {
     padding-top: 10px; }

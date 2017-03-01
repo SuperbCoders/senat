@@ -1704,8 +1704,7 @@ body.rtl .formError .formErrorArrow {
 
 .action_nav_menu {
   float: right;
-  padding-right: 25px;
-  line-height: 50px; }
+  padding-right: 25px; }
   .action_nav_menu + .action_nav_controls {
     padding-right: 65px; }
   .action_nav_menu .menu_holder {
