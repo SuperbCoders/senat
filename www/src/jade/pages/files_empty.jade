@@ -1,0 +1,40 @@
+block variables
+  - var bodyClass = 'page_question dropzone';
+  - var htmlClass = 'stick_footer action_header';
+  - var pageTitle = 'Файлы пусто';
+  - var pageDescription = 'Описание страницы';
+  - var activePage = 5;
+  - var hasUnitNav = true;
+  - var actionNavbarColor = 'clr_orange';
+  - var customScripts = ['vendors/moment.min.js', 'vendors/daterangepicker.js', 'files.js'];
+
+include ../components/dashboard
+
+extends ../components/layout
+block head
+block content
+  .wrapper
+    .drop_catcher
+    include ../components/header
+
+    .main_content.files_root
+      .gl_table
+        .gl_table_cell
+          .section_inner
+            .text_center
+              img(src='./img/folder.svg')
+              
+            .caption_v1.text_center Пока что вы не загружали файлы. Создание папок, загрузка файлов происходит здесь. Так же вы можете создать текстовый файл.
+              
+            ul.upload_list.uploadList
+              
+              li.uploadTip
+                .input_w.drag_catcher.text_upper
+                  input#file_upload_2.hide(type='file')
+                  span.drag_text.clr_def Переместите файлы с компьютера в окно браузера 
+                  label.drag_link(for='file_upload_2') Воспользуйтесь обычной загрузкой
+                
+              
+                    
+    include ../components/footer_controls
+    

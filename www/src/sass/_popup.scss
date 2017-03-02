@@ -190,6 +190,16 @@
   .section_inner {
     height: 100%;
   }
+
+  &:before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    right: 0;
+    left: 0;
+    background: $gl_white;
+    height: 27px;
+  }
 }
 
 .vote_form_holder {

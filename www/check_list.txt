@@ -12,9 +12,9 @@ dashboard 1920.jpg +
 dashboard scroll 1.jpg +
 dashboard scroll 2.jpg +
 dashboard.jpg +
-Files empty.jpg 
+Files empty.jpg +
 Files file.jpg 
-Files.jpg 
+Files.jpg +
 filter calendar.jpg 
 filter organs view.jpg +
 filter organs.jpg +
@@ -25,7 +25,7 @@ header look.jpg
 login.jpg +
 meeting.jpg +
 meetings.jpg +
-messages.jpg
+messages.jpg +
 notification important.jpg +
 notifications.jpg 
 Person.jpg +
@@ -35,7 +35,7 @@ questions.jpg +
 search empty.jpg +
 search field.jpg +
 search.jpg +
-task.jpg
+task.jpg +
 tasks.jpg +
 vote empty.jpg +
 vote process.jpg +

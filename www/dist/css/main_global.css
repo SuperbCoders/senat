@@ -12,7 +12,7 @@
   -webkit-box-pack: center;
   -webkit-box-align: start; }
 
-.main_content:after, .form_row:after, .nav_bar:after, .nav_list:after, .action_nav_list:after {
+.main_content:after, .chat_container:after, .small_aside_right:after, .form_row:after, .nav_bar:after, .page_messages .nav_bar .section_inner:after, .nav_list:after, .action_nav_list:after {
   position: static;
   display: block;
   height: 0;
@@ -199,7 +199,7 @@ a {
   font-weight: 800;
   font-style: normal; }
 
-.logo_icon:after, .dialog_close_butt_mod_1 .ui-dialog-titlebar-close:after, .search_submit:after, .select_v1 .select2-container--default .select2-selection--single .select2-selection__arrow:after, .search_btn:after, .notification_btn:after, .nav_back_link:after, .logo_icon:before, .dialog_close_butt_mod_1 .ui-dialog-titlebar-close:before, .search_submit:before, .select_v1 .select2-container--default .select2-selection--single .select2-selection__arrow:before, .search_btn:before, .notification_btn:before, .nav_back_link:before {
+.logo_icon:after, .dialog_close_butt_mod_1 .ui-dialog-titlebar-close:after, .search_submit:after, .select_v1 .select2-container--default .select2-selection--single .select2-selection__arrow:after, .select_v2 .select2-container--default .select2-selection--single .select2-selection__arrow:after, .search_btn:after, .notification_btn:after, .nav_back_link:after, .logo_icon:before, .dialog_close_butt_mod_1 .ui-dialog-titlebar-close:before, .search_submit:before, .select_v1 .select2-container--default .select2-selection--single .select2-selection__arrow:before, .select_v2 .select2-container--default .select2-selection--single .select2-selection__arrow:before, .search_btn:before, .notification_btn:before, .nav_back_link:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "senat_icons" !important;
   speak: none;
@@ -389,6 +389,10 @@ input.hide {
   .main_content .section_inner {
     padding: 0 72px;
     max-width: 944px; }
+    .filter_bar .section_inner._chat,
+    .main_content .section_inner._chat {
+      padding: 0;
+      max-width: 1024px; }
   @media only screen and (min-width: 1440px) {
     .page_index .filter_bar .section_inner,
     .page_index .main_content .section_inner {
@@ -424,6 +428,64 @@ input.hide {
         bottom: 0;
         right: 0;
         overflow-y: auto; } }
+
+.chat_container .small_aside_right,
+.chat_container .small_aside_left {
+  position: relative; }
+
+.chat_container .small_aside_left {
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  top: 130px;
+  width: 350px; }
+  .chat_container .small_aside_left:before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 0;
+    bottom: 0;
+    width: 5000px;
+    background: #fff; }
+  .chat_container .small_aside_left._has_search {
+    padding-top: 60px; }
+    .chat_container .small_aside_left._has_search:before {
+      border-top: 60px solid #d6d8da; }
+
+.chat_container .small_aside_right {
+  padding-bottom: 80px; }
+  .chat_container .small_aside_right .chat_form {
+    position: fixed;
+    bottom: 20px;
+    padding-top: 0;
+    width: 610px;
+    margin-left: 30px; }
+  .chat_container .small_aside_right .f_input {
+    background: #fff; }
+
+.small_aside_left {
+  float: left;
+  width: 350px;
+  min-height: 1px; }
+  .nav_bar .small_aside_left {
+    padding: 0 30px;
+    font-size: 12px; }
+
+.small_aside_right {
+  margin-left: 350px;
+  position: relative;
+  min-height: 1px; }
+
+.aside_caption {
+  padding: 0 30px;
+  letter-spacing: .035em; }
+
+.doc_preview {
+  text-align: center; }
+  .doc_preview img {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%; }
 
 @media only screen and (min-width: 1800px) {
   .wide-hidden {
@@ -482,6 +544,9 @@ input.hide {
 
 .clr_gray {
   color: #a0b3be; }
+
+.clr_gray_2 {
+  color: #3c3c3c; }
 
 .clr_def {
   color: #474747; }
@@ -997,6 +1062,20 @@ body.rtl .formError .formErrorArrow {
         color: #2f2f2f !important; }
       .f_input._inp_black:focus:empty::-webkit-input-placeholder {
         color: #2f2f2f !important; }
+  .f_input._inp_white {
+    background: #fff;
+    border-color: #fff;
+    color: #474747; }
+    .f_input._inp_white::-moz-placeholder {
+      color: rgba(71, 71, 71, 0.7); }
+    .f_input._inp_white::-webkit-input-placeholder {
+      color: rgba(71, 71, 71, 0.7); }
+    .f_input._inp_white:focus {
+      border-color: #6e737a; }
+      .f_input._inp_white:focus:empty::-moz-placeholder {
+        color: #474747 !important; }
+      .f_input._inp_white:focus:empty::-webkit-input-placeholder {
+        color: #474747 !important; }
   .f_input._h_90 {
     height: 90px; }
   .f_input._h_120 {
@@ -1166,6 +1245,39 @@ body.rtl .formError .formErrorArrow {
   border: 1px solid #6e737a; }
 
 .select_v1 .select2-container--default.select2-container--open .select2-selection__arrow:before {
+  content: ""; }
+
+.select_v2 .select2-dropdown {
+  border-color: #6e737a; }
+
+.select_v2 .select2-container--default .select2-results__option {
+  padding: 2px 14px; }
+
+.select_v2 .select2-container--default .select2-selection--single {
+  border-color: transparent; }
+  .select_v2 .select2-container--default .select2-selection--single .select2-selection__rendered {
+    min-width: 110px;
+    color: #6e737a;
+    letter-spacing: .025em;
+    font: 12px/26px "HelveticaNeueBold", sans-serif; }
+  .select_v2 .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: auto;
+    bottom: 1px; }
+    .select_v2 .select2-container--default .select2-selection--single .select2-selection__arrow:before {
+      content: "";
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      font-size: 12px;
+      line-height: 16px;
+      margin-top: -8px; }
+    .select_v2 .select2-container--default .select2-selection--single .select2-selection__arrow b {
+      display: none; }
+
+.select_v2 .select2-container--default.select2-container--open .select2-selection--single {
+  border: 1px solid #6e737a; }
+
+.select_v2 .select2-container--default.select2-container--open .select2-selection__arrow:before {
   content: ""; }
 
 .light_pin {
@@ -1653,6 +1765,19 @@ body.rtl .formError .formErrorArrow {
         width: 1px;
         background: #d8d8d8;
         margin-left: -1px; } }
+  .page_messages .nav_bar {
+    top: 80px !important; }
+    .page_messages .nav_bar .section_inner {
+      position: relative; }
+      .page_messages .nav_bar .section_inner:before {
+        content: '';
+        position: absolute;
+        left: 350px;
+        top: 0;
+        bottom: 0;
+        width: 1px;
+        background: #d8d8d8;
+        margin-left: -1px; }
 
 .nav_list {
   margin: 0 auto;

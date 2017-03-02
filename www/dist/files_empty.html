@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="stick_footer stick_header">
+<html lang="ru" class="stick_footer action_header">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -11,7 +11,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="mobile-web-app-capable" content="yes">
-    <title>Профиль</title>
+    <title>Файлы пусто</title>
     <meta name="description" content="Описание страницы">
     <meta property="og:title" content="feedly: organize, read and share what matters to you.">
     <meta property="og:url" content="http://feedly.com/index.html">
@@ -26,8 +26,9 @@
     <link rel="stylesheet" href="css/main_global.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body class="page_profile">
+  <body class="page_question dropzone">
     <div class="wrapper">
+      <div class="drop_catcher"></div>
       <div class="header">
         <div class="section_inner clearfix">
           <div class="logo_block"><a href="index.html" class="logo clr_white mb"><span class="logo_icon"></span></a></div>
@@ -41,7 +42,7 @@
               </li>
               <li class="nav_item"><a href="messages.html" class="nav_link">Сообщения</a>
               </li>
-              <li class="nav_item"><a href="files.html" class="nav_link">Мои файлы</a>
+              <li class="nav_item active"><a href="files.html" class="nav_link">Мои файлы</a>
               </li>
               <li class="nav_item"><a href="reports.html" class="nav_link">Отчеты</a>
               </li>
@@ -112,124 +113,36 @@
           </div>
         </div>
       </div>
-      <div class="nav_bar navBar">
-        <div class="wide_aside_left">
-          <div class="section_inner">
-            <ul class="nav_list">
-              <li>
-                <div data-scroll="#meetings_block" class="nav_unit scrollTo clr_green"><span class="mb nav_unit_counter">1</span><span class="mb">Заседания сегодня</span></div>
-              </li>
-              <li>
-                <div data-scroll="#instructions_block" class="nav_unit scrollTo clr_orange"><span class="mb nav_unit_counter">4</span><span class="mb">Поручения</span></div>
-              </li>
-              <li>
-                <div data-scroll="#actions_block" class="nav_unit scrollTo clr_blue"><span class="mb nav_unit_counter">2</span><span class="mb">Действия</span></div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="wide_aside_right">
-          <div class="section_inner clearfix">
-            <div class="action_nav_menu">
-              <div class="menu_holder">
-                <div class="dash_b_menu_btn dashMenuBtn">
-                  <div class="dash_b_menu_icon"></div>
-                </div>
-                <div class="dash_b_menu_w menu_w">
-                  <ul class="dash_b_menu_list">
-                    <li class="dash_menu_group"><span class="mb">Действия</span></li>
-                    <li><a href="#" class="dash_menu_link"><span class="mb">Редактировать</span></a></li>
-                    <li><a href="#" class="dash_menu_link"><span class="mb">Перейти к оформлению</span></a></li>
-                    <li><a href="#" class="dash_menu_link"><span class="mb">Удалить</span></a></li>
-                  </ul>
-                  <ul class="dash_b_menu_list">
-                    <li class="dash_menu_group"><span class="mb">Cтатус</span></li>
-                    <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _in_process"></span><span class="mb">В ПРОЦЕССЕ</span></a></li>
-                    <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _new"></span><span class="mb">НОВАЯ</span></a></li>
-                    <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _completed"></span><span class="mb">ЗАВЕРШЕНО</span></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div class="action_nav_controls">
-              <ul class="action_nav_list clr_green">
-                <li>№241</li>
-                <li>Очное</li>
-                <li>Комитет по корпоративному бизнесу обеспечивает реализации стратегии разития по корпоративному бизнесу обеспечивает реализации стратегии разития</li>
+      <div class="main_content files_root">
+        <div class="gl_table">
+          <div class="gl_table_cell">
+            <div class="section_inner">
+              <div class="text_center"><img src="./img/folder.svg"></div>
+              <div class="caption_v1 text_center">Пока что вы не загружали файлы. Создание папок, загрузка файлов происходит здесь. Так же вы можете создать текстовый файл.</div>
+              <ul class="upload_list uploadList">
+                <li class="uploadTip">
+                  <div class="input_w drag_catcher text_upper">
+                    <input id="file_upload_2" type="file" class="hide"><span class="drag_text clr_def">Переместите файлы с компьютера в окно браузера </span>
+                    <label for="file_upload_2" class="drag_link">Воспользуйтесь обычной загрузкой</label>
+                  </div>
+                </li>
               </ul>
             </div>
           </div>
         </div>
       </div>
-      <div class="profile_bg_w">
-        <div class="profile_bg profileBG"><img src="./img/person_bg.png" class="hide profileIMG"></div>
-      </div>
-      <div class="main_content">
-        <div class="section_inner">
-          <div class="profile_block">
-            <div class="profile_logout"><a href="#" class="btn_v1 btn_white_3 logout_btn">ВЫЙТИ ИЗ АККАУНТА</a></div>
-            <div class="profile_photo"><img src="./img/person.png"></div>
-            <div class="profile_info clr_white">
-              <div class="profile_name">Созонов Владислав Андреевич</div>
-              <div class="profile_post">Руководитель комитета</div>
-              <p>Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности</p>
-            </div>
-          </div>
-          <div class="profile_settings clr_white">
-            <div class="profile_s_row">
-              <div class="fr">
-                <div class="mb"> 
-                  <div class="profile_s_val">
-                    <label class="radio_toggle _flag">
-                      <input type="checkbox" class="hide"/><span class="radio_text _on"><img src="img/flag_ru.png" class="flag_img"/><span>Ru</span></span><span class="radio_text _off"><img src="img/flag_ru.png" class="flag_img"/><span>Eng</span></span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="profile_s_name">
-                <div class="mb">Язык интерфейса</div>
-              </div>
-            </div>
-            <div class="profile_s_row">
-              <div class="fr">
-                <div class="mb"> 
-                  <div class="profile_s_val">
-                    <label class="radio_toggle">
-                      <input type="checkbox" class="hide"/><span class="radio_text _on"><span>Да</span></span><span class="radio_text _off"><span>Нет</span></span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="profile_s_name">
-                <div class="mb">Уведомлять о новых заседаниях</div>
-              </div>
-            </div>
-            <div class="profile_s_row">
-              <div class="fr">
-                <div class="mb"> 
-                  <div class="profile_s_val">
-                    <label class="radio_toggle">
-                      <input type="checkbox" class="hide"/><span class="radio_text _on"><span>Да</span></span><span class="radio_text _off"><span>Нет</span></span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="profile_s_name">
-                <div class="mb">Уведомлять о сообщениях</div>
-              </div>
-            </div>
-            <div class="profile_s_row">
-              <div class="fr">
-                <div class="mb"> 
-                  <div class="profile_s_val">
-                    <label class="radio_toggle">
-                      <input type="checkbox" class="hide"/><span class="radio_text _on"><span>Да</span></span><span class="radio_text _off"><span>Нет</span></span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="profile_s_name">
-                <div class="mb">Уведомлять о задачах</div>
+      <div class="footer_controls">
+        <div class="section_inner clearfix">
+          <div class="fr">
+            <div class="f_controls_holder">
+              <div class="btn_v2 add_unit_btn btn_white_2 asideAddOpen"><span class="mb i-plus"></span></div>
+              <div class="f_controls_panel">
+                <div class="f_control_item clr_orange"><a href="create_action.html" class="f_control_link clr_orange"><span class="btn_v1 f_control_btn i-plus"></span>
+                    <div class="f_control_text">ПОРУЧЕНИЕ</div></a></div>
+                <div class="f_control_item clr_blue"><a href="create_question.html" class="f_control_link clr_blue"><span class="btn_v1 f_control_btn i-plus"></span>
+                    <div class="f_control_text">ВОПРОС</div></a></div>
+                <div class="f_control_item clr_green"><a href="create_meeting.html" class="f_control_link clr_green"><span class="btn_v1 f_control_btn i-plus"></span>
+                    <div class="f_control_text">ЗАСЕДАНИЕ</div></a></div>
               </div>
             </div>
           </div>
@@ -432,8 +345,9 @@
     <script src="js/vendors/jquery1.10.js"></script>
     <script src="js/vendors/snabbt.min.js"></script>
     <script src="js/vendors/flexibility.js"></script>
-    <script src="js/vendors/backstretch.js"></script>
-    <script src="js/profile.js"></script>
+    <script src="js/vendors/moment.min.js"></script>
+    <script src="js/vendors/daterangepicker.js"></script>
+    <script src="js/files.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

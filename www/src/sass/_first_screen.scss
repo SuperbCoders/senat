@@ -93,6 +93,11 @@ input.hide {
   .main_content & {
     padding: 0 72px;
     max-width: $content-max-w - 80;
+
+    &._chat {
+      padding: 0;
+      max-width: $content-max-w;
+    }
   }
 
   .page_index .filter_bar &,
@@ -150,8 +155,100 @@ input.hide {
   }
 }
 
-.wide-hidden {
+.chat_container {
+  @extend %clearfix;
+  //position: fixed;
+  //bottom: 0;
+  //top: 130px;
+  //width: $content-max-w;
+  //max-width: 100%;
 
+  .small_aside_right,
+  .small_aside_left {
+    //height: 100%;
+    position: relative;
+  }
+
+  .small_aside_left {
+    background: $gl_white;
+
+    position: fixed;
+    bottom: 0;
+    top: 130px;
+    width: 350px;
+
+    &:before {
+      content: '';
+      position: absolute;
+      right: 100%;
+      top: 0;
+      bottom: 0;
+      width: 5000px;
+      background: $gl_white;
+    }
+
+    &._has_search {
+      padding-top: 60px;
+
+      &:before {
+        border-top: 60px solid #d6d8da;
+      }
+    }
+  }
+
+  .small_aside_right {
+    padding-bottom: 80px;
+
+    .chat_form {
+      position: fixed;
+      bottom: 20px;
+      //right: 30px;
+      //left: 30px;
+      padding-top: 0;
+      width: 610px;
+      margin-left: 30px;
+    }
+
+    .f_input {
+      background: $gl_white;
+    }
+  }
+}
+
+.small_aside_left {
+  float: left;
+  width: 350px;
+  min-height: 1px;
+
+  .nav_bar & {
+    padding: 0 30px;
+    font-size: 12px;
+  }
+}
+
+.small_aside_right {
+  @extend %clearfix;
+  margin-left: 350px;
+  position: relative;
+  min-height: 1px;
+}
+
+.aside_caption {
+  padding: 0 30px;
+  letter-spacing: .035em;
+}
+
+.doc_preview {
+  text-align: center;
+
+  img {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%;
+  }
+}
+
+.wide-hidden {
   @include respond-to-min($resp_step_3) {
     display: none;
   }
@@ -234,6 +331,10 @@ input.hide {
 
 .clr_gray {
   color: $gl_gray_3;
+}
+
+.clr_gray_2 {
+  color: #3c3c3c;
 }
 
 .clr_def {

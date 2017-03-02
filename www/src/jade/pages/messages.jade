@@ -1,0 +1,189 @@
+block variables
+  - var bodyClass = 'page_messages';
+  - var htmlClass = 'stick_footer action_header';
+  - var filterClass = 'clr_blue';
+  - var pageTitle = 'Сообщения';
+  - var pageDescription = 'Описание страницы';
+  - var activePage = 4;
+  - var hasUnitNav = true;
+  - var actionNavbarColor = 'clr_orange';
+  - var customScripts = ['vendors/moment.min.js', 'vendors/daterangepicker.js', 'vendors/select2.js'];
+
+include ../components/dashboard
+
+extends ../components/layout
+block head
+block content
+  .wrapper
+    include ../components/header
+    include ../components/navbar_msg
+
+    .main_content
+      .section_inner._chat
+        .chat_container
+          .small_aside_left._has_search
+            .chat_search
+              form(action='#')
+                .input_w
+                  input.input_v1.f_input._inp_white.text_center(placeholder='Имя, сообщение или название ')
+            
+            .chat_messages
+              .chat_item
+                .msg_title ВОПРОС №223
+                .msg_body
+                  p Текст документа подготовлен. Необходимо согласовать. Разработка нового.
+                  .msg_text Вроде бы это CIO, Виктория
+              
+              .chat_item
+                .msg_title ЛИЧНОЕ СООБЩЕНИЕ
+                .msg_body
+                  .msg_avatar
+                    img(src='./img/participant.png')
+                  .msg_author Долгов Ч. М.
+                  .msg_text В спам может попадать в зависимости от сов зависимости от со
+                    
+              .chat_item
+                .msg_title ВОПРОС №223
+                .msg_body
+                  p Текст документа подготовлен. Необходимо согласовать. Разработка нового регламента.
+                  .msg_text Вроде бы это CIO, Виктория
+                    
+              .chat_item
+                .msg_title ВОПРОС №223
+                .msg_body
+                  p Текст документа подготовлен. Необходимо согласовать. Разработка нового регламента.
+                  .msg_text Вроде бы это CIO, Виктория
+                    
+              .chat_item
+                .msg_title ЛИЧНОЕ СООБЩЕНИЕ
+                .msg_body
+                  .msg_avatar
+                    img(src='./img/participant.png')
+                  .msg_author Долгов Ч. М.
+                  .msg_text В спам может попадать в зависимости от сов зависимости от со
+                    
+              .chat_item
+                .msg_title ВОПРОС №223
+                .msg_body
+                  p Текст документа подготовлен. Необходимо согласовать. Разработка нового регламента.
+                  .msg_text Вроде бы это CIO, Виктория
+              
+              .chat_item
+                .msg_title ЛИЧНОЕ СООБЩЕНИЕ
+                .msg_body
+                  .msg_avatar
+                    img(src='./img/participant.png')
+                  .msg_author Долгов Ч. М.
+                  .msg_text В спам может попадать в зависимости от сов зависимости от со
+                    
+              .chat_item
+                .msg_title ВОПРОС №223
+                .msg_body
+                  p Текст документа подготовлен. Необходимо согласовать. Разработка нового регламента.
+                  .msg_text Вроде бы это CIO, Виктория
+                    
+              .chat_item
+                .msg_title ВОПРОС №223
+                .msg_body
+                  p Текст документа подготовлен. Необходимо согласовать. Разработка нового регламента.
+                  .msg_text Вроде бы это CIO, Виктория
+                    
+              .chat_item
+                .msg_title ЛИЧНОЕ СООБЩЕНИЕ
+                .msg_body
+                  .msg_avatar
+                    img(src='./img/participant.png')
+                  .msg_author Долгов Ч. М.
+                  .msg_text В спам может попадать в зависимости от сов зависимости от со
+                    
+          .small_aside_right
+            .chat_history
+              ul.chat_list
+                +loop_while(2)
+                  li
+                    .chat_msg
+                      .chat_avatar
+                        img(src='./img/participant.png')
+                      .chat_caption
+                        span.fl.msg_author Дмитриевцев В.В.
+                        span.fl.msg_date 10 сент в 12:15
+                        
+                      p В спам может попадать в зависимости от содержимого письма, сервис рассылки тут не играет роли - пусть тестируют с реальными текстами
+                      
+                li
+                  .chat_date.text_center
+                    .caption_v2 Сегодня, 3 апреля
+                      
+                +loop_while(2)
+                  li
+                    .chat_msg
+                      .chat_avatar
+                        img(src='./img/participant.png')
+                      .chat_caption
+                        span.fl.msg_author Бунтман С.В.
+                        span.fl.msg_date 03 сент в 21:42
+                        
+                      p я не знаю как все скачать, у меня половина файлов битые
+                        
+                  li
+                    .chat_msg
+                      .chat_avatar
+                        img(src='./img/participant.png')
+                      .chat_caption
+                        span.fl.msg_author Дмитриевцев В.В.
+                        span.fl.msg_date 10 сент в 12:15
+                        
+                      p Профессионалы с профильным образованием и как минимум 5-летним опытом работы, постоянная актуализация знаний и повышение квалификации Знание английского языка всеми членами команды
+                        
+                  li
+                    .chat_msg
+                      .chat_avatar
+                        img(src='./img/participant.png')
+                      .chat_caption
+                        span.fl.msg_author Бунтман С.В.
+                        span.fl.msg_date 03 сент в 21:42
+                        
+                      p я не знаю как все скачать, у меня половина файлов битые
+                  
+                li
+                  .chat_date.text_center
+                    .caption_v2 Завтра, 4 апреля
+                      
+                +loop_while(2)
+                  li
+                    .chat_msg
+                      .chat_avatar
+                        img(src='./img/participant.png')
+                      .chat_caption
+                        span.fl.msg_author Бунтман С.В.
+                        span.fl.msg_date 03 сент в 21:42
+                        
+                      p я не знаю как все скачать, у меня половина файлов битые
+                        
+                  li
+                    .chat_msg
+                      .chat_avatar
+                        img(src='./img/participant.png')
+                      .chat_caption
+                        span.fl.msg_author Дмитриевцев В.В.
+                        span.fl.msg_date 10 сент в 12:15
+                        
+                      p Профессионалы с профильным образованием и как минимум 5-летним опытом работы, постоянная актуализация знаний и повышение квалификации Знание английского языка всеми членами команды
+                        
+                  li
+                    .chat_msg
+                      .chat_avatar
+                        img(src='./img/participant.png')
+                      .chat_caption
+                        span.fl.msg_author Бунтман С.В.
+                        span.fl.msg_date 03 сент в 21:42
+                        
+                      p я не знаю как все скачать, у меня половина файлов битые
+                  
+            .chat_form
+              form(action='#')
+                .input_w.chat_cell
+                  input.f_input.input_v1._inp_black(placeholder='Сообщение')
+                  button.btn_v1.btn_green_3.chat_btn ОТПРАВИТЬ
+                  
+ 

@@ -1,0 +1,59 @@
+block variables
+  - var bodyClass = 'page_messages';
+  - var htmlClass = 'stick_footer action_header';
+  - var pageTitle = 'Файлы файл';
+  - var pageDescription = 'Описание страницы';
+  - var activePage = 5;
+  - var hasUnitNav = true;
+  - var customScripts = ['vendors/moment.min.js', 'vendors/daterangepicker.js', 'vendors/select2.js'];
+
+include ../components/dashboard
+
+extends ../components/layout
+block head
+block content
+  .wrapper
+    include ../components/header
+    include ../components/navbar_file
+
+    .main_content
+      .section_inner._chat
+        .chat_container
+          .small_aside_left
+            ul.material_list._file_catalog._file_nav
+              li
+                .upload_file
+                  .mb
+                    span.upload_icon
+                      img(src='./img/file_pdf.svg')
+                  .upload_name.mb Intro.pdf
+                  
+              li
+                .upload_file
+                  .mb
+                    span.upload_icon
+                      img(src='./img/file_doc.svg')
+                  .upload_name.mb Wеlcome-to-biejing.doc
+                  
+              li
+                .upload_file
+                  .mb
+                    span.upload_icon
+                      img(src='./img/file_pdf.svg')
+                  .upload_name.mb Dogovor_23_05_2016-idjjjh2.pdf
+                  
+              li
+                .upload_file
+                  .mb
+                    span.upload_icon
+                      img(src='./img/file_doc.svg')
+                  .upload_name.mb Wеlcome-to-biejing.doc
+                  
+                      
+                      
+          .small_aside_right
+            .doc_preview
+              img(src='./img/doc_1.jpg')
+ 
+    include ../components/footer_controls
+    

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru" class="stick_footer stick_header">
+<html lang="ru" class="stick_footer action_header">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -11,7 +11,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="mobile-web-app-capable" content="yes">
-    <title>Профиль</title>
+    <title>Сообщения</title>
     <meta name="description" content="Описание страницы">
     <meta property="og:title" content="feedly: organize, read and share what matters to you.">
     <meta property="og:url" content="http://feedly.com/index.html">
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/main_global.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body class="page_profile">
+  <body class="page_messages">
     <div class="wrapper">
       <div class="header">
         <div class="section_inner clearfix">
@@ -39,7 +39,7 @@
               </li>
               <li class="nav_item"><a href="tasks.html" class="nav_link">Поручения</a><span class="nav_counter">4</span>
               </li>
-              <li class="nav_item"><a href="messages.html" class="nav_link">Сообщения</a>
+              <li class="nav_item active"><a href="messages.html" class="nav_link">Сообщения</a>
               </li>
               <li class="nav_item"><a href="files.html" class="nav_link">Мои файлы</a>
               </li>
@@ -112,124 +112,232 @@
           </div>
         </div>
       </div>
-      <div class="nav_bar navBar">
-        <div class="wide_aside_left">
-          <div class="section_inner">
-            <ul class="nav_list">
-              <li>
-                <div data-scroll="#meetings_block" class="nav_unit scrollTo clr_green"><span class="mb nav_unit_counter">1</span><span class="mb">Заседания сегодня</span></div>
-              </li>
-              <li>
-                <div data-scroll="#instructions_block" class="nav_unit scrollTo clr_orange"><span class="mb nav_unit_counter">4</span><span class="mb">Поручения</span></div>
-              </li>
-              <li>
-                <div data-scroll="#actions_block" class="nav_unit scrollTo clr_blue"><span class="mb nav_unit_counter">2</span><span class="mb">Действия</span></div>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="wide_aside_right">
-          <div class="section_inner clearfix">
-            <div class="action_nav_menu">
-              <div class="menu_holder">
-                <div class="dash_b_menu_btn dashMenuBtn">
-                  <div class="dash_b_menu_icon"></div>
-                </div>
-                <div class="dash_b_menu_w menu_w">
-                  <ul class="dash_b_menu_list">
-                    <li class="dash_menu_group"><span class="mb">Действия</span></li>
-                    <li><a href="#" class="dash_menu_link"><span class="mb">Редактировать</span></a></li>
-                    <li><a href="#" class="dash_menu_link"><span class="mb">Перейти к оформлению</span></a></li>
-                    <li><a href="#" class="dash_menu_link"><span class="mb">Удалить</span></a></li>
-                  </ul>
-                  <ul class="dash_b_menu_list">
-                    <li class="dash_menu_group"><span class="mb">Cтатус</span></li>
-                    <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _in_process"></span><span class="mb">В ПРОЦЕССЕ</span></a></li>
-                    <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _new"></span><span class="mb">НОВАЯ</span></a></li>
-                    <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _completed"></span><span class="mb">ЗАВЕРШЕНО</span></a></li>
-                  </ul>
-                </div>
+      <div class="nav_bar">
+        <div class="section_inner">
+          <div class="small_aside_left">
+            <div class="text_center">
+              <div class="mb select_v2 text_left">
+                <select class="select2">
+                  <option>НЕДАВНИЕ</option>
+                  <option>НОВЫЕ</option>
+                  <option>СТАРЫЕ</option>
+                </select>
               </div>
             </div>
-            <div class="action_nav_controls">
-              <ul class="action_nav_list clr_green">
-                <li>№241</li>
-                <li>Очное</li>
-                <li>Комитет по корпоративному бизнесу обеспечивает реализации стратегии разития по корпоративному бизнесу обеспечивает реализации стратегии разития</li>
-              </ul>
-            </div>
+          </div>
+          <div class="small_aside_right">
+            <div class="text_center clr_gray_2 aside_caption">Заседание №223</div>
           </div>
         </div>
-      </div>
-      <div class="profile_bg_w">
-        <div class="profile_bg profileBG"><img src="./img/person_bg.png" class="hide profileIMG"></div>
       </div>
       <div class="main_content">
-        <div class="section_inner">
-          <div class="profile_block">
-            <div class="profile_logout"><a href="#" class="btn_v1 btn_white_3 logout_btn">ВЫЙТИ ИЗ АККАУНТА</a></div>
-            <div class="profile_photo"><img src="./img/person.png"></div>
-            <div class="profile_info clr_white">
-              <div class="profile_name">Созонов Владислав Андреевич</div>
-              <div class="profile_post">Руководитель комитета</div>
-              <p>Комитет по проблемным активам обеспечивает эффективную деятельность банка по урегулированию проблемной задолженности</p>
-            </div>
-          </div>
-          <div class="profile_settings clr_white">
-            <div class="profile_s_row">
-              <div class="fr">
-                <div class="mb"> 
-                  <div class="profile_s_val">
-                    <label class="radio_toggle _flag">
-                      <input type="checkbox" class="hide"/><span class="radio_text _on"><img src="img/flag_ru.png" class="flag_img"/><span>Ru</span></span><span class="radio_text _off"><img src="img/flag_ru.png" class="flag_img"/><span>Eng</span></span>
-                    </label>
+        <div class="section_inner _chat">
+          <div class="chat_container">
+            <div class="small_aside_left _has_search">
+              <div class="chat_search">
+                <form action="#">
+                  <div class="input_w">
+                    <input placeholder="Имя, сообщение или название " class="input_v1 f_input _inp_white text_center">
+                  </div>
+                </form>
+              </div>
+              <div class="chat_messages">
+                <div class="chat_item">
+                  <div class="msg_title">ВОПРОС №223</div>
+                  <div class="msg_body">
+                    <p>Текст документа подготовлен. Необходимо согласовать. Разработка нового.</p>
+                    <div class="msg_text">Вроде бы это CIO, Виктория</div>
+                  </div>
+                </div>
+                <div class="chat_item">
+                  <div class="msg_title">ЛИЧНОЕ СООБЩЕНИЕ</div>
+                  <div class="msg_body">
+                    <div class="msg_avatar"><img src="./img/participant.png"></div>
+                    <div class="msg_author">Долгов Ч. М.</div>
+                    <div class="msg_text">В спам может попадать в зависимости от сов зависимости от со</div>
+                  </div>
+                </div>
+                <div class="chat_item">
+                  <div class="msg_title">ВОПРОС №223</div>
+                  <div class="msg_body">
+                    <p>Текст документа подготовлен. Необходимо согласовать. Разработка нового регламента.</p>
+                    <div class="msg_text">Вроде бы это CIO, Виктория</div>
+                  </div>
+                </div>
+                <div class="chat_item">
+                  <div class="msg_title">ВОПРОС №223</div>
+                  <div class="msg_body">
+                    <p>Текст документа подготовлен. Необходимо согласовать. Разработка нового регламента.</p>
+                    <div class="msg_text">Вроде бы это CIO, Виктория</div>
+                  </div>
+                </div>
+                <div class="chat_item">
+                  <div class="msg_title">ЛИЧНОЕ СООБЩЕНИЕ</div>
+                  <div class="msg_body">
+                    <div class="msg_avatar"><img src="./img/participant.png"></div>
+                    <div class="msg_author">Долгов Ч. М.</div>
+                    <div class="msg_text">В спам может попадать в зависимости от сов зависимости от со</div>
+                  </div>
+                </div>
+                <div class="chat_item">
+                  <div class="msg_title">ВОПРОС №223</div>
+                  <div class="msg_body">
+                    <p>Текст документа подготовлен. Необходимо согласовать. Разработка нового регламента.</p>
+                    <div class="msg_text">Вроде бы это CIO, Виктория</div>
+                  </div>
+                </div>
+                <div class="chat_item">
+                  <div class="msg_title">ЛИЧНОЕ СООБЩЕНИЕ</div>
+                  <div class="msg_body">
+                    <div class="msg_avatar"><img src="./img/participant.png"></div>
+                    <div class="msg_author">Долгов Ч. М.</div>
+                    <div class="msg_text">В спам может попадать в зависимости от сов зависимости от со</div>
+                  </div>
+                </div>
+                <div class="chat_item">
+                  <div class="msg_title">ВОПРОС №223</div>
+                  <div class="msg_body">
+                    <p>Текст документа подготовлен. Необходимо согласовать. Разработка нового регламента.</p>
+                    <div class="msg_text">Вроде бы это CIO, Виктория</div>
+                  </div>
+                </div>
+                <div class="chat_item">
+                  <div class="msg_title">ВОПРОС №223</div>
+                  <div class="msg_body">
+                    <p>Текст документа подготовлен. Необходимо согласовать. Разработка нового регламента.</p>
+                    <div class="msg_text">Вроде бы это CIO, Виктория</div>
+                  </div>
+                </div>
+                <div class="chat_item">
+                  <div class="msg_title">ЛИЧНОЕ СООБЩЕНИЕ</div>
+                  <div class="msg_body">
+                    <div class="msg_avatar"><img src="./img/participant.png"></div>
+                    <div class="msg_author">Долгов Ч. М.</div>
+                    <div class="msg_text">В спам может попадать в зависимости от сов зависимости от со</div>
                   </div>
                 </div>
               </div>
-              <div class="profile_s_name">
-                <div class="mb">Язык интерфейса</div>
-              </div>
             </div>
-            <div class="profile_s_row">
-              <div class="fr">
-                <div class="mb"> 
-                  <div class="profile_s_val">
-                    <label class="radio_toggle">
-                      <input type="checkbox" class="hide"/><span class="radio_text _on"><span>Да</span></span><span class="radio_text _off"><span>Нет</span></span>
-                    </label>
+            <div class="small_aside_right">
+              <div class="chat_history">
+                <ul class="chat_list">
+                  <li>
+                    <div class="chat_msg">
+                      <div class="chat_avatar"><img src="./img/participant.png"></div>
+                      <div class="chat_caption"><span class="fl msg_author">Дмитриевцев В.В.</span><span class="fl msg_date">10 сент в 12:15</span></div>
+                      <p>В спам может попадать в зависимости от содержимого письма, сервис рассылки тут не играет роли - пусть тестируют с реальными текстами</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="chat_msg">
+                      <div class="chat_avatar"><img src="./img/participant.png"></div>
+                      <div class="chat_caption"><span class="fl msg_author">Дмитриевцев В.В.</span><span class="fl msg_date">10 сент в 12:15</span></div>
+                      <p>В спам может попадать в зависимости от содержимого письма, сервис рассылки тут не играет роли - пусть тестируют с реальными текстами</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="chat_date text_center">
+                      <div class="caption_v2">Сегодня, 3 апреля</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="chat_msg">
+                      <div class="chat_avatar"><img src="./img/participant.png"></div>
+                      <div class="chat_caption"><span class="fl msg_author">Бунтман С.В.</span><span class="fl msg_date">03 сент в 21:42</span></div>
+                      <p>я не знаю как все скачать, у меня половина файлов битые</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="chat_msg">
+                      <div class="chat_avatar"><img src="./img/participant.png"></div>
+                      <div class="chat_caption"><span class="fl msg_author">Дмитриевцев В.В.</span><span class="fl msg_date">10 сент в 12:15</span></div>
+                      <p>Профессионалы с профильным образованием и как минимум 5-летним опытом работы, постоянная актуализация знаний и повышение квалификации Знание английского языка всеми членами команды</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="chat_msg">
+                      <div class="chat_avatar"><img src="./img/participant.png"></div>
+                      <div class="chat_caption"><span class="fl msg_author">Бунтман С.В.</span><span class="fl msg_date">03 сент в 21:42</span></div>
+                      <p>я не знаю как все скачать, у меня половина файлов битые</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="chat_msg">
+                      <div class="chat_avatar"><img src="./img/participant.png"></div>
+                      <div class="chat_caption"><span class="fl msg_author">Бунтман С.В.</span><span class="fl msg_date">03 сент в 21:42</span></div>
+                      <p>я не знаю как все скачать, у меня половина файлов битые</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="chat_msg">
+                      <div class="chat_avatar"><img src="./img/participant.png"></div>
+                      <div class="chat_caption"><span class="fl msg_author">Дмитриевцев В.В.</span><span class="fl msg_date">10 сент в 12:15</span></div>
+                      <p>Профессионалы с профильным образованием и как минимум 5-летним опытом работы, постоянная актуализация знаний и повышение квалификации Знание английского языка всеми членами команды</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="chat_msg">
+                      <div class="chat_avatar"><img src="./img/participant.png"></div>
+                      <div class="chat_caption"><span class="fl msg_author">Бунтман С.В.</span><span class="fl msg_date">03 сент в 21:42</span></div>
+                      <p>я не знаю как все скачать, у меня половина файлов битые</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="chat_date text_center">
+                      <div class="caption_v2">Завтра, 4 апреля</div>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="chat_msg">
+                      <div class="chat_avatar"><img src="./img/participant.png"></div>
+                      <div class="chat_caption"><span class="fl msg_author">Бунтман С.В.</span><span class="fl msg_date">03 сент в 21:42</span></div>
+                      <p>я не знаю как все скачать, у меня половина файлов битые</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="chat_msg">
+                      <div class="chat_avatar"><img src="./img/participant.png"></div>
+                      <div class="chat_caption"><span class="fl msg_author">Дмитриевцев В.В.</span><span class="fl msg_date">10 сент в 12:15</span></div>
+                      <p>Профессионалы с профильным образованием и как минимум 5-летним опытом работы, постоянная актуализация знаний и повышение квалификации Знание английского языка всеми членами команды</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="chat_msg">
+                      <div class="chat_avatar"><img src="./img/participant.png"></div>
+                      <div class="chat_caption"><span class="fl msg_author">Бунтман С.В.</span><span class="fl msg_date">03 сент в 21:42</span></div>
+                      <p>я не знаю как все скачать, у меня половина файлов битые</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="chat_msg">
+                      <div class="chat_avatar"><img src="./img/participant.png"></div>
+                      <div class="chat_caption"><span class="fl msg_author">Бунтман С.В.</span><span class="fl msg_date">03 сент в 21:42</span></div>
+                      <p>я не знаю как все скачать, у меня половина файлов битые</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="chat_msg">
+                      <div class="chat_avatar"><img src="./img/participant.png"></div>
+                      <div class="chat_caption"><span class="fl msg_author">Дмитриевцев В.В.</span><span class="fl msg_date">10 сент в 12:15</span></div>
+                      <p>Профессионалы с профильным образованием и как минимум 5-летним опытом работы, постоянная актуализация знаний и повышение квалификации Знание английского языка всеми членами команды</p>
+                    </div>
+                  </li>
+                  <li>
+                    <div class="chat_msg">
+                      <div class="chat_avatar"><img src="./img/participant.png"></div>
+                      <div class="chat_caption"><span class="fl msg_author">Бунтман С.В.</span><span class="fl msg_date">03 сент в 21:42</span></div>
+                      <p>я не знаю как все скачать, у меня половина файлов битые</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="chat_form">
+                <form action="#">
+                  <div class="input_w chat_cell">
+                    <input placeholder="Сообщение" class="f_input input_v1 _inp_black">
+                    <button class="btn_v1 btn_green_3 chat_btn">ОТПРАВИТЬ</button>
                   </div>
-                </div>
-              </div>
-              <div class="profile_s_name">
-                <div class="mb">Уведомлять о новых заседаниях</div>
-              </div>
-            </div>
-            <div class="profile_s_row">
-              <div class="fr">
-                <div class="mb"> 
-                  <div class="profile_s_val">
-                    <label class="radio_toggle">
-                      <input type="checkbox" class="hide"/><span class="radio_text _on"><span>Да</span></span><span class="radio_text _off"><span>Нет</span></span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="profile_s_name">
-                <div class="mb">Уведомлять о сообщениях</div>
-              </div>
-            </div>
-            <div class="profile_s_row">
-              <div class="fr">
-                <div class="mb"> 
-                  <div class="profile_s_val">
-                    <label class="radio_toggle">
-                      <input type="checkbox" class="hide"/><span class="radio_text _on"><span>Да</span></span><span class="radio_text _off"><span>Нет</span></span>
-                    </label>
-                  </div>
-                </div>
-              </div>
-              <div class="profile_s_name">
-                <div class="mb">Уведомлять о задачах</div>
+                </form>
               </div>
             </div>
           </div>
@@ -432,8 +540,9 @@
     <script src="js/vendors/jquery1.10.js"></script>
     <script src="js/vendors/snabbt.min.js"></script>
     <script src="js/vendors/flexibility.js"></script>
-    <script src="js/vendors/backstretch.js"></script>
-    <script src="js/profile.js"></script>
+    <script src="js/vendors/moment.min.js"></script>
+    <script src="js/vendors/daterangepicker.js"></script>
+    <script src="js/vendors/select2.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

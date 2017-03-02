@@ -63,6 +63,34 @@
     }
   }
 
+  &._inp_white {
+    background: $gl_white;
+    border-color: $gl_white;
+    color: $default_t_color;
+
+    &::-moz-placeholder {
+      color: rgba(71, 71, 71, .7);
+    }
+
+    &::-webkit-input-placeholder {
+      color: rgba(71, 71, 71, .7);
+    }
+
+    &:focus {
+      border-color: $gl_gray_2;
+
+      &:empty {
+        &::-moz-placeholder {
+          color: rgba(71, 71, 71, 1) !important;
+        }
+
+        &::-webkit-input-placeholder {
+          color: rgba(71, 71, 71, 1) !important;
+        }
+      }
+    }
+  }
+
   &._h_90 {
     height: 90px;
   }
@@ -271,7 +299,7 @@
     .select2-results__option {
       padding: 12px 14px;
     }
-    
+
     .select2-selection--single {
       @include transition_all(border .3s);
       border: 1px solid rgba(110, 115, 122, 0.5);
@@ -283,6 +311,63 @@
         color: $default_t_color;
         padding: 10px 35px 10px 15px;
         font: 14px/18px $HelveticaNeueReg;
+      }
+
+      .select2-selection__arrow {
+        @extend %icon_pseudo;
+        height: auto;
+        bottom: 1px;
+
+        &:before {
+          content: $i-chevron-down;
+          position: absolute;
+          right: 5px;
+          top: 50%;
+          font-size: 12px;
+          line-height: 16px;
+          margin-top: -8px;
+        }
+
+        b {
+          display: none;
+        }
+      }
+    }
+
+    &.select2-container--open {
+      .select2-selection--single {
+        border: 1px solid $gl_gray_2;
+      }
+
+      .select2-selection__arrow {
+
+        &:before {
+          content: $i-chevron-up;
+        }
+      }
+    }
+  }
+}
+
+.select_v2 {
+  .select2-dropdown {
+    border-color: $gl_gray_2;
+  }
+
+  .select2-container--default {
+
+    .select2-results__option {
+      padding: 2px 14px;
+    }
+
+    .select2-selection--single {
+      border-color: transparent;
+
+      .select2-selection__rendered {
+        min-width: 110px;
+        color: $gl_gray_2;
+        letter-spacing: .025em;
+        font: 12px/26px $HelveticaNeueBold;
       }
 
       .select2-selection__arrow {

@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.main_content:after {
+.main_content:after, .chat_container:after, .small_aside_right:after {
   position: static;
   display: block;
   height: 0;
@@ -376,6 +376,10 @@ input.hide {
   .main_content .section_inner {
     padding: 0 72px;
     max-width: 944px; }
+    .filter_bar .section_inner._chat,
+    .main_content .section_inner._chat {
+      padding: 0;
+      max-width: 1024px; }
   @media only screen and (min-width: 1440px) {
     .page_index .filter_bar .section_inner,
     .page_index .main_content .section_inner {
@@ -411,6 +415,64 @@ input.hide {
         bottom: 0;
         right: 0;
         overflow-y: auto; } }
+
+.chat_container .small_aside_right,
+.chat_container .small_aside_left {
+  position: relative; }
+
+.chat_container .small_aside_left {
+  background: #fff;
+  position: fixed;
+  bottom: 0;
+  top: 130px;
+  width: 350px; }
+  .chat_container .small_aside_left:before {
+    content: '';
+    position: absolute;
+    right: 100%;
+    top: 0;
+    bottom: 0;
+    width: 5000px;
+    background: #fff; }
+  .chat_container .small_aside_left._has_search {
+    padding-top: 60px; }
+    .chat_container .small_aside_left._has_search:before {
+      border-top: 60px solid #d6d8da; }
+
+.chat_container .small_aside_right {
+  padding-bottom: 80px; }
+  .chat_container .small_aside_right .chat_form {
+    position: fixed;
+    bottom: 20px;
+    padding-top: 0;
+    width: 610px;
+    margin-left: 30px; }
+  .chat_container .small_aside_right .f_input {
+    background: #fff; }
+
+.small_aside_left {
+  float: left;
+  width: 350px;
+  min-height: 1px; }
+  .nav_bar .small_aside_left {
+    padding: 0 30px;
+    font-size: 12px; }
+
+.small_aside_right {
+  margin-left: 350px;
+  position: relative;
+  min-height: 1px; }
+
+.aside_caption {
+  padding: 0 30px;
+  letter-spacing: .035em; }
+
+.doc_preview {
+  text-align: center; }
+  .doc_preview img {
+    display: inline-block;
+    vertical-align: top;
+    max-width: 100%; }
 
 @media only screen and (min-width: 1800px) {
   .wide-hidden {
@@ -469,6 +531,9 @@ input.hide {
 
 .clr_gray {
   color: #a0b3be; }
+
+.clr_gray_2 {
+  color: #3c3c3c; }
 
 .clr_def {
   color: #474747; }
