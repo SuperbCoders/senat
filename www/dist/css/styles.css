@@ -118,7 +118,7 @@
 .i-location2:before {
   content: ""; }
 
-.dash_box_inner:after, .dash_list:after, .more_block:after, .dash_box_title:after, .material_list:after, .monitor_list:after, .filter_controls:after, .participants_block:after, .member_list:after, .members_wrapper:after, .question_inner:after, .tag_list:after, .chat_caption:after, .contact_block:after, .profile_block:after, .profile_s_row:after, .collegial_list:after, .filter_bar_controls:after, .filter_list:after, .daterangepicker_holder .daterangepicker:after, .vote_result_caption:after, .vote_results_scale:after, .votings_list > li:after, .opinion_item:after {
+.dash_box_inner:after, .dash_list:after, .more_block:after, .dash_box_title:after, .material_list:after, .monitor_list:after, .filter_controls:after, .participants_block:after, .member_list:after, .members_wrapper:after, .question_inner:after, .upload_file:after, .tag_list:after, .chat_caption:after, .contact_block:after, .profile_block:after, .profile_s_row:after, .collegial_list:after, .filter_bar_controls:after, .filter_list:after, .daterangepicker_holder .daterangepicker:after, .vote_result_caption:after, .vote_results_scale:after, .votings_list > li:after, .opinion_item:after {
   position: static;
   display: block;
   height: 0;
@@ -1449,6 +1449,18 @@
         padding: 20px; }
         .material_list._full_w > li .upload_file:hover {
           background: #fbfbfb; }
+  .material_list._file_nav {
+    padding-bottom: 20px; }
+    .material_list._file_nav > li:last-child {
+      border-bottom: 1px solid #d9d9d9; }
+    .material_list._file_nav .upload_file {
+      cursor: pointer; }
+
+.file_info {
+  margin-right: 15px; }
+
+.empty_folder {
+  opacity: .4; }
 
 .monitor_list {
   margin-left: -10px; }

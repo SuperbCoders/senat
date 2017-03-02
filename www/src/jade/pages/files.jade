@@ -1,0 +1,88 @@
+block variables
+  - var bodyClass = 'page_question';
+  - var htmlClass = 'stick_footer action_header';
+  - var pageTitle = 'Файлы';
+  - var pageDescription = 'Описание страницы';
+  - var activePage = 2;
+  - var hasUnitNav = true;
+  - var actionNavbarColor = 'clr_orange';
+  - var customScripts = ['vendors/moment.min.js', 'vendors/daterangepicker.js'];
+
+include ../components/dashboard
+
+extends ../components/layout
+block head
+block content
+  .wrapper
+    include ../components/header
+
+    .main_content
+      .section_inner
+        .dash_box._alone
+          .dash_box_inner
+            ul.material_list._full_w._file_nav
+              li
+                .upload_file
+                  .fl
+                    .mb
+                      span.upload_icon
+                        img(src='./img/folder.svg')
+                    .upload_name.mb Документация
+                  .fr
+                    .mb.file_info 213 файлов
+                    .mb
+                      +file_menu()
+              li
+                .upload_file
+                  .fl
+                    .mb
+                      span.upload_icon
+                        img(src='./img/folder.svg')
+                    .upload_name.mb Разное
+                  .fr
+                    .mb.empty_folder.file_info Пусто
+                    .mb
+                      +file_menu()
+                    
+              li
+                .upload_file
+                  .fl
+                    .mb
+                      span.upload_icon
+                        img(src='./img/file_pdf.svg')
+                    .upload_name.mb Intro.pdf
+                  .fr
+                    +file_menu()
+                    
+              li
+                .upload_file
+                  .fl
+                    .mb
+                      span.upload_icon
+                        img(src='./img/file_doc.svg')
+                    .upload_name.mb Wеlcome-to-biejing.doc
+                  .fr
+                    +file_menu()
+                    
+              li
+                .upload_file
+                  .fl
+                    .mb
+                      span.upload_icon
+                        img(src='./img/file_pdf.svg')
+                    .upload_name.mb Wеlcome-to-biejing.pdf
+                  .fr
+                    +file_menu()
+                    
+              li
+                .upload_file
+                  .fl
+                    .mb
+                      span.upload_icon
+                        img(src='./img/file_pdf.svg')
+                    .upload_name.mb Manual 2015.doc
+                  .fr
+                    +file_menu()
+                    
+    include ../components/footer_controls
+    

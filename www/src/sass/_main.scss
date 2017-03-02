@@ -628,6 +628,7 @@
 }
 
 .upload_file {
+  @extend %clearfix;
   @include transition_all(background .3s);
   position: relative;
   line-height: 30px;

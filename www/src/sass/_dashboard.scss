@@ -706,6 +706,26 @@
       }
     }
   }
+
+  &._file_nav {
+    padding-bottom: 20px;
+
+    > li:last-child {
+      border-bottom: 1px solid #d9d9d9;
+    }
+
+    .upload_file {
+      cursor: pointer;
+    }
+  }
+}
+
+.file_info {
+  margin-right: 15px;
+}
+
+.empty_folder {
+  opacity: .4;
 }
 
 .monitor_list {
