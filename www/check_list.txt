@@ -13,7 +13,7 @@ dashboard scroll 1.jpg +
 dashboard scroll 2.jpg +
 dashboard.jpg +
 Files empty.jpg +
-Files file.jpg 
+Files file.jpg +
 Files.jpg +
 filter calendar.jpg 
 filter organs view.jpg +
@@ -27,7 +27,7 @@ meeting.jpg +
 meetings.jpg +
 messages.jpg +
 notification important.jpg +
-notifications.jpg 
+notifications.jpg +
 Person.jpg +
 Profile.jpg +
 question.jpg +

@@ -330,11 +330,15 @@ input.hide {
 }
 
 .clr_gray {
-  color: $gl_gray_3;
+  color: #3c3c3c;
 }
 
 .clr_gray_2 {
-  color: #3c3c3c;
+  color: $gl_gray_2;
+}
+
+.clr_gray_3 {
+  color: $gl_gray_3;
 }
 
 .clr_def {

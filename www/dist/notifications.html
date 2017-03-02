@@ -11,7 +11,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="mobile-web-app-capable" content="yes">
-    <title>Файлы файл</title>
+    <title>Уведомления</title>
     <meta name="description" content="Описание страницы">
     <meta property="og:title" content="feedly: organize, read and share what matters to you.">
     <meta property="og:url" content="http://feedly.com/index.html">
@@ -26,7 +26,7 @@
     <link rel="stylesheet" href="css/main_global.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
-  <body class="page_messages">
+  <body class="page_question">
     <div class="wrapper">
       <div class="header">
         <div class="section_inner clearfix">
@@ -112,91 +112,53 @@
           </div>
         </div>
       </div>
-      <div class="nav_bar">
-        <div class="section_inner">
-          <div class="small_aside_left"><a href="files.html" class="nav_back_link"><span>ВСЕ ФАЙЛЫ</span></a></div>
-          <div class="small_aside_right">
-            <div class="fl">
-              <div class="mb">
-                <div class="clr_gray aside_caption">Документация / Wеlcome-to-biejing.doc</div>
-              </div>
-            </div>
-            <div class="action_nav_menu">
-              <div class="menu_holder">
-                <div class="dash_b_menu_btn dashMenuBtn">
-                  <div class="dash_b_menu_icon"></div>
-                </div>
-                <div class="dash_b_menu_w menu_w">
-                  <ul class="dash_b_menu_list">
-                    <li class="dash_menu_group"><span class="mb">Действия</span></li>
-                    <li><a href="#" class="dash_menu_link"><span class="mb">Редактировать</span></a></li>
-                    <li><a href="#" class="dash_menu_link"><span class="mb">Перейти к оформлению</span></a></li>
-                    <li><a href="#" class="dash_menu_link"><span class="mb">Удалить</span></a></li>
-                  </ul>
-                  <ul class="dash_b_menu_list">
-                    <li class="dash_menu_group"><span class="mb">Cтатус</span></li>
-                    <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _in_process"></span><span class="mb">В ПРОЦЕССЕ</span></a></li>
-                    <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _new"></span><span class="mb">НОВАЯ</span></a></li>
-                    <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _completed"></span><span class="mb">ЗАВЕРШЕНО</span></a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="main_content">
-        <div class="section_inner _chat">
-          <div class="chat_container">
-            <div class="small_aside_left">
-              <ul class="material_list _file_catalog _file_nav">
-                <li>
-                  <div class="upload_file">
-                    <div class="mb"><span class="upload_icon"><img src="./img/file_pdf.svg"></span></div>
-                    <div class="upload_name mb">Intro.pdf</div>
-                  </div>
-                </li>
-                <li>
-                  <div class="upload_file">
-                    <div class="mb"><span class="upload_icon"><img src="./img/file_doc.svg"></span></div>
-                    <div class="upload_name mb">Wеlcome-to-biejing.doc</div>
-                  </div>
-                </li>
-                <li>
-                  <div class="upload_file">
-                    <div class="mb"><span class="upload_icon"><img src="./img/file_pdf.svg"></span></div>
-                    <div class="upload_name mb">Dogovor_23_05_2016-idjjjh2.pdf</div>
-                  </div>
-                </li>
-                <li>
-                  <div class="upload_file">
-                    <div class="mb"><span class="upload_icon"><img src="./img/file_doc.svg"></span></div>
-                    <div class="upload_name mb">Wеlcome-to-biejing.doc</div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="small_aside_right">
-              <div class="doc_preview"><img src="./img/doc_1.jpg"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="footer_controls">
-        <div class="section_inner clearfix">
-          <div class="fr">
-            <div class="f_controls_holder">
-              <div class="btn_v2 add_unit_btn btn_white_2 asideAddOpen"><span class="mb i-plus"></span></div>
-              <div class="f_controls_panel">
-                <div class="f_control_item clr_orange"><a href="create_action.html" class="f_control_link clr_orange"><span class="btn_v1 f_control_btn i-plus"></span>
-                    <div class="f_control_text">ПОРУЧЕНИЕ</div></a></div>
-                <div class="f_control_item clr_blue"><a href="create_question.html" class="f_control_link clr_blue"><span class="btn_v1 f_control_btn i-plus"></span>
-                    <div class="f_control_text">ВОПРОС</div></a></div>
-                <div class="f_control_item clr_green"><a href="create_meeting.html" class="f_control_link clr_green"><span class="btn_v1 f_control_btn i-plus"></span>
-                    <div class="f_control_text">ЗАСЕДАНИЕ</div></a></div>
+        <div class="section_inner">
+          <div class="dash_box_title">5 МИНУТ НАЗАД</div>
+          <ul class="notification_list">
+            <li>
+              <div class="notification_block">
+                <div class="notification_user"><img src="./img/member.png"></div>
               </div>
-            </div>
-          </div>
+              <div class="notification_block">
+                <p> <span class="clr_gray_2">Олег П.П. добавил вас к заседанию: </span><span>Подготовка к постройке нового комплекса</span></p>
+              </div>
+            </li>
+            <li>
+              <div class="notification_block">
+                <div class="notification_user"><img src="./img/member.png"></div>
+                <div class="notification_user"><img src="./img/member.png"></div>
+                <div class="notification_user"><img src="./img/member.png"></div>
+                <div class="notification_user"><img src="./img/member.png"></div>
+              </div>
+              <div class="notification_block">
+                <p> <span class="clr_gray_2">Олег П.П. и еще 3 пользователя написали вам новое сообщение: </span><span>Подготовка к постройке нового комплекса</span></p>
+              </div>
+            </li>
+          </ul>
+          <div class="dash_box_title">СЕГОДНЯ</div>
+          <ul class="notification_list">
+            <li>
+              <div class="notification_block">
+                <p> <span class="clr_gray_2">Вы пропустили голосование: </span><span>Подготовка к постройке нового комплекса</span></p>
+              </div>
+              <div class="notification_block">
+                <div class="notification_user"><img src="./img/member.png"></div>
+                <div class="notification_user"><img src="./img/member.png"></div>
+                <div class="notification_user"><img src="./img/member.png"></div>
+                <div class="notification_user"><img src="./img/member.png"></div>
+              </div>
+              <div class="notification_block">
+                <p> <span class="clr_gray_2">Олег П.П. и еще 3 пользователя написали вам новое сообщение: </span><span>Подготовка к постройке нового комплекса</span></p>
+              </div>
+              <div class="notification_block">
+                <div class="notification_user"><img src="./img/member.png"></div>
+              </div>
+              <div class="notification_block">
+                <p><span class="clr_gray_2">Олег П.П. добавил вас к заседанию: </span><span>Подготовка к постройке нового комплекса</span></p>
+              </div>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -396,9 +358,6 @@
     <script src="js/vendors/jquery1.10.js"></script>
     <script src="js/vendors/snabbt.min.js"></script>
     <script src="js/vendors/flexibility.js"></script>
-    <script src="js/vendors/moment.min.js"></script>
-    <script src="js/vendors/daterangepicker.js"></script>
-    <script src="js/vendors/select2.js"></script>
     <script src="js/main.js"></script>
   </body>
 </html>

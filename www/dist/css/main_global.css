@@ -543,10 +543,13 @@ input.hide {
   color: #50c171; }
 
 .clr_gray {
-  color: #a0b3be; }
+  color: #3c3c3c; }
 
 .clr_gray_2 {
-  color: #3c3c3c; }
+  color: #6e737a; }
+
+.clr_gray_3 {
+  color: #a0b3be; }
 
 .clr_def {
   color: #474747; }

@@ -1,0 +1,71 @@
+block variables
+  - var bodyClass = 'page_question';
+  - var htmlClass = 'stick_footer action_header';
+  - var pageTitle = 'Уведомления';
+  - var pageDescription = 'Описание страницы';
+  - var activePage = 5;
+  - var hasUnitNav = true;
+  - var actionNavbarColor = 'clr_orange';
+
+include ../components/dashboard
+
+extends ../components/layout
+block head
+block content
+  .wrapper
+    include ../components/header
+
+    .main_content
+      .section_inner
+        .dash_box_title 5 МИНУТ НАЗАД
+          
+        ul.notification_list
+          li
+            .notification_block
+              .notification_user
+                img(src='./img/member.png')
+              
+            .notification_block
+              p 
+                span.clr_gray_2 Олег П.П. добавил вас к заседанию: 
+                span Подготовка к постройке нового комплекса
+                
+          li
+            .notification_block
+              +loop_while(4)
+                .notification_user
+                  img(src='./img/member.png')
+              
+            .notification_block
+              p 
+                span.clr_gray_2 Олег П.П. и еще 3 пользователя написали вам новое сообщение: 
+                span Подготовка к постройке нового комплекса
+              
+        .dash_box_title СЕГОДНЯ
+          
+        ul.notification_list
+          li
+            .notification_block
+              p 
+                span.clr_gray_2 Вы пропустили голосование: 
+                span Подготовка к постройке нового комплекса
+
+            .notification_block
+              +loop_while(4)
+                .notification_user
+                  img(src='./img/member.png')
+              
+            .notification_block
+              p 
+                span.clr_gray_2 Олег П.П. и еще 3 пользователя написали вам новое сообщение: 
+                span Подготовка к постройке нового комплекса
+                
+            .notification_block
+              .notification_user
+                img(src='./img/member.png')
+
+            .notification_block
+              p
+                span.clr_gray_2 Олег П.П. добавил вас к заседанию: 
+                span Подготовка к постройке нового комплекса
+                
