@@ -57,6 +57,10 @@
       color: $gl_white;
     }
   }
+
+  .search_form + & {
+    right: 10px;
+  }
 }
 
 .vote_step {

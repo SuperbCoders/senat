@@ -2,7 +2,7 @@ block variables
   - var bodyClass = 'page_question';
   - var htmlClass = 'stick_footer action_header';
   - var filterClass = 'clr_blue';
-  - var pageTitle = 'Вопросы';
+  - var pageTitle = 'Вопрос';
   - var pageDescription = 'Описание страницы';
   - var activePage = 2;
   - var hasUnitNav = true;
@@ -21,6 +21,9 @@ block content
     .main_content._has_footer_controls
       .action_brief
         .section_inner
+          a.brief_control._prev.btn_gray_2(href='#')
+          a.brief_control._next.btn_gray_2(href='#')
+          
           +action_brief(23, '_in_process', false, 1, 0, false, ['Паспорта услуг и заключение SLA между обеспечивающими подразделениями и краткий обзор проблемных проектов'], false, false, false, '_mod_1')
         .action_brief_progress
           .action_brief_val(style='width: 58%;')
@@ -44,19 +47,19 @@ block content
                 li
                   .member_box
                     .member_avatars
-                      .member_main_avatar
-                        img(src='./img/member.png')
+                      .member_main_avatar._current
+                        a(href='#'): img(src='./img/member.png')
                         .member_small_avatar
-                          img(src='./img/member.png')
+                          a(href='#'): img(src='./img/member.png')
                     .participant_name Кислицин Д.М.
                     .participant_post Председатель
                 li
                   .member_box
                     .member_avatars
                       .member_main_avatar
-                        img(src='./img/user_empty.png')
+                        a(href='#'): img(src='./img/user_empty.png')
                         .member_small_avatar
-                          img(src='./img/member.png')
+                          a(href='#'): img(src='./img/member.png')
                     .participant_name Морозов В.К.
                     .participant_post Секретарь <br> Кислицина. М.П.
 
@@ -69,18 +72,18 @@ block content
                   .member_box
                     .member_avatars
                       .member_main_avatar
-                        img(src='./img/member.png')
+                        a(href='#'): img(src='./img/member.png')
                         .member_small_avatar
-                          img(src='./img/member.png')
+                          a(href='#'): img(src='./img/member.png')
                     .participant_name Кислицин Д.М.
                     .participant_post Председатель
                 li
                   .member_box
                     .member_avatars
                       .member_main_avatar
-                        img(src='./img/user_empty.png')
+                        a(href='#'): img(src='./img/user_empty.png')
                         .member_small_avatar
-                          img(src='./img/member.png')
+                          a(href='#'): img(src='./img/member.png')
                     .participant_name Морозов В.К.
                     .participant_post Секретарь <br> Кислицина. М.П.
 
@@ -141,7 +144,7 @@ block content
             ul.material_list
               +loop_while(3)
                 li
-                  .upload_file
+                  .upload_file.goTo(data-goto='./img/doc_1.jpg')
                     .mb
                       span.upload_icon
                         img(src='./img/file_doc.svg')
@@ -179,21 +182,21 @@ block content
           .dash_box_inner
             ul.material_list._full_w._file_catalog
               li
-                .upload_file
+                .upload_file.goTo(data-goto='./img/doc_1.jpg')
                   .mb
                     span.upload_icon
                       img(src='./img/file_pdf.svg')
                   .upload_name.mb Dogovor_23_05_2016-idjjjh2.pdf
                       
               li
-                .upload_file
+                .upload_file.goTo(data-goto='./img/doc_1.jpg')
                   .mb
                     span.upload_icon
                       img(src='./img/file_pdf.svg')
                   .upload_name.mb Intro.pdf
                       
               li
-                .upload_file
+                .upload_file.goTo(data-goto='./img/doc_1.jpg')
                   .mb
                     span.upload_icon
                       img(src='./img/file_pdf.svg')
@@ -218,16 +221,16 @@ block content
             
         ul.tag_list
           li
-            .tag_item Заседание
+            a.tag_item(href='#') Заседание
           li
-            .tag_item Комитет №1
+            a.tag_item(href='#') Комитет №1
           li
-            .tag_item Поручение
+            a.tag_item(href='#') Поручение
           li
-            .tag_item Комитет по корпоративному бизнесу обеспечивает реализацию стратегии
+            a.tag_item(href='#') Комитет по корпоративному бизнесу обеспечивает реализацию стратегии
           li
-            .tag_item Встречи в сентябре
+            a.tag_item(href='#') Встречи в сентябре
           li
-            .tag_item Поручения созданные Долговым
+            a.tag_item(href='#') Поручения созданные Долговым
 
     include ../components/footer_controls

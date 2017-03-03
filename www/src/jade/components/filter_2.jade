@@ -1,12 +1,10 @@
 block variables
-    
-  
   
 .filter_bar
   .section_inner
     ul.filter_list
       li.menu_holder
-        a.filter_link.dashMenuBtn(href="#collegial_filter" class=filterClass)
+        a.filter_link.dashMenuBtn(href="#" class=filterClass)
           span.mb КОЛЛЕГИАЛЬНЫЙ ОРГАН
         .filter_menu_w.menu_w._wide
           .collegial_switch_w
@@ -37,7 +35,7 @@ block variables
                 a.btn_v1.btn_green_2.filter_btn(href='#') ПРИМЕНИТЬ ФИЛЬТР
 
       li.menu_holder
-        a.filter_link.dashMenuBtn(href="#collegial_filter" class=filterClass)
+        a.filter_link.dashMenuBtn(href="#" class=filterClass)
           span.mb СТАТУС
         .filter_menu_w.menu_w
           ul.dash_b_menu_list
@@ -51,11 +49,15 @@ block variables
               span.mb.dash_m_status._completed
               span.mb ЗАВЕРШЕНО
         
-      li
-        a.filter_link.filterToggle(href="#date_filter" class=filterClass)
+      li.menu_holder
+        a.filter_link.dashMenuBtn(href="#" class=filterClass)
           span.mb ДАТА
-          
-  .filter_dropdown
+        .filter_menu_w.menu_w
+          .input_w.daterangepicker_holder.daterangepicker_v1
+            input#range_calendar.invis.autoFocus('name'='daterange')
+              
+              
+  //-.filter_dropdown
     #date_filter.section_inner.filterUnit
       .input_w.daterangepicker_holder
         input#range_calendar.hide_('name'='daterange')

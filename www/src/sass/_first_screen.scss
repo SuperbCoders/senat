@@ -52,6 +52,13 @@ body {
   display: none !important;
 }
 
+.invis {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
 input.hide {
   position: absolute;
 }
@@ -89,6 +96,10 @@ input.hide {
   max-width: $content-max-w;
   margin: 0 auto;
 
+  &._rel {
+    position: relative;
+  }
+  
   .filter_bar &,
   .main_content & {
     padding: 0 72px;

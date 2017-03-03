@@ -31,11 +31,16 @@ $(function ($) {
     })
     .delegate('.openForm', 'click', function () {
       var btn = $(this),
-        form = $(btn.attr('data-href'));
+        form = $(btn.attr('data-href')),
+        step = $(this).attr('data-step');
 
       html.toggleClass(form.attr('data-class'));
 
       overlay.toggle();
+
+      $('.voteStep').hide().filter(function () {
+        return $(this).attr('data-step') == step;
+      }).show();
 
       form.fadeToggle(600);
 
@@ -77,7 +82,7 @@ $(function ($) {
       return false;
     })
     .delegate('.asideAddOpen', 'click', function () {
-      $(this).parent().toggleClass('open_aside_add');
+      $(this).parent().toggleClass('open_menu');
       return false;
     })
     .delegate('.voteStepBtn', 'click', function () {
@@ -119,21 +124,98 @@ $(function ($) {
       $(this).closest('.rmUnit').remove();
       return false;
     })
+    .delegate('.goTo', 'click', function (e) {
+      if (!((e.target.tagName).toLowerCase() == 'a' || $(e.target).closest('a').length > 0 || $(e.target).closest('.open_menu').length > 0)) {
+        var a = document.createElement('a');
+        a.href = $(this).attr('data-goto');
+        a.className = 'hide';
+        document.body.appendChild(a);
+
+        setTimeout(function () {
+          a.click();
+        }, 0);
+      }
+    })
     .delegate('.userMenuBtn', 'click', function () {
       var dd = $(this).parent();
       hideDropDowns(dd);
       dd.toggleClass('open_menu');
       return false;
     })
+    .delegate('.loadMore', 'click', function () {
+      var loaderBlock = $('.loaderBlock'),
+        target = $($(this).attr('data-append-to')),
+        interval;
+
+      loaderBlock.show().find('.preloader').click();
+
+      console.log(target);
+      
+      interval = setInterval(function () {
+        target.append($('<li> \
+                <div class="dash_box"> \
+                  <div data-goto="meeting.html" class="dash_box_inner _meeting goTo"> \
+                    <div class="fl"> \
+                      <div class="mb"> \
+                        <div class="dash_b_date"> \
+                          <div class="day">1</div> \
+                          <div class="month">сентября</div> \
+                        </div> \
+                      </div> \
+                      <div class="mb"> \
+                        <div class="dash_b_info fl"> \
+                          <div class="dash_b_caption">№' + Math.floor(Math.random() * 999) + ', с 17:00 до 19:00</div> \
+                          <p>Комитет по проектам и процессам</p> \
+                        </div> \
+                      </div> \
+                    </div> \
+                    <div class="fr"> \
+                      <div class="mb">&nbsp; \
+                      </div> \
+                      <div class="mb"><a href="#" data-href="#vote_popup" data-step="3" class="dash_b_status openForm  _in_preparation">ПОДГОТОВКА</a></div> \
+                      <div class="mb"> \
+                        <div class="menu_holder"> \
+                          <div class="dash_b_menu_btn dashMenuBtn"> \
+                            <div class="dash_b_menu_icon"></div> \
+                          </div> \
+                          <div class="dash_b_menu_w menu_w"> \
+                            <ul class="dash_b_menu_list"> \
+                              <li class="dash_menu_group"><span class="mb">Действия</span></li> \
+                              <li><a href="#" class="dash_menu_link"><span class="mb">Редактировать</span></a></li> \
+                              <li><a href="#" class="dash_menu_link"><span class="mb">Перейти к оформлению</span></a></li> \
+                              <li><a href="#" class="dash_menu_link"><span class="mb">Удалить</span></a></li> \
+                            </ul> \
+                            <ul class="dash_b_menu_list"> \
+                              <li class="dash_menu_group"><span class="mb">Cтатус</span></li> \
+                              <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _in_process"></span><span class="mb">В  ПРОЦЕССЕ</span></a></li> \
+                              <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _new"></span><span  class="mb">НОВАЯ</span></a></li> \
+                              <li><a href="#" class="dash_menu_link"><span class="mb dash_m_status _completed"></span><span  class="mb">ЗАВЕРШЕНО</span></a></li> \
+                            </ul> \
+                          </div> \
+                        </div> \
+                      </div> \
+                    </div> \
+                  </div> \
+                </div> \
+              </li>'));
+      }, 500);
+
+      setTimeout(function () {
+        clearInterval(interval);
+        loaderBlock.hide();
+      }, 4000);
+
+      return false;
+    })
     .delegate('.dashMenuBtn', 'click', function () {
       var dd = $(this).parent();
       hideDropDowns(dd);
-      dd.toggleClass('open_menu');
+      dd.toggleClass('open_menu').find('.autoFocus').click();
       return false;
     });
 
   $(document).click(function (e) {
-    if ($(e.target).parents().filter('.open_menu').length != 1) {
+    if (!$(e.target).parents().filter('.open_menu').length) {
       $('._active').removeClass('_active');
       hideDropDowns();
     }
@@ -285,37 +367,41 @@ function initCalendar() {
   }
 
   if (clndr.length) {
-    clndr.daterangepicker({
-      "alwaysShowCalendars": true,
-      "showDropdowns": true,
-      "parentEl": clndr.parent(),
-      "startDate": "14/02/2017",
-      "endDate": "20/02/2017",
-      "dateLimit": 20,
-      "locale": {
-        "format": "DD/MM/YYYY",
-        "separator": " - ",
-        "applyLabel": "Apply",
-        "cancelLabel": "Cancel",
-        "fromLabel": "From",
-        "toLabel": "To",
-        "customRangeLabel": "Custom",
-        "weekLabel": "W",
-        "daysOfWeek": [
-          "Вс",
-          "Пн",
-          "Вт",
-          "Ср",
-          "Чт",
-          "Пт",
-          "Сб"
-        ],
-        "monthNames": [
-          "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
-        ],
-        "firstDay": 1
-      }
-    });
+    clndr
+      .on('showCalendar.daterangepicker', function (ev, picker) {
+        customizeSelect(picker);
+      })
+      .daterangepicker({
+        "alwaysShowCalendars": true,
+        "showDropdowns": true,
+        "parentEl": clndr.parent(),
+        "startDate": "14/02/2017",
+        "endDate": "20/02/2017",
+        "dateLimit": 20,
+        "locale": {
+          "format": "DD/MM/YYYY",
+          "separator": " - ",
+          "applyLabel": "Apply",
+          "cancelLabel": "Cancel",
+          "fromLabel": "From",
+          "toLabel": "To",
+          "customRangeLabel": "Custom",
+          "weekLabel": "W",
+          "daysOfWeek": [
+            "Вс",
+            "Пн",
+            "Вт",
+            "Ср",
+            "Чт",
+            "Пт",
+            "Сб"
+          ],
+          "monthNames": [
+            "Январь", "Февраль", "Март", "Апрель", "Май", "Июнь", "Июль", "Август", "Сентябрь", "Октябрь", "Ноябрь", "Декабрь"
+          ],
+          "firstDay": 1
+        }
+      });
 
     /*
         clndr.dateRangePicker({

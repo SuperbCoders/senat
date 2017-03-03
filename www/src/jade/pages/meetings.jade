@@ -2,11 +2,12 @@ block variables
   - var bodyClass = 'page_meetings';
   - var htmlClass = 'stick_footer nav_header';
   - var filterClass = 'clr_green';
-  - var pageTitle = 'Фильтр 2';
+  - var pageTitle = 'Заседания';
   - var pageDescription = 'Описание страницы';
   - var activePage = 1;
   - var hasUnitNav = true;
-  - var customScripts = ['vendors/moment.min.js', 'vendors/daterangepicker.js'];
+  - var unitNavLink = 'create_meeting.html';
+  - var customScripts = ['vendors/moment.min.js', 'vendors/daterangepicker.js', 'vendors/select2.js'];
 
 include ../components/dashboard
 
@@ -20,9 +21,16 @@ block content
     .main_content._has_footer_controls
       .section_inner
 
-        #meetings_block.dash_box_title.clr_green ЗАСЕДАНИЯ
-
         ul.dashboard_list
+          li
+            +meeting_box(23, '_in_process', 'Управляющий комитет')
+          li
+            +meeting_box(22, '', 'Комитет по проектам и процессам')
+          li
+            +meeting_box(1, '_in_preparation', 'Комитет по проектам и процессам')
+          li
+            +meeting_box(22, '_in_process', 'Управляющий комитет')
+
           li
             +meeting_box(23, '_in_process', 'Управляющий комитет')
           li
@@ -34,26 +42,6 @@ block content
 
         .text_center.more_block
           a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 10 ЗАСЕДАНИЙ
-
-        #instructions_block.dash_box_title.clr_orange 4 ПОРУЧЕНИЯ
-
-        ul.dashboard_list
-          li
-            +instruction_box('', '_new')
-          li
-            +instruction_box('', '_new')
-          li
-            +instruction_box('', '_in_process')
-          li
-            +instruction_box('', '_new')
-
-        #actions_block.dash_box_title.clr_blue 2 ДЕЙСТВИЯ
-
-        ul.dashboard_list
-          li
-            +question_box(0, '_approved')
-          li
-            +question_box(29, '_rejected', true)
 
       include ../components/preloader
 

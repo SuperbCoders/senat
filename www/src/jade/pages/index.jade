@@ -76,7 +76,7 @@ block content
   
           #meetings_block.dash_box_title.clr_green ЗАСЕДАНИЯ
   
-          ul.dashboard_list
+          ul#meetings_list.dashboard_list
             li
               +meeting_box(23, '_in_process', 'Управляющий комитет', true)
             li
@@ -87,8 +87,11 @@ block content
               +meeting_box(22, '_in_process', 'Управляющий комитет')
   
           .text_center.more_block
-            a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 10 ЗАСЕДАНИЙ
-  
+            a.btn_v1.btn_white_2.dash_btn.loadMore(href='#' data-append-to='#meetings_list') ПОКАЗАТЬ ВСЕ 10 ЗАСЕДАНИЙ
+              
+          .loaderBlock.loader_block
+            include ../components/preloader
+            
           #instructions_block.dash_box_title.clr_orange 4 ПОРУЧЕНИЯ
   
           ul.dashboard_list

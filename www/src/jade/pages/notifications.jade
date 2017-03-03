@@ -22,24 +22,24 @@ block content
         ul.notification_list
           li
             .notification_block
-              .notification_user
+              a.notification_user(href='#')
                 img(src='./img/member.png')
               
             .notification_block
               p 
                 span.clr_gray_2 Олег П.П. добавил вас к заседанию: 
-                span Подготовка к постройке нового комплекса
+                a.clr_def(href='#') Подготовка к постройке нового комплекса
                 
           li
             .notification_block
               +loop_while(4)
-                .notification_user
+                a.notification_user(href='#')
                   img(src='./img/member.png')
               
             .notification_block
               p 
                 span.clr_gray_2 Олег П.П. и еще 3 пользователя написали вам новое сообщение: 
-                span Подготовка к постройке нового комплекса
+                a.clr_def(href='#') Подготовка к постройке нового комплекса
               
         .dash_box_title СЕГОДНЯ
           
@@ -48,24 +48,29 @@ block content
             .notification_block
               p 
                 span.clr_gray_2 Вы пропустили голосование: 
-                span Подготовка к постройке нового комплекса
+                a.clr_def(href='#') Подготовка к постройке нового комплекса
 
             .notification_block
               +loop_while(4)
-                .notification_user
+                a.notification_user(href='#')
                   img(src='./img/member.png')
               
             .notification_block
               p 
                 span.clr_gray_2 Олег П.П. и еще 3 пользователя написали вам новое сообщение: 
-                span Подготовка к постройке нового комплекса
+                a.clr_def(href='#') Подготовка к постройке нового комплекса
                 
             .notification_block
-              .notification_user
+              a.notification_user(href='#')
                 img(src='./img/member.png')
 
             .notification_block
               p
                 span.clr_gray_2 Олег П.П. добавил вас к заседанию: 
-                span Подготовка к постройке нового комплекса
+                a.clr_def(href='#') Подготовка к постройке нового комплекса
                 
+        .text_center.more_block
+          a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ЕЩЕ
+          
+      include ../components/preloader
+      

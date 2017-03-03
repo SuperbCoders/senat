@@ -123,6 +123,7 @@
     line-height: 20px;
   }
 
+  .open_menu &,
   ._active & {
     opacity: .5;
 
@@ -332,6 +333,12 @@
       border-radius: 13px;
       border: 0;
 
+      &.in-range {
+        background: $default_t_color;
+        color: $gl_white;
+        border-radius: 0;
+      }
+
       &.end-date {
         border-radius: 0 13px 13px 0;
       }
@@ -353,6 +360,9 @@
 }
 
 .daterangepicker_holder {
+  .filter_menu_w & {
+    min-width: 420px;
+  }
 
   .date-picker-wrapper {
     border: none;
@@ -375,11 +385,24 @@
     left: auto !important;
     right: auto !important;
     display: block !important;
+    border: none !important;
     padding: 0;
     border-radius: 0;
 
+    &:after,
+    &:before {
+      background: none;
+      border: none;
+    }
+    
     .calendar {
       margin: 0;
+
+      .off {
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+      }
     }
 
     .ranges {

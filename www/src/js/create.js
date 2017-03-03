@@ -4,4 +4,6 @@ $(function ($) {
 
   $('.tagIt').tagit();
 
+  $('.autoGrow').autoGrow();
+  
 });

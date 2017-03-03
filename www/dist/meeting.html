@@ -11,18 +11,18 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="mobile-web-app-capable" content="yes">
-    <title>Заседания</title>
+    <title>Заседание</title>
     <meta name="description" content="Описание страницы">
     <meta property="og:title" content="feedly: organize, read and share what matters to you.">
     <meta property="og:url" content="http://feedly.com/index.html">
     <meta property="og:site_name" content="feedly">
     <meta property="og:description" content="Feedly connects you to the information and knowledge you care about. We help you get more out of you work, education, hobbies and interests. The feedly platform lets you discover sources of quality content, follow and read everything those sources publish with ease and organize everything in one place.">
     <meta property="og:image" content="http://s3.feedly.com/img/feedly-512.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/img/favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/img/favicons/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/img/favicons/manifest.json">
-    <link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg" color="#2bb24c">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="./img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="./img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="./img/favicons/manifest.json">
+    <link rel="mask-icon" href="./img/favicons/safari-pinned-tab.svg" color="#2bb24c">
     <link rel="stylesheet" href="css/main_global.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
@@ -43,7 +43,7 @@
               </li>
               <li class="nav_item"><a href="files.html" class="nav_link">Мои файлы</a>
               </li>
-              <li class="nav_item"><a href="reports.html" class="nav_link">Отчеты</a>
+              <li class="nav_item"><a href="files.html" class="nav_link">Отчеты</a>
               </li>
             </ul>
           </div>
@@ -53,36 +53,68 @@
                 <li class="user_b_item">
                   <div class="user_b_control"><a href="#" class="notification_btn userMenuBtn"></a><span class="nav_counter">3</span>
                     <div class="notification_menu_w menu_w">
-                      <ul class="dash_b_menu_list">
-                        <li class="dash_menu_group"><span class="mb">5 минут назад</span></li>
-                        <li>
-                          <div class="notification_item _has_img">
-                            <div class="notification_author"><img src="./img/msg_author.png"></div>
-                            <div class="notification_caption">Олег П.П. добавил вас к заседанию: </div>
-                            <p>Подготовка к постройке нового комплекса</p>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="notification_item _has_img">
-                            <div class="notification_author"><img src="./img/msg_author.png"></div>
-                            <div class="notification_caption">Владислав А.С. добавил вас к заседанию: </div>
-                            <p>Подготовка к постройке нового комплекса</p>
-                          </div>
-                        </li>
-                      </ul>
-                      <ul class="dash_b_menu_list">
-                        <li class="dash_menu_group"><span class="mb">Сейчас</span></li>
-                        <li>
-                          <div class="notification_item">
-                            <div class="notification_caption">
-                               
-                              Началось голосование на заседании  <b class="clr_green"> №241</b> Форма реестра №6 и отчета «Инвестиционные проек…:
+                      <div class="notification_scroller">
+                        <ul class="dash_b_menu_list">
+                          <li class="dash_menu_group"><span class="mb">5 минут назад</span></li>
+                          <li>
+                            <div class="notification_item _has_img">
+                              <div class="notification_author"><img src="./img/msg_author.png"></div>
+                              <div class="notification_caption">Олег П.П. добавил вас к заседанию: </div>
+                              <p>Подготовка к постройке нового комплекса</p>
                             </div>
-                            <p>Текст документа подготовлен. Необходимо согласовать дополнительные гарантийный обязательства</p>
-                            <div class="notification_control"><a data-href="#vote_popup" href="#" class="btn_v1 dash_btn btn_blue openForm"><span>ПЕРЕЙТИ К ГОЛОСОВАНИЮ</span></a></div>
-                          </div>
-                        </li>
-                      </ul>
+                          </li>
+                          <li>
+                            <div class="notification_item _has_img">
+                              <div class="notification_author"><img src="./img/msg_author.png"></div>
+                              <div class="notification_caption">Владислав А.С. добавил вас к заседанию: </div>
+                              <p>Подготовка к постройке нового комплекса</p>
+                            </div>
+                          </li>
+                        </ul>
+                        <ul class="dash_b_menu_list">
+                          <li class="dash_menu_group"><span class="mb">Сейчас</span></li>
+                          <li>
+                            <div class="notification_item">
+                              <div class="notification_caption">
+                                 
+                                Началось голосование на заседании  <b class="clr_green"> №241</b> Форма реестра №6 и отчета «Инвестиционные проек…:
+                              </div>
+                              <p>Текст документа подготовлен. Необходимо согласовать дополнительные гарантийный обязательства</p>
+                              <div class="notification_control"><a data-href="#vote_popup" href="#" data-step="1" class="btn_v1 dash_btn btn_blue openForm"><span>ПЕРЕЙТИ К ГОЛОСОВАНИЮ</span></a></div>
+                            </div>
+                          </li>
+                        </ul>
+                        <ul class="dash_b_menu_list">
+                          <li class="dash_menu_group"><span class="mb">5 минут назад</span></li>
+                          <li>
+                            <div class="notification_item _has_img">
+                              <div class="notification_author"><img src="./img/msg_author.png"></div>
+                              <div class="notification_caption">Олег П.П. добавил вас к заседанию: </div>
+                              <p>Подготовка к постройке нового комплекса</p>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="notification_item _has_img">
+                              <div class="notification_author"><img src="./img/msg_author.png"></div>
+                              <div class="notification_caption">Владислав А.С. добавил вас к заседанию: </div>
+                              <p>Подготовка к постройке нового комплекса</p>
+                            </div>
+                          </li>
+                        </ul>
+                        <ul class="dash_b_menu_list">
+                          <li class="dash_menu_group"><span class="mb">Сейчас</span></li>
+                          <li>
+                            <div class="notification_item">
+                              <div class="notification_caption">
+                                 
+                                Началось голосование на заседании  <b class="clr_green"> №241</b> Форма реестра №6 и отчета «Инвестиционные проек…:
+                              </div>
+                              <p>Текст документа подготовлен. Необходимо согласовать дополнительные гарантийный обязательства</p>
+                              <div class="notification_control"><a data-href="#vote_popup" href="#" data-step="1" class="btn_v1 dash_btn btn_blue openForm"><span>ПЕРЕЙТИ К ГОЛОСОВАНИЮ</span></a></div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
                       <ul class="dash_b_menu_list">
                         <li><a href="notifications.html" class="dash_menu_link"><span class="mb">Смотреть все оповещения</span></a></li>
                       </ul>
@@ -101,8 +133,8 @@
                       <ul class="dash_b_menu_list">
                         <li class="dash_menu_group"><span class="mb">Созонов Владислав Андреевич</span></li>
                         <li><a href="profile.html" class="dash_menu_link"><span class="mb">Настройки профиля</span></a></li>
-                        <li><a href="#" class="dash_menu_link"><span class="mb">Администрирование</span></a></li>
-                        <li><a href="#" class="dash_menu_link"><span class="mb">Выйти</span></a></li>
+                        <li><a href="person.html" class="dash_menu_link"><span class="mb">Администрирование</span></a></li>
+                        <li><a href="login.html" class="dash_menu_link"><span class="mb">Выйти</span></a></li>
                       </ul>
                     </div>
                   </div>
@@ -148,7 +180,7 @@
       </div>
       <div class="main_content _has_footer_controls">
         <div class="action_brief">
-          <div class="section_inner">
+          <div class="section_inner"><a href="#" class="brief_control _prev btn_gray_2"></a><a href="#" class="brief_control _next btn_gray_2"></a>
             <div class="dash_box">
               <div class="dash_box_inner">
                 <div class="fl">
@@ -167,13 +199,11 @@
                   </div>
                 </div>
                 <div class="fr">
-                  <div class="mb">
-                    <div class="dash_b_status _in_process">ПРОВОДИТСЯ
-                    </div>
+                  <div class="mb"><a href="#" data-href="#vote_popup" data-step="3" class="dash_b_status openForm _in_process">ПРОВОДИТСЯ</a>
                   </div>
                 </div>
                 <div class="participants_block">
-                  <div class="participant_vote"><a data-href="#vote_popup" href="#" class="btn_v1 dash_btn btn_blue openForm"><span>ПЕРЕЙТИ К ГОЛОСОВАНИЮ</span></a></div>
+                  <div class="participant_vote"><a data-href="#vote_popup" href="#" data-step="1" class="btn_v1 dash_btn btn_blue openForm"><span>ПЕРЕЙТИ К ГОЛОСОВАНИЮ</span></a></div>
                   <ul class="participants_list">
                     <li>
                       <div class="dash_b_participant">
@@ -228,9 +258,7 @@
                     </div>
                   </div>
                   <div class="fr">
-                    <div class="mb">
-                      <div class="dash_b_status _in_vote">НА ГОЛОСОВАНИИ
-                      </div>
+                    <div class="mb"><a href="#" data-href="#vote_popup" data-step="3" class="dash_b_status openForm _in_vote">НА ГОЛОСОВАНИИ</a>
                     </div>
                     <div class="mb">
                       <div class="menu_holder">
@@ -255,7 +283,7 @@
                     </div>
                   </div>
                   <div class="participants_block">
-                    <div class="participant_vote"><a data-href="#vote_popup" href="#" class="btn_v1 dash_btn btn_blue openForm"><span>ПЕРЕЙТИ К ГОЛОСОВАНИЮ</span></a></div>
+                    <div class="participant_vote"><a data-href="#vote_popup" href="#" data-step="1" class="btn_v1 dash_btn btn_blue openForm"><span>ПЕРЕЙТИ К ГОЛОСОВАНИЮ</span></a></div>
                     <ul class="participants_list">
                       <li>
                         <div class="dash_b_participant">
@@ -291,9 +319,7 @@
                     </div>
                   </div>
                   <div class="fr">
-                    <div class="mb">
-                      <div class="dash_b_status _in_vote">НА ГОЛОСОВАНИИ
-                      </div>
+                    <div class="mb"><a href="#" data-href="#vote_popup" data-step="3" class="dash_b_status openForm _in_vote">НА ГОЛОСОВАНИИ</a>
                     </div>
                     <div class="mb">
                       <div class="menu_holder">
@@ -318,7 +344,7 @@
                     </div>
                   </div>
                   <div class="participants_block">
-                    <div class="participant_vote"><a data-href="#vote_popup" href="#" class="btn_v1 dash_btn btn_blue openForm"><span>ПЕРЕЙТИ К ГОЛОСОВАНИЮ</span></a></div>
+                    <div class="participant_vote"><a data-href="#vote_popup" href="#" data-step="1" class="btn_v1 dash_btn btn_blue openForm"><span>ПЕРЕЙТИ К ГОЛОСОВАНИЮ</span></a></div>
                     <ul class="participants_list">
                       <li>
                         <div class="dash_b_participant">
@@ -347,7 +373,7 @@
             </li>
             <li>
               <div class="dash_box">
-                <div class="dash_box_inner">
+                <div data-goto="question.html" class="dash_box_inner _question goTo">
                   <div class="fl">
                     <div class="mb">
                       <div class="dash_b_date"><a href="#" class="dash_b_control clr_blue"><span class="i-help"></span></a>
@@ -362,9 +388,7 @@
                   </div>
                   <div class="fr">
                     <div class="mb">
-                      <div class="dash_b_status _name _approved">УТВЕРЖДЕН</div>
-                      <div class="dash_b_status _approved"><span class="dash_b_status_counter"><span class="mb i-check dash_b_icon"></span><span class="mb">10</span></span><span class="dash_b_status_counter"><span class="mb i-cross dash_b_icon"></span><span class="mb">5</span></span><span class="dash_b_status_counter"><span class="mb i-circle-minus dash_b_icon"></span><span class="mb">2</span></span>
-                      </div>
+                      <div data-href="#vote_popup" data-step="3" class="dash_b_status _name openForm _approved">УТВЕРЖДЕН</div><a href="#" data-href="#vote_popup" data-step="3" class="dash_b_status openForm _approved"><span class="dash_b_status_counter"><span class="mb i-check dash_b_icon"></span><span class="mb">10</span></span><span class="dash_b_status_counter"><span class="mb i-cross dash_b_icon"></span><span class="mb">5</span></span><span class="dash_b_status_counter"><span class="mb i-circle-minus dash_b_icon"></span><span class="mb">2</span></span></a>
                     </div>
                     <div class="mb">
                       <div class="menu_holder">
@@ -393,7 +417,7 @@
             </li>
             <li>
               <div class="dash_box">
-                <div class="dash_box_inner">
+                <div data-goto="question.html" class="dash_box_inner _question goTo">
                   <div class="fl">
                     <div class="mb">
                       <div class="dash_b_date">
@@ -410,9 +434,7 @@
                   </div>
                   <div class="fr">
                     <div class="mb">
-                      <div class="dash_b_status _name _rejected">ОТКЛОНЕН</div>
-                      <div class="dash_b_status _rejected"><span class="dash_b_status_counter"><span class="mb i-check dash_b_icon"></span><span class="mb">10</span></span><span class="dash_b_status_counter"><span class="mb i-cross dash_b_icon"></span><span class="mb">5</span></span><span class="dash_b_status_counter"><span class="mb i-circle-minus dash_b_icon"></span><span class="mb">2</span></span>
-                      </div>
+                      <div data-href="#vote_popup" data-step="3" class="dash_b_status _name openForm _rejected">ОТКЛОНЕН</div><a href="#" data-href="#vote_popup" data-step="3" class="dash_b_status openForm _rejected"><span class="dash_b_status_counter"><span class="mb i-check dash_b_icon"></span><span class="mb">10</span></span><span class="dash_b_status_counter"><span class="mb i-cross dash_b_icon"></span><span class="mb">5</span></span><span class="dash_b_status_counter"><span class="mb i-circle-minus dash_b_icon"></span><span class="mb">2</span></span></a>
                     </div>
                     <div class="mb">
                       <div class="menu_holder">
@@ -445,7 +467,7 @@
           <ul class="dashboard_list">
             <li>
               <div class="dash_box">
-                <div class="dash_box_inner">
+                <div data-goto="task.html" class="dash_box_inner _mission goTo">
                   <div class="fl">
                     <div class="mb">
                       <div class="dash_b_date"><a href="#" class="dash_b_control clr_orange"><span class="i-list"></span></a>
@@ -458,10 +480,7 @@
                     </div>
                   </div>
                   <div class="fr">
-                    <div class="mb">
-                      <div class="dash_b_status _new">НОВАЯ
-                      </div>
-                    </div>
+                    <div class="mb"><a href="#" data-href="#vote_popup" data-step="3" class="dash_b_status openForm _new">НОВАЯ</a></div>
                     <div class="mb">
                       <div class="menu_holder">
                         <div class="dash_b_menu_btn dashMenuBtn">
@@ -489,7 +508,7 @@
             </li>
             <li>
               <div class="dash_box">
-                <div class="dash_box_inner">
+                <div data-goto="task.html" class="dash_box_inner _mission goTo">
                   <div class="fl">
                     <div class="mb">
                       <div class="dash_b_date"><a href="#" class="dash_b_control clr_orange"><span class="i-list"></span></a>
@@ -502,10 +521,7 @@
                     </div>
                   </div>
                   <div class="fr">
-                    <div class="mb">
-                      <div class="dash_b_status _new">НОВАЯ
-                      </div>
-                    </div>
+                    <div class="mb"><a href="#" data-href="#vote_popup" data-step="3" class="dash_b_status openForm _new">НОВАЯ</a></div>
                     <div class="mb">
                       <div class="menu_holder">
                         <div class="dash_b_menu_btn dashMenuBtn">
@@ -533,7 +549,7 @@
             </li>
             <li>
               <div class="dash_box">
-                <div class="dash_box_inner">
+                <div data-goto="task.html" class="dash_box_inner _mission goTo">
                   <div class="fl">
                     <div class="mb">
                       <div class="dash_b_date"><a href="#" class="dash_b_control clr_orange"><span class="i-list"></span></a>
@@ -546,10 +562,7 @@
                     </div>
                   </div>
                   <div class="fr">
-                    <div class="mb">
-                      <div class="dash_b_status _in_process">ИСПОЛНЯЕТСЯ
-                      </div>
-                    </div>
+                    <div class="mb"><a href="#" data-href="#vote_popup" data-step="3" class="dash_b_status openForm _in_process">ИСПОЛНЯЕТСЯ</a></div>
                     <div class="mb">
                       <div class="menu_holder">
                         <div class="dash_b_menu_btn dashMenuBtn">
@@ -577,7 +590,7 @@
             </li>
             <li>
               <div class="dash_box">
-                <div class="dash_box_inner">
+                <div data-goto="task.html" class="dash_box_inner _mission goTo">
                   <div class="fl">
                     <div class="mb">
                       <div class="dash_b_date"><a href="#" class="dash_b_control clr_orange"><span class="i-list"></span></a>
@@ -590,10 +603,7 @@
                     </div>
                   </div>
                   <div class="fr">
-                    <div class="mb">
-                      <div class="dash_b_status _new">НОВАЯ
-                      </div>
-                    </div>
+                    <div class="mb"><a href="#" data-href="#vote_popup" data-step="3" class="dash_b_status openForm _new">НОВАЯ</a></div>
                     <div class="mb">
                       <div class="menu_holder">
                         <div class="dash_b_menu_btn dashMenuBtn">
@@ -731,9 +741,9 @@
             <div class="f_controls_holder">
               <div class="btn_v2 add_unit_btn btn_white_2 asideAddOpen"><span class="mb i-plus"></span></div>
               <div class="f_controls_panel">
-                <div class="f_control_item clr_orange"><a href="create_action.html" class="f_control_link clr_orange"><span class="btn_v1 f_control_btn i-plus"></span>
+                <div class="f_control_item clr_orange"><a href="create_task.html" class="f_control_link clr_orange"><span class="btn_v1 f_control_btn i-plus"></span>
                     <div class="f_control_text">ПОРУЧЕНИЕ</div></a></div>
-                <div class="f_control_item clr_blue"><a href="create_question.html" class="f_control_link clr_blue"><span class="btn_v1 f_control_btn i-plus"></span>
+                <div class="f_control_item clr_blue"><a href="create_meeting_add.html" class="f_control_link clr_blue"><span class="btn_v1 f_control_btn i-plus"></span>
                     <div class="f_control_text">ВОПРОС</div></a></div>
                 <div class="f_control_item clr_green"><a href="create_meeting.html" class="f_control_link clr_green"><span class="btn_v1 f_control_btn i-plus"></span>
                     <div class="f_control_text">ЗАСЕДАНИЕ</div></a></div>
@@ -751,7 +761,7 @@
       <div class="gl_table">
         <div class="gl_table_cell">
           <div class="main_content">
-            <div class="section_inner noClose">
+            <div class="section_inner noClose _rel">
               <div class="search_form">
                 <form action="#">
                   <div class="form_cell">
@@ -762,6 +772,7 @@
                   </div>
                 </form>
               </div>
+              <div class="popup_close popupClose _close_2"></div>
             </div>
           </div>
         </div>

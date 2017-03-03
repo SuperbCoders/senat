@@ -96,8 +96,17 @@
     line-height: 52px;
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .3);
 
-    .open_aside_add & {
+    span {
+      @include transition_all(transform .3s);
+      position: relative;
+    }
+
+    .open_menu & {
       background: #e9e9e9;
+
+      span {
+        transform: rotate(45deg);
+      }
     }
 
     .nav_counter {

@@ -8,7 +8,7 @@ block variables
   - var shortUnitNav = true;
   - var actionNavbarColor = 'clr_green';
   - var actionText = 'ОПУБЛИКОВАТЬ ЗАСЕДАНИЕ';
-  - var customScripts = ['vendors/moment.min.js','vendors/daterangepicker.js','vendors/select2.js','vendors/jquery-ui-1.10.2.custom.min.js','vendors/tag-it.min.js','create.js','files.js'];
+  - var customScripts = ['vendors/moment.min.js','vendors/daterangepicker.js','vendors/select2.js','vendors/jquery-ui-1.10.2.custom.min.js','vendors/tag-it.min.js','vendors/jquery.autogrowtextarea.min.js','create.js','files.js'];
 
 include ../components/dashboard
 
@@ -290,18 +290,18 @@ block content
             
               .form_cell._s_100
                 .input_w
-                  textarea.f_input._inp_black.input_v1._h_90(placeholder='Комментарий')
+                  textarea.f_input._inp_black.input_v1._h_90.autoGrow(placeholder='Комментарий')
             
             .form_row.cell_v1
               .form_cell._s_100
                 label.f_label(for='question_description') ПОЯСНЕНИЕ
                 .input_w
-                  textarea#question_description.f_input._inp_black.input_v1._h_120(placeholder='Развернутое описание вопроса')
+                  textarea#question_description.f_input._inp_black.input_v1._h_120.autoGrow(placeholder='Развернутое описание вопроса')
             
               .form_cell._s_100
                 label.f_label(for='question_description_wide') ПРОЕКТ РЕШЕНИЯ
                 .input_w
-                  textarea#question_description_wide.f_input._inp_black.input_v1._h_400(placeholder='Развернутое описание вопроса')
+                  textarea#question_description_wide.f_input._inp_black.input_v1._h_400.autoGrow(placeholder='Развернутое описание вопроса')
               
               
             .f_label ОСНОВНЫЕ МАТЕРИАЛЫ
@@ -345,5 +345,8 @@ block content
                 
             .text_center
               a.btn_v1.btn_gray_2.dash_btn(href='#') СОХРАНИТЬ ВОПРОС
-            
-    include ../components/footer_controls_2
+        
+        .text_center.more_block._mod_2
+          a.btn_v1.dash_btn.btn_green_2(href='#')= actionText
+          
+    //-include ../components/footer_controls_2

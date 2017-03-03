@@ -18,11 +18,11 @@
     <meta property="og:site_name" content="feedly">
     <meta property="og:description" content="Feedly connects you to the information and knowledge you care about. We help you get more out of you work, education, hobbies and interests. The feedly platform lets you discover sources of quality content, follow and read everything those sources publish with ease and organize everything in one place.">
     <meta property="og:image" content="http://s3.feedly.com/img/feedly-512.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/favicons/apple-touch-icon.png">
-    <link rel="icon" type="image/png" href="/img/favicons/favicon-32x32.png" sizes="32x32">
-    <link rel="icon" type="image/png" href="/img/favicons/favicon-16x16.png" sizes="16x16">
-    <link rel="manifest" href="/img/favicons/manifest.json">
-    <link rel="mask-icon" href="/img/favicons/safari-pinned-tab.svg" color="#2bb24c">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="./img/favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="./img/favicons/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="./img/favicons/manifest.json">
+    <link rel="mask-icon" href="./img/favicons/safari-pinned-tab.svg" color="#2bb24c">
     <link rel="stylesheet" href="css/main_global.css">
     <link rel="stylesheet" href="css/styles.css">
   </head>
@@ -43,7 +43,7 @@
               </li>
               <li class="nav_item"><a href="files.html" class="nav_link">Мои файлы</a>
               </li>
-              <li class="nav_item"><a href="reports.html" class="nav_link">Отчеты</a>
+              <li class="nav_item"><a href="files.html" class="nav_link">Отчеты</a>
               </li>
             </ul>
           </div>
@@ -53,36 +53,68 @@
                 <li class="user_b_item">
                   <div class="user_b_control"><a href="#" class="notification_btn userMenuBtn"></a><span class="nav_counter">3</span>
                     <div class="notification_menu_w menu_w">
-                      <ul class="dash_b_menu_list">
-                        <li class="dash_menu_group"><span class="mb">5 минут назад</span></li>
-                        <li>
-                          <div class="notification_item _has_img">
-                            <div class="notification_author"><img src="./img/msg_author.png"></div>
-                            <div class="notification_caption">Олег П.П. добавил вас к заседанию: </div>
-                            <p>Подготовка к постройке нового комплекса</p>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="notification_item _has_img">
-                            <div class="notification_author"><img src="./img/msg_author.png"></div>
-                            <div class="notification_caption">Владислав А.С. добавил вас к заседанию: </div>
-                            <p>Подготовка к постройке нового комплекса</p>
-                          </div>
-                        </li>
-                      </ul>
-                      <ul class="dash_b_menu_list">
-                        <li class="dash_menu_group"><span class="mb">Сейчас</span></li>
-                        <li>
-                          <div class="notification_item">
-                            <div class="notification_caption">
-                               
-                              Началось голосование на заседании  <b class="clr_green"> №241</b> Форма реестра №6 и отчета «Инвестиционные проек…:
+                      <div class="notification_scroller">
+                        <ul class="dash_b_menu_list">
+                          <li class="dash_menu_group"><span class="mb">5 минут назад</span></li>
+                          <li>
+                            <div class="notification_item _has_img">
+                              <div class="notification_author"><img src="./img/msg_author.png"></div>
+                              <div class="notification_caption">Олег П.П. добавил вас к заседанию: </div>
+                              <p>Подготовка к постройке нового комплекса</p>
                             </div>
-                            <p>Текст документа подготовлен. Необходимо согласовать дополнительные гарантийный обязательства</p>
-                            <div class="notification_control"><a data-href="#vote_popup" href="#" class="btn_v1 dash_btn btn_blue openForm"><span>ПЕРЕЙТИ К ГОЛОСОВАНИЮ</span></a></div>
-                          </div>
-                        </li>
-                      </ul>
+                          </li>
+                          <li>
+                            <div class="notification_item _has_img">
+                              <div class="notification_author"><img src="./img/msg_author.png"></div>
+                              <div class="notification_caption">Владислав А.С. добавил вас к заседанию: </div>
+                              <p>Подготовка к постройке нового комплекса</p>
+                            </div>
+                          </li>
+                        </ul>
+                        <ul class="dash_b_menu_list">
+                          <li class="dash_menu_group"><span class="mb">Сейчас</span></li>
+                          <li>
+                            <div class="notification_item">
+                              <div class="notification_caption">
+                                 
+                                Началось голосование на заседании  <b class="clr_green"> №241</b> Форма реестра №6 и отчета «Инвестиционные проек…:
+                              </div>
+                              <p>Текст документа подготовлен. Необходимо согласовать дополнительные гарантийный обязательства</p>
+                              <div class="notification_control"><a data-href="#vote_popup" href="#" data-step="1" class="btn_v1 dash_btn btn_blue openForm"><span>ПЕРЕЙТИ К ГОЛОСОВАНИЮ</span></a></div>
+                            </div>
+                          </li>
+                        </ul>
+                        <ul class="dash_b_menu_list">
+                          <li class="dash_menu_group"><span class="mb">5 минут назад</span></li>
+                          <li>
+                            <div class="notification_item _has_img">
+                              <div class="notification_author"><img src="./img/msg_author.png"></div>
+                              <div class="notification_caption">Олег П.П. добавил вас к заседанию: </div>
+                              <p>Подготовка к постройке нового комплекса</p>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="notification_item _has_img">
+                              <div class="notification_author"><img src="./img/msg_author.png"></div>
+                              <div class="notification_caption">Владислав А.С. добавил вас к заседанию: </div>
+                              <p>Подготовка к постройке нового комплекса</p>
+                            </div>
+                          </li>
+                        </ul>
+                        <ul class="dash_b_menu_list">
+                          <li class="dash_menu_group"><span class="mb">Сейчас</span></li>
+                          <li>
+                            <div class="notification_item">
+                              <div class="notification_caption">
+                                 
+                                Началось голосование на заседании  <b class="clr_green"> №241</b> Форма реестра №6 и отчета «Инвестиционные проек…:
+                              </div>
+                              <p>Текст документа подготовлен. Необходимо согласовать дополнительные гарантийный обязательства</p>
+                              <div class="notification_control"><a data-href="#vote_popup" href="#" data-step="1" class="btn_v1 dash_btn btn_blue openForm"><span>ПЕРЕЙТИ К ГОЛОСОВАНИЮ</span></a></div>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
                       <ul class="dash_b_menu_list">
                         <li><a href="notifications.html" class="dash_menu_link"><span class="mb">Смотреть все оповещения</span></a></li>
                       </ul>
@@ -101,8 +133,8 @@
                       <ul class="dash_b_menu_list">
                         <li class="dash_menu_group"><span class="mb">Созонов Владислав Андреевич</span></li>
                         <li><a href="profile.html" class="dash_menu_link"><span class="mb">Настройки профиля</span></a></li>
-                        <li><a href="#" class="dash_menu_link"><span class="mb">Администрирование</span></a></li>
-                        <li><a href="#" class="dash_menu_link"><span class="mb">Выйти</span></a></li>
+                        <li><a href="person.html" class="dash_menu_link"><span class="mb">Администрирование</span></a></li>
+                        <li><a href="login.html" class="dash_menu_link"><span class="mb">Выйти</span></a></li>
                       </ul>
                     </div>
                   </div>
@@ -127,7 +159,7 @@
                 <div class="form_cell _s_100">
                   <label for="question_description" class="f_label">ФОРМУЛИРОВКА ПОРУЧЕНИЯ</label>
                   <div class="input_w">
-                    <textarea id="question_description" placeholder="Сформулируйте суть поручения" class="f_input _inp_black input_v1 _h_120"></textarea>
+                    <textarea id="question_description" placeholder="Сформулируйте суть поручения" class="f_input _inp_black input_v1 _h_120 autoGrow"></textarea>
                   </div>
                 </div>
               </div>
@@ -428,7 +460,7 @@
       <div class="gl_table">
         <div class="gl_table_cell">
           <div class="main_content">
-            <div class="section_inner noClose">
+            <div class="section_inner noClose _rel">
               <div class="search_form">
                 <form action="#">
                   <div class="form_cell">
@@ -439,6 +471,7 @@
                   </div>
                 </form>
               </div>
+              <div class="popup_close popupClose _close_2"></div>
             </div>
           </div>
         </div>
@@ -624,6 +657,7 @@
     <script src="js/vendors/select2.js"></script>
     <script src="js/vendors/jquery-ui-1.10.2.custom.min.js"></script>
     <script src="js/vendors/tag-it.min.js"></script>
+    <script src="js/vendors/jquery.autogrowtextarea.min.js"></script>
     <script src="js/create.js"></script>
     <script src="js/main.js"></script>
   </body>

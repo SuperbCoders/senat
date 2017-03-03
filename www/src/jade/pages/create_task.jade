@@ -8,7 +8,7 @@ block variables
   - var shortUnitNav = true;
   - var actionNavbarColor = 'clr_orange';
   - var actionText = 'В ПОВЕСТКУ';
-  - var customScripts = ['vendors/moment.min.js','vendors/daterangepicker.js','vendors/select2.js','vendors/jquery-ui-1.10.2.custom.min.js','vendors/tag-it.min.js','create.js'];
+  - var customScripts = ['vendors/moment.min.js','vendors/daterangepicker.js','vendors/select2.js','vendors/jquery-ui-1.10.2.custom.min.js','vendors/tag-it.min.js','vendors/jquery.autogrowtextarea.min.js','create.js'];
 
 include ../components/dashboard
 
@@ -28,7 +28,7 @@ block content
               .form_cell._s_100
                 label.f_label(for='question_description') ФОРМУЛИРОВКА ПОРУЧЕНИЯ
                 .input_w
-                  textarea#question_description.f_input._inp_black.input_v1._h_120(placeholder='Сформулируйте суть поручения')
+                  textarea#question_description.f_input._inp_black.input_v1._h_120.autoGrow(placeholder='Сформулируйте суть поручения')
                     
             .form_row.cell_v1
               .form_cell._s_25

@@ -63,8 +63,10 @@ mixin file_menu()
           span.mb ЗАВЕРШЕНО
           
 mixin meeting_box(date, status, author, active)
-  .dash_box(class= active ? '_current' : '')
-    .dash_box_inner
+  .dash_box
+    .dash_box_inner._meeting.goTo(data-goto='meeting.html')
+      - if (active)
+        .arrow_current
       .fl
         .mb
           .dash_b_date
@@ -77,13 +79,13 @@ mixin meeting_box(date, status, author, active)
       .fr
         .mb
           - if (status == '_in_process')
-            a.btn_v1.dash_btn.btn_blue.openForm(data-href='#vote_popup' href='#'): span ПЕРЕЙТИ К ГОЛОСОВАНИЮ
+            a.btn_v1.dash_btn.btn_blue.openForm(data-href='#vote_popup' href='#' data-step='1'): span ПЕРЕЙТИ К ГОЛОСОВАНИЮ
           - else if (status == '_in_preparation')
             | &nbsp;
           - else
             a.btn_v1.dash_btn.btn_green(href='#') ПРОТОКОЛ ЗАСЕДАНИЯ
         .mb
-          .dash_b_status(class= status ? status : '_completed')
+          a.dash_b_status.openForm(href='#' data-href='#vote_popup' data-step='3' class= status ? status : '_completed')
             - if (status == '_in_process')
               | В ПРОЦЕССЕ
             - else if (status == '_new')
@@ -105,7 +107,7 @@ mixin meeting_box(date, status, author, active)
 
 mixin instruction_box(date, status)
   .dash_box
-    .dash_box_inner
+    .dash_box_inner._mission.goTo(data-goto='task.html')
       .fl
         .mb
           .dash_b_date
@@ -121,7 +123,7 @@ mixin instruction_box(date, status)
             p Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные обязательства
       .fr
         .mb
-          .dash_b_status(class= status ? status : '_completed')
+          a.dash_b_status.openForm(href='#' data-href='#vote_popup' data-step='3' class= status ? status : '_completed')
             - if (status == '_in_process')
               | ИСПОЛНЯЕТСЯ
             - else if (status == '_new')
@@ -143,7 +145,7 @@ mixin instruction_box(date, status)
 
 mixin question_box(date, status, mod_1, mod_2)
   .dash_box
-    .dash_box_inner
+    .dash_box_inner._question.goTo(data-goto='question.html')
       .fl
         .mb
           .dash_b_date
@@ -168,10 +170,10 @@ mixin question_box(date, status, mod_1, mod_2)
       .fr
         .mb
           - if (status == '_approved')
-            .dash_b_status._name(class= status ? status : '_completed') УТВЕРЖДЕН
+            .dash_b_status._name.openForm(data-href='#vote_popup' data-step='3' class= status ? status : '_completed') УТВЕРЖДЕН
           - else if (status == '_rejected')
-            .dash_b_status._name(class= status ? status : '_completed') ОТКЛОНЕН
-          .dash_b_status(class= status ? status : '_completed')
+            .dash_b_status._name.openForm(data-href='#vote_popup' data-step='3' class= status ? status : '_completed') ОТКЛОНЕН
+          a.dash_b_status.openForm(href='#' data-href='#vote_popup' data-step='3' class= status ? status : '_completed')
             - if (status == '_in_process')
               | ИСПОЛНЯЕТСЯ
             - else if (status == '_new')
@@ -228,11 +230,11 @@ mixin action_brief(date, status, brief_menu, users, counter, progress, points, r
       .fr
         .mb
           - if (status == '_approved')
-            .dash_b_status._name(class= status ? status : '_completed') УТВЕРЖДЕН
+            .dash_b_status._name.openForm(data-href='#vote_popup' data-step='3' class= status ? status : '_completed') УТВЕРЖДЕН
           - else if (status == '_rejected')
-            .dash_b_status._name(class= status ? status : '_completed') ОТКЛОНЕН
+            .dash_b_status._name.openForm(data-href='#vote_popup' data-step='3' class= status ? status : '_completed') ОТКЛОНЕН
          
-          .dash_b_status(class= status ? status : '_completed')
+          a.dash_b_status.openForm(href='#' data-href='#vote_popup' data-step='3' class= status ? status : '_completed')
             - if (status == '_in_process')
               | ПРОВОДИТСЯ
             - else if (status == '_new')
@@ -271,7 +273,7 @@ mixin action_brief(date, status, brief_menu, users, counter, progress, points, r
       - if (users > 0)
         .participants_block
           .participant_vote
-            a.btn_v1.dash_btn.btn_blue.openForm(data-href='#vote_popup' href='#'): span ПЕРЕЙТИ К ГОЛОСОВАНИЮ
+            a.btn_v1.dash_btn.btn_blue.openForm(data-href='#vote_popup' href='#' data-step='1'): span ПЕРЕЙТИ К ГОЛОСОВАНИЮ
             
           - if (users > 1)
             ul.participants_list

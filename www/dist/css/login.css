@@ -343,6 +343,12 @@ body {
 .hide {
   display: none !important; }
 
+.invis {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; }
+
 input.hide {
   position: absolute; }
 
@@ -372,6 +378,8 @@ input.hide {
   width: 100%;
   max-width: 1024px;
   margin: 0 auto; }
+  .section_inner._rel {
+    position: relative; }
   .filter_bar .section_inner,
   .main_content .section_inner {
     padding: 0 72px;

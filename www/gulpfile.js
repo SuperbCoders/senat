@@ -67,7 +67,7 @@ gulp.task('sass', function () {
   gulp.src(src.sass)
   // .pipe(sourcemaps.init())
     .pipe(plumber())
-    .pipe(sass())
+    .pipe(sass({style: 'compressed'}))
     .pipe(autoprefixer('last 2 version', 'ie9'))
     .pipe(postcss([flexibility]))
     // .pipe(rename('style.css'))

@@ -1,7 +1,7 @@
 block variables
   - var bodyClass = 'page_meeting';
   - var htmlClass = 'stick_footer action_header';
-  - var pageTitle = 'Заседания';
+  - var pageTitle = 'Заседание';
   - var pageDescription = 'Описание страницы';
   - var activePage = 1;
   - var hasUnitNav = true;
@@ -20,6 +20,9 @@ block content
     .main_content._has_footer_controls
       .action_brief
         .section_inner
+          a.brief_control._prev.btn_gray_2(href='#')
+          a.brief_control._next.btn_gray_2(href='#')
+          
           +action_brief(23, '_in_process', false, 2)
         .action_brief_progress
           .action_brief_val(style='width: 58%;')

@@ -3,14 +3,15 @@
   .gl_table
     .gl_table_cell
       .main_content
-        .section_inner.noClose
+        .section_inner.noClose._rel
           .search_form
             form(action='#')
               .form_cell
                 .input_w.has_icon
                   input.f_input.input_v2(placeholder='Поиск')
                   button.search_submit.i-search._large.clr_white
-                  
+          .popup_close.popupClose._close_2
+
 #vote_popup.popup_wrapper.popupWrapper(data-class='vote_opened')
   .vote_step.voteStep(data-step='1' style='display: block;')
     .vote_info_holder
