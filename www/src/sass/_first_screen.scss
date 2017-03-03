@@ -111,8 +111,8 @@ input.hide {
     }
   }
 
-  .page_index .filter_bar &,
-  .page_index .main_content & {
+  .page_index .wrapper .filter_bar &,
+  .page_index .wrapper .main_content & {
 
     @include respond-to-min($resp_step_2) {
       //max-width: $content-max-w;

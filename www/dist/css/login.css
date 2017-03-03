@@ -389,8 +389,8 @@ input.hide {
       padding: 0;
       max-width: 1024px; }
   @media only screen and (min-width: 1440px) {
-    .page_index .filter_bar .section_inner,
-    .page_index .main_content .section_inner {
+    .page_index .wrapper .filter_bar .section_inner,
+    .page_index .wrapper .main_content .section_inner {
       padding: 0 32px; } }
 
 .main_content {
