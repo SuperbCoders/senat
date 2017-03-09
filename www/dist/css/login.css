@@ -440,8 +440,7 @@ input.hide {
     right: 100%;
     top: 0;
     bottom: 0;
-    width: 5000px;
-    background: #fff; }
+    width: 5000px; }
   .chat_container .small_aside_left._has_search {
     padding-top: 60px; }
     .chat_container .small_aside_left._has_search:before {
@@ -666,6 +665,7 @@ input.hide {
   width: 100%; }
   .f_input.input_v1 {
     transition: border 0.3s;
+    min-height: 40px;
     height: 40px;
     padding: 10px;
     font: 14px/18px "HelveticaNeue", sans-serif;
@@ -682,6 +682,8 @@ input.hide {
         color: white !important; }
       .f_input.input_v1:focus:empty::-webkit-input-placeholder {
         color: white !important; }
+  .f_input._3_lines {
+    max-height: 4.7em; }
   .has_icon .f_input {
     padding-left: 40px; }
   .chat_cell .f_input {

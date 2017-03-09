@@ -1,5 +1,8 @@
 .gl_overlay.glOverlay
 #search_popup.popup_wrapper.popupWrapper(data-class='search_opened')
+  .close_holder: .section_inner
+    .popup_close.popupClose._close_2
+
   .gl_table
     .gl_table_cell
       .main_content
@@ -10,7 +13,6 @@
                 .input_w.has_icon
                   input.f_input.input_v2(placeholder='Поиск')
                   button.search_submit.i-search._large.clr_white
-          .popup_close.popupClose._close_2
 
 #vote_popup.popup_wrapper.popupWrapper(data-class='vote_opened')
   .vote_step.voteStep(data-step='1' style='display: block;')

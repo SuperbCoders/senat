@@ -271,8 +271,8 @@
               <div class="chat_form">
                 <form action="#">
                   <div class="input_w chat_cell">
-                    <input placeholder="Сообщение" class="f_input input_v1 _inp_black">
-                    <button class="btn_v1 btn_green_3 chat_btn">ОТПРАВИТЬ</button>
+                    <textarea placeholder="Сообщение" class="autoGrow _3_lines f_input input_v1 _inp_black"></textarea>
+                    <button class="btn_v1 btn_green_3 chat_btn"><span class="mb">ОТПРАВИТЬ</span></button>
                   </div>
                 </form>
               </div>
@@ -476,6 +476,11 @@
     </div>
     <div class="gl_overlay glOverlay"></div>
     <div id="search_popup" data-class="search_opened" class="popup_wrapper popupWrapper">
+      <div class="close_holder">
+        <div class="section_inner">
+          <div class="popup_close popupClose _close_2"></div>
+        </div>
+      </div>
       <div class="gl_table">
         <div class="gl_table_cell">
           <div class="main_content">
@@ -490,7 +495,6 @@
                   </div>
                 </form>
               </div>
-              <div class="popup_close popupClose _close_2"></div>
             </div>
           </div>
         </div>
@@ -673,6 +677,8 @@
     <script src="./js/vendors/flexibility.js"></script>
     <script src="./js/vendors/moment.min.js"></script>
     <script src="./js/vendors/daterangepicker.js"></script>
+    <script src="./js/vendors/autoresize-mod.jquery.js"></script>
+    <script src="./js/msg.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

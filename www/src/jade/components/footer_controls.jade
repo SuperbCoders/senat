@@ -8,7 +8,11 @@ block variables
   .section_inner.clearfix
     .fr
       .f_controls_holder
-        - if (unitNavLink && unitNavLink.length)
+        - if (unitNavFiles)
+          label.btn_v2.add_unit_btn.btn_white_2
+            span.mb.i-plus(class=filterClass || '')
+            input.hide(type='file')
+        - else if (unitNavLink && unitNavLink.length)
           a.btn_v2.add_unit_btn.btn_white_2(href= unitNavLink)
             span.mb.i-plus(class=filterClass || '')
         - else

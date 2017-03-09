@@ -23,6 +23,8 @@ block content
 
         ul.dashboard_list
           li
+            +action_brief(17, '_in_vote', true, 1, 1, false, ['Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные'], false, true, true)
+          li
             +action_brief(17, '_in_vote', true, 1, 1, true, ['Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные'], false, true, true)
           li
             +question_box(0, '_approved')

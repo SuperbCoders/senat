@@ -1,25 +1,28 @@
 block variables
-  - var bodyClass = 'page_question';
+  - var bodyClass = 'page_files dropzone';
   - var htmlClass = 'stick_footer action_header';
   - var pageTitle = 'Файлы';
   - var pageDescription = 'Описание страницы';
   - var activePage = 5;
   - var hasUnitNav = true;
+  - var unitNavFiles = true;
   - var actionNavbarColor = 'clr_orange';
-
+  - var customScripts = ['files.js'];
+  
 include ../components/dashboard
 
 extends ../components/layout
 block head
 block content
   .wrapper
+    .drop_catcher
     include ../components/header
 
     .main_content
       .section_inner
         .dash_box._alone
           .dash_box_inner
-            ul.material_list._full_w._file_nav._file_catalog
+            ul.material_list._full_w._file_nav._file_catalog._no_rm
               li
                 .upload_file.goTo(data-goto='files_file.html')
                   .fl
@@ -82,6 +85,7 @@ block content
                     .upload_name.mb Manual 2015.doc
                   .fr
                     +file_menu()
+              li.uploadTip
                     
     include ../components/footer_controls
     

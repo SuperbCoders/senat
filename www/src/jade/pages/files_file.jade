@@ -1,11 +1,12 @@
 block variables
-  - var bodyClass = 'page_messages';
+  - var bodyClass = 'page_files dropzone';
   - var htmlClass = 'stick_footer action_header';
   - var pageTitle = 'Файлы файл';
   - var pageDescription = 'Описание страницы';
   - var activePage = 5;
   - var hasUnitNav = true;
-  - var customScripts = ['vendors/moment.min.js', 'vendors/daterangepicker.js', 'vendors/select2.js'];
+  - var unitNavFiles = true;
+  - var customScripts = ['vendors/moment.min.js', 'vendors/daterangepicker.js', 'vendors/select2.js', 'files.js'];
 
 include ../components/dashboard
 
@@ -13,6 +14,7 @@ extends ../components/layout
 block head
 block content
   .wrapper
+    .drop_catcher
     include ../components/header
     include ../components/navbar_file
 

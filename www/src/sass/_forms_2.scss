@@ -92,15 +92,15 @@
   }
 
   &._h_90 {
-    height: 90px;
+    min-height: 90px;
   }
 
   &._h_120 {
-    height: 120px;
+    min-height: 120px;
   }
 
   &._h_400 {
-    height: 400px;
+    min-height: 400px;
   }
 
   .search_form .has_icon & {
@@ -351,13 +351,22 @@
 
 .select_v2 {
   .select2-dropdown {
-    border-color: $gl_gray_2;
+    border: none !important;
+    border-radius: 0 !important;
+    background: #fff;
+    box-shadow: 0 2px 5px rgba(26, 26, 26, 0.3);
   }
 
   .select2-container--default {
 
     .select2-results__option {
-      padding: 2px 14px;
+      padding: 0 14px;
+      line-height: 40px;
+      letter-spacing: .03em;
+
+      &[aria-selected=true] {
+        background: #cecece;
+      }
     }
 
     .select2-selection--single {
@@ -393,7 +402,7 @@
 
     &.select2-container--open {
       .select2-selection--single {
-        border: 1px solid $gl_gray_2;
+        //border: 1px solid $gl_gray_2;
       }
 
       .select2-selection__arrow {

@@ -150,7 +150,7 @@ $(function ($) {
       loaderBlock.show().find('.preloader').click();
 
       console.log(target);
-      
+
       interval = setInterval(function () {
         target.append($('<li> \
                 <div class="dash_box"> \
@@ -241,7 +241,20 @@ $(function ($) {
 
   all_dialog_close();
 
+  initTabs();
+
 });
+
+function initTabs() {
+  $('.tabHolder').each(function (ind) {
+    var tabs = $(this);
+
+    tabs.tabs({
+      tabContext: tabs.attr('data-context')
+    });
+
+  });
+}
 
 function selectTemplate(data, container) {
   if (data.element) {

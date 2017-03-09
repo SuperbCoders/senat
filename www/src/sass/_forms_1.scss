@@ -27,6 +27,7 @@
 
   &.input_v1 {
     @include transition_all(border .3s);
+    min-height: 40px;
     height: 40px;
     padding: 10px;
     font: 14px/18px $HelveticaNeueReg;
@@ -55,6 +56,10 @@
         }
       }
     }
+  }
+
+  &._3_lines {
+    max-height: 4.7em;
   }
 
   .has_icon & {

@@ -23,7 +23,17 @@
       //padding-top: 40vh;
     }
   }
+}
 
+.close_holder {
+  position: absolute;
+  top: 107px;
+  right: 0;
+  left: 0;
+
+  .section_inner {
+    position: relative;
+  }
 }
 
 .popup_close {

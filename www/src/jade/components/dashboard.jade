@@ -105,7 +105,7 @@ mixin meeting_box(date, status, author, active)
         .mb
           +dash_b_menu()
 
-mixin instruction_box(date, status)
+mixin instruction_box(date, status, has_vote)
   .dash_box
     .dash_box_inner._mission.goTo(data-goto='task.html')
       .fl
@@ -143,7 +143,7 @@ mixin instruction_box(date, status)
         .mb
           +dash_b_menu()
 
-mixin question_box(date, status, mod_1, mod_2)
+mixin question_box(date, status, mod_1, mod_2, mod_3, has_vote)
   .dash_box
     .dash_box_inner._question.goTo(data-goto='question.html')
       .fl
@@ -163,33 +163,41 @@ mixin question_box(date, status, mod_1, mod_2)
               p Управляющий комитет
             - else if (mod_2)
               p Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные обязательства
+            
+            - else if (mod_3)
+              .dash_b_caption №244, с 17:00 до 19:00
+              p Управляющий комитет
             - else
               .dash_b_caption №21
                 span  Комитет по проектам и процессам
               p Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные
       .fr
-        .mb
-          - if (status == '_approved')
-            .dash_b_status._name.openForm(data-href='#vote_popup' data-step='3' class= status ? status : '_completed') УТВЕРЖДЕН
-          - else if (status == '_rejected')
-            .dash_b_status._name.openForm(data-href='#vote_popup' data-step='3' class= status ? status : '_completed') ОТКЛОНЕН
-          a.dash_b_status.openForm(href='#' data-href='#vote_popup' data-step='3' class= status ? status : '_completed')
-            - if (status == '_in_process')
-              | ИСПОЛНЯЕТСЯ
-            - else if (status == '_new')
-              | НОВАЯ
-            - else if (status == '_in_preparation')
-              | ПОДГОТОВКА
-            - else
-              span.dash_b_status_counter
-                span.mb.i-check.dash_b_icon
-                span.mb 10
-              span.dash_b_status_counter
-                span.mb.i-cross.dash_b_icon
-                span.mb 5
-              span.dash_b_status_counter
-                span.mb.i-circle-minus.dash_b_icon
-                span.mb 2
+        - if (has_vote)
+          .mb
+            a.btn_v1.dash_btn.btn_blue.openForm(data-href='#vote_popup' href='#' data-step='1'): span ПЕРЕЙТИ К ГОЛОСОВАНИЮ
+        - if (status != false)
+          .mb
+            - if (status == '_approved')
+              .dash_b_status._name.openForm(data-href='#vote_popup' data-step='3' class= status ? status : '_completed') УТВЕРЖДЕН
+            - else if (status == '_rejected')
+              .dash_b_status._name.openForm(data-href='#vote_popup' data-step='3' class= status ? status : '_completed') ОТКЛОНЕН
+            a.dash_b_status.openForm(href='#' data-href='#vote_popup' data-step='3' class= status ? status : '_completed')
+              - if (status == '_in_process')
+                | ИСПОЛНЯЕТСЯ
+              - else if (status == '_new')
+                | НОВАЯ
+              - else if (status == '_in_preparation')
+                | ПОДГОТОВКА
+              - else
+                span.dash_b_status_counter
+                  span.mb.i-check.dash_b_icon
+                  span.mb 10
+                span.dash_b_status_counter
+                  span.mb.i-cross.dash_b_icon
+                  span.mb 5
+                span.dash_b_status_counter
+                  span.mb.i-circle-minus.dash_b_icon
+                  span.mb 2
 
         .mb
           +dash_b_menu()

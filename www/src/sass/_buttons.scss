@@ -23,6 +23,7 @@
     min-width: 120px;
     border-radius: 4px;
     padding: 10px;
+    height: 100%;
     font: 10px/20px $HelveticaNeueBold;
   }
 
@@ -140,6 +141,12 @@
     background: #ececec;
     //color: $gl_white;
   }
+
+  .ui-tabs-active & {
+    background: #ececec;
+    cursor: default;
+  }
+
 }
 
 .btn_white_3 {

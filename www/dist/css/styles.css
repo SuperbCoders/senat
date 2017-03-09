@@ -1497,8 +1497,6 @@
       padding: 20px; }
   .material_list._file_nav {
     padding-bottom: 20px; }
-    .material_list._file_nav > li:last-child {
-      border-bottom: 1px solid #d9d9d9; }
     .material_list._file_nav .upload_file {
       cursor: pointer; }
 
@@ -2239,6 +2237,7 @@ a.upload_file {
   border-left: 1px solid #d8d8d8; }
 
 .chat_item {
+  cursor: pointer;
   padding: 20px 20px 30px 30px;
   border-bottom: 1px solid #d8d8d8; }
 
@@ -2548,6 +2547,8 @@ a.upload_file {
     content: "";
     font-size: 12px;
     line-height: 20px; }
+  ._no_rm .unit_rm_btn {
+    display: none; }
 
 .filter_link {
   transition: opacity 0.3s;
@@ -2981,6 +2982,14 @@ a.upload_file {
   left: 0;
   right: 0;
   z-index: 4; }
+
+.close_holder {
+  position: absolute;
+  top: 107px;
+  right: 0;
+  left: 0; }
+  .close_holder .section_inner {
+    position: relative; }
 
 .popup_close {
   transition: border 0.3s;

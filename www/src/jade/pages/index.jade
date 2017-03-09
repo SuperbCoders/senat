@@ -4,6 +4,7 @@ block variables
   - var pageTitle = 'Главная';
   - var pageDescription = 'Описание страницы';
   - var activePage = 0;
+  - var unitNavLink = 'dash_add.html';
   - var hasUnitNav = true;
 
 include ../components/dashboard
@@ -108,9 +109,9 @@ block content
   
           ul.dashboard_list
             li
-              +question_box(0, '_approved')
+              +question_box(0, false, false, false, false, true)
             li
-              +question_box(29, '_rejected', true)
+              +question_box(29, '_in_preparation', false, false, true, true)
   
         include ../components/preloader
           

@@ -100,6 +100,10 @@
     font-size: 12px;
     line-height: 20px;
   }
+
+  ._no_rm & {
+    display: none;
+  }
 }
 
 .filter_link {
@@ -394,7 +398,7 @@
       background: none;
       border: none;
     }
-    
+
     .calendar {
       margin: 0;
 

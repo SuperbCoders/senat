@@ -1,14 +1,14 @@
 block variables
-  - var bodyClass = 'page_create_meeting';
-  - var htmlClass = 'stick_footer nav_header';
-  - var pageTitle = 'Новое заседание';
+  - var bodyClass = 'page_create_meeting dropzone';
+  - var htmlClass = 'stick_footer nav_header nav_footer_';
+  - var pageTitle = 'Новое заседание драг-н-дроп';
   - var pageDescription = 'Описание страницы';
   - var activePage = 1;
   - var hasUnitNav = true;
   - var shortUnitNav = true;
   - var actionNavbarColor = 'clr_green';
-  - var actionText = 'В ПОВЕСТКУ';
-  - var customScripts = ['vendors/moment.min.js','vendors/daterangepicker.js','vendors/select2.js','vendors/jquery-ui-1.10.2.custom.min.js','vendors/tag-it.min.js','vendors/autoresize-mod.jquery.js','msg.js','create.js'];
+  - var actionText = 'ОПУБЛИКОВАТЬ ЗАСЕДАНИЕ';
+  - var customScripts = ['vendors/moment.min.js','vendors/daterangepicker.js','vendors/select2.js','vendors/jquery-ui-1.10.2.custom.min.js','vendors/tag-it.min.js','vendors/autoresize-mod.jquery.js','msg.js','create.js','files.js'];
 
 include ../components/dashboard
 
@@ -16,6 +16,7 @@ extends ../components/layout
 block head
 block content
   .wrapper
+    .drop_catcher
     include ../components/header
     .action_navbar
       include ../components/action_navbar
@@ -24,152 +25,6 @@ block content
       .section_inner
         .dash_box._create
           .dash_box_inner
-            .form_row.cell_v1
-              .form_cell._s_25
-                label.f_label(for='number') НОМЕР
-                .input_w
-                  input#number.f_input._inp_black.input_v1
-                  
-              .form_cell._s_50
-                .f_label КОЛЛЕГИАЛЬНЫЙ ОРГАН
-                .input_w.select_v1
-                  select.select2
-                    option Комитет по стратегии
-                    option Комитет по стратегии 2
-                    option Комитет по стратегии 3
-                    option Комитет по стратегии 4
-                  
-              .form_cell._s_25
-                .f_label() ВИД ЗАСЕДАНИЯ
-                .input_w.select_v1
-                  select.select2
-                    option Заочное
-                    option Очное
-                    
-            .form_row.cell_v1
-              .form_cell._s_25
-                label.f_label(for='date') ДАТА
-                .input_w.has_icon.daterangepicker_v1
-                  input#date.f_input._inp_black.input_v1.singleDate
-                  span.input_icon.i-calendar
-
-              .form_cell._s_25
-                label.f_label(for='time') ВРЕМЯ НАЧАЛА
-                .input_w.has_icon.timePicker
-                  input#time.f_input._inp_black.input_v1.timePickerVal(data-format='hh часов mm минут')
-                  span.input_icon.i-timer
-                  +time_picker()
-
-              .form_cell._s_25
-                label.f_label(for='question_deadline') ПРИЕМ ВОПРОСОВ ДО
-                .input_w.has_icon.daterangepicker_v1
-                  input#question_deadline.f_input._inp_black.input_v1.singleDate
-                  span.input_icon.i-calendar
-
-              .form_cell._s_25
-                label.f_label(for='material_deadline') ПРИЕМ МАТЕРИАЛОВ ДО
-                .input_w.has_icon.daterangepicker_v1
-                  input#material_deadline.f_input._inp_black.input_v1.singleDate
-                  span.input_icon.i-calendar
-
-            .form_row.cell_v1
-              .form_cell._s_50
-                label.f_label(for='location') АДРЕС
-                .input_w.has_icon.daterangepicker_v1
-                  input#location.f_input._inp_black.input_v1.singleDate
-                  span.input_icon.i-location2
-
-              .form_cell._s_50
-                label.f_label(for='place') МЕСТО
-                .input_w.timePicker
-                  input#place.f_input._inp_black.input_v1
-            
-            .members_holder
-              .f_label Члены коллегиального органа
-              ul.member_list
-                +loop_while(1)
-                  li.rmUnit
-                    .member_box
-                      .member_avatars
-                        .member_main_avatar
-                          img(src='./img/member.png')
-                          span.btn_red_2.unit_rm_btn.rmBtn
-
-                      .participant_name Кислицин Д.М.
-                      .participant_post Председатель
-                  li.rmUnit
-                    .member_box
-                      .member_avatars
-                        .member_main_avatar
-                          img(src='./img/user_empty.png')
-                          span.btn_red_2.unit_rm_btn.rmBtn
-
-                      .participant_name Морозов В.К.
-                      .participant_post Секретарь <br> Кислицина. М.П.
-                  li
-                    .member_box
-                      .btn_v2.add_unit_btn.btn_white_2
-                        span.mb.i-plus
-                                    
-            .members_holder
-              .f_label ПРИГЛАШЕННЫЕ УЧАСТНИКИ НА ЗАСЕДАНИЕ
-              ul.member_list
-                +loop_while(2)
-                  li
-                    .member_box
-                      .member_avatars
-                        .member_main_avatar
-                        
-                li
-                  .member_box
-                    .btn_v2.add_unit_btn.btn_white_2
-                      span.mb.i-plus
-                      
-            .create_controls.more_block
-              a.btn_v1.btn_black.dash_btn(href='#') СОХРАНИТЬ ЗАСЕДАНИЕ
-
-        .dash_box_title.clr_blue.mod_1 ПОВЕСТКА
-
-        ul.dashboard_list.sortable
-          +loop_while(3)
-            li.rmUnit
-              +action_brief(17, '_in_vote', true, 0, 1, false, ['Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные'], true, false)
-            
-        ul#tab_panel.text_center.more_block.mod_3
-          li
-            a.btn_v1.btn_white_2.dash_btn(href='#tab_1') СОЗДАТЬ ВОПРОС
-          li
-            a.btn_v1.btn_white_2.dash_btn(href='#tab_2') ДОБАВИТЬ ВОПРОСЫ
-
-        .tabHolder(data-context='#tab_panel')
-          #tab_1.dash_box._add._mb_50
-            .dash_box_inner
-              .dash_b_label Добавить вопросы
-                
-              .question_holder
-                ul.add_list
-                  +loop_while(7)
-                    li
-                      .add_item
-                        label.check_v1
-                          input.hide(type='checkbox')
-                          span.check_text
-                        .question_inner
-                          .fl
-                            .mb
-                              .dash_b_date
-                                .day= 17
-                                .month сентября
-                            .mb
-                              .question_info.fl
-                                p Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные обязательства
-                
-              .question_controls
-                .text_center
-                  a.btn_v1.dash_btn.btn_green_2(href='#') ДОБАВИТЬ НА ЗАСЕДАНИЕ
-                  
-          #tab_2.dash_box._create._mb_50
-            .dash_box_inner
               .form_row.cell_v1
                 .form_cell._s_100
                   label.f_label(for='question') НАЗВАНИЕ ВОПРОСА
@@ -317,16 +172,22 @@ block content
                 
               .f_label МАТЕРИАЛЫ
                 
-              ul.upload_list
+              ul.upload_list.uploadList
                 li
                   .input_w.drag_catcher
-                    span.drag_text ДОБАВИТЬ
+                    input#file_upload.hide(type='file')
+                    label.drag_link(for='file_upload') ДОБАВИТЬ
                 li
                   +file_upload()
                 li
                   +file_upload()
                 li
                   +file_upload(true)
+                li.uploadTip
+                  .input_w.drag_catcher.text_upper
+                    input#file_upload_2.hide(type='file')
+                    span.drag_text.clr_def Переместите файлы с компьютера в окно браузера 
+                    label.drag_link(for='file_upload_2') Воспользуйтесь обычной загрузкой
   
               .f_label ТЕГИ
                 
@@ -338,8 +199,7 @@ block content
                   
               .text_center
                 a.btn_v1.btn_gray_2.dash_btn(href='#') СОХРАНИТЬ ВОПРОС
-         
-        .text_center.more_block._mod_2
+          
+        .text_center.more_block.mod_2
           a.btn_v1.dash_btn.btn_green_2(href='#')= actionText
-              
-    //-include ../components/footer_controls_2
+          

@@ -8,7 +8,7 @@ block variables
   - var shortUnitNav = true;
   - var actionNavbarColor = 'clr_green';
   - var actionText = 'ОПУБЛИКОВАТЬ ЗАСЕДАНИЕ';
-  - var customScripts = ['vendors/moment.min.js','vendors/daterangepicker.js','vendors/select2.js','vendors/jquery-ui-1.10.2.custom.min.js','vendors/tag-it.min.js','vendors/jquery.autogrowtextarea.min.js','create.js','files.js'];
+  - var customScripts = ['vendors/moment.min.js','vendors/daterangepicker.js','vendors/select2.js','vendors/jquery-ui-1.10.2.custom.min.js','vendors/tag-it.min.js','vendors/autoresize-mod.jquery.js','msg.js','create.js','files.js'];
 
 include ../components/dashboard
 
@@ -22,7 +22,6 @@ block content
       include ../components/action_navbar
 
     .main_content
-      //-form.dropzone(action="/file-upload")
       .section_inner
         .dash_box._create
           .dash_box_inner
@@ -137,215 +136,216 @@ block content
             li.rmUnit
               +action_brief(17, '_in_vote', true, 0, 1, false, ['Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные'], true, false)
             
-        ul.text_center.more_block.mod_3
+        ul#tab_panel.text_center.more_block.mod_3
           li
-            a.btn_v1.btn_white_2.dash_btn(href='#') СОЗДАТЬ ВОПРОС
+            a.btn_v1.btn_white_2.dash_btn(href='#tab_1') СОЗДАТЬ ВОПРОС
           li
-            a.btn_v1.btn_gray.dash_btn(href='#') ДОБАВИТЬ ВОПРОСЫ
+            a.btn_v1.btn_white_2.dash_btn(href='#tab_2') ДОБАВИТЬ ВОПРОСЫ
 
-        .dash_box._add._mb_50
-          .dash_box_inner
-            .dash_b_label Добавить вопросы
-              
-            .question_holder
-              ul.add_list
-                +loop_while(7)
-                  li
-                    .add_item
-                      label.check_v1
-                        input.hide(type='checkbox')
-                        span.check_text
-                      .question_inner
-                        .fl
-                          .mb
-                            .dash_b_date
-                              .day= 17
-                              .month сентября
-                          .mb
-                            .question_info.fl
-                              p Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные обязательства
-              
-            .question_controls
-              .text_center
-                a.btn_v1.dash_btn.btn_green_2(href='#') ДОБАВИТЬ НА ЗАСЕДАНИЕ
+        .tabHolder(data-context='#tab_panel')
+          #tab_1.dash_box._add._mb_50
+            .dash_box_inner
+              .dash_b_label Добавить вопросы
                 
-        .dash_box._create
-          .dash_box_inner
-            .form_row.cell_v1
-              .form_cell._s_100
-                label.f_label(for='question') НАЗВАНИЕ ВОПРОСА
-                .input_w
-                  input#question.f_input._inp_black.input_v1
-
-              .form_cell._s_75
-                .f_label КОЛЛЕГИАЛЬНЫЙ ОРГАН
-                .input_w.select_v1
-                  select.select2
-                    option Комитет по стратегии
-                    option Комитет по стратегии 2
-                    option Комитет по стратегии 3
-                    option Комитет по стратегии 4
+              .question_holder
+                ul.add_list
+                  +loop_while(7)
+                    li
+                      .add_item
+                        label.check_v1
+                          input.hide(type='checkbox')
+                          span.check_text
+                        .question_inner
+                          .fl
+                            .mb
+                              .dash_b_date
+                                .day= 17
+                                .month сентября
+                            .mb
+                              .question_info.fl
+                                p Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные обязательства
+                
+              .question_controls
+                .text_center
+                  a.btn_v1.dash_btn.btn_green_2(href='#') ДОБАВИТЬ НА ЗАСЕДАНИЕ
+                  
+          #tab_2.dash_box._create
+            .dash_box_inner
+              .form_row.cell_v1
+                .form_cell._s_100
+                  label.f_label(for='question') НАЗВАНИЕ ВОПРОСА
+                  .input_w
+                    input#question.f_input._inp_black.input_v1
+  
+                .form_cell._s_75
+                  .f_label КОЛЛЕГИАЛЬНЫЙ ОРГАН
+                  .input_w.select_v1
+                    select.select2
+                      option Комитет по стратегии
+                      option Комитет по стратегии 2
+                      option Комитет по стратегии 3
+                      option Комитет по стратегии 4
+                      
+                .form_cell._s_25
+                  label.f_label(for='question_time') ВРЕМЯ РАССМОТРЕНИЯ
+                  .input_w.has_icon.timePicker
+                    input#question_time.f_input._inp_black.input_v1.timePickerVal(data-format='hh часов mm минут')
+                    span.input_icon.i-timer
+                    +time_picker()
+  
+              .members_wrapper
+                .members_holder
+                  .f_label ИНИЦИАТОР ВОПРОСА
+                  ul.member_list
+                    +loop_while(1)
+                      li.rmUnit
+                        .member_box
+                          .member_avatars
+                            .member_main_avatar
+                              img(src='./img/member.png')
+                              span.btn_red_2.unit_rm_btn.rmBtn
+    
+                          .participant_name Кислицин Д.М.
+                          .participant_post Председатель
+                      li.rmUnit
+                        .member_box
+                          .member_avatars
+                            .member_main_avatar
+                              img(src='./img/user_empty.png')
+                              span.btn_red_2.unit_rm_btn.rmBtn
+    
+                          .participant_name Морозов В.К.
+                          .participant_post Секретарь <br> Кислицина. М.П.
+                      li
+                        .member_box
+                          .btn_v2.add_unit_btn.btn_white_2
+                            span.mb.i-plus
+    
+                .members_holder
+                  .f_label ДОКЛАДЧИКИ
+                  ul.member_list
+                    +loop_while(1)
+                      li.rmUnit
+                        .member_box
+                          .member_avatars
+                            .member_main_avatar
+                              img(src='./img/member.png')
+                              span.btn_red_2.unit_rm_btn.rmBtn
+    
+                          .participant_name Кислицин Д.М.
+                          .participant_post Председатель
+                      li.rmUnit
+                        .member_box
+                          .member_avatars
+                            .member_main_avatar
+                              img(src='./img/user_empty.png')
+                              span.btn_red_2.unit_rm_btn.rmBtn
+    
+                          .participant_name Морозов В.К.
+                          .participant_post Секретарь <br> Кислицина. М.П.
+                      li
+                        .member_box
+                          .btn_v2.add_unit_btn.btn_white_2
+                            span.mb.i-plus
+    
+                .members_holder
+                  .f_label ПРИГЛАШЕННЫЕ УЧАСТНИКИ
+                  ul.member_list
+                    +loop_while(2)
+                      li
+                        .member_box
+                          .member_avatars
+                            .member_main_avatar
+    
+                    li
+                      .member_box
+                        .btn_v2.add_unit_btn.btn_white_2.userMenuBtn
+                          span.mb.i-plus
+                        +member_search()
+  
+              .form_row.cell_v1.cell_group
+                .form_cell._s_12
+                  .f_label СВЕТОФОР
+                  .input_w.select_v1
+                    select.select2.switchLights
+                      option.light_pin._pin_orange(value='1' selected) 1
+                      option.light_pin._pin_green(value='2') 2
+                      option.light_pin._pin_red(value='3') 3
                     
-              .form_cell._s_25
-                label.f_label(for='question_time') ВРЕМЯ РАССМОТРЕНИЯ
-                .input_w.has_icon.timePicker
-                  input#question_time.f_input._inp_black.input_v1.timePickerVal(data-format='hh часов mm минут')
-                  span.input_icon.i-timer
-                  +time_picker()
-
-            .members_wrapper
-              .members_holder
-                .f_label ИНИЦИАТОР ВОПРОСА
-                ul.member_list
-                  +loop_while(1)
-                    li.rmUnit
-                      .member_box
-                        .member_avatars
-                          .member_main_avatar
-                            img(src='./img/member.png')
-                            span.btn_red_2.unit_rm_btn.rmBtn
-  
-                        .participant_name Кислицин Д.М.
-                        .participant_post Председатель
-                    li.rmUnit
-                      .member_box
-                        .member_avatars
-                          .member_main_avatar
-                            img(src='./img/user_empty.png')
-                            span.btn_red_2.unit_rm_btn.rmBtn
-  
-                        .participant_name Морозов В.К.
-                        .participant_post Секретарь <br> Кислицина. М.П.
-                    li
-                      .member_box
-                        .btn_v2.add_unit_btn.btn_white_2
-                          span.mb.i-plus
-  
-              .members_holder
-                .f_label ДОКЛАДЧИКИ
-                ul.member_list
-                  +loop_while(1)
-                    li.rmUnit
-                      .member_box
-                        .member_avatars
-                          .member_main_avatar
-                            img(src='./img/member.png')
-                            span.btn_red_2.unit_rm_btn.rmBtn
-  
-                        .participant_name Кислицин Д.М.
-                        .participant_post Председатель
-                    li.rmUnit
-                      .member_box
-                        .member_avatars
-                          .member_main_avatar
-                            img(src='./img/user_empty.png')
-                            span.btn_red_2.unit_rm_btn.rmBtn
-  
-                        .participant_name Морозов В.К.
-                        .participant_post Секретарь <br> Кислицина. М.П.
-                    li
-                      .member_box
-                        .btn_v2.add_unit_btn.btn_white_2
-                          span.mb.i-plus
-  
-              .members_holder
-                .f_label ПРИГЛАШЕННЫЕ УЧАСТНИКИ
-                ul.member_list
-                  +loop_while(2)
-                    li
-                      .member_box
-                        .member_avatars
-                          .member_main_avatar
-  
-                  li
-                    .member_box
-                      .btn_v2.add_unit_btn.btn_white_2.userMenuBtn
-                        span.mb.i-plus
-                      +member_search()
-
-            .form_row.cell_v1.cell_group
-              .form_cell._s_12
-                .f_label СВЕТОФОР
-                .input_w.select_v1
-                  select.select2.switchLights
-                    option.light_pin._pin_orange(value='1' selected) 1
-                    option.light_pin._pin_green(value='2') 2
-                    option.light_pin._pin_red(value='3') 3
-                  
-              .form_cell._s_88
-                .f_label &nbsp;
-                .input_w
-                  input.f_input._inp_black.input_v1(placeholder='Название')
-            
-              .form_cell._s_12
-                .input_w.select_v1
-                  select.select2.switchLights
-                    option.light_pin._pin_orange(value='1') 1
-                    option.light_pin._pin_green(value='2') 2
-                    option.light_pin._pin_red(value='3' selected) 3
-                  
-              .form_cell._s_88
-                .input_w
-                  input.f_input._inp_black.input_v1(placeholder='Название')
-            
-              .form_cell._s_100
-                .input_w
-                  textarea.f_input._inp_black.input_v1._h_90.autoGrow(placeholder='Комментарий')
-            
-            .form_row.cell_v1
-              .form_cell._s_100
-                label.f_label(for='question_description') ПОЯСНЕНИЕ
-                .input_w
-                  textarea#question_description.f_input._inp_black.input_v1._h_120.autoGrow(placeholder='Развернутое описание вопроса')
-            
-              .form_cell._s_100
-                label.f_label(for='question_description_wide') ПРОЕКТ РЕШЕНИЯ
-                .input_w
-                  textarea#question_description_wide.f_input._inp_black.input_v1._h_400.autoGrow(placeholder='Развернутое описание вопроса')
+                .form_cell._s_88
+                  .f_label &nbsp;
+                  .input_w
+                    input.f_input._inp_black.input_v1(placeholder='Название')
               
+                .form_cell._s_12
+                  .input_w.select_v1
+                    select.select2.switchLights
+                      option.light_pin._pin_orange(value='1') 1
+                      option.light_pin._pin_green(value='2') 2
+                      option.light_pin._pin_red(value='3' selected) 3
+                    
+                .form_cell._s_88
+                  .input_w
+                    input.f_input._inp_black.input_v1(placeholder='Название')
               
-            .f_label ОСНОВНЫЕ МАТЕРИАЛЫ
-            .form_row.cell_v1
-              .form_cell._s_33
-                .input_w.drag_catcher
-                  span.drag_text ФАЙЛ ПРЕЗЕНТАЦИИ
-              .form_cell._s_33
-                .input_w.drag_catcher
-                  span.drag_text ФАЙЛ ПРОЕКТА РЕШЕНИЯ
-              .form_cell._s_33
-                .input_w.drag_catcher
-                  span.drag_text ФАЙЛ ПРИЛОЖЕНИЯ
+                .form_cell._s_100
+                  .input_w
+                    textarea.f_input._inp_black.input_v1._h_90.autoGrow(placeholder='Комментарий')
               
-            .f_label МАТЕРИАЛЫ
+              .form_row.cell_v1
+                .form_cell._s_100
+                  label.f_label(for='question_description') ПОЯСНЕНИЕ
+                  .input_w
+                    textarea#question_description.f_input._inp_black.input_v1._h_120.autoGrow(placeholder='Развернутое описание вопроса')
               
-            ul.upload_list.uploadList
-              li
-                .input_w.drag_catcher
-                  input#file_upload.hide(type='file')
-                  label.drag_link(for='file_upload') ДОБАВИТЬ
-              li
-                +file_upload()
-              li
-                +file_upload()
-              li
-                +file_upload(true)
-              li.uploadTip
-                .input_w.drag_catcher.text_upper
-                  input#file_upload_2.hide(type='file')
-                  span.drag_text.clr_def Переместите файлы с компьютера в окно браузера 
-                  label.drag_link(for='file_upload_2') Воспользуйтесь обычной загрузкой
-
-            .f_label ТЕГИ
-              
-            .tag_holder: ul.tag_list.tagIt
-              li
-                span Заседание
-              li
-                span Комитет №1
+                .form_cell._s_100
+                  label.f_label(for='question_description_wide') ПРОЕКТ РЕШЕНИЯ
+                  .input_w
+                    textarea#question_description_wide.f_input._inp_black.input_v1._h_400.autoGrow(placeholder='Развернутое описание вопроса')
                 
-            .text_center
-              a.btn_v1.btn_gray_2.dash_btn(href='#') СОХРАНИТЬ ВОПРОС
-        
+                
+              .f_label ОСНОВНЫЕ МАТЕРИАЛЫ
+              .form_row.cell_v1
+                .form_cell._s_33
+                  .input_w.drag_catcher
+                    span.drag_text ФАЙЛ ПРЕЗЕНТАЦИИ
+                .form_cell._s_33
+                  .input_w.drag_catcher
+                    span.drag_text ФАЙЛ ПРОЕКТА РЕШЕНИЯ
+                .form_cell._s_33
+                  .input_w.drag_catcher
+                    span.drag_text ФАЙЛ ПРИЛОЖЕНИЯ
+                
+              .f_label МАТЕРИАЛЫ
+                
+              ul.upload_list.uploadList
+                li
+                  .input_w.drag_catcher
+                    input#file_upload.hide(type='file')
+                    label.drag_link(for='file_upload') ДОБАВИТЬ
+                li
+                  +file_upload()
+                li
+                  +file_upload()
+                li
+                  +file_upload(true)
+                li.uploadTip
+                  .input_w.drag_catcher.text_upper
+                    input#file_upload_2.hide(type='file')
+                    span.drag_text.clr_def Переместите файлы с компьютера в окно браузера 
+                    label.drag_link(for='file_upload_2') Воспользуйтесь обычной загрузкой
+  
+              .f_label ТЕГИ
+                
+              .tag_holder: ul.tag_list.tagIt
+                li
+                  span Заседание
+                li
+                  span Комитет №1
+                  
+              .text_center
+                a.btn_v1.btn_gray_2.dash_btn(href='#') СОХРАНИТЬ ВОПРОС
+          
         .text_center.more_block.mod_2
           a.btn_v1.dash_btn.btn_green_2(href='#')= actionText
           

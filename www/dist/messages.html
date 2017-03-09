@@ -248,6 +248,7 @@
                     <div class="msg_text">В спам может попадать в зависимости от сов зависимости от со</div>
                   </div>
                 </div>
+                <div class="preloader"><span class="timer_holder"><span class="timer_wrapper"><span class="timer_l"></span></span><span class="timer_wrapper mod_right"><span class="timer_r"></span></span></span></div>
               </div>
             </div>
             <div class="small_aside_right">
@@ -363,11 +364,12 @@
                   </li>
                 </ul>
               </div>
+              <div class="preloader"><span class="timer_holder"><span class="timer_wrapper"><span class="timer_l"></span></span><span class="timer_wrapper mod_right"><span class="timer_r"></span></span></span></div>
               <div class="chat_form">
                 <form action="#">
                   <div class="input_w chat_cell">
-                    <input placeholder="Сообщение" class="f_input input_v1 _inp_black">
-                    <button class="btn_v1 btn_green_3 chat_btn">ОТПРАВИТЬ</button>
+                    <textarea placeholder="Сообщение" class="autoGrow _3_lines f_input input_v1 _inp_black"></textarea>
+                    <button class="btn_v1 btn_green_3 chat_btn"><span class="mb">ОТПРАВИТЬ</span></button>
                   </div>
                 </form>
               </div>
@@ -378,6 +380,11 @@
     </div>
     <div class="gl_overlay glOverlay"></div>
     <div id="search_popup" data-class="search_opened" class="popup_wrapper popupWrapper">
+      <div class="close_holder">
+        <div class="section_inner">
+          <div class="popup_close popupClose _close_2"></div>
+        </div>
+      </div>
       <div class="gl_table">
         <div class="gl_table_cell">
           <div class="main_content">
@@ -392,7 +399,6 @@
                   </div>
                 </form>
               </div>
-              <div class="popup_close popupClose _close_2"></div>
             </div>
           </div>
         </div>
@@ -576,6 +582,8 @@
     <script src="./js/vendors/moment.min.js"></script>
     <script src="./js/vendors/daterangepicker.js"></script>
     <script src="./js/vendors/select2.js"></script>
+    <script src="./js/vendors/autoresize-mod.jquery.js"></script>
+    <script src="./js/msg.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
