@@ -129,3 +129,50 @@
   letter-spacing: .09em;
   margin: 32px 0;
 }
+
+.check_v1 {
+  display: inline-block;
+  vertical-align: top;
+
+  .check_text {
+    @include transition_all(transform .3s);
+    padding-left: 20px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    font: 14px/18px $HelveticaNeueReg;
+
+    &:before {
+      @extend %icon_pseudo;
+      @include transition_all(opacity .3s);
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      margin-top: -8px;
+      left: 0;
+      font-size: 8px;
+      line-height: 16px;
+      text-align: center;
+      color: $gl_white;
+      border-radius: 4px;
+      border: 1px solid $gl_white;
+      opacity: .5;
+    }
+
+    &:hover {
+      &:before {
+        opacity: 1;
+      }
+    }
+  }
+
+  input.hide:checked + .check_text {
+
+    &:before {
+      opacity: 1;
+      content: $i-checkmark_bold;
+    }
+  }
+}

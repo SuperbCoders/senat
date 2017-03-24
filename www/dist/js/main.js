@@ -56,6 +56,12 @@ $(function ($) {
         });
       }
     })
+    .delegate('.editModeBtn', 'click', function (e) {
+      var firedEl = $(this);
+
+      
+
+    })
     .delegate('.filterLink', 'click', function () {
       var item = $(this), target = $(item.attr('href'));
 

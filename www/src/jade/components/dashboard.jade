@@ -202,7 +202,7 @@ mixin question_box(date, status, mod_1, mod_2, mod_3, has_vote)
         .mb
           +dash_b_menu()
 
-mixin action_brief(date, status, brief_menu, users, counter, progress, points, rm, check_class, extra_info, add_class)
+mixin action_brief(date, status, brief_menu, users, counter, progress, points, rm, check_class, extra_info, add_class, no_help, no_vote)
   .dash_box
     .dash_box_inner
       - if (rm)
@@ -217,8 +217,11 @@ mixin action_brief(date, status, brief_menu, users, counter, progress, points, r
               .day= date
               .month сентября
             - else
-              a.dash_b_control.clr_blue(href='#')
-                span.i-help
+              - if (no_help)
+                  | 
+              - else
+                a.dash_b_control.clr_blue(href='#')
+                  span.i-help
       .fl
         .mb
           .dash_b_info(class= add_class)
@@ -280,8 +283,11 @@ mixin action_brief(date, status, brief_menu, users, counter, progress, points, r
         
       - if (users > 0)
         .participants_block
-          .participant_vote
-            a.btn_v1.dash_btn.btn_blue.openForm(data-href='#vote_popup' href='#' data-step='1'): span ПЕРЕЙТИ К ГОЛОСОВАНИЮ
+          - if (no_vote)
+            | 
+          - else
+            .participant_vote
+              a.btn_v1.dash_btn.btn_blue.openForm(data-href='#vote_popup' href='#' data-step='1'): span ПЕРЕЙТИ К ГОЛОСОВАНИЮ
             
           - if (users > 1)
             ul.participants_list
@@ -293,7 +299,7 @@ mixin action_brief(date, status, brief_menu, users, counter, progress, points, r
           - else if (users == 1)
             ul.participants_list
               li
-                +participant('Председатель')
+                +participant('Инициатор')
     
               - if (progress)
                 li

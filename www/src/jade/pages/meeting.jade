@@ -23,7 +23,7 @@ block content
           a.brief_control._prev.btn_gray_2(href='#')
           a.brief_control._next.btn_gray_2(href='#')
           
-          +action_brief(23, '_in_process', false, 2)
+          +action_brief(23, '_in_process', false, 2, 0, false, undefined, false, false, false, undefined, '', true)
         .action_brief_progress
           .action_brief_val(style='width: 58%;')
           .section_inner.clearfix
@@ -31,13 +31,23 @@ block content
             .action_brief_left 40 минут до конца
 
       .section_inner
-        .dash_box_title.clr_blue ПОВЕСТКА
+        .dash_box_title
+          .fl.clr_blue ПОВЕСТКА
+          .fr
+            .menu_holder
+              .dash_b_menu_btn.dashMenuBtn: .dash_b_menu_icon
+              .dash_b_menu_w.menu_w
+                ul.dash_b_menu_list
+                  li.dash_menu_group
+                    span.mb Действия
+                  li: a.dash_menu_link.editModeBtn(data-edit-target='' data-edit-mode='meeting' href='#')
+                    span.mb Редактировать
 
         ul.dashboard_list
           li
-            +action_brief(17, '_in_vote', true, 1, 1, false, ['Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные'])
+            +action_brief(false, '_in_vote', true, 1, 1, false, ['Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные'], false, false, false, '', true)
           li
-            +action_brief(17, '_in_vote', true, 1, 1, true, ['Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные'])
+            +action_brief(false, '_in_vote', true, 1, 1, true, ['Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные'], false, false, false, '', true)
           li
             +question_box(0, '_approved')
           li
@@ -46,8 +56,18 @@ block content
         .text_center.more_block.mod_2
           a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 34 ВОПРОСА
 
-        .dash_box_title.clr_orange 4 ПОРУЧЕНИЯ
-
+        .dash_box_title
+          .fl.clr_orange 4 ПОРУЧЕНИЯ
+          .fr
+            .menu_holder
+              .dash_b_menu_btn.dashMenuBtn: .dash_b_menu_icon
+              .dash_b_menu_w.menu_w
+                ul.dash_b_menu_list
+                  li.dash_menu_group
+                    span.mb Действия
+                  li: a.dash_menu_link.editModeBtn(data-edit-target='' data-edit-mode='meeting' href='#')
+                    span.mb Редактировать
+            
         ul.dashboard_list
           li
             +instruction_box('', '_new')
@@ -61,7 +81,17 @@ block content
         .text_center.more_block.mod_2
           a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 4 ПОРУЧЕНИЯ
           
-        .dash_box_title УЧАСТНИКИ
+        .dash_box_title
+          .fl УЧАСТНИКИ
+          .fr
+            .menu_holder
+              .dash_b_menu_btn.dashMenuBtn: .dash_b_menu_icon
+              .dash_b_menu_w.menu_w
+                ul.dash_b_menu_list
+                  li.dash_menu_group
+                    span.mb Действия
+                  li: a.dash_menu_link.editModeBtn(data-edit-target='' data-edit-mode='meeting' href='#')
+                    span.mb Редактировать
           
         .dash_box._members
           .dash_box_inner

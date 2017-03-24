@@ -186,7 +186,7 @@ a {
   font-weight: 800;
   font-style: normal; }
 
-.logo_icon:after, .logo_icon:before {
+.logo_icon:after, .logo_icon:before, .check_v1 .check_text:before {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: "senat_icons" !important;
   speak: none;
@@ -641,6 +641,38 @@ input.hide {
   font: 10px "HelveticaNeueLight", sans-serif;
   letter-spacing: .09em;
   margin: 32px 0; }
+
+.check_v1 {
+  display: inline-block;
+  vertical-align: top; }
+  .check_v1 .check_text {
+    transition: transform 0.3s;
+    padding-left: 20px;
+    position: relative;
+    display: block;
+    cursor: pointer;
+    font: 14px/18px "HelveticaNeue", sans-serif; }
+    .check_v1 .check_text:before {
+      transition: opacity 0.3s;
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      margin-top: -8px;
+      left: 0;
+      font-size: 8px;
+      line-height: 16px;
+      text-align: center;
+      color: #fff;
+      border-radius: 4px;
+      border: 1px solid #fff;
+      opacity: .5; }
+    .check_v1 .check_text:hover:before {
+      opacity: 1; }
+  .check_v1 input.hide:checked + .check_text:before {
+    opacity: 1;
+    content: ""; }
 
 .input_w {
   position: relative; }
