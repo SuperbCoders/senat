@@ -557,6 +557,9 @@ input.hide {
 .clr_orange {
   color: #ff841f; }
 
+._fw_n {
+  font-family: "HelveticaNeue", sans-serif !important; }
+
 .full_h {
   height: 100%;
   overflow-y: auto; }

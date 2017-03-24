@@ -548,6 +548,14 @@
     border-color: $gl_blue;
   }
 
+  &._prev_ver {
+    letter-spacing: 0;
+    padding: 4px 8px;
+    font-size: 12px;
+    color: #000;
+    border-color: #979797;
+  }
+
   &._in_vote,
   &._in_review {
     color: $gl_violet;

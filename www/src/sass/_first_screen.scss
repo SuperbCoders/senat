@@ -99,7 +99,7 @@ input.hide {
   &._rel {
     position: relative;
   }
-  
+
   .filter_bar &,
   .main_content & {
     padding: 0 72px;
@@ -366,4 +366,8 @@ input.hide {
 
 .clr_orange {
   color: $gl_orange;
+}
+
+._fw_n {
+  font-family: $HelveticaNeueReg !important;
 }

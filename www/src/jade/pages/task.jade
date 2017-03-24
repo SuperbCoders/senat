@@ -74,31 +74,37 @@ block content
                   textarea.autoGrow._3_lines.f_input.input_v1._inp_black(placeholder='Сообщение')
                   button.btn_v1.btn_green_3.chat_btn: span.mb ОТПРАВИТЬ
                   
-        .dash_box_title МАТЕРИАЛЫ
+        .dash_box_title 
+          .fl МАТЕРИАЛЫ
+          .fr
+            .menu_holder
+              .dash_b_menu_btn.dashMenuBtn: .dash_b_menu_icon
+              .dash_b_menu_w.menu_w
+                ul.dash_b_menu_list
+                  li.dash_menu_group
+                    span.mb Действия
+                  li: a.dash_menu_link(href='#')
+                    span.mb Редактировать
+                  li: a.dash_menu_link(href='#')
+                    span.mb Перейти к оформлению
+                  li: a.dash_menu_link(href='#')
+                    span.mb Удалить
+                ul.dash_b_menu_list
+                  li.dash_menu_group
+                    span.mb Cтатус
+                  li: a.dash_menu_link(href='#')
+                    span.mb.dash_m_status._in_process
+                    span.mb В ПРОЦЕССЕ
+                  li: a.dash_menu_link(href='#')
+                    span.mb.dash_m_status._new
+                    span.mb НОВАЯ
+                  li: a.dash_menu_link(href='#')
+                    span.mb.dash_m_status._completed
+                    span.mb ЗАВЕРШЕНО
 
         .dash_box._alone
           .dash_box_inner
-            ul.material_list._full_w._file_catalog
-              li
-                .upload_file
-                  .mb
-                    span.upload_icon
-                      img(src='./img/folder.svg')
-                  .upload_name.mb Документация
-
-              li
-                .upload_file
-                  .mb
-                    span.upload_icon
-                      img(src='./img/file_pdf.svg')
-                  .upload_name.mb Intro.pdf
-
-              li
-                .upload_file
-                  .mb
-                    span.upload_icon
-                      img(src='./img/file_pdf.svg')
-                  .upload_name.mb Wеlcome-to-biejing.pdf
+            +files(1)
               
         .text_center.more_block
           a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 15 ФАЙЛОВ

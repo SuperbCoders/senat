@@ -116,7 +116,7 @@
   .section_inner {
     position: relative;
   }
-  
+
   .dash_box_inner {
     position: relative;
     padding: 20px 0 3px 20px;
@@ -699,6 +699,53 @@
   }
 }
 
+.file_menu {
+  font-size: 12px;
+  max-width: 40%;
+  
+  > li {
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 5px;
+    padding-left: 10px;
+  }
+}
+
+.file_path {
+  font: 12px/16px $HelveticaNeueMedium;
+  padding: 18px 23px 12px;
+  letter-spacing: .025em;
+
+  > li {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+
+    &:after {
+      content: '/';
+      padding-left: 3px;
+    }
+
+    &:last-child {
+      &:after {
+        display: none;
+      }
+    }
+  }
+}
+
+.path_link {
+  color: $default_t_color;
+}
+
+a.path_link {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
 .upload_list {
   margin-bottom: 30px;
 
@@ -768,6 +815,10 @@ a.upload_file {
   text-overflow: ellipsis;
   max-width: 92%;
   font: 18px $HelveticaNeueLight;
+
+  ._has_menu & {
+    max-width: 55%;
+  }
 }
 
 .upload_icon {

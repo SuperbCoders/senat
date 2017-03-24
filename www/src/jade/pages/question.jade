@@ -180,27 +180,7 @@ block content
                     
         .dash_box._alone
           .dash_box_inner
-            ul.material_list._full_w._file_catalog
-              li
-                .upload_file.goTo(data-goto='./img/doc_1.jpg')
-                  .mb
-                    span.upload_icon
-                      img(src='./img/file_pdf.svg')
-                  .upload_name.mb Dogovor_23_05_2016-idjjjh2.pdf
-                      
-              li
-                .upload_file.goTo(data-goto='./img/doc_1.jpg')
-                  .mb
-                    span.upload_icon
-                      img(src='./img/file_pdf.svg')
-                  .upload_name.mb Intro.pdf
-                      
-              li
-                .upload_file.goTo(data-goto='./img/doc_1.jpg')
-                  .mb
-                    span.upload_icon
-                      img(src='./img/file_pdf.svg')
-                  .upload_name.mb Wеlcome-to-biejing.pdf
+            +files()
                       
         .text_center.more_block
           a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 15 ФАЙЛОВ

@@ -29,6 +29,64 @@ mixin file_upload(loading)
         .loading_progress_text 76%
         
       
+mixin files(dir)
+  ul.material_list._full_w._file_catalog
+    li
+      ul.file_path
+        li._active: span.path_link(href='#') Материалы вопроса
+        li: a.path_link(href='#') Имя папки
+        li: a.path_link(href='#') Имя подпапки
+        
+    - if (dir)
+      li
+        .upload_file._has_menu
+          .mb
+            span.upload_icon
+              img(src='./img/folder.svg')
+          .upload_name.mb Документация
+          .fr
+             ul.file_menu
+              li 01.02.2017 14:53
+              li 
+               a.dash_b_status._prev_ver._fw_n.openForm_(href='#') Прежние версии
+    - else
+      li
+        .upload_file._has_menu.goTo(data-goto='./img/doc_1.jpg')
+          .mb
+            span.upload_icon
+              img(src='./img/file_pdf.svg')
+          .upload_name.mb Dogovor_23_05_2016-idjjjh2.pdf
+          .fr
+             ul.file_menu
+               li 01.02.2017 14:53 
+               li
+                 a.dash_b_status._prev_ver._fw_n.openForm_(href='#') Прежние версии
+
+    li
+      .upload_file._has_menu
+        .mb
+          span.upload_icon
+            img(src='./img/file_pdf.svg')
+        .upload_name.mb Intro.pdf
+        .fr
+           ul.file_menu
+             li 01.02.2017 14:53         
+             li
+               a.dash_b_status._prev_ver._fw_n.openForm_(href='#') Прежние версии
+
+    li
+      .upload_file._has_menu
+        .mb
+          span.upload_icon
+            img(src='./img/file_pdf.svg')
+        .upload_name.mb Wеlcome-to-biejing.pdf
+        .fr
+           ul.file_menu
+             li 01.02.2017 14:53         
+             li
+               a.dash_b_status._prev_ver._fw_n.openForm_(href='#') Прежние версии
+               
+          
 mixin member_search(id)
   .member_search_w.menu_w
     .member_search_header
