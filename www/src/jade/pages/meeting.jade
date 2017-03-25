@@ -40,7 +40,7 @@ block content
                 ul.dash_b_menu_list
                   li.dash_menu_group
                     span.mb Действия
-                  li: a.dash_menu_link.editModeBtn(data-edit-target='' data-edit-mode='meeting' href='#')
+                  li: a.dash_menu_link(href='#')
                     span.mb Редактировать
 
         ul.dashboard_list
@@ -65,7 +65,7 @@ block content
                 ul.dash_b_menu_list
                   li.dash_menu_group
                     span.mb Действия
-                  li: a.dash_menu_link.editModeBtn(data-edit-target='' data-edit-mode='meeting' href='#')
+                  li: a.dash_menu_link(href='#')
                     span.mb Редактировать
             
         ul.dashboard_list
@@ -90,10 +90,10 @@ block content
                 ul.dash_b_menu_list
                   li.dash_menu_group
                     span.mb Действия
-                  li: a.dash_menu_link.editModeBtn(data-edit-target='' data-edit-mode='meeting' href='#')
+                  li: a.dash_menu_link.editModeBtn(data-edit-target='#members' data-edit-mode='#edit_members' href='#')
                     span.mb Редактировать
           
-        .dash_box._members
+        #members.dash_box._members
           .dash_box_inner
             .box_caption Члены коллегиального органа
             ul.member_list
@@ -141,6 +141,51 @@ block content
                     .participant_name Морозов В.К.
                     .participant_post Секретарь <br> Кислицина. М.П.
                       
+        
+        #edit_members(style='display:none;')
+          .dash_box._create
+            .dash_box_inner
+              .members_holder
+                .f_label Члены коллегиального органа
+                ul.member_list
+                  +loop_while(1)
+                    li.rmUnit
+                      .member_box
+                        .member_avatars
+                          .member_main_avatar
+                            img(src='./img/member.png')
+                            span.btn_red_2.unit_rm_btn.rmBtn
+
+                        .participant_name Кислицин Д.М.
+                        .participant_post Председатель
+                    li.rmUnit
+                      .member_box
+                        .member_avatars
+                          .member_main_avatar
+                            img(src='./img/user_empty.png')
+                            span.btn_red_2.unit_rm_btn.rmBtn
+
+                        .participant_name Морозов В.К.
+                        .participant_post Секретарь <br> Кислицина. М.П.
+                    li
+                      .member_box
+                        .btn_v2.add_unit_btn.btn_white_2
+                          span.mb.i-plus
+              .members_holder
+                .f_label ПРИГЛАШЕННЫЕ УЧАСТНИКИ НА ЗАСЕДАНИЕ
+                ul.member_list
+                  +loop_while(2)
+                    li
+                      .member_box
+                        .member_avatars
+                          .member_main_avatar
+
+                  li
+                    .member_box
+                      .btn_v2.add_unit_btn.btn_white_2.userMenuBtn
+                        span.mb.i-plus
+                      +member_search()
+                        
         .text_center.more_block.mod_2
           a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 21 УЧАСТНИКА
             

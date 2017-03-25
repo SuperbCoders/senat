@@ -1521,7 +1521,8 @@
 
 .monitor_item {
   position: relative;
-  min-width: 153px; }
+  min-width: 153px;
+  cursor: pointer; }
 
 .monitor_icon {
   transition: border 0.3s;
@@ -2123,6 +2124,9 @@ a.upload_file {
   position: relative;
   line-height: 30px;
   white-space: nowrap; }
+  .material_list .upload_file,
+  ._has_menu .upload_file {
+    cursor: pointer; }
   .small_aside_left .upload_file {
     padding: 14px 25px; }
     .small_aside_left .upload_file .upload_name {

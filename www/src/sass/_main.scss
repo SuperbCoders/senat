@@ -702,7 +702,7 @@
 .file_menu {
   font-size: 12px;
   max-width: 40%;
-  
+
   > li {
     display: inline-block;
     vertical-align: middle;
@@ -765,6 +765,11 @@ a.upload_file {
   position: relative;
   line-height: 30px;
   white-space: nowrap;
+
+  .material_list &,
+  ._has_menu & {
+    cursor: pointer;
+  }
 
   .small_aside_left & {
     padding: 14px 25px;

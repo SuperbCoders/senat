@@ -1415,6 +1415,7 @@ body.rtl .formError .formErrorArrow {
       .open_menu .btn_v2.add_unit_btn span {
         transform: rotate(45deg); }
     .btn_v2.add_unit_btn .nav_counter {
+      position: absolute;
       top: -2px;
       right: 0;
       height: 18px;

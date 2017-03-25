@@ -244,7 +244,7 @@
                 <div class="dash_b_menu_w menu_w">
                   <ul class="dash_b_menu_list">
                     <li class="dash_menu_group"><span class="mb">Действия</span></li>
-                    <li><a data-edit-target="" data-edit-mode="meeting" href="#" class="dash_menu_link editModeBtn"><span class="mb">Редактировать</span></a></li>
+                    <li><a href="#" class="dash_menu_link"><span class="mb">Редактировать</span></a></li>
                   </ul>
                 </div>
               </div>
@@ -483,7 +483,7 @@
                 <div class="dash_b_menu_w menu_w">
                   <ul class="dash_b_menu_list">
                     <li class="dash_menu_group"><span class="mb">Действия</span></li>
-                    <li><a data-edit-target="" data-edit-mode="meeting" href="#" class="dash_menu_link editModeBtn"><span class="mb">Редактировать</span></a></li>
+                    <li><a href="#" class="dash_menu_link"><span class="mb">Редактировать</span></a></li>
                   </ul>
                 </div>
               </div>
@@ -666,13 +666,13 @@
                 <div class="dash_b_menu_w menu_w">
                   <ul class="dash_b_menu_list">
                     <li class="dash_menu_group"><span class="mb">Действия</span></li>
-                    <li><a data-edit-target="" data-edit-mode="meeting" href="#" class="dash_menu_link editModeBtn"><span class="mb">Редактировать</span></a></li>
+                    <li><a data-edit-target="#members" data-edit-mode="#edit_members" href="#" class="dash_menu_link editModeBtn"><span class="mb">Редактировать</span></a></li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-          <div class="dash_box _members">
+          <div id="members" class="dash_box _members">
             <div class="dash_box_inner">
               <div class="box_caption">Члены коллегиального органа</div>
               <ul class="member_list">
@@ -769,6 +769,179 @@
                   </div>
                 </li>
               </ul>
+            </div>
+          </div>
+          <div id="edit_members" style="display:none;">
+            <div class="dash_box _create">
+              <div class="dash_box_inner">
+                <div class="members_holder">
+                  <div class="f_label">Члены коллегиального органа</div>
+                  <ul class="member_list">
+                    <li class="rmUnit">
+                      <div class="member_box">
+                        <div class="member_avatars">
+                          <div class="member_main_avatar"><img src="./img/member.png"><span class="btn_red_2 unit_rm_btn rmBtn"></span></div>
+                        </div>
+                        <div class="participant_name">Кислицин Д.М.</div>
+                        <div class="participant_post">Председатель</div>
+                      </div>
+                    </li>
+                    <li class="rmUnit">
+                      <div class="member_box">
+                        <div class="member_avatars">
+                          <div class="member_main_avatar"><img src="./img/user_empty.png"><span class="btn_red_2 unit_rm_btn rmBtn"></span></div>
+                        </div>
+                        <div class="participant_name">Морозов В.К.</div>
+                        <div class="participant_post">Секретарь <br> Кислицина. М.П.</div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="member_box">
+                        <div class="btn_v2 add_unit_btn btn_white_2"><span class="mb i-plus"></span></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="members_holder">
+                  <div class="f_label">ПРИГЛАШЕННЫЕ УЧАСТНИКИ НА ЗАСЕДАНИЕ</div>
+                  <ul class="member_list">
+                    <li>
+                      <div class="member_box">
+                        <div class="member_avatars">
+                          <div class="member_main_avatar"></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="member_box">
+                        <div class="member_avatars">
+                          <div class="member_main_avatar"></div>
+                        </div>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="member_box">
+                        <div class="btn_v2 add_unit_btn btn_white_2 userMenuBtn"><span class="mb i-plus"></span></div>
+                        <div class="member_search_w menu_w">
+                          <div class="member_search_header">
+                            <label for="member_search_0" class="dash_b_label">Поиск участников по имени или комитету</label>
+                            <form action="#">
+                              <div class="input_w has_icon">
+                                <input placeholder="Поиск" id="member_search_0" class="f_input input_v1 _inp_black"/>
+                                <button class="search_submit i-search _small"></button>
+                              </div>
+                            </form>
+                          </div>
+                          <ul class="add_list">
+                            <li>
+                              <div class="dash_b_label">Приглашенные участники</div>
+                            </li>
+                            <li>
+                              <div class="add_item">
+                                <label class="check_v1">
+                                  <input type="checkbox" class="hide"/><span class="check_text"></span>
+                                </label>
+                                <div class="dash_b_participant">
+                                  <div class="participant_avatar"><img src="./img/member.png"/>
+                                  </div>
+                                  <div class="participant_name">Долгов Ч.М.</div>
+                                  <div class="participant_post">Руководитель</div>
+                                  <div class="participant_committee">Комитет по проектам и процессам</div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="add_item">
+                                <label class="check_v1">
+                                  <input type="checkbox" class="hide"/><span class="check_text"></span>
+                                </label>
+                                <div class="dash_b_participant">
+                                  <div class="participant_avatar"><img src="./img/member.png"/>
+                                  </div>
+                                  <div class="participant_name">Долгов Ч.М.</div>
+                                  <div class="participant_post">Руководитель</div>
+                                  <div class="participant_committee">Комитет по проектам и процессам</div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="add_item">
+                                <label class="check_v1">
+                                  <input type="checkbox" class="hide"/><span class="check_text"></span>
+                                </label>
+                                <div class="dash_b_participant">
+                                  <div class="participant_avatar"><img src="./img/member.png"/>
+                                  </div>
+                                  <div class="participant_name">Долгов Ч.М.</div>
+                                  <div class="participant_post">Руководитель</div>
+                                  <div class="participant_committee">Комитет по проектам и процессам</div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="add_item">
+                                <label class="check_v1">
+                                  <input type="checkbox" class="hide"/><span class="check_text"></span>
+                                </label>
+                                <div class="dash_b_participant">
+                                  <div class="participant_avatar"><img src="./img/member.png"/>
+                                  </div>
+                                  <div class="participant_name">Долгов Ч.М.</div>
+                                  <div class="participant_post">Руководитель</div>
+                                  <div class="participant_committee">Комитет по проектам и процессам</div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="add_item">
+                                <label class="check_v1">
+                                  <input type="checkbox" class="hide"/><span class="check_text"></span>
+                                </label>
+                                <div class="dash_b_participant">
+                                  <div class="participant_avatar"><img src="./img/member.png"/>
+                                  </div>
+                                  <div class="participant_name">Долгов Ч.М.</div>
+                                  <div class="participant_post">Руководитель</div>
+                                  <div class="participant_committee">Комитет по проектам и процессам</div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="add_item">
+                                <label class="check_v1">
+                                  <input type="checkbox" class="hide"/><span class="check_text"></span>
+                                </label>
+                                <div class="dash_b_participant">
+                                  <div class="participant_avatar"><img src="./img/member.png"/>
+                                  </div>
+                                  <div class="participant_name">Долгов Ч.М.</div>
+                                  <div class="participant_post">Руководитель</div>
+                                  <div class="participant_committee">Комитет по проектам и процессам</div>
+                                </div>
+                              </div>
+                            </li>
+                            <li>
+                              <div class="add_item">
+                                <label class="check_v1">
+                                  <input type="checkbox" class="hide"/><span class="check_text"></span>
+                                </label>
+                                <div class="dash_b_participant">
+                                  <div class="participant_avatar"><img src="./img/member.png"/>
+                                  </div>
+                                  <div class="participant_name">Долгов Ч.М.</div>
+                                  <div class="participant_post">Руководитель</div>
+                                  <div class="participant_committee">Комитет по проектам и процессам</div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                          <div class="member_search_footer"><a href="#" class="btn_v1 dash_btn btn_green_2">ВЫБРАТЬ УЧАСТНИКОВ</a></div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
           <div class="text_center more_block mod_2"><a href="#" class="btn_v1 btn_white_2 dash_btn">ПОКАЗАТЬ ВСЕ 21 УЧАСТНИКА</a></div>

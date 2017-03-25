@@ -59,8 +59,12 @@ $(function ($) {
     .delegate('.editModeBtn', 'click', function (e) {
       var firedEl = $(this);
 
-      
+      $(firedEl.attr('data-edit-target')).toggle();
+      $(firedEl.attr('data-edit-mode')).toggle();
 
+      firedEl.closest('.open_menu').removeClass('open_menu');
+      
+      return false;
     })
     .delegate('.filterLink', 'click', function () {
       var item = $(this), target = $(item.attr('href'));
