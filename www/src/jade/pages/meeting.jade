@@ -47,11 +47,11 @@ block content
           li
             +action_brief(false, '_in_vote', true, 1, 1, false, ['Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные'], false, false, false, '', true)
           li
-            +action_brief(false, '_in_vote', true, 1, 1, true, ['Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные'], false, false, false, '', true)
+            +action_brief(false, '_in_vote', true, 1, 2, true, ['Текст документа подготовлен. Необходимо согласовать дополнительные гарантийные'], false, false, false, '', true)
           li
-            +question_box(0, '_approved')
+            +question_box(0, '_approved', false, false, false, false, 3)
           li
-            +question_box(29, '_rejected', true)
+            +question_box(0, '_rejected', true, false, false, false, 4)
             
         .text_center.more_block.mod_2
           a.btn_v1.btn_white_2.dash_btn(href='#') ПОКАЗАТЬ ВСЕ 34 ВОПРОСА
